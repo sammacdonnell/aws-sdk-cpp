@@ -218,7 +218,7 @@ BatchGetItemOutcome DynamoDBClient::BatchGetItem(const BatchGetItemRequest& requ
   AWS_OPERATION_GUARD(BatchGetItem);
   AWS_OPERATION_CHECK_PTR(m_endpointProvider, BatchGetItem, CoreErrors, CoreErrors::ENDPOINT_RESOLUTION_FAILURE);
   ResolveEndpointOutcome endpointResolutionOutcome = Aws::Endpoint::AWSEndpoint();
-  const bool enableEndpointDiscovery = m_clientConfiguration.enableEndpointDiscovery && m_clientConfiguration.enableEndpointDiscovery.value();
+  const bool enableEndpointDiscovery = m_clientConfiguration.enableEndpointDiscovery && m_clientConfiguration.enableEndpointDiscovery.value() && m_clientConfiguration.endpointOverride.empty();
   if (enableEndpointDiscovery)
   {
     Aws::String endpointKey = "Shared";

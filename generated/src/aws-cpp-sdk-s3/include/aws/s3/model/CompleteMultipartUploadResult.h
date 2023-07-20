@@ -88,7 +88,7 @@ namespace Model
      * SDKs, you provide the Outposts access point ARN in place of the bucket name. For
      * more information about S3 on Outposts ARNs, see <a
      * href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/S3onOutposts.html">What
-     * is S3 on Outposts</a> in the <i>Amazon S3 User Guide</i>.</p>
+     * is S3 on Outposts?</a> in the <i>Amazon S3 User Guide</i>.</p>
      */
     inline const Aws::String& GetBucket() const{ return m_bucket; }
 
@@ -110,7 +110,7 @@ namespace Model
      * SDKs, you provide the Outposts access point ARN in place of the bucket name. For
      * more information about S3 on Outposts ARNs, see <a
      * href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/S3onOutposts.html">What
-     * is S3 on Outposts</a> in the <i>Amazon S3 User Guide</i>.</p>
+     * is S3 on Outposts?</a> in the <i>Amazon S3 User Guide</i>.</p>
      */
     inline void SetBucket(const Aws::String& value) { m_bucket = value; }
 
@@ -132,7 +132,7 @@ namespace Model
      * SDKs, you provide the Outposts access point ARN in place of the bucket name. For
      * more information about S3 on Outposts ARNs, see <a
      * href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/S3onOutposts.html">What
-     * is S3 on Outposts</a> in the <i>Amazon S3 User Guide</i>.</p>
+     * is S3 on Outposts?</a> in the <i>Amazon S3 User Guide</i>.</p>
      */
     inline void SetBucket(Aws::String&& value) { m_bucket = std::move(value); }
 
@@ -154,7 +154,7 @@ namespace Model
      * SDKs, you provide the Outposts access point ARN in place of the bucket name. For
      * more information about S3 on Outposts ARNs, see <a
      * href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/S3onOutposts.html">What
-     * is S3 on Outposts</a> in the <i>Amazon S3 User Guide</i>.</p>
+     * is S3 on Outposts?</a> in the <i>Amazon S3 User Guide</i>.</p>
      */
     inline void SetBucket(const char* value) { m_bucket.assign(value); }
 
@@ -176,7 +176,7 @@ namespace Model
      * SDKs, you provide the Outposts access point ARN in place of the bucket name. For
      * more information about S3 on Outposts ARNs, see <a
      * href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/S3onOutposts.html">What
-     * is S3 on Outposts</a> in the <i>Amazon S3 User Guide</i>.</p>
+     * is S3 on Outposts?</a> in the <i>Amazon S3 User Guide</i>.</p>
      */
     inline CompleteMultipartUploadResult& WithBucket(const Aws::String& value) { SetBucket(value); return *this;}
 
@@ -198,7 +198,7 @@ namespace Model
      * SDKs, you provide the Outposts access point ARN in place of the bucket name. For
      * more information about S3 on Outposts ARNs, see <a
      * href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/S3onOutposts.html">What
-     * is S3 on Outposts</a> in the <i>Amazon S3 User Guide</i>.</p>
+     * is S3 on Outposts?</a> in the <i>Amazon S3 User Guide</i>.</p>
      */
     inline CompleteMultipartUploadResult& WithBucket(Aws::String&& value) { SetBucket(std::move(value)); return *this;}
 
@@ -220,7 +220,7 @@ namespace Model
      * SDKs, you provide the Outposts access point ARN in place of the bucket name. For
      * more information about S3 on Outposts ARNs, see <a
      * href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/S3onOutposts.html">What
-     * is S3 on Outposts</a> in the <i>Amazon S3 User Guide</i>.</p>
+     * is S3 on Outposts?</a> in the <i>Amazon S3 User Guide</i>.</p>
      */
     inline CompleteMultipartUploadResult& WithBucket(const char* value) { SetBucket(value); return *this;}
 
@@ -689,31 +689,31 @@ namespace Model
 
     /**
      * <p>The server-side encryption algorithm used when storing this object in Amazon
-     * S3 (for example, AES256, <code>aws:kms</code>).</p>
+     * S3 (for example, <code>AES256</code>, <code>aws:kms</code>).</p>
      */
     inline const ServerSideEncryption& GetServerSideEncryption() const{ return m_serverSideEncryption; }
 
     /**
      * <p>The server-side encryption algorithm used when storing this object in Amazon
-     * S3 (for example, AES256, <code>aws:kms</code>).</p>
+     * S3 (for example, <code>AES256</code>, <code>aws:kms</code>).</p>
      */
     inline void SetServerSideEncryption(const ServerSideEncryption& value) { m_serverSideEncryption = value; }
 
     /**
      * <p>The server-side encryption algorithm used when storing this object in Amazon
-     * S3 (for example, AES256, <code>aws:kms</code>).</p>
+     * S3 (for example, <code>AES256</code>, <code>aws:kms</code>).</p>
      */
     inline void SetServerSideEncryption(ServerSideEncryption&& value) { m_serverSideEncryption = std::move(value); }
 
     /**
      * <p>The server-side encryption algorithm used when storing this object in Amazon
-     * S3 (for example, AES256, <code>aws:kms</code>).</p>
+     * S3 (for example, <code>AES256</code>, <code>aws:kms</code>).</p>
      */
     inline CompleteMultipartUploadResult& WithServerSideEncryption(const ServerSideEncryption& value) { SetServerSideEncryption(value); return *this;}
 
     /**
      * <p>The server-side encryption algorithm used when storing this object in Amazon
-     * S3 (for example, AES256, <code>aws:kms</code>).</p>
+     * S3 (for example, <code>AES256</code>, <code>aws:kms</code>).</p>
      */
     inline CompleteMultipartUploadResult& WithServerSideEncryption(ServerSideEncryption&& value) { SetServerSideEncryption(std::move(value)); return *this;}
 
@@ -762,70 +762,63 @@ namespace Model
 
 
     /**
-     * <p>If present, specifies the ID of the Amazon Web Services Key Management
-     * Service (Amazon Web Services KMS) symmetric encryption customer managed key that
-     * was used for the object.</p>
+     * <p>If present, specifies the ID of the Key Management Service (KMS) symmetric
+     * encryption customer managed key that was used for the object.</p>
      */
     inline const Aws::String& GetSSEKMSKeyId() const{ return m_sSEKMSKeyId; }
 
     /**
-     * <p>If present, specifies the ID of the Amazon Web Services Key Management
-     * Service (Amazon Web Services KMS) symmetric encryption customer managed key that
-     * was used for the object.</p>
+     * <p>If present, specifies the ID of the Key Management Service (KMS) symmetric
+     * encryption customer managed key that was used for the object.</p>
      */
     inline void SetSSEKMSKeyId(const Aws::String& value) { m_sSEKMSKeyId = value; }
 
     /**
-     * <p>If present, specifies the ID of the Amazon Web Services Key Management
-     * Service (Amazon Web Services KMS) symmetric encryption customer managed key that
-     * was used for the object.</p>
+     * <p>If present, specifies the ID of the Key Management Service (KMS) symmetric
+     * encryption customer managed key that was used for the object.</p>
      */
     inline void SetSSEKMSKeyId(Aws::String&& value) { m_sSEKMSKeyId = std::move(value); }
 
     /**
-     * <p>If present, specifies the ID of the Amazon Web Services Key Management
-     * Service (Amazon Web Services KMS) symmetric encryption customer managed key that
-     * was used for the object.</p>
+     * <p>If present, specifies the ID of the Key Management Service (KMS) symmetric
+     * encryption customer managed key that was used for the object.</p>
      */
     inline void SetSSEKMSKeyId(const char* value) { m_sSEKMSKeyId.assign(value); }
 
     /**
-     * <p>If present, specifies the ID of the Amazon Web Services Key Management
-     * Service (Amazon Web Services KMS) symmetric encryption customer managed key that
-     * was used for the object.</p>
+     * <p>If present, specifies the ID of the Key Management Service (KMS) symmetric
+     * encryption customer managed key that was used for the object.</p>
      */
     inline CompleteMultipartUploadResult& WithSSEKMSKeyId(const Aws::String& value) { SetSSEKMSKeyId(value); return *this;}
 
     /**
-     * <p>If present, specifies the ID of the Amazon Web Services Key Management
-     * Service (Amazon Web Services KMS) symmetric encryption customer managed key that
-     * was used for the object.</p>
+     * <p>If present, specifies the ID of the Key Management Service (KMS) symmetric
+     * encryption customer managed key that was used for the object.</p>
      */
     inline CompleteMultipartUploadResult& WithSSEKMSKeyId(Aws::String&& value) { SetSSEKMSKeyId(std::move(value)); return *this;}
 
     /**
-     * <p>If present, specifies the ID of the Amazon Web Services Key Management
-     * Service (Amazon Web Services KMS) symmetric encryption customer managed key that
-     * was used for the object.</p>
+     * <p>If present, specifies the ID of the Key Management Service (KMS) symmetric
+     * encryption customer managed key that was used for the object.</p>
      */
     inline CompleteMultipartUploadResult& WithSSEKMSKeyId(const char* value) { SetSSEKMSKeyId(value); return *this;}
 
 
     /**
      * <p>Indicates whether the multipart upload uses an S3 Bucket Key for server-side
-     * encryption with Amazon Web Services KMS (SSE-KMS).</p>
+     * encryption with Key Management Service (KMS) keys (SSE-KMS).</p>
      */
     inline bool GetBucketKeyEnabled() const{ return m_bucketKeyEnabled; }
 
     /**
      * <p>Indicates whether the multipart upload uses an S3 Bucket Key for server-side
-     * encryption with Amazon Web Services KMS (SSE-KMS).</p>
+     * encryption with Key Management Service (KMS) keys (SSE-KMS).</p>
      */
     inline void SetBucketKeyEnabled(bool value) { m_bucketKeyEnabled = value; }
 
     /**
      * <p>Indicates whether the multipart upload uses an S3 Bucket Key for server-side
-     * encryption with Amazon Web Services KMS (SSE-KMS).</p>
+     * encryption with Key Management Service (KMS) keys (SSE-KMS).</p>
      */
     inline CompleteMultipartUploadResult& WithBucketKeyEnabled(bool value) { SetBucketKeyEnabled(value); return *this;}
 

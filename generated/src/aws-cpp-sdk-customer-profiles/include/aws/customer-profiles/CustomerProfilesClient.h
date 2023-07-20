@@ -113,6 +113,38 @@ namespace CustomerProfiles
         }
 
         /**
+         * <p>Creates a new calculated attribute definition. After creation, new object
+         * data ingested into Customer Profiles will be included in the calculated
+         * attribute, which can be retrieved for a profile using the <a
+         * href="https://docs.aws.amazon.com/customerprofiles/latest/APIReference/API_GetCalculatedAttributeForProfile.html">GetCalculatedAttributeForProfile</a>
+         * API. Defining a calculated attribute makes it available for all profiles within
+         * a domain. Each calculated attribute can only reference one
+         * <code>ObjectType</code> and at most, two fields from that
+         * <code>ObjectType</code>.</p><p><h3>See Also:</h3>   <a
+         * href="http://docs.aws.amazon.com/goto/WebAPI/customer-profiles-2020-08-15/CreateCalculatedAttributeDefinition">AWS
+         * API Reference</a></p>
+         */
+        virtual Model::CreateCalculatedAttributeDefinitionOutcome CreateCalculatedAttributeDefinition(const Model::CreateCalculatedAttributeDefinitionRequest& request) const;
+
+        /**
+         * A Callable wrapper for CreateCalculatedAttributeDefinition that returns a future to the operation so that it can be executed in parallel to other requests.
+         */
+        template<typename CreateCalculatedAttributeDefinitionRequestT = Model::CreateCalculatedAttributeDefinitionRequest>
+        Model::CreateCalculatedAttributeDefinitionOutcomeCallable CreateCalculatedAttributeDefinitionCallable(const CreateCalculatedAttributeDefinitionRequestT& request) const
+        {
+            return SubmitCallable(&CustomerProfilesClient::CreateCalculatedAttributeDefinition, request);
+        }
+
+        /**
+         * An Async wrapper for CreateCalculatedAttributeDefinition that queues the request into a thread executor and triggers associated callback when operation has finished.
+         */
+        template<typename CreateCalculatedAttributeDefinitionRequestT = Model::CreateCalculatedAttributeDefinitionRequest>
+        void CreateCalculatedAttributeDefinitionAsync(const CreateCalculatedAttributeDefinitionRequestT& request, const CreateCalculatedAttributeDefinitionResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context = nullptr) const
+        {
+            return SubmitAsync(&CustomerProfilesClient::CreateCalculatedAttributeDefinition, request, handler, context);
+        }
+
+        /**
          * <p>Creates a domain, which is a container for all customer data, such as
          * customer profile attributes, object types, profile keys, and encryption keys.
          * You can create multiple domains, and each domain can have multiple third-party
@@ -148,6 +180,35 @@ namespace CustomerProfiles
         void CreateDomainAsync(const CreateDomainRequestT& request, const CreateDomainResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context = nullptr) const
         {
             return SubmitAsync(&CustomerProfilesClient::CreateDomain, request, handler, context);
+        }
+
+        /**
+         * <p>Creates an event stream, which is a subscription to real-time events, such as
+         * when profiles are created and updated through Amazon Connect Customer
+         * Profiles.</p> <p>Each event stream can be associated with only one Kinesis Data
+         * Stream destination in the same region and Amazon Web Services account as the
+         * customer profiles domain</p><p><h3>See Also:</h3>   <a
+         * href="http://docs.aws.amazon.com/goto/WebAPI/customer-profiles-2020-08-15/CreateEventStream">AWS
+         * API Reference</a></p>
+         */
+        virtual Model::CreateEventStreamOutcome CreateEventStream(const Model::CreateEventStreamRequest& request) const;
+
+        /**
+         * A Callable wrapper for CreateEventStream that returns a future to the operation so that it can be executed in parallel to other requests.
+         */
+        template<typename CreateEventStreamRequestT = Model::CreateEventStreamRequest>
+        Model::CreateEventStreamOutcomeCallable CreateEventStreamCallable(const CreateEventStreamRequestT& request) const
+        {
+            return SubmitCallable(&CustomerProfilesClient::CreateEventStream, request);
+        }
+
+        /**
+         * An Async wrapper for CreateEventStream that queues the request into a thread executor and triggers associated callback when operation has finished.
+         */
+        template<typename CreateEventStreamRequestT = Model::CreateEventStreamRequest>
+        void CreateEventStreamAsync(const CreateEventStreamRequestT& request, const CreateEventStreamResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context = nullptr) const
+        {
+            return SubmitAsync(&CustomerProfilesClient::CreateEventStream, request, handler, context);
         }
 
         /**
@@ -206,6 +267,35 @@ namespace CustomerProfiles
         }
 
         /**
+         * <p>Deletes an existing calculated attribute definition. Note that deleting a
+         * default calculated attribute is possible, however once deleted, you will be
+         * unable to undo that action and will need to recreate it on your own using the
+         * CreateCalculatedAttributeDefinition API if you want it back.</p><p><h3>See
+         * Also:</h3>   <a
+         * href="http://docs.aws.amazon.com/goto/WebAPI/customer-profiles-2020-08-15/DeleteCalculatedAttributeDefinition">AWS
+         * API Reference</a></p>
+         */
+        virtual Model::DeleteCalculatedAttributeDefinitionOutcome DeleteCalculatedAttributeDefinition(const Model::DeleteCalculatedAttributeDefinitionRequest& request) const;
+
+        /**
+         * A Callable wrapper for DeleteCalculatedAttributeDefinition that returns a future to the operation so that it can be executed in parallel to other requests.
+         */
+        template<typename DeleteCalculatedAttributeDefinitionRequestT = Model::DeleteCalculatedAttributeDefinitionRequest>
+        Model::DeleteCalculatedAttributeDefinitionOutcomeCallable DeleteCalculatedAttributeDefinitionCallable(const DeleteCalculatedAttributeDefinitionRequestT& request) const
+        {
+            return SubmitCallable(&CustomerProfilesClient::DeleteCalculatedAttributeDefinition, request);
+        }
+
+        /**
+         * An Async wrapper for DeleteCalculatedAttributeDefinition that queues the request into a thread executor and triggers associated callback when operation has finished.
+         */
+        template<typename DeleteCalculatedAttributeDefinitionRequestT = Model::DeleteCalculatedAttributeDefinitionRequest>
+        void DeleteCalculatedAttributeDefinitionAsync(const DeleteCalculatedAttributeDefinitionRequestT& request, const DeleteCalculatedAttributeDefinitionResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context = nullptr) const
+        {
+            return SubmitAsync(&CustomerProfilesClient::DeleteCalculatedAttributeDefinition, request, handler, context);
+        }
+
+        /**
          * <p>Deletes a specific domain and all of its customer data, such as customer
          * profile attributes and their related objects.</p><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/customer-profiles-2020-08-15/DeleteDomain">AWS
@@ -229,6 +319,32 @@ namespace CustomerProfiles
         void DeleteDomainAsync(const DeleteDomainRequestT& request, const DeleteDomainResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context = nullptr) const
         {
             return SubmitAsync(&CustomerProfilesClient::DeleteDomain, request, handler, context);
+        }
+
+        /**
+         * <p>Disables and deletes the specified event stream.</p><p><h3>See Also:</h3>  
+         * <a
+         * href="http://docs.aws.amazon.com/goto/WebAPI/customer-profiles-2020-08-15/DeleteEventStream">AWS
+         * API Reference</a></p>
+         */
+        virtual Model::DeleteEventStreamOutcome DeleteEventStream(const Model::DeleteEventStreamRequest& request) const;
+
+        /**
+         * A Callable wrapper for DeleteEventStream that returns a future to the operation so that it can be executed in parallel to other requests.
+         */
+        template<typename DeleteEventStreamRequestT = Model::DeleteEventStreamRequest>
+        Model::DeleteEventStreamOutcomeCallable DeleteEventStreamCallable(const DeleteEventStreamRequestT& request) const
+        {
+            return SubmitCallable(&CustomerProfilesClient::DeleteEventStream, request);
+        }
+
+        /**
+         * An Async wrapper for DeleteEventStream that queues the request into a thread executor and triggers associated callback when operation has finished.
+         */
+        template<typename DeleteEventStreamRequestT = Model::DeleteEventStreamRequest>
+        void DeleteEventStreamAsync(const DeleteEventStreamRequestT& request, const DeleteEventStreamResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context = nullptr) const
+        {
+            return SubmitAsync(&CustomerProfilesClient::DeleteEventStream, request, handler, context);
         }
 
         /**
@@ -427,6 +543,58 @@ namespace CustomerProfiles
         }
 
         /**
+         * <p>Provides more information on a calculated attribute definition for Customer
+         * Profiles.</p><p><h3>See Also:</h3>   <a
+         * href="http://docs.aws.amazon.com/goto/WebAPI/customer-profiles-2020-08-15/GetCalculatedAttributeDefinition">AWS
+         * API Reference</a></p>
+         */
+        virtual Model::GetCalculatedAttributeDefinitionOutcome GetCalculatedAttributeDefinition(const Model::GetCalculatedAttributeDefinitionRequest& request) const;
+
+        /**
+         * A Callable wrapper for GetCalculatedAttributeDefinition that returns a future to the operation so that it can be executed in parallel to other requests.
+         */
+        template<typename GetCalculatedAttributeDefinitionRequestT = Model::GetCalculatedAttributeDefinitionRequest>
+        Model::GetCalculatedAttributeDefinitionOutcomeCallable GetCalculatedAttributeDefinitionCallable(const GetCalculatedAttributeDefinitionRequestT& request) const
+        {
+            return SubmitCallable(&CustomerProfilesClient::GetCalculatedAttributeDefinition, request);
+        }
+
+        /**
+         * An Async wrapper for GetCalculatedAttributeDefinition that queues the request into a thread executor and triggers associated callback when operation has finished.
+         */
+        template<typename GetCalculatedAttributeDefinitionRequestT = Model::GetCalculatedAttributeDefinitionRequest>
+        void GetCalculatedAttributeDefinitionAsync(const GetCalculatedAttributeDefinitionRequestT& request, const GetCalculatedAttributeDefinitionResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context = nullptr) const
+        {
+            return SubmitAsync(&CustomerProfilesClient::GetCalculatedAttributeDefinition, request, handler, context);
+        }
+
+        /**
+         * <p>Retrieve a calculated attribute for a customer profile.</p><p><h3>See
+         * Also:</h3>   <a
+         * href="http://docs.aws.amazon.com/goto/WebAPI/customer-profiles-2020-08-15/GetCalculatedAttributeForProfile">AWS
+         * API Reference</a></p>
+         */
+        virtual Model::GetCalculatedAttributeForProfileOutcome GetCalculatedAttributeForProfile(const Model::GetCalculatedAttributeForProfileRequest& request) const;
+
+        /**
+         * A Callable wrapper for GetCalculatedAttributeForProfile that returns a future to the operation so that it can be executed in parallel to other requests.
+         */
+        template<typename GetCalculatedAttributeForProfileRequestT = Model::GetCalculatedAttributeForProfileRequest>
+        Model::GetCalculatedAttributeForProfileOutcomeCallable GetCalculatedAttributeForProfileCallable(const GetCalculatedAttributeForProfileRequestT& request) const
+        {
+            return SubmitCallable(&CustomerProfilesClient::GetCalculatedAttributeForProfile, request);
+        }
+
+        /**
+         * An Async wrapper for GetCalculatedAttributeForProfile that queues the request into a thread executor and triggers associated callback when operation has finished.
+         */
+        template<typename GetCalculatedAttributeForProfileRequestT = Model::GetCalculatedAttributeForProfileRequest>
+        void GetCalculatedAttributeForProfileAsync(const GetCalculatedAttributeForProfileRequestT& request, const GetCalculatedAttributeForProfileResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context = nullptr) const
+        {
+            return SubmitAsync(&CustomerProfilesClient::GetCalculatedAttributeForProfile, request, handler, context);
+        }
+
+        /**
          * <p>Returns information about a specific domain.</p><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/customer-profiles-2020-08-15/GetDomain">AWS
          * API Reference</a></p>
@@ -449,6 +617,32 @@ namespace CustomerProfiles
         void GetDomainAsync(const GetDomainRequestT& request, const GetDomainResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context = nullptr) const
         {
             return SubmitAsync(&CustomerProfilesClient::GetDomain, request, handler, context);
+        }
+
+        /**
+         * <p>Returns information about the specified event stream in a specific
+         * domain.</p><p><h3>See Also:</h3>   <a
+         * href="http://docs.aws.amazon.com/goto/WebAPI/customer-profiles-2020-08-15/GetEventStream">AWS
+         * API Reference</a></p>
+         */
+        virtual Model::GetEventStreamOutcome GetEventStream(const Model::GetEventStreamRequest& request) const;
+
+        /**
+         * A Callable wrapper for GetEventStream that returns a future to the operation so that it can be executed in parallel to other requests.
+         */
+        template<typename GetEventStreamRequestT = Model::GetEventStreamRequest>
+        Model::GetEventStreamOutcomeCallable GetEventStreamCallable(const GetEventStreamRequestT& request) const
+        {
+            return SubmitCallable(&CustomerProfilesClient::GetEventStream, request);
+        }
+
+        /**
+         * An Async wrapper for GetEventStream that queues the request into a thread executor and triggers associated callback when operation has finished.
+         */
+        template<typename GetEventStreamRequestT = Model::GetEventStreamRequest>
+        void GetEventStreamAsync(const GetEventStreamRequestT& request, const GetEventStreamResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context = nullptr) const
+        {
+            return SubmitAsync(&CustomerProfilesClient::GetEventStream, request, handler, context);
         }
 
         /**
@@ -690,6 +884,58 @@ namespace CustomerProfiles
         }
 
         /**
+         * <p>Lists calculated attribute definitions for Customer Profiles</p><p><h3>See
+         * Also:</h3>   <a
+         * href="http://docs.aws.amazon.com/goto/WebAPI/customer-profiles-2020-08-15/ListCalculatedAttributeDefinitions">AWS
+         * API Reference</a></p>
+         */
+        virtual Model::ListCalculatedAttributeDefinitionsOutcome ListCalculatedAttributeDefinitions(const Model::ListCalculatedAttributeDefinitionsRequest& request) const;
+
+        /**
+         * A Callable wrapper for ListCalculatedAttributeDefinitions that returns a future to the operation so that it can be executed in parallel to other requests.
+         */
+        template<typename ListCalculatedAttributeDefinitionsRequestT = Model::ListCalculatedAttributeDefinitionsRequest>
+        Model::ListCalculatedAttributeDefinitionsOutcomeCallable ListCalculatedAttributeDefinitionsCallable(const ListCalculatedAttributeDefinitionsRequestT& request) const
+        {
+            return SubmitCallable(&CustomerProfilesClient::ListCalculatedAttributeDefinitions, request);
+        }
+
+        /**
+         * An Async wrapper for ListCalculatedAttributeDefinitions that queues the request into a thread executor and triggers associated callback when operation has finished.
+         */
+        template<typename ListCalculatedAttributeDefinitionsRequestT = Model::ListCalculatedAttributeDefinitionsRequest>
+        void ListCalculatedAttributeDefinitionsAsync(const ListCalculatedAttributeDefinitionsRequestT& request, const ListCalculatedAttributeDefinitionsResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context = nullptr) const
+        {
+            return SubmitAsync(&CustomerProfilesClient::ListCalculatedAttributeDefinitions, request, handler, context);
+        }
+
+        /**
+         * <p>Retrieve a list of calculated attributes for a customer
+         * profile.</p><p><h3>See Also:</h3>   <a
+         * href="http://docs.aws.amazon.com/goto/WebAPI/customer-profiles-2020-08-15/ListCalculatedAttributesForProfile">AWS
+         * API Reference</a></p>
+         */
+        virtual Model::ListCalculatedAttributesForProfileOutcome ListCalculatedAttributesForProfile(const Model::ListCalculatedAttributesForProfileRequest& request) const;
+
+        /**
+         * A Callable wrapper for ListCalculatedAttributesForProfile that returns a future to the operation so that it can be executed in parallel to other requests.
+         */
+        template<typename ListCalculatedAttributesForProfileRequestT = Model::ListCalculatedAttributesForProfileRequest>
+        Model::ListCalculatedAttributesForProfileOutcomeCallable ListCalculatedAttributesForProfileCallable(const ListCalculatedAttributesForProfileRequestT& request) const
+        {
+            return SubmitCallable(&CustomerProfilesClient::ListCalculatedAttributesForProfile, request);
+        }
+
+        /**
+         * An Async wrapper for ListCalculatedAttributesForProfile that queues the request into a thread executor and triggers associated callback when operation has finished.
+         */
+        template<typename ListCalculatedAttributesForProfileRequestT = Model::ListCalculatedAttributesForProfileRequest>
+        void ListCalculatedAttributesForProfileAsync(const ListCalculatedAttributesForProfileRequestT& request, const ListCalculatedAttributesForProfileResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context = nullptr) const
+        {
+            return SubmitAsync(&CustomerProfilesClient::ListCalculatedAttributesForProfile, request, handler, context);
+        }
+
+        /**
          * <p>Returns a list of all the domains for an AWS account that have been
          * created.</p><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/customer-profiles-2020-08-15/ListDomains">AWS
@@ -713,6 +959,32 @@ namespace CustomerProfiles
         void ListDomainsAsync(const ListDomainsRequestT& request, const ListDomainsResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context = nullptr) const
         {
             return SubmitAsync(&CustomerProfilesClient::ListDomains, request, handler, context);
+        }
+
+        /**
+         * <p>Returns a list of all the event streams in a specific domain.</p><p><h3>See
+         * Also:</h3>   <a
+         * href="http://docs.aws.amazon.com/goto/WebAPI/customer-profiles-2020-08-15/ListEventStreams">AWS
+         * API Reference</a></p>
+         */
+        virtual Model::ListEventStreamsOutcome ListEventStreams(const Model::ListEventStreamsRequest& request) const;
+
+        /**
+         * A Callable wrapper for ListEventStreams that returns a future to the operation so that it can be executed in parallel to other requests.
+         */
+        template<typename ListEventStreamsRequestT = Model::ListEventStreamsRequest>
+        Model::ListEventStreamsOutcomeCallable ListEventStreamsCallable(const ListEventStreamsRequestT& request) const
+        {
+            return SubmitCallable(&CustomerProfilesClient::ListEventStreams, request);
+        }
+
+        /**
+         * An Async wrapper for ListEventStreams that queues the request into a thread executor and triggers associated callback when operation has finished.
+         */
+        template<typename ListEventStreamsRequestT = Model::ListEventStreamsRequest>
+        void ListEventStreamsAsync(const ListEventStreamsRequestT& request, const ListEventStreamsResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context = nullptr) const
+        {
+            return SubmitAsync(&CustomerProfilesClient::ListEventStreams, request, handler, context);
         }
 
         /**
@@ -1125,6 +1397,34 @@ namespace CustomerProfiles
         void UntagResourceAsync(const UntagResourceRequestT& request, const UntagResourceResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context = nullptr) const
         {
             return SubmitAsync(&CustomerProfilesClient::UntagResource, request, handler, context);
+        }
+
+        /**
+         * <p>Updates an existing calculated attribute definition. When updating the
+         * Conditions, note that increasing the date range of a calculated attribute will
+         * not trigger inclusion of historical data greater than the current date
+         * range.</p><p><h3>See Also:</h3>   <a
+         * href="http://docs.aws.amazon.com/goto/WebAPI/customer-profiles-2020-08-15/UpdateCalculatedAttributeDefinition">AWS
+         * API Reference</a></p>
+         */
+        virtual Model::UpdateCalculatedAttributeDefinitionOutcome UpdateCalculatedAttributeDefinition(const Model::UpdateCalculatedAttributeDefinitionRequest& request) const;
+
+        /**
+         * A Callable wrapper for UpdateCalculatedAttributeDefinition that returns a future to the operation so that it can be executed in parallel to other requests.
+         */
+        template<typename UpdateCalculatedAttributeDefinitionRequestT = Model::UpdateCalculatedAttributeDefinitionRequest>
+        Model::UpdateCalculatedAttributeDefinitionOutcomeCallable UpdateCalculatedAttributeDefinitionCallable(const UpdateCalculatedAttributeDefinitionRequestT& request) const
+        {
+            return SubmitCallable(&CustomerProfilesClient::UpdateCalculatedAttributeDefinition, request);
+        }
+
+        /**
+         * An Async wrapper for UpdateCalculatedAttributeDefinition that queues the request into a thread executor and triggers associated callback when operation has finished.
+         */
+        template<typename UpdateCalculatedAttributeDefinitionRequestT = Model::UpdateCalculatedAttributeDefinitionRequest>
+        void UpdateCalculatedAttributeDefinitionAsync(const UpdateCalculatedAttributeDefinitionRequestT& request, const UpdateCalculatedAttributeDefinitionResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context = nullptr) const
+        {
+            return SubmitAsync(&CustomerProfilesClient::UpdateCalculatedAttributeDefinition, request, handler, context);
         }
 
         /**

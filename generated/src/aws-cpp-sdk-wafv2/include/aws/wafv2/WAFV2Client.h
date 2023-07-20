@@ -559,6 +559,59 @@ namespace WAFV2
         }
 
         /**
+         * <p>Provides high-level information for the Amazon Web Services Managed Rules
+         * rule groups and Amazon Web Services Marketplace managed rule groups.
+         * </p><p><h3>See Also:</h3>   <a
+         * href="http://docs.aws.amazon.com/goto/WebAPI/wafv2-2019-07-29/DescribeAllManagedProducts">AWS
+         * API Reference</a></p>
+         */
+        virtual Model::DescribeAllManagedProductsOutcome DescribeAllManagedProducts(const Model::DescribeAllManagedProductsRequest& request) const;
+
+        /**
+         * A Callable wrapper for DescribeAllManagedProducts that returns a future to the operation so that it can be executed in parallel to other requests.
+         */
+        template<typename DescribeAllManagedProductsRequestT = Model::DescribeAllManagedProductsRequest>
+        Model::DescribeAllManagedProductsOutcomeCallable DescribeAllManagedProductsCallable(const DescribeAllManagedProductsRequestT& request) const
+        {
+            return SubmitCallable(&WAFV2Client::DescribeAllManagedProducts, request);
+        }
+
+        /**
+         * An Async wrapper for DescribeAllManagedProducts that queues the request into a thread executor and triggers associated callback when operation has finished.
+         */
+        template<typename DescribeAllManagedProductsRequestT = Model::DescribeAllManagedProductsRequest>
+        void DescribeAllManagedProductsAsync(const DescribeAllManagedProductsRequestT& request, const DescribeAllManagedProductsResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context = nullptr) const
+        {
+            return SubmitAsync(&WAFV2Client::DescribeAllManagedProducts, request, handler, context);
+        }
+
+        /**
+         * <p>Provides high-level information for the managed rule groups owned by a
+         * specific vendor. </p><p><h3>See Also:</h3>   <a
+         * href="http://docs.aws.amazon.com/goto/WebAPI/wafv2-2019-07-29/DescribeManagedProductsByVendor">AWS
+         * API Reference</a></p>
+         */
+        virtual Model::DescribeManagedProductsByVendorOutcome DescribeManagedProductsByVendor(const Model::DescribeManagedProductsByVendorRequest& request) const;
+
+        /**
+         * A Callable wrapper for DescribeManagedProductsByVendor that returns a future to the operation so that it can be executed in parallel to other requests.
+         */
+        template<typename DescribeManagedProductsByVendorRequestT = Model::DescribeManagedProductsByVendorRequest>
+        Model::DescribeManagedProductsByVendorOutcomeCallable DescribeManagedProductsByVendorCallable(const DescribeManagedProductsByVendorRequestT& request) const
+        {
+            return SubmitCallable(&WAFV2Client::DescribeManagedProductsByVendor, request);
+        }
+
+        /**
+         * An Async wrapper for DescribeManagedProductsByVendor that queues the request into a thread executor and triggers associated callback when operation has finished.
+         */
+        template<typename DescribeManagedProductsByVendorRequestT = Model::DescribeManagedProductsByVendorRequest>
+        void DescribeManagedProductsByVendorAsync(const DescribeManagedProductsByVendorRequestT& request, const DescribeManagedProductsByVendorResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context = nullptr) const
+        {
+            return SubmitAsync(&WAFV2Client::DescribeManagedProductsByVendor, request, handler, context);
+        }
+
+        /**
          * <p>Provides high-level information for a managed rule group, including
          * descriptions of the rules. </p><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/wafv2-2019-07-29/DescribeManagedRuleGroup">AWS
@@ -827,20 +880,22 @@ namespace WAFV2
         }
 
         /**
-         * <p>Retrieves the keys that are currently blocked by a rate-based rule instance.
-         * The maximum number of managed keys that can be blocked for a single rate-based
-         * rule instance is 10,000. If more than 10,000 addresses exceed the rate limit,
-         * those with the highest rates are blocked.</p> <p>For a rate-based rule that
-         * you've defined inside a rule group, provide the name of the rule group reference
-         * statement in your request, in addition to the rate-based rule name and the web
-         * ACL name. </p> <p>WAF monitors web requests and manages keys independently for
-         * each unique combination of web ACL, optional rule group, and rate-based rule.
-         * For example, if you define a rate-based rule inside a rule group, and then use
-         * the rule group in a web ACL, WAF monitors web requests and manages keys for that
-         * web ACL, rule group reference statement, and rate-based rule instance. If you
-         * use the same rule group in a second web ACL, WAF monitors web requests and
-         * manages keys for this second usage completely independent of your first.
-         * </p><p><h3>See Also:</h3>   <a
+         * <p>Retrieves the IP addresses that are currently blocked by a rate-based rule
+         * instance. This is only available for rate-based rules that aggregate solely on
+         * the IP address or on the forwarded IP address. </p> <p>The maximum number of
+         * addresses that can be blocked for a single rate-based rule instance is 10,000.
+         * If more than 10,000 addresses exceed the rate limit, those with the highest
+         * rates are blocked.</p> <p>For a rate-based rule that you've defined inside a
+         * rule group, provide the name of the rule group reference statement in your
+         * request, in addition to the rate-based rule name and the web ACL name. </p>
+         * <p>WAF monitors web requests and manages keys independently for each unique
+         * combination of web ACL, optional rule group, and rate-based rule. For example,
+         * if you define a rate-based rule inside a rule group, and then use the rule group
+         * in a web ACL, WAF monitors web requests and manages keys for that web ACL, rule
+         * group reference statement, and rate-based rule instance. If you use the same
+         * rule group in a second web ACL, WAF monitors web requests and manages keys for
+         * this second usage completely independent of your first. </p><p><h3>See
+         * Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/wafv2-2019-07-29/GetRateBasedStatementManagedKeys">AWS
          * API Reference</a></p>
          */

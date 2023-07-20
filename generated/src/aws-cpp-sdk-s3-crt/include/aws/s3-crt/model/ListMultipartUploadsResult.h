@@ -8,6 +8,7 @@
 #include <aws/core/utils/memory/stl/AWSString.h>
 #include <aws/core/utils/memory/stl/AWSVector.h>
 #include <aws/s3-crt/model/EncodingType.h>
+#include <aws/s3-crt/model/RequestCharged.h>
 #include <aws/s3-crt/model/MultipartUpload.h>
 #include <aws/s3-crt/model/CommonPrefix.h>
 #include <utility>
@@ -476,7 +477,7 @@ namespace Model
 
     /**
      * <p>Encoding type used by Amazon S3 to encode object keys in the response.</p>
-     * <p>If you specify <code>encoding-type</code> request parameter, Amazon S3
+     * <p>If you specify the <code>encoding-type</code> request parameter, Amazon S3
      * includes this element in the response, and returns encoded key name values in
      * the following response elements:</p> <p> <code>Delimiter</code>,
      * <code>KeyMarker</code>, <code>Prefix</code>, <code>NextKeyMarker</code>,
@@ -486,7 +487,7 @@ namespace Model
 
     /**
      * <p>Encoding type used by Amazon S3 to encode object keys in the response.</p>
-     * <p>If you specify <code>encoding-type</code> request parameter, Amazon S3
+     * <p>If you specify the <code>encoding-type</code> request parameter, Amazon S3
      * includes this element in the response, and returns encoded key name values in
      * the following response elements:</p> <p> <code>Delimiter</code>,
      * <code>KeyMarker</code>, <code>Prefix</code>, <code>NextKeyMarker</code>,
@@ -496,7 +497,7 @@ namespace Model
 
     /**
      * <p>Encoding type used by Amazon S3 to encode object keys in the response.</p>
-     * <p>If you specify <code>encoding-type</code> request parameter, Amazon S3
+     * <p>If you specify the <code>encoding-type</code> request parameter, Amazon S3
      * includes this element in the response, and returns encoded key name values in
      * the following response elements:</p> <p> <code>Delimiter</code>,
      * <code>KeyMarker</code>, <code>Prefix</code>, <code>NextKeyMarker</code>,
@@ -506,7 +507,7 @@ namespace Model
 
     /**
      * <p>Encoding type used by Amazon S3 to encode object keys in the response.</p>
-     * <p>If you specify <code>encoding-type</code> request parameter, Amazon S3
+     * <p>If you specify the <code>encoding-type</code> request parameter, Amazon S3
      * includes this element in the response, and returns encoded key name values in
      * the following response elements:</p> <p> <code>Delimiter</code>,
      * <code>KeyMarker</code>, <code>Prefix</code>, <code>NextKeyMarker</code>,
@@ -516,13 +517,29 @@ namespace Model
 
     /**
      * <p>Encoding type used by Amazon S3 to encode object keys in the response.</p>
-     * <p>If you specify <code>encoding-type</code> request parameter, Amazon S3
+     * <p>If you specify the <code>encoding-type</code> request parameter, Amazon S3
      * includes this element in the response, and returns encoded key name values in
      * the following response elements:</p> <p> <code>Delimiter</code>,
      * <code>KeyMarker</code>, <code>Prefix</code>, <code>NextKeyMarker</code>,
      * <code>Key</code>.</p>
      */
     inline ListMultipartUploadsResult& WithEncodingType(EncodingType&& value) { SetEncodingType(std::move(value)); return *this;}
+
+
+    
+    inline const RequestCharged& GetRequestCharged() const{ return m_requestCharged; }
+
+    
+    inline void SetRequestCharged(const RequestCharged& value) { m_requestCharged = value; }
+
+    
+    inline void SetRequestCharged(RequestCharged&& value) { m_requestCharged = std::move(value); }
+
+    
+    inline ListMultipartUploadsResult& WithRequestCharged(const RequestCharged& value) { SetRequestCharged(value); return *this;}
+
+    
+    inline ListMultipartUploadsResult& WithRequestCharged(RequestCharged&& value) { SetRequestCharged(std::move(value)); return *this;}
 
 
     
@@ -571,6 +588,8 @@ namespace Model
     Aws::Vector<CommonPrefix> m_commonPrefixes;
 
     EncodingType m_encodingType;
+
+    RequestCharged m_requestCharged;
 
     Aws::String m_requestId;
   };

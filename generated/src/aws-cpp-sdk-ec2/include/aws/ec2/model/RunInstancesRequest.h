@@ -177,48 +177,42 @@ namespace Model
     /**
      * <p>The instance type. For more information, see <a
      * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-types.html">Instance
-     * types</a> in the <i>Amazon EC2 User Guide</i>.</p> <p>Default:
-     * <code>m1.small</code> </p>
+     * types</a> in the <i>Amazon EC2 User Guide</i>.</p>
      */
     inline const InstanceType& GetInstanceType() const{ return m_instanceType; }
 
     /**
      * <p>The instance type. For more information, see <a
      * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-types.html">Instance
-     * types</a> in the <i>Amazon EC2 User Guide</i>.</p> <p>Default:
-     * <code>m1.small</code> </p>
+     * types</a> in the <i>Amazon EC2 User Guide</i>.</p>
      */
     inline bool InstanceTypeHasBeenSet() const { return m_instanceTypeHasBeenSet; }
 
     /**
      * <p>The instance type. For more information, see <a
      * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-types.html">Instance
-     * types</a> in the <i>Amazon EC2 User Guide</i>.</p> <p>Default:
-     * <code>m1.small</code> </p>
+     * types</a> in the <i>Amazon EC2 User Guide</i>.</p>
      */
     inline void SetInstanceType(const InstanceType& value) { m_instanceTypeHasBeenSet = true; m_instanceType = value; }
 
     /**
      * <p>The instance type. For more information, see <a
      * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-types.html">Instance
-     * types</a> in the <i>Amazon EC2 User Guide</i>.</p> <p>Default:
-     * <code>m1.small</code> </p>
+     * types</a> in the <i>Amazon EC2 User Guide</i>.</p>
      */
     inline void SetInstanceType(InstanceType&& value) { m_instanceTypeHasBeenSet = true; m_instanceType = std::move(value); }
 
     /**
      * <p>The instance type. For more information, see <a
      * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-types.html">Instance
-     * types</a> in the <i>Amazon EC2 User Guide</i>.</p> <p>Default:
-     * <code>m1.small</code> </p>
+     * types</a> in the <i>Amazon EC2 User Guide</i>.</p>
      */
     inline RunInstancesRequest& WithInstanceType(const InstanceType& value) { SetInstanceType(value); return *this;}
 
     /**
      * <p>The instance type. For more information, see <a
      * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-types.html">Instance
-     * types</a> in the <i>Amazon EC2 User Guide</i>.</p> <p>Default:
-     * <code>m1.small</code> </p>
+     * types</a> in the <i>Amazon EC2 User Guide</i>.</p>
      */
     inline RunInstancesRequest& WithInstanceType(InstanceType&& value) { SetInstanceType(std::move(value)); return *this;}
 
@@ -2063,8 +2057,10 @@ namespace Model
 
 
     /**
-     * <p>Indicates whether an instance is enabled for hibernation. For more
-     * information, see <a
+     * <p>Indicates whether an instance is enabled for hibernation. This parameter is
+     * valid only if the instance meets the <a
+     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/hibernating-prerequisites.html">hibernation
+     * prerequisites</a>. For more information, see <a
      * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/Hibernate.html">Hibernate
      * your instance</a> in the <i>Amazon EC2 User Guide</i>.</p> <p>You can't enable
      * hibernation and Amazon Web Services Nitro Enclaves on the same instance.</p>
@@ -2072,8 +2068,10 @@ namespace Model
     inline const HibernationOptionsRequest& GetHibernationOptions() const{ return m_hibernationOptions; }
 
     /**
-     * <p>Indicates whether an instance is enabled for hibernation. For more
-     * information, see <a
+     * <p>Indicates whether an instance is enabled for hibernation. This parameter is
+     * valid only if the instance meets the <a
+     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/hibernating-prerequisites.html">hibernation
+     * prerequisites</a>. For more information, see <a
      * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/Hibernate.html">Hibernate
      * your instance</a> in the <i>Amazon EC2 User Guide</i>.</p> <p>You can't enable
      * hibernation and Amazon Web Services Nitro Enclaves on the same instance.</p>
@@ -2081,8 +2079,10 @@ namespace Model
     inline bool HibernationOptionsHasBeenSet() const { return m_hibernationOptionsHasBeenSet; }
 
     /**
-     * <p>Indicates whether an instance is enabled for hibernation. For more
-     * information, see <a
+     * <p>Indicates whether an instance is enabled for hibernation. This parameter is
+     * valid only if the instance meets the <a
+     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/hibernating-prerequisites.html">hibernation
+     * prerequisites</a>. For more information, see <a
      * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/Hibernate.html">Hibernate
      * your instance</a> in the <i>Amazon EC2 User Guide</i>.</p> <p>You can't enable
      * hibernation and Amazon Web Services Nitro Enclaves on the same instance.</p>
@@ -2090,8 +2090,10 @@ namespace Model
     inline void SetHibernationOptions(const HibernationOptionsRequest& value) { m_hibernationOptionsHasBeenSet = true; m_hibernationOptions = value; }
 
     /**
-     * <p>Indicates whether an instance is enabled for hibernation. For more
-     * information, see <a
+     * <p>Indicates whether an instance is enabled for hibernation. This parameter is
+     * valid only if the instance meets the <a
+     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/hibernating-prerequisites.html">hibernation
+     * prerequisites</a>. For more information, see <a
      * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/Hibernate.html">Hibernate
      * your instance</a> in the <i>Amazon EC2 User Guide</i>.</p> <p>You can't enable
      * hibernation and Amazon Web Services Nitro Enclaves on the same instance.</p>
@@ -2099,8 +2101,10 @@ namespace Model
     inline void SetHibernationOptions(HibernationOptionsRequest&& value) { m_hibernationOptionsHasBeenSet = true; m_hibernationOptions = std::move(value); }
 
     /**
-     * <p>Indicates whether an instance is enabled for hibernation. For more
-     * information, see <a
+     * <p>Indicates whether an instance is enabled for hibernation. This parameter is
+     * valid only if the instance meets the <a
+     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/hibernating-prerequisites.html">hibernation
+     * prerequisites</a>. For more information, see <a
      * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/Hibernate.html">Hibernate
      * your instance</a> in the <i>Amazon EC2 User Guide</i>.</p> <p>You can't enable
      * hibernation and Amazon Web Services Nitro Enclaves on the same instance.</p>
@@ -2108,8 +2112,10 @@ namespace Model
     inline RunInstancesRequest& WithHibernationOptions(const HibernationOptionsRequest& value) { SetHibernationOptions(value); return *this;}
 
     /**
-     * <p>Indicates whether an instance is enabled for hibernation. For more
-     * information, see <a
+     * <p>Indicates whether an instance is enabled for hibernation. This parameter is
+     * valid only if the instance meets the <a
+     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/hibernating-prerequisites.html">hibernation
+     * prerequisites</a>. For more information, see <a
      * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/Hibernate.html">Hibernate
      * your instance</a> in the <i>Amazon EC2 User Guide</i>.</p> <p>You can't enable
      * hibernation and Amazon Web Services Nitro Enclaves on the same instance.</p>
@@ -2204,7 +2210,7 @@ namespace Model
     /**
      * <p>Indicates whether the instance is enabled for Amazon Web Services Nitro
      * Enclaves. For more information, see <a
-     * href="https://docs.aws.amazon.com/enclaves/latest/user/nitro-enclave.html"> What
+     * href="https://docs.aws.amazon.com/enclaves/latest/user/nitro-enclave.html">What
      * is Amazon Web Services Nitro Enclaves?</a> in the <i>Amazon Web Services Nitro
      * Enclaves User Guide</i>.</p> <p>You can't enable Amazon Web Services Nitro
      * Enclaves and hibernation on the same instance.</p>
@@ -2214,7 +2220,7 @@ namespace Model
     /**
      * <p>Indicates whether the instance is enabled for Amazon Web Services Nitro
      * Enclaves. For more information, see <a
-     * href="https://docs.aws.amazon.com/enclaves/latest/user/nitro-enclave.html"> What
+     * href="https://docs.aws.amazon.com/enclaves/latest/user/nitro-enclave.html">What
      * is Amazon Web Services Nitro Enclaves?</a> in the <i>Amazon Web Services Nitro
      * Enclaves User Guide</i>.</p> <p>You can't enable Amazon Web Services Nitro
      * Enclaves and hibernation on the same instance.</p>
@@ -2224,7 +2230,7 @@ namespace Model
     /**
      * <p>Indicates whether the instance is enabled for Amazon Web Services Nitro
      * Enclaves. For more information, see <a
-     * href="https://docs.aws.amazon.com/enclaves/latest/user/nitro-enclave.html"> What
+     * href="https://docs.aws.amazon.com/enclaves/latest/user/nitro-enclave.html">What
      * is Amazon Web Services Nitro Enclaves?</a> in the <i>Amazon Web Services Nitro
      * Enclaves User Guide</i>.</p> <p>You can't enable Amazon Web Services Nitro
      * Enclaves and hibernation on the same instance.</p>
@@ -2234,7 +2240,7 @@ namespace Model
     /**
      * <p>Indicates whether the instance is enabled for Amazon Web Services Nitro
      * Enclaves. For more information, see <a
-     * href="https://docs.aws.amazon.com/enclaves/latest/user/nitro-enclave.html"> What
+     * href="https://docs.aws.amazon.com/enclaves/latest/user/nitro-enclave.html">What
      * is Amazon Web Services Nitro Enclaves?</a> in the <i>Amazon Web Services Nitro
      * Enclaves User Guide</i>.</p> <p>You can't enable Amazon Web Services Nitro
      * Enclaves and hibernation on the same instance.</p>
@@ -2244,7 +2250,7 @@ namespace Model
     /**
      * <p>Indicates whether the instance is enabled for Amazon Web Services Nitro
      * Enclaves. For more information, see <a
-     * href="https://docs.aws.amazon.com/enclaves/latest/user/nitro-enclave.html"> What
+     * href="https://docs.aws.amazon.com/enclaves/latest/user/nitro-enclave.html">What
      * is Amazon Web Services Nitro Enclaves?</a> in the <i>Amazon Web Services Nitro
      * Enclaves User Guide</i>.</p> <p>You can't enable Amazon Web Services Nitro
      * Enclaves and hibernation on the same instance.</p>
@@ -2254,7 +2260,7 @@ namespace Model
     /**
      * <p>Indicates whether the instance is enabled for Amazon Web Services Nitro
      * Enclaves. For more information, see <a
-     * href="https://docs.aws.amazon.com/enclaves/latest/user/nitro-enclave.html"> What
+     * href="https://docs.aws.amazon.com/enclaves/latest/user/nitro-enclave.html">What
      * is Amazon Web Services Nitro Enclaves?</a> in the <i>Amazon Web Services Nitro
      * Enclaves User Guide</i>.</p> <p>You can't enable Amazon Web Services Nitro
      * Enclaves and hibernation on the same instance.</p>
@@ -2264,37 +2270,43 @@ namespace Model
 
     /**
      * <p>The options for the instance hostname. The default values are inherited from
-     * the subnet.</p>
+     * the subnet. Applies only if creating a network interface, not attaching an
+     * existing one.</p>
      */
     inline const PrivateDnsNameOptionsRequest& GetPrivateDnsNameOptions() const{ return m_privateDnsNameOptions; }
 
     /**
      * <p>The options for the instance hostname. The default values are inherited from
-     * the subnet.</p>
+     * the subnet. Applies only if creating a network interface, not attaching an
+     * existing one.</p>
      */
     inline bool PrivateDnsNameOptionsHasBeenSet() const { return m_privateDnsNameOptionsHasBeenSet; }
 
     /**
      * <p>The options for the instance hostname. The default values are inherited from
-     * the subnet.</p>
+     * the subnet. Applies only if creating a network interface, not attaching an
+     * existing one.</p>
      */
     inline void SetPrivateDnsNameOptions(const PrivateDnsNameOptionsRequest& value) { m_privateDnsNameOptionsHasBeenSet = true; m_privateDnsNameOptions = value; }
 
     /**
      * <p>The options for the instance hostname. The default values are inherited from
-     * the subnet.</p>
+     * the subnet. Applies only if creating a network interface, not attaching an
+     * existing one.</p>
      */
     inline void SetPrivateDnsNameOptions(PrivateDnsNameOptionsRequest&& value) { m_privateDnsNameOptionsHasBeenSet = true; m_privateDnsNameOptions = std::move(value); }
 
     /**
      * <p>The options for the instance hostname. The default values are inherited from
-     * the subnet.</p>
+     * the subnet. Applies only if creating a network interface, not attaching an
+     * existing one.</p>
      */
     inline RunInstancesRequest& WithPrivateDnsNameOptions(const PrivateDnsNameOptionsRequest& value) { SetPrivateDnsNameOptions(value); return *this;}
 
     /**
      * <p>The options for the instance hostname. The default values are inherited from
-     * the subnet.</p>
+     * the subnet. Applies only if creating a network interface, not attaching an
+     * existing one.</p>
      */
     inline RunInstancesRequest& WithPrivateDnsNameOptions(PrivateDnsNameOptionsRequest&& value) { SetPrivateDnsNameOptions(std::move(value)); return *this;}
 

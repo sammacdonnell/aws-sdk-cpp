@@ -359,13 +359,23 @@ namespace SageMaker
         }
 
         /**
-         * <p>Creates an Autopilot job.</p> <p>Find the best-performing model after you run
-         * an Autopilot job by calling <a
-         * href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_DescribeAutoMLJob.html">DescribeAutoMLJob</a>.</p>
-         * <p>For information about how to use Autopilot, see <a
-         * href="https://docs.aws.amazon.com/sagemaker/latest/dg/autopilot-automate-model-development.html">Automate
-         * Model Development with Amazon SageMaker Autopilot</a>.</p><p><h3>See Also:</h3> 
-         * <a
+         * <p>Creates an Autopilot job also referred to as Autopilot experiment or AutoML
+         * job.</p>  <p>We recommend using the new versions <a
+         * href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_CreateAutoMLJobV2.html">CreateAutoMLJobV2</a>
+         * and <a
+         * href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_DescribeAutoMLJobV2.html">DescribeAutoMLJobV2</a>,
+         * which offer backward compatibility.</p> <p> <code>CreateAutoMLJobV2</code> can
+         * manage tabular problem types identical to those of its previous version
+         * <code>CreateAutoMLJob</code>, as well as non-tabular problem types such as image
+         * or text classification.</p> <p>Find guidelines about how to migrate a
+         * <code>CreateAutoMLJob</code> to <code>CreateAutoMLJobV2</code> in <a
+         * href="https://docs.aws.amazon.com/sagemaker/latest/dg/autopilot-automate-model-development-create-experiment-api.html#autopilot-create-experiment-api-migrate-v1-v2">Migrate
+         * a CreateAutoMLJob to CreateAutoMLJobV2</a>.</p>  <p>You can find the
+         * best-performing model after you run an AutoML job by calling <a
+         * href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_DescribeAutoMLJobV2.html">DescribeAutoMLJobV2</a>
+         * (recommended) or <a
+         * href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_DescribeAutoMLJob.html">DescribeAutoMLJob</a>.</p><p><h3>See
+         * Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/CreateAutoMLJob">AWS
          * API Reference</a></p>
          */
@@ -390,14 +400,27 @@ namespace SageMaker
         }
 
         /**
-         * <p>Creates an Amazon SageMaker AutoML job that uses non-tabular data such as
-         * images or text for Computer Vision or Natural Language Processing problems.</p>
-         * <p>Find the resulting model after you run an AutoML job V2 by calling <a
-         * href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_DescribeAutoMLJobV2.html">DescribeAutoMLJobV2</a>.</p>
-         * <p>To create an <code>AutoMLJob</code> using tabular data, see <a
-         * href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_CreateAutoMLJob.html">CreateAutoMLJob</a>.</p>
-         *  <p>This API action is callable through SageMaker Canvas only. Calling it
-         * directly from the CLI or an SDK results in an error.</p> <p><h3>See
+         * <p>Creates an Autopilot job also referred to as Autopilot experiment or AutoML
+         * job V2.</p>  <p> <a
+         * href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_CreateAutoMLJobV2.html">CreateAutoMLJobV2</a>
+         * and <a
+         * href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_DescribeAutoMLJobV2.html">DescribeAutoMLJobV2</a>
+         * are new versions of <a
+         * href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_CreateAutoMLJob.html">CreateAutoMLJob</a>
+         * and <a
+         * href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_DescribeAutoMLJob.html">DescribeAutoMLJob</a>
+         * which offer backward compatibility.</p> <p> <code>CreateAutoMLJobV2</code> can
+         * manage tabular problem types identical to those of its previous version
+         * <code>CreateAutoMLJob</code>, as well as non-tabular problem types such as image
+         * or text classification.</p> <p>Find guidelines about how to migrate a
+         * <code>CreateAutoMLJob</code> to <code>CreateAutoMLJobV2</code> in <a
+         * href="https://docs.aws.amazon.com/sagemaker/latest/dg/autopilot-automate-model-development-create-experiment-api.html#autopilot-create-experiment-api-migrate-v1-v2">Migrate
+         * a CreateAutoMLJob to CreateAutoMLJobV2</a>.</p>  <p>For the list of
+         * available problem types supported by <code>CreateAutoMLJobV2</code>, see <a
+         * href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_AutoMLProblemTypeConfig.html">AutoMLProblemTypeConfig</a>.</p>
+         * <p>You can find the best-performing model after you run an AutoML job V2 by
+         * calling <a
+         * href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_DescribeAutoMLJobV2.html">DescribeAutoMLJobV2</a>.</p><p><h3>See
          * Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/CreateAutoMLJobV2">AWS
          * API Reference</a></p>
@@ -3485,7 +3508,11 @@ namespace SageMaker
         }
 
         /**
-         * <p>Returns information about an Amazon SageMaker AutoML job.</p><p><h3>See
+         * <p>Returns information about an AutoML job created by calling <a
+         * href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_CreateAutoMLJob.html">CreateAutoMLJob</a>.</p>
+         *  <p>AutoML jobs created by calling <a
+         * href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_CreateAutoMLJobV2.html">CreateAutoMLJobV2</a>
+         * cannot be described by <code>DescribeAutoMLJob</code>.</p> <p><h3>See
          * Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/DescribeAutoMLJob">AWS
          * API Reference</a></p>
@@ -3511,9 +3538,10 @@ namespace SageMaker
         }
 
         /**
-         * <p>Returns information about an Amazon SageMaker AutoML V2 job.</p> 
-         * <p>This API action is callable through SageMaker Canvas only. Calling it
-         * directly from the CLI or an SDK results in an error.</p> <p><h3>See
+         * <p>Returns information about an AutoML job created by calling <a
+         * href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_CreateAutoMLJobV2.html">CreateAutoMLJobV2</a>
+         * or <a
+         * href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_CreateAutoMLJob.html">CreateAutoMLJob</a>.</p><p><h3>See
          * Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/DescribeAutoMLJobV2">AWS
          * API Reference</a></p>
@@ -4007,8 +4035,9 @@ namespace SageMaker
         }
 
         /**
-         * <p>Gets a description of a hyperparameter tuning job.</p><p><h3>See Also:</h3>  
-         * <a
+         * <p>Returns a description of a hyperparameter tuning job, depending on the fields
+         * selected. These fields can include the name, Amazon Resource Name (ARN), job
+         * status of your tuning job and more.</p><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/DescribeHyperParameterTuningJob">AWS
          * API Reference</a></p>
          */

@@ -1330,4 +1330,48 @@ namespace
 
         AWS_ASSERT_SUCCESS(Client->GetObject(getObjectRequest));
     }
+
+    TEST_F(BucketAndObjectOperationTest, LocalHostCrtError) {
+        Aws::S3Crt::ClientConfiguration s3ClientConfig;
+        s3ClientConfig.region = Aws::Region::US_EAST_1;
+        s3ClientConfig.scheme = Scheme::HTTPS;
+        s3ClientConfig.executor = Aws::MakeShared<Aws::Utils::Threading::PooledThreadExecutor>(ALLOCATION_TAG, 4);
+        s3ClientConfig.throughputTargetGbps = 2.0;
+        s3ClientConfig.partSize = 5 * 1024 * 1024;
+        s3ClientConfig.endpointOverride = "localhost";
+
+        Client = Aws::MakeShared<S3CrtClient>(ALLOCATION_TAG,
+                                              Aws::Auth::AWSCredentials{"", ""},
+                                              s3ClientConfig,
+                                              Aws::Client::AWSAuthV4Signer::PayloadSigningPolicy::Never);
+
+        //Make a request for one of out public doc pages
+        GetObjectRequest getObjectRequest;
+        getObjectRequest.SetBucket("aws-sdk-cpp-docs");
+        getObjectRequest.SetKey("cpp/api/LATEST/index.html");
+
+        GetObjectOutcome outcome = Client->GetObject(getObjectRequest);
+
+        ASSERT_FALSE(outcome.IsSuccess());
+        ASSERT_EQ(outcome.GetError().GetErrorType(), Aws::S3Crt::S3CrtErrors::NETWORK_CONNECTION);
+    }
+
+    TEST_F(BucketAndObjectOperationTest, MissingCertificate) {
+        Aws::S3Crt::ClientConfiguration s3ClientConfig;
+        s3ClientConfig.region = Aws::Region::US_EAST_1;
+        s3ClientConfig.caFile = "/some-non-existing-certificate/cert.crt";
+        s3ClientConfig.verifySSL = true;
+
+        S3CrtClient crtClient = S3CrtClient(Aws::Auth::AWSCredentials{"", ""},
+                                              s3ClientConfig,
+                                              Aws::Client::AWSAuthV4Signer::PayloadSigningPolicy::Never);
+
+        GetObjectRequest getObjectRequest;
+        getObjectRequest.SetBucket("aws-sdk-cpp-docs");
+        getObjectRequest.SetKey("cpp/api/LATEST/index.html");
+
+        auto result = crtClient.GetObject(getObjectRequest);
+        ASSERT_FALSE(result.IsSuccess());
+        ASSERT_EQ((Aws::Client::CoreErrors) result.GetError().GetErrorType(), Aws::Client::CoreErrors::NOT_INITIALIZED);
+    }
 }

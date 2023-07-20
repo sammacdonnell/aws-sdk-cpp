@@ -27,6 +27,9 @@ ListObjectVersionsRequest::ListObjectVersionsRequest() :
     m_prefixHasBeenSet(false),
     m_versionIdMarkerHasBeenSet(false),
     m_expectedBucketOwnerHasBeenSet(false),
+    m_requestPayer(RequestPayer::NOT_SET),
+    m_requestPayerHasBeenSet(false),
+    m_optionalObjectAttributesHasBeenSet(false),
     m_customizedAccessLogTagHasBeenSet(false)
 {
 }
@@ -109,6 +112,21 @@ Aws::Http::HeaderValueCollection ListObjectVersionsRequest::GetRequestSpecificHe
     ss << m_expectedBucketOwner;
     headers.emplace("x-amz-expected-bucket-owner",  ss.str());
     ss.str("");
+  }
+
+  if(m_requestPayerHasBeenSet)
+  {
+    headers.emplace("x-amz-request-payer", RequestPayerMapper::GetNameForRequestPayer(m_requestPayer));
+  }
+
+  if(m_optionalObjectAttributesHasBeenSet)
+  {
+    for(const auto& item : m_optionalObjectAttributes)
+    {
+      ss << OptionalObjectAttributesMapper::GetNameForOptionalObjectAttributes(item);
+      headers.emplace("x-amz-optional-object-attributes", ss.str());
+      ss.str("");
+    }
   }
 
   return headers;

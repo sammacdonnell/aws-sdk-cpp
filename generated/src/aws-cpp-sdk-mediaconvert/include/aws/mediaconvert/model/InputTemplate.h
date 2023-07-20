@@ -63,7 +63,7 @@ namespace Model
      * increase the video quality of your output relative to its bitrate, since noisy
      * inputs are more complex and require more bits to encode. To help restore loss of
      * detail after applying the filter, you can optionally add texture or sharpening
-     * as an additional step.Jobs that use this feature incur pro-tier pricing. To not
+     * as an additional step. Jobs that use this feature incur pro-tier pricing. To not
      * apply advanced input filtering: Choose Disabled. Note that you can still apply
      * basic filtering with Deblock and Denoise.
      */
@@ -78,7 +78,7 @@ namespace Model
      * increase the video quality of your output relative to its bitrate, since noisy
      * inputs are more complex and require more bits to encode. To help restore loss of
      * detail after applying the filter, you can optionally add texture or sharpening
-     * as an additional step.Jobs that use this feature incur pro-tier pricing. To not
+     * as an additional step. Jobs that use this feature incur pro-tier pricing. To not
      * apply advanced input filtering: Choose Disabled. Note that you can still apply
      * basic filtering with Deblock and Denoise.
      */
@@ -93,7 +93,7 @@ namespace Model
      * increase the video quality of your output relative to its bitrate, since noisy
      * inputs are more complex and require more bits to encode. To help restore loss of
      * detail after applying the filter, you can optionally add texture or sharpening
-     * as an additional step.Jobs that use this feature incur pro-tier pricing. To not
+     * as an additional step. Jobs that use this feature incur pro-tier pricing. To not
      * apply advanced input filtering: Choose Disabled. Note that you can still apply
      * basic filtering with Deblock and Denoise.
      */
@@ -108,7 +108,7 @@ namespace Model
      * increase the video quality of your output relative to its bitrate, since noisy
      * inputs are more complex and require more bits to encode. To help restore loss of
      * detail after applying the filter, you can optionally add texture or sharpening
-     * as an additional step.Jobs that use this feature incur pro-tier pricing. To not
+     * as an additional step. Jobs that use this feature incur pro-tier pricing. To not
      * apply advanced input filtering: Choose Disabled. Note that you can still apply
      * basic filtering with Deblock and Denoise.
      */
@@ -123,7 +123,7 @@ namespace Model
      * increase the video quality of your output relative to its bitrate, since noisy
      * inputs are more complex and require more bits to encode. To help restore loss of
      * detail after applying the filter, you can optionally add texture or sharpening
-     * as an additional step.Jobs that use this feature incur pro-tier pricing. To not
+     * as an additional step. Jobs that use this feature incur pro-tier pricing. To not
      * apply advanced input filtering: Choose Disabled. Note that you can still apply
      * basic filtering with Deblock and Denoise.
      */
@@ -138,7 +138,7 @@ namespace Model
      * increase the video quality of your output relative to its bitrate, since noisy
      * inputs are more complex and require more bits to encode. To help restore loss of
      * detail after applying the filter, you can optionally add texture or sharpening
-     * as an additional step.Jobs that use this feature incur pro-tier pricing. To not
+     * as an additional step. Jobs that use this feature incur pro-tier pricing. To not
      * apply advanced input filtering: Choose Disabled. Note that you can still apply
      * basic filtering with Deblock and Denoise.
      */
@@ -366,73 +366,73 @@ namespace Model
 
     /**
      * Use captions selectors to specify the captions data from your input that you use
-     * in your outputs. You can use up to 20 captions selectors per input.
+     * in your outputs. You can use up to 100 captions selectors per input.
      */
     inline const Aws::Map<Aws::String, CaptionSelector>& GetCaptionSelectors() const{ return m_captionSelectors; }
 
     /**
      * Use captions selectors to specify the captions data from your input that you use
-     * in your outputs. You can use up to 20 captions selectors per input.
+     * in your outputs. You can use up to 100 captions selectors per input.
      */
     inline bool CaptionSelectorsHasBeenSet() const { return m_captionSelectorsHasBeenSet; }
 
     /**
      * Use captions selectors to specify the captions data from your input that you use
-     * in your outputs. You can use up to 20 captions selectors per input.
+     * in your outputs. You can use up to 100 captions selectors per input.
      */
     inline void SetCaptionSelectors(const Aws::Map<Aws::String, CaptionSelector>& value) { m_captionSelectorsHasBeenSet = true; m_captionSelectors = value; }
 
     /**
      * Use captions selectors to specify the captions data from your input that you use
-     * in your outputs. You can use up to 20 captions selectors per input.
+     * in your outputs. You can use up to 100 captions selectors per input.
      */
     inline void SetCaptionSelectors(Aws::Map<Aws::String, CaptionSelector>&& value) { m_captionSelectorsHasBeenSet = true; m_captionSelectors = std::move(value); }
 
     /**
      * Use captions selectors to specify the captions data from your input that you use
-     * in your outputs. You can use up to 20 captions selectors per input.
+     * in your outputs. You can use up to 100 captions selectors per input.
      */
     inline InputTemplate& WithCaptionSelectors(const Aws::Map<Aws::String, CaptionSelector>& value) { SetCaptionSelectors(value); return *this;}
 
     /**
      * Use captions selectors to specify the captions data from your input that you use
-     * in your outputs. You can use up to 20 captions selectors per input.
+     * in your outputs. You can use up to 100 captions selectors per input.
      */
     inline InputTemplate& WithCaptionSelectors(Aws::Map<Aws::String, CaptionSelector>&& value) { SetCaptionSelectors(std::move(value)); return *this;}
 
     /**
      * Use captions selectors to specify the captions data from your input that you use
-     * in your outputs. You can use up to 20 captions selectors per input.
+     * in your outputs. You can use up to 100 captions selectors per input.
      */
     inline InputTemplate& AddCaptionSelectors(const Aws::String& key, const CaptionSelector& value) { m_captionSelectorsHasBeenSet = true; m_captionSelectors.emplace(key, value); return *this; }
 
     /**
      * Use captions selectors to specify the captions data from your input that you use
-     * in your outputs. You can use up to 20 captions selectors per input.
+     * in your outputs. You can use up to 100 captions selectors per input.
      */
     inline InputTemplate& AddCaptionSelectors(Aws::String&& key, const CaptionSelector& value) { m_captionSelectorsHasBeenSet = true; m_captionSelectors.emplace(std::move(key), value); return *this; }
 
     /**
      * Use captions selectors to specify the captions data from your input that you use
-     * in your outputs. You can use up to 20 captions selectors per input.
+     * in your outputs. You can use up to 100 captions selectors per input.
      */
     inline InputTemplate& AddCaptionSelectors(const Aws::String& key, CaptionSelector&& value) { m_captionSelectorsHasBeenSet = true; m_captionSelectors.emplace(key, std::move(value)); return *this; }
 
     /**
      * Use captions selectors to specify the captions data from your input that you use
-     * in your outputs. You can use up to 20 captions selectors per input.
+     * in your outputs. You can use up to 100 captions selectors per input.
      */
     inline InputTemplate& AddCaptionSelectors(Aws::String&& key, CaptionSelector&& value) { m_captionSelectorsHasBeenSet = true; m_captionSelectors.emplace(std::move(key), std::move(value)); return *this; }
 
     /**
      * Use captions selectors to specify the captions data from your input that you use
-     * in your outputs. You can use up to 20 captions selectors per input.
+     * in your outputs. You can use up to 100 captions selectors per input.
      */
     inline InputTemplate& AddCaptionSelectors(const char* key, CaptionSelector&& value) { m_captionSelectorsHasBeenSet = true; m_captionSelectors.emplace(key, std::move(value)); return *this; }
 
     /**
      * Use captions selectors to specify the captions data from your input that you use
-     * in your outputs. You can use up to 20 captions selectors per input.
+     * in your outputs. You can use up to 100 captions selectors per input.
      */
     inline InputTemplate& AddCaptionSelectors(const char* key, const CaptionSelector& value) { m_captionSelectorsHasBeenSet = true; m_captionSelectors.emplace(key, value); return *this; }
 

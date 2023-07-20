@@ -69,6 +69,7 @@ private:
     bool m_disableExpectHeader;
     bool m_allowRedirects;
     static std::atomic<bool> isInit;
+    std::shared_ptr<smithy::components::tracing::TelemetryProvider> m_telemetryProvider;
 };
 
 using PlatformHttpClient = CurlHttpClient;

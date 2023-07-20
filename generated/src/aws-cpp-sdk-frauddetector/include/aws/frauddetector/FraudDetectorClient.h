@@ -30,9 +30,10 @@ namespace FraudDetector
    * libraries provide basic functions that automatically take care of tasks such as
    * cryptographically signing your requests, retrying requests, and handling error
    * responses, so that it is easier for you to get started. For more information
-   * about the AWS SDKs, see <a
-   * href="https://docs.aws.amazon.com/https:/aws.amazon.com/tools/">Tools to build
-   * on AWS</a>. </p>
+   * about the AWS SDKs, go to <a
+   * href="https://aws.amazon.com/developer/tools/">Tools to build on AWS</a> page,
+   * scroll down to the <b>SDK</b> section, and choose plus (+) sign to expand the
+   * section. </p>
    */
   class AWS_FRAUDDETECTOR_API FraudDetectorClient : public Aws::Client::AWSJsonClient, public Aws::Client::ClientWithAsyncTemplateMethods<FraudDetectorClient>
   {
@@ -538,7 +539,9 @@ namespace FraudDetector
         /**
          * <p>Deletes the specified event.</p> <p>When you delete an event, Amazon Fraud
          * Detector permanently deletes that event and the event data is no longer stored
-         * in Amazon Fraud Detector.</p><p><h3>See Also:</h3>   <a
+         * in Amazon Fraud Detector. If <code>deleteAuditHistory</code> is
+         * <code>True</code>, event data is available through search for up to 30 seconds
+         * after the delete operation is completed.</p><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/frauddetector-2019-11-15/DeleteEvent">AWS
          * API Reference</a></p>
          */

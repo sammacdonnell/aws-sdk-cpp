@@ -414,7 +414,20 @@ namespace Connect
          * href="https://docs.aws.amazon.com/connect/latest/APIReference/API_DescribePhoneNumber.html">DescribePhoneNumber</a>
          * API to verify the status of a previous <a
          * href="https://docs.aws.amazon.com/connect/latest/APIReference/API_ClaimPhoneNumber.html">ClaimPhoneNumber</a>
-         * operation.</p> <p><h3>See Also:</h3>   <a
+         * operation.</p>  <p>If you plan to claim and release numbers
+         * frequently during a 30 day period, contact us for a service quota exception.
+         * Otherwise, it is possible you will be blocked from claiming and releasing any
+         * more numbers until 30 days past the oldest number released has expired.</p>
+         * <p>By default you can claim and release up to 200% of your maximum number of
+         * active phone numbers during any 30 day period. If you claim and release phone
+         * numbers using the UI or API during a rolling 30 day cycle that exceeds 200% of
+         * your phone number service level quota, you will be blocked from claiming any
+         * more numbers until 30 days past the oldest number released has expired. </p>
+         * <p>For example, if you already have 99 claimed numbers and a service level quota
+         * of 99 phone numbers, and in any 30 day period you release 99, claim 99, and then
+         * release 99, you will have exceeded the 200% limit. At that point you are blocked
+         * from claiming any more numbers until you open an Amazon Web Services support
+         * ticket.</p><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/connect-2017-08-08/ClaimPhoneNumber">AWS
          * API Reference</a></p>
          */
@@ -663,6 +676,35 @@ namespace Connect
         }
 
         /**
+         * <p>Creates a prompt. For more information about prompts, such as supported file
+         * types and maximum length, see <a
+         * href="https://docs.aws.amazon.com/connect/latest/adminguide/prompts.html">Create
+         * prompts</a> in the <i>Amazon Connect Administrator's Guide</i>.</p><p><h3>See
+         * Also:</h3>   <a
+         * href="http://docs.aws.amazon.com/goto/WebAPI/connect-2017-08-08/CreatePrompt">AWS
+         * API Reference</a></p>
+         */
+        virtual Model::CreatePromptOutcome CreatePrompt(const Model::CreatePromptRequest& request) const;
+
+        /**
+         * A Callable wrapper for CreatePrompt that returns a future to the operation so that it can be executed in parallel to other requests.
+         */
+        template<typename CreatePromptRequestT = Model::CreatePromptRequest>
+        Model::CreatePromptOutcomeCallable CreatePromptCallable(const CreatePromptRequestT& request) const
+        {
+            return SubmitCallable(&ConnectClient::CreatePrompt, request);
+        }
+
+        /**
+         * An Async wrapper for CreatePrompt that queues the request into a thread executor and triggers associated callback when operation has finished.
+         */
+        template<typename CreatePromptRequestT = Model::CreatePromptRequest>
+        void CreatePromptAsync(const CreatePromptRequestT& request, const CreatePromptResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context = nullptr) const
+        {
+            return SubmitAsync(&ConnectClient::CreatePrompt, request, handler, context);
+        }
+
+        /**
          * <p>This API is in preview release for Amazon Connect and is subject to
          * change.</p> <p>Creates a new queue for the specified Amazon Connect
          * instance.</p>  <p>If the number being used in the input is claimed to
@@ -675,8 +717,13 @@ namespace Connect
          * distribution group and you are calling this API using an instance in the
          * alternate Amazon Web Services Region associated with the traffic distribution
          * group, you must provide a full phone number ARN. If a UUID is provided in this
-         * scenario, you will receive a <code>ResourceNotFoundException</code>.</p>
-         * <p><h3>See Also:</h3>   <a
+         * scenario, you will receive a <code>ResourceNotFoundException</code>.</p> <p>Only
+         * use the phone number ARN format that doesn't contain <code>instance</code> in
+         * the path, for example,
+         * <code>arn:aws:connect:us-east-1:1234567890:phone-number/uuid</code>. This is the
+         * same ARN format that is returned when you call the <a
+         * href="https://docs.aws.amazon.com/connect/latest/APIReference/API_ListPhoneNumbersV2.html">ListPhoneNumbersV2</a>
+         * API.</p> <p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/connect-2017-08-08/CreateQueue">AWS
          * API Reference</a></p>
          */
@@ -1189,6 +1236,56 @@ namespace Connect
         }
 
         /**
+         * <p>Deletes a prompt.</p><p><h3>See Also:</h3>   <a
+         * href="http://docs.aws.amazon.com/goto/WebAPI/connect-2017-08-08/DeletePrompt">AWS
+         * API Reference</a></p>
+         */
+        virtual Model::DeletePromptOutcome DeletePrompt(const Model::DeletePromptRequest& request) const;
+
+        /**
+         * A Callable wrapper for DeletePrompt that returns a future to the operation so that it can be executed in parallel to other requests.
+         */
+        template<typename DeletePromptRequestT = Model::DeletePromptRequest>
+        Model::DeletePromptOutcomeCallable DeletePromptCallable(const DeletePromptRequestT& request) const
+        {
+            return SubmitCallable(&ConnectClient::DeletePrompt, request);
+        }
+
+        /**
+         * An Async wrapper for DeletePrompt that queues the request into a thread executor and triggers associated callback when operation has finished.
+         */
+        template<typename DeletePromptRequestT = Model::DeletePromptRequest>
+        void DeletePromptAsync(const DeletePromptRequestT& request, const DeletePromptResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context = nullptr) const
+        {
+            return SubmitAsync(&ConnectClient::DeletePrompt, request, handler, context);
+        }
+
+        /**
+         * <p>Deletes a queue.</p><p><h3>See Also:</h3>   <a
+         * href="http://docs.aws.amazon.com/goto/WebAPI/connect-2017-08-08/DeleteQueue">AWS
+         * API Reference</a></p>
+         */
+        virtual Model::DeleteQueueOutcome DeleteQueue(const Model::DeleteQueueRequest& request) const;
+
+        /**
+         * A Callable wrapper for DeleteQueue that returns a future to the operation so that it can be executed in parallel to other requests.
+         */
+        template<typename DeleteQueueRequestT = Model::DeleteQueueRequest>
+        Model::DeleteQueueOutcomeCallable DeleteQueueCallable(const DeleteQueueRequestT& request) const
+        {
+            return SubmitCallable(&ConnectClient::DeleteQueue, request);
+        }
+
+        /**
+         * An Async wrapper for DeleteQueue that queues the request into a thread executor and triggers associated callback when operation has finished.
+         */
+        template<typename DeleteQueueRequestT = Model::DeleteQueueRequest>
+        void DeleteQueueAsync(const DeleteQueueRequestT& request, const DeleteQueueResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context = nullptr) const
+        {
+            return SubmitAsync(&ConnectClient::DeleteQueue, request, handler, context);
+        }
+
+        /**
          * <p>Deletes a quick connect.</p><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/connect-2017-08-08/DeleteQuickConnect">AWS
          * API Reference</a></p>
@@ -1211,6 +1308,31 @@ namespace Connect
         void DeleteQuickConnectAsync(const DeleteQuickConnectRequestT& request, const DeleteQuickConnectResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context = nullptr) const
         {
             return SubmitAsync(&ConnectClient::DeleteQuickConnect, request, handler, context);
+        }
+
+        /**
+         * <p>Deletes a routing profile.</p><p><h3>See Also:</h3>   <a
+         * href="http://docs.aws.amazon.com/goto/WebAPI/connect-2017-08-08/DeleteRoutingProfile">AWS
+         * API Reference</a></p>
+         */
+        virtual Model::DeleteRoutingProfileOutcome DeleteRoutingProfile(const Model::DeleteRoutingProfileRequest& request) const;
+
+        /**
+         * A Callable wrapper for DeleteRoutingProfile that returns a future to the operation so that it can be executed in parallel to other requests.
+         */
+        template<typename DeleteRoutingProfileRequestT = Model::DeleteRoutingProfileRequest>
+        Model::DeleteRoutingProfileOutcomeCallable DeleteRoutingProfileCallable(const DeleteRoutingProfileRequestT& request) const
+        {
+            return SubmitCallable(&ConnectClient::DeleteRoutingProfile, request);
+        }
+
+        /**
+         * An Async wrapper for DeleteRoutingProfile that queues the request into a thread executor and triggers associated callback when operation has finished.
+         */
+        template<typename DeleteRoutingProfileRequestT = Model::DeleteRoutingProfileRequest>
+        void DeleteRoutingProfileAsync(const DeleteRoutingProfileRequestT& request, const DeleteRoutingProfileResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context = nullptr) const
+        {
+            return SubmitAsync(&ConnectClient::DeleteRoutingProfile, request, handler, context);
         }
 
         /**
@@ -1733,6 +1855,31 @@ namespace Connect
         void DescribePhoneNumberAsync(const DescribePhoneNumberRequestT& request, const DescribePhoneNumberResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context = nullptr) const
         {
             return SubmitAsync(&ConnectClient::DescribePhoneNumber, request, handler, context);
+        }
+
+        /**
+         * <p>Describes the prompt.</p><p><h3>See Also:</h3>   <a
+         * href="http://docs.aws.amazon.com/goto/WebAPI/connect-2017-08-08/DescribePrompt">AWS
+         * API Reference</a></p>
+         */
+        virtual Model::DescribePromptOutcome DescribePrompt(const Model::DescribePromptRequest& request) const;
+
+        /**
+         * A Callable wrapper for DescribePrompt that returns a future to the operation so that it can be executed in parallel to other requests.
+         */
+        template<typename DescribePromptRequestT = Model::DescribePromptRequest>
+        Model::DescribePromptOutcomeCallable DescribePromptCallable(const DescribePromptRequestT& request) const
+        {
+            return SubmitCallable(&ConnectClient::DescribePrompt, request);
+        }
+
+        /**
+         * An Async wrapper for DescribePrompt that queues the request into a thread executor and triggers associated callback when operation has finished.
+         */
+        template<typename DescribePromptRequestT = Model::DescribePromptRequest>
+        void DescribePromptAsync(const DescribePromptRequestT& request, const DescribePromptResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context = nullptr) const
+        {
+            return SubmitAsync(&ConnectClient::DescribePrompt, request, handler, context);
         }
 
         /**
@@ -2421,13 +2568,12 @@ namespace Connect
          * the previous version of this API. It has new metrics, offers filtering at a
          * metric level, and offers the ability to filter and group data by channels,
          * queues, routing profiles, agents, and agent hierarchy levels. It can retrieve
-         * historical data for the last 14 days, in 24-hour intervals.</p> <p>For a
+         * historical data for the last 35 days, in 24-hour intervals.</p> <p>For a
          * description of the historical metrics that are supported by
          * <code>GetMetricDataV2</code> and <code>GetMetricData</code>, see <a
          * href="https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html">Historical
-         * metrics definitions</a> in the <i>Amazon Connect Administrator's Guide</i>. </p>
-         * <p>This API is not available in the Amazon Web Services GovCloud (US)
-         * Regions.</p><p><h3>See Also:</h3>   <a
+         * metrics definitions</a> in the <i>Amazon Connect Administrator's
+         * Guide</i>.</p><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/connect-2017-08-08/GetMetricDataV2">AWS
          * API Reference</a></p>
          */
@@ -2449,6 +2595,31 @@ namespace Connect
         void GetMetricDataV2Async(const GetMetricDataV2RequestT& request, const GetMetricDataV2ResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context = nullptr) const
         {
             return SubmitAsync(&ConnectClient::GetMetricDataV2, request, handler, context);
+        }
+
+        /**
+         * <p>Gets the prompt file.</p><p><h3>See Also:</h3>   <a
+         * href="http://docs.aws.amazon.com/goto/WebAPI/connect-2017-08-08/GetPromptFile">AWS
+         * API Reference</a></p>
+         */
+        virtual Model::GetPromptFileOutcome GetPromptFile(const Model::GetPromptFileRequest& request) const;
+
+        /**
+         * A Callable wrapper for GetPromptFile that returns a future to the operation so that it can be executed in parallel to other requests.
+         */
+        template<typename GetPromptFileRequestT = Model::GetPromptFileRequest>
+        Model::GetPromptFileOutcomeCallable GetPromptFileCallable(const GetPromptFileRequestT& request) const
+        {
+            return SubmitCallable(&ConnectClient::GetPromptFile, request);
+        }
+
+        /**
+         * An Async wrapper for GetPromptFile that queues the request into a thread executor and triggers associated callback when operation has finished.
+         */
+        template<typename GetPromptFileRequestT = Model::GetPromptFileRequest>
+        void GetPromptFileAsync(const GetPromptFileRequestT& request, const GetPromptFileResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context = nullptr) const
+        {
+            return SubmitAsync(&ConnectClient::GetPromptFile, request, handler, context);
         }
 
         /**
@@ -3545,7 +3716,20 @@ namespace Connect
          * <p>After releasing a phone number, the phone number enters into a cooldown
          * period of 30 days. It cannot be searched for or claimed again until the period
          * has ended. If you accidentally release a phone number, contact Amazon Web
-         * Services Support.</p> <p><h3>See Also:</h3>   <a
+         * Services Support.</p>  <p>If you plan to claim and release numbers
+         * frequently during a 30 day period, contact us for a service quota exception.
+         * Otherwise, it is possible you will be blocked from claiming and releasing any
+         * more numbers until 30 days past the oldest number released has expired.</p>
+         * <p>By default you can claim and release up to 200% of your maximum number of
+         * active phone numbers during any 30 day period. If you claim and release phone
+         * numbers using the UI or API during a rolling 30 day cycle that exceeds 200% of
+         * your phone number service level quota, you will be blocked from claiming any
+         * more numbers until 30 days past the oldest number released has expired. </p>
+         * <p>For example, if you already have 99 claimed numbers and a service level quota
+         * of 99 phone numbers, and in any 30 day period you release 99, claim 99, and then
+         * release 99, you will have exceeded the 200% limit. At that point you are blocked
+         * from claiming any more numbers until you open an Amazon Web Services support
+         * ticket.</p><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/connect-2017-08-08/ReleasePhoneNumber">AWS
          * API Reference</a></p>
          */
@@ -3601,8 +3785,8 @@ namespace Connect
 
         /**
          * <p>When a contact is being recorded, and the recording has been suspended using
-         * SuspendContactRecording, this API resumes recording the call.</p> <p>Only voice
-         * recordings are supported at this time.</p><p><h3>See Also:</h3>   <a
+         * SuspendContactRecording, this API resumes recording the call or screen.</p>
+         * <p>Voice and screen recordings are supported.</p><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/connect-2017-08-08/ResumeContactRecording">AWS
          * API Reference</a></p>
          */
@@ -3656,8 +3840,59 @@ namespace Connect
         }
 
         /**
-         * <p>This API is in preview release for Amazon Connect and is subject to
-         * change.</p> <p>Searches queues in an Amazon Connect instance, with optional
+         * <p>Searches the hours of operation in an Amazon Connect instance, with optional
+         * filtering.</p><p><h3>See Also:</h3>   <a
+         * href="http://docs.aws.amazon.com/goto/WebAPI/connect-2017-08-08/SearchHoursOfOperations">AWS
+         * API Reference</a></p>
+         */
+        virtual Model::SearchHoursOfOperationsOutcome SearchHoursOfOperations(const Model::SearchHoursOfOperationsRequest& request) const;
+
+        /**
+         * A Callable wrapper for SearchHoursOfOperations that returns a future to the operation so that it can be executed in parallel to other requests.
+         */
+        template<typename SearchHoursOfOperationsRequestT = Model::SearchHoursOfOperationsRequest>
+        Model::SearchHoursOfOperationsOutcomeCallable SearchHoursOfOperationsCallable(const SearchHoursOfOperationsRequestT& request) const
+        {
+            return SubmitCallable(&ConnectClient::SearchHoursOfOperations, request);
+        }
+
+        /**
+         * An Async wrapper for SearchHoursOfOperations that queues the request into a thread executor and triggers associated callback when operation has finished.
+         */
+        template<typename SearchHoursOfOperationsRequestT = Model::SearchHoursOfOperationsRequest>
+        void SearchHoursOfOperationsAsync(const SearchHoursOfOperationsRequestT& request, const SearchHoursOfOperationsResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context = nullptr) const
+        {
+            return SubmitAsync(&ConnectClient::SearchHoursOfOperations, request, handler, context);
+        }
+
+        /**
+         * <p>Searches prompts in an Amazon Connect instance, with optional
+         * filtering.</p><p><h3>See Also:</h3>   <a
+         * href="http://docs.aws.amazon.com/goto/WebAPI/connect-2017-08-08/SearchPrompts">AWS
+         * API Reference</a></p>
+         */
+        virtual Model::SearchPromptsOutcome SearchPrompts(const Model::SearchPromptsRequest& request) const;
+
+        /**
+         * A Callable wrapper for SearchPrompts that returns a future to the operation so that it can be executed in parallel to other requests.
+         */
+        template<typename SearchPromptsRequestT = Model::SearchPromptsRequest>
+        Model::SearchPromptsOutcomeCallable SearchPromptsCallable(const SearchPromptsRequestT& request) const
+        {
+            return SubmitCallable(&ConnectClient::SearchPrompts, request);
+        }
+
+        /**
+         * An Async wrapper for SearchPrompts that queues the request into a thread executor and triggers associated callback when operation has finished.
+         */
+        template<typename SearchPromptsRequestT = Model::SearchPromptsRequest>
+        void SearchPromptsAsync(const SearchPromptsRequestT& request, const SearchPromptsResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context = nullptr) const
+        {
+            return SubmitAsync(&ConnectClient::SearchPrompts, request, handler, context);
+        }
+
+        /**
+         * <p>Searches queues in an Amazon Connect instance, with optional
          * filtering.</p><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/connect-2017-08-08/SearchQueues">AWS
          * API Reference</a></p>
@@ -3683,9 +3918,60 @@ namespace Connect
         }
 
         /**
-         * <p>This API is in preview release for Amazon Connect and is subject to
-         * change.</p> <p>Searches routing profiles in an Amazon Connect instance, with
-         * optional filtering.</p><p><h3>See Also:</h3>   <a
+         * <p>Searches quick connects in an Amazon Connect instance, with optional
+         * filtering.</p><p><h3>See Also:</h3>   <a
+         * href="http://docs.aws.amazon.com/goto/WebAPI/connect-2017-08-08/SearchQuickConnects">AWS
+         * API Reference</a></p>
+         */
+        virtual Model::SearchQuickConnectsOutcome SearchQuickConnects(const Model::SearchQuickConnectsRequest& request) const;
+
+        /**
+         * A Callable wrapper for SearchQuickConnects that returns a future to the operation so that it can be executed in parallel to other requests.
+         */
+        template<typename SearchQuickConnectsRequestT = Model::SearchQuickConnectsRequest>
+        Model::SearchQuickConnectsOutcomeCallable SearchQuickConnectsCallable(const SearchQuickConnectsRequestT& request) const
+        {
+            return SubmitCallable(&ConnectClient::SearchQuickConnects, request);
+        }
+
+        /**
+         * An Async wrapper for SearchQuickConnects that queues the request into a thread executor and triggers associated callback when operation has finished.
+         */
+        template<typename SearchQuickConnectsRequestT = Model::SearchQuickConnectsRequest>
+        void SearchQuickConnectsAsync(const SearchQuickConnectsRequestT& request, const SearchQuickConnectsResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context = nullptr) const
+        {
+            return SubmitAsync(&ConnectClient::SearchQuickConnects, request, handler, context);
+        }
+
+        /**
+         * <p>Searches tags used in an Amazon Connect instance using optional search
+         * criteria.</p><p><h3>See Also:</h3>   <a
+         * href="http://docs.aws.amazon.com/goto/WebAPI/connect-2017-08-08/SearchResourceTags">AWS
+         * API Reference</a></p>
+         */
+        virtual Model::SearchResourceTagsOutcome SearchResourceTags(const Model::SearchResourceTagsRequest& request) const;
+
+        /**
+         * A Callable wrapper for SearchResourceTags that returns a future to the operation so that it can be executed in parallel to other requests.
+         */
+        template<typename SearchResourceTagsRequestT = Model::SearchResourceTagsRequest>
+        Model::SearchResourceTagsOutcomeCallable SearchResourceTagsCallable(const SearchResourceTagsRequestT& request) const
+        {
+            return SubmitCallable(&ConnectClient::SearchResourceTags, request);
+        }
+
+        /**
+         * An Async wrapper for SearchResourceTags that queues the request into a thread executor and triggers associated callback when operation has finished.
+         */
+        template<typename SearchResourceTagsRequestT = Model::SearchResourceTagsRequest>
+        void SearchResourceTagsAsync(const SearchResourceTagsRequestT& request, const SearchResourceTagsResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context = nullptr) const
+        {
+            return SubmitAsync(&ConnectClient::SearchResourceTags, request, handler, context);
+        }
+
+        /**
+         * <p>Searches routing profiles in an Amazon Connect instance, with optional
+         * filtering.</p><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/connect-2017-08-08/SearchRoutingProfiles">AWS
          * API Reference</a></p>
          */
@@ -3710,9 +3996,8 @@ namespace Connect
         }
 
         /**
-         * <p>This API is in preview release for Amazon Connect and is subject to
-         * change.</p> <p>Searches security profiles in an Amazon Connect instance, with
-         * optional filtering.</p><p><h3>See Also:</h3>   <a
+         * <p>Searches security profiles in an Amazon Connect instance, with optional
+         * filtering.</p><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/connect-2017-08-08/SearchSecurityProfiles">AWS
          * API Reference</a></p>
          */
@@ -4116,12 +4401,12 @@ namespace Connect
         }
 
         /**
-         * <p>When a contact is being recorded, this API suspends recording the call. For
-         * example, you might suspend the call recording while collecting sensitive
-         * information, such as a credit card number. Then use ResumeContactRecording to
-         * restart recording. </p> <p>The period of time that the recording is suspended is
-         * filled with silence in the final recording. </p> <p>Only voice recordings are
-         * supported at this time.</p><p><h3>See Also:</h3>   <a
+         * <p>When a contact is being recorded, this API suspends recording the call or
+         * screen. For example, you might suspend the call or screen recording while
+         * collecting sensitive information, such as a credit card number. Then use
+         * ResumeContactRecording to restart recording.</p> <p>The period of time that the
+         * recording is suspended is filled with silence in the final recording.</p>
+         * <p>Voice and screen recordings are supported.</p><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/connect-2017-08-08/SuspendContactRecording">AWS
          * API Reference</a></p>
          */
@@ -4668,7 +4953,11 @@ namespace Connect
          * <p>Updates your claimed phone number from its current Amazon Connect instance or
          * traffic distribution group to another Amazon Connect instance or traffic
          * distribution group in the same Amazon Web Services Region.</p> 
-         * <p>You can call <a
+         * <p>After using this API, you must verify that the phone number is attached to
+         * the correct flow in the target instance or traffic distribution group. You need
+         * to do this because the API switches only the phone number to a new instance or
+         * traffic distribution group. It doesn't migrate the flow configuration of the
+         * phone number, too.</p> <p>You can call <a
          * href="https://docs.aws.amazon.com/connect/latest/APIReference/API_DescribePhoneNumber.html">DescribePhoneNumber</a>
          * API to verify the status of a previous <a
          * href="https://docs.aws.amazon.com/connect/latest/APIReference/API_UpdatePhoneNumber.html">UpdatePhoneNumber</a>
@@ -4694,6 +4983,31 @@ namespace Connect
         void UpdatePhoneNumberAsync(const UpdatePhoneNumberRequestT& request, const UpdatePhoneNumberResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context = nullptr) const
         {
             return SubmitAsync(&ConnectClient::UpdatePhoneNumber, request, handler, context);
+        }
+
+        /**
+         * <p>Updates a prompt.</p><p><h3>See Also:</h3>   <a
+         * href="http://docs.aws.amazon.com/goto/WebAPI/connect-2017-08-08/UpdatePrompt">AWS
+         * API Reference</a></p>
+         */
+        virtual Model::UpdatePromptOutcome UpdatePrompt(const Model::UpdatePromptRequest& request) const;
+
+        /**
+         * A Callable wrapper for UpdatePrompt that returns a future to the operation so that it can be executed in parallel to other requests.
+         */
+        template<typename UpdatePromptRequestT = Model::UpdatePromptRequest>
+        Model::UpdatePromptOutcomeCallable UpdatePromptCallable(const UpdatePromptRequestT& request) const
+        {
+            return SubmitCallable(&ConnectClient::UpdatePrompt, request);
+        }
+
+        /**
+         * An Async wrapper for UpdatePrompt that queues the request into a thread executor and triggers associated callback when operation has finished.
+         */
+        template<typename UpdatePromptRequestT = Model::UpdatePromptRequest>
+        void UpdatePromptAsync(const UpdatePromptRequestT& request, const UpdatePromptResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context = nullptr) const
+        {
+            return SubmitAsync(&ConnectClient::UpdatePrompt, request, handler, context);
         }
 
         /**
@@ -4791,8 +5105,13 @@ namespace Connect
          * distribution group and you are calling this API using an instance in the
          * alternate Amazon Web Services Region associated with the traffic distribution
          * group, you must provide a full phone number ARN. If a UUID is provided in this
-         * scenario, you will receive a <code>ResourceNotFoundException</code>.</p>
-         * <p><h3>See Also:</h3>   <a
+         * scenario, you will receive a <code>ResourceNotFoundException</code>.</p> <p>Only
+         * use the phone number ARN format that doesn't contain <code>instance</code> in
+         * the path, for example,
+         * <code>arn:aws:connect:us-east-1:1234567890:phone-number/uuid</code>. This is the
+         * same ARN format that is returned when you call the <a
+         * href="https://docs.aws.amazon.com/connect/latest/APIReference/API_ListPhoneNumbersV2.html">ListPhoneNumbersV2</a>
+         * API.</p> <p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/connect-2017-08-08/UpdateQueueOutboundCallerConfig">AWS
          * API Reference</a></p>
          */

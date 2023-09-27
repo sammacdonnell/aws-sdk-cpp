@@ -115,7 +115,8 @@ You can download and install aws-sdk-cpp using the [vcpkg](https://github.com/Mi
     ./vcpkg integrate install
     ./vcpkg install aws-sdk-cpp
 
-The aws-sdk-cpp port in vcpkg is kept up to date by Microsoft team members and community contributors. If the version is out of date, please [create an issue or pull request](https://github.com/Microsoft/vcpkg) on the vcpkg repository.
+> [!WARNING]  
+> The aws-sdk-cpp port in vcpkg is kept up to date by Microsoft team members and community contributors. > If the version is out of date, please [create an issue or pull request](https://github.com/Microsoft/vcpkg) on the vcpkg repository.
 
 # Issues and Contributions
 We welcome all kinds of contributions, check [this guideline](./CONTRIBUTING.md) to learn how you can contribute or report issues.
@@ -153,3 +154,4 @@ Please make sure to check out our resources too before opening an issue:
 * [Coding Standards](./docs/CODING_STANDARDS.md)
 * [License](./LICENSE)
 * [Code of Conduct](./CODE_OF_CONDUCT.md)
+

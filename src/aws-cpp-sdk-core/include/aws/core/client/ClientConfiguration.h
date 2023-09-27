@@ -167,6 +167,11 @@ namespace Aws
              * Override the http endpoint used to talk to a service.
              */
             Aws::String endpointOverride;
+
+            /**
+             * Allow HTTP client to discover system proxy setting. Off by default for legacy reasons.
+             */
+            bool allowSystemProxy = false;
             /**
              * If you have users going through a proxy, set the proxy scheme here. Default HTTP
              */
@@ -299,7 +304,7 @@ namespace Aws
             bool enableHttpClientTrace;
 
             /**
-             * profileName in config file that will be used by this object to reslove more configurations.
+             * profileName in config file that will be used by this object to resolve more configurations.
              */
             Aws::String profileName;
 

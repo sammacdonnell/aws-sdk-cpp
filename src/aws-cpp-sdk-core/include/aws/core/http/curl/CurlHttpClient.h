@@ -29,6 +29,9 @@ public:
 
     using Base = HttpClient;
 
+    //sets level of logging
+    int CurlDebugCallback(CURL *handle, curl_infotype type, char *data, size_t size, void *userptr)
+
     //Creates client, initializes curl handle if it hasn't been created already.
     CurlHttpClient(const Aws::Client::ClientConfiguration& clientConfig);
 

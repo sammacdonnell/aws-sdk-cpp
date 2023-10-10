@@ -549,7 +549,7 @@ Aws::String CurlInfoTypeToString(curl_infotype type)
     }
 }
 
-int CurlDebugCallback(CURL *handle, curl_infotype type, char *data, size_t size, void *userptr)
+int CurlHttpClient::CurlDebugCallback(CURL *handle, curl_infotype type, char *data, size_t size, void *userptr)
 {
     AWS_UNREFERENCED_PARAM(handle);
     AWS_UNREFERENCED_PARAM(userptr);

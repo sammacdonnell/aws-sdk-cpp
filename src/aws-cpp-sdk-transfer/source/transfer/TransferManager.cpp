@@ -336,7 +336,7 @@ namespace Aws
             context->rootDirectory = directory;
             context->prefix = prefix;
 
-            m_transferConfig.s3Client->ListObjectsV2Async(request, handler, context);
+            m_transferConfig.s3Client->ListObjectsV2Async<2>(request, handler, context);
         }
 
         void TransferManager::DoMultiPartUpload(const std::shared_ptr<TransferHandle>& handle)
@@ -480,7 +480,7 @@ namespace Aws
                         self->RemoveTask(uploadTask);
                     };
 
-                    m_transferConfig.s3Client->UploadPartAsync(uploadPartRequest, callback, asyncContext);
+                    m_transferConfig.s3Client->UploadPartAsync<2>(uploadPartRequest, callback, asyncContext);
                     sentBytes += lengthToWrite;
 
                     ++partsIter;
@@ -1212,7 +1212,7 @@ namespace Aws
                         self->RemoveTask(listObjectTask);
                     };
 
-                    m_transferConfig.s3Client->ListObjectsV2Async(requestCpy, handler, context);
+                    m_transferConfig.s3Client->ListObjectsV2Async<2>(requestCpy, handler, context);
                 }
 
                 //this can contain matching directories or actual objects to download. If it's a directory, go ahead and create a local directory then

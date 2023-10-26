@@ -90,6 +90,7 @@ namespace ${rootNamespace}
     {
     public:
         typedef Aws::Client::AWSXMLClient BASECLASS;
+        using XmlOutcome = Aws::Client::XmlOutcome;
         static const char* SERVICE_NAME;
         static const char* ALLOCATION_TAG;
 

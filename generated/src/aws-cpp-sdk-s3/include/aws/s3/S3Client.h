@@ -43,6 +43,7 @@ namespace Aws
     {
     public:
         typedef Aws::Client::AWSXMLClient BASECLASS;
+        using XmlOutcome = Aws::Client::XmlOutcome;
         static const char* SERVICE_NAME;
         static const char* ALLOCATION_TAG;
 
@@ -136,6 +137,9 @@ namespace Aws
          */
         virtual Model::AbortMultipartUploadOutcome AbortMultipartUpload(const Model::AbortMultipartUploadRequest& request) const;
 
+        void SubmitOpAbortMultipartUpload(Model::AbortMultipartUploadRequest const * const pRequest,
+                                      std::function<void(XmlOutcome)> responseHandler, std::shared_ptr<Aws::Utils::Threading::Executor> pExecutor) const;
+
         /**
          * A Callable wrapper for AbortMultipartUpload that returns a future to the operation so that it can be executed in parallel to other requests.
          */
@@ -148,10 +152,13 @@ namespace Aws
         /**
          * An Async wrapper for AbortMultipartUpload that queues the request into a thread executor and triggers associated callback when operation has finished.
          */
-        template<typename AbortMultipartUploadRequestT = Model::AbortMultipartUploadRequest>
+        template<int version = 1, typename AbortMultipartUploadRequestT = Model::AbortMultipartUploadRequest>
         void AbortMultipartUploadAsync(const AbortMultipartUploadRequestT& request, const AbortMultipartUploadResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context = nullptr) const
         {
-            return SubmitAsync(&S3Client::AbortMultipartUpload, request, handler, context);
+            if(version == 2)
+              return SubmitAsyncV2< AbortMultipartUploadRequestT, Model::AbortMultipartUploadOutcome, XmlOutcome>(&S3Client::SubmitOpAbortMultipartUpload, request, handler, context);
+            else
+              return SubmitAsync(&S3Client::AbortMultipartUpload, request, handler, context);
         }
 
         /**
@@ -224,6 +231,9 @@ namespace Aws
          */
         virtual Model::CompleteMultipartUploadOutcome CompleteMultipartUpload(const Model::CompleteMultipartUploadRequest& request) const;
 
+        void SubmitOpCompleteMultipartUpload(Model::CompleteMultipartUploadRequest const * const pRequest,
+                                      std::function<void(XmlOutcome)> responseHandler, std::shared_ptr<Aws::Utils::Threading::Executor> pExecutor) const;
+
         /**
          * A Callable wrapper for CompleteMultipartUpload that returns a future to the operation so that it can be executed in parallel to other requests.
          */
@@ -236,10 +246,13 @@ namespace Aws
         /**
          * An Async wrapper for CompleteMultipartUpload that queues the request into a thread executor and triggers associated callback when operation has finished.
          */
-        template<typename CompleteMultipartUploadRequestT = Model::CompleteMultipartUploadRequest>
+        template<int version = 1, typename CompleteMultipartUploadRequestT = Model::CompleteMultipartUploadRequest>
         void CompleteMultipartUploadAsync(const CompleteMultipartUploadRequestT& request, const CompleteMultipartUploadResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context = nullptr) const
         {
-            return SubmitAsync(&S3Client::CompleteMultipartUpload, request, handler, context);
+            if(version == 2)
+              return SubmitAsyncV2< CompleteMultipartUploadRequestT, Model::CompleteMultipartUploadOutcome, XmlOutcome>(&S3Client::SubmitOpCompleteMultipartUpload, request, handler, context);
+            else
+              return SubmitAsync(&S3Client::CompleteMultipartUpload, request, handler, context);
         }
 
         /**
@@ -411,6 +424,9 @@ namespace Aws
          */
         virtual Model::CopyObjectOutcome CopyObject(const Model::CopyObjectRequest& request) const;
 
+        void SubmitOpCopyObject(Model::CopyObjectRequest const * const pRequest,
+                                      std::function<void(XmlOutcome)> responseHandler, std::shared_ptr<Aws::Utils::Threading::Executor> pExecutor) const;
+
         /**
          * A Callable wrapper for CopyObject that returns a future to the operation so that it can be executed in parallel to other requests.
          */
@@ -506,6 +522,9 @@ namespace Aws
          */
         virtual Model::CreateBucketOutcome CreateBucket(const Model::CreateBucketRequest& request) const;
 
+        void SubmitOpCreateBucket(Model::CreateBucketRequest const * const pRequest,
+                                      std::function<void(XmlOutcome)> responseHandler, std::shared_ptr<Aws::Utils::Threading::Executor> pExecutor) const;
+
         /**
          * A Callable wrapper for CreateBucket that returns a future to the operation so that it can be executed in parallel to other requests.
          */
@@ -518,10 +537,13 @@ namespace Aws
         /**
          * An Async wrapper for CreateBucket that queues the request into a thread executor and triggers associated callback when operation has finished.
          */
-        template<typename CreateBucketRequestT = Model::CreateBucketRequest>
+        template<int version = 1, typename CreateBucketRequestT = Model::CreateBucketRequest>
         void CreateBucketAsync(const CreateBucketRequestT& request, const CreateBucketResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context = nullptr) const
         {
-            return SubmitAsync(&S3Client::CreateBucket, request, handler, context);
+            if(version == 2)
+              return SubmitAsyncV2< CreateBucketRequestT, Model::CreateBucketOutcome, XmlOutcome>(&S3Client::SubmitOpCreateBucket, request, handler, context);
+            else
+              return SubmitAsync(&S3Client::CreateBucket, request, handler, context);
         }
 
         /**
@@ -708,6 +730,9 @@ namespace Aws
          */
         virtual Model::CreateMultipartUploadOutcome CreateMultipartUpload(const Model::CreateMultipartUploadRequest& request) const;
 
+        void SubmitOpCreateMultipartUpload(Model::CreateMultipartUploadRequest const * const pRequest,
+                                      std::function<void(XmlOutcome)> responseHandler, std::shared_ptr<Aws::Utils::Threading::Executor> pExecutor) const;
+
         /**
          * A Callable wrapper for CreateMultipartUpload that returns a future to the operation so that it can be executed in parallel to other requests.
          */
@@ -720,10 +745,13 @@ namespace Aws
         /**
          * An Async wrapper for CreateMultipartUpload that queues the request into a thread executor and triggers associated callback when operation has finished.
          */
-        template<typename CreateMultipartUploadRequestT = Model::CreateMultipartUploadRequest>
+        template<int version = 1, typename CreateMultipartUploadRequestT = Model::CreateMultipartUploadRequest>
         void CreateMultipartUploadAsync(const CreateMultipartUploadRequestT& request, const CreateMultipartUploadResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context = nullptr) const
         {
-            return SubmitAsync(&S3Client::CreateMultipartUpload, request, handler, context);
+            if(version == 2)
+              return SubmitAsyncV2< CreateMultipartUploadRequestT, Model::CreateMultipartUploadOutcome, XmlOutcome>(&S3Client::SubmitOpCreateMultipartUpload, request, handler, context);
+            else
+              return SubmitAsync(&S3Client::CreateMultipartUpload, request, handler, context);
         }
 
         /**
@@ -740,6 +768,9 @@ namespace Aws
          */
         virtual Model::DeleteBucketOutcome DeleteBucket(const Model::DeleteBucketRequest& request) const;
 
+        void SubmitOpDeleteBucket(Model::DeleteBucketRequest const * const pRequest,
+                                      std::function<void(XmlOutcome)> responseHandler, std::shared_ptr<Aws::Utils::Threading::Executor> pExecutor) const;
+
         /**
          * A Callable wrapper for DeleteBucket that returns a future to the operation so that it can be executed in parallel to other requests.
          */
@@ -752,10 +783,13 @@ namespace Aws
         /**
          * An Async wrapper for DeleteBucket that queues the request into a thread executor and triggers associated callback when operation has finished.
          */
-        template<typename DeleteBucketRequestT = Model::DeleteBucketRequest>
+        template<int version = 1, typename DeleteBucketRequestT = Model::DeleteBucketRequest>
         void DeleteBucketAsync(const DeleteBucketRequestT& request, const DeleteBucketResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context = nullptr) const
         {
-            return SubmitAsync(&S3Client::DeleteBucket, request, handler, context);
+            if(version == 2)
+              return SubmitAsyncV2< DeleteBucketRequestT, Model::DeleteBucketOutcome, XmlOutcome>(&S3Client::SubmitOpDeleteBucket, request, handler, context);
+            else
+              return SubmitAsync(&S3Client::DeleteBucket, request, handler, context);
         }
 
         /**
@@ -783,6 +817,9 @@ namespace Aws
          */
         virtual Model::DeleteBucketAnalyticsConfigurationOutcome DeleteBucketAnalyticsConfiguration(const Model::DeleteBucketAnalyticsConfigurationRequest& request) const;
 
+        void SubmitOpDeleteBucketAnalyticsConfiguration(Model::DeleteBucketAnalyticsConfigurationRequest const * const pRequest,
+                                      std::function<void(XmlOutcome)> responseHandler, std::shared_ptr<Aws::Utils::Threading::Executor> pExecutor) const;
+
         /**
          * A Callable wrapper for DeleteBucketAnalyticsConfiguration that returns a future to the operation so that it can be executed in parallel to other requests.
          */
@@ -795,10 +832,13 @@ namespace Aws
         /**
          * An Async wrapper for DeleteBucketAnalyticsConfiguration that queues the request into a thread executor and triggers associated callback when operation has finished.
          */
-        template<typename DeleteBucketAnalyticsConfigurationRequestT = Model::DeleteBucketAnalyticsConfigurationRequest>
+        template<int version = 1, typename DeleteBucketAnalyticsConfigurationRequestT = Model::DeleteBucketAnalyticsConfigurationRequest>
         void DeleteBucketAnalyticsConfigurationAsync(const DeleteBucketAnalyticsConfigurationRequestT& request, const DeleteBucketAnalyticsConfigurationResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context = nullptr) const
         {
-            return SubmitAsync(&S3Client::DeleteBucketAnalyticsConfiguration, request, handler, context);
+            if(version == 2)
+              return SubmitAsyncV2< DeleteBucketAnalyticsConfigurationRequestT, Model::DeleteBucketAnalyticsConfigurationOutcome, XmlOutcome>(&S3Client::SubmitOpDeleteBucketAnalyticsConfiguration, request, handler, context);
+            else
+              return SubmitAsync(&S3Client::DeleteBucketAnalyticsConfiguration, request, handler, context);
         }
 
         /**
@@ -819,6 +859,9 @@ namespace Aws
          */
         virtual Model::DeleteBucketCorsOutcome DeleteBucketCors(const Model::DeleteBucketCorsRequest& request) const;
 
+        void SubmitOpDeleteBucketCors(Model::DeleteBucketCorsRequest const * const pRequest,
+                                      std::function<void(XmlOutcome)> responseHandler, std::shared_ptr<Aws::Utils::Threading::Executor> pExecutor) const;
+
         /**
          * A Callable wrapper for DeleteBucketCors that returns a future to the operation so that it can be executed in parallel to other requests.
          */
@@ -831,10 +874,13 @@ namespace Aws
         /**
          * An Async wrapper for DeleteBucketCors that queues the request into a thread executor and triggers associated callback when operation has finished.
          */
-        template<typename DeleteBucketCorsRequestT = Model::DeleteBucketCorsRequest>
+        template<int version = 1, typename DeleteBucketCorsRequestT = Model::DeleteBucketCorsRequest>
         void DeleteBucketCorsAsync(const DeleteBucketCorsRequestT& request, const DeleteBucketCorsResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context = nullptr) const
         {
-            return SubmitAsync(&S3Client::DeleteBucketCors, request, handler, context);
+            if(version == 2)
+              return SubmitAsyncV2< DeleteBucketCorsRequestT, Model::DeleteBucketCorsOutcome, XmlOutcome>(&S3Client::SubmitOpDeleteBucketCors, request, handler, context);
+            else
+              return SubmitAsync(&S3Client::DeleteBucketCors, request, handler, context);
         }
 
         /**
@@ -862,6 +908,9 @@ namespace Aws
          */
         virtual Model::DeleteBucketEncryptionOutcome DeleteBucketEncryption(const Model::DeleteBucketEncryptionRequest& request) const;
 
+        void SubmitOpDeleteBucketEncryption(Model::DeleteBucketEncryptionRequest const * const pRequest,
+                                      std::function<void(XmlOutcome)> responseHandler, std::shared_ptr<Aws::Utils::Threading::Executor> pExecutor) const;
+
         /**
          * A Callable wrapper for DeleteBucketEncryption that returns a future to the operation so that it can be executed in parallel to other requests.
          */
@@ -874,10 +923,13 @@ namespace Aws
         /**
          * An Async wrapper for DeleteBucketEncryption that queues the request into a thread executor and triggers associated callback when operation has finished.
          */
-        template<typename DeleteBucketEncryptionRequestT = Model::DeleteBucketEncryptionRequest>
+        template<int version = 1, typename DeleteBucketEncryptionRequestT = Model::DeleteBucketEncryptionRequest>
         void DeleteBucketEncryptionAsync(const DeleteBucketEncryptionRequestT& request, const DeleteBucketEncryptionResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context = nullptr) const
         {
-            return SubmitAsync(&S3Client::DeleteBucketEncryption, request, handler, context);
+            if(version == 2)
+              return SubmitAsyncV2< DeleteBucketEncryptionRequestT, Model::DeleteBucketEncryptionOutcome, XmlOutcome>(&S3Client::SubmitOpDeleteBucketEncryption, request, handler, context);
+            else
+              return SubmitAsync(&S3Client::DeleteBucketEncryption, request, handler, context);
         }
 
         /**
@@ -911,6 +963,9 @@ namespace Aws
          */
         virtual Model::DeleteBucketIntelligentTieringConfigurationOutcome DeleteBucketIntelligentTieringConfiguration(const Model::DeleteBucketIntelligentTieringConfigurationRequest& request) const;
 
+        void SubmitOpDeleteBucketIntelligentTieringConfiguration(Model::DeleteBucketIntelligentTieringConfigurationRequest const * const pRequest,
+                                      std::function<void(XmlOutcome)> responseHandler, std::shared_ptr<Aws::Utils::Threading::Executor> pExecutor) const;
+
         /**
          * A Callable wrapper for DeleteBucketIntelligentTieringConfiguration that returns a future to the operation so that it can be executed in parallel to other requests.
          */
@@ -923,10 +978,13 @@ namespace Aws
         /**
          * An Async wrapper for DeleteBucketIntelligentTieringConfiguration that queues the request into a thread executor and triggers associated callback when operation has finished.
          */
-        template<typename DeleteBucketIntelligentTieringConfigurationRequestT = Model::DeleteBucketIntelligentTieringConfigurationRequest>
+        template<int version = 1, typename DeleteBucketIntelligentTieringConfigurationRequestT = Model::DeleteBucketIntelligentTieringConfigurationRequest>
         void DeleteBucketIntelligentTieringConfigurationAsync(const DeleteBucketIntelligentTieringConfigurationRequestT& request, const DeleteBucketIntelligentTieringConfigurationResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context = nullptr) const
         {
-            return SubmitAsync(&S3Client::DeleteBucketIntelligentTieringConfiguration, request, handler, context);
+            if(version == 2)
+              return SubmitAsyncV2< DeleteBucketIntelligentTieringConfigurationRequestT, Model::DeleteBucketIntelligentTieringConfigurationOutcome, XmlOutcome>(&S3Client::SubmitOpDeleteBucketIntelligentTieringConfiguration, request, handler, context);
+            else
+              return SubmitAsync(&S3Client::DeleteBucketIntelligentTieringConfiguration, request, handler, context);
         }
 
         /**
@@ -954,6 +1012,9 @@ namespace Aws
          */
         virtual Model::DeleteBucketInventoryConfigurationOutcome DeleteBucketInventoryConfiguration(const Model::DeleteBucketInventoryConfigurationRequest& request) const;
 
+        void SubmitOpDeleteBucketInventoryConfiguration(Model::DeleteBucketInventoryConfigurationRequest const * const pRequest,
+                                      std::function<void(XmlOutcome)> responseHandler, std::shared_ptr<Aws::Utils::Threading::Executor> pExecutor) const;
+
         /**
          * A Callable wrapper for DeleteBucketInventoryConfiguration that returns a future to the operation so that it can be executed in parallel to other requests.
          */
@@ -966,10 +1027,13 @@ namespace Aws
         /**
          * An Async wrapper for DeleteBucketInventoryConfiguration that queues the request into a thread executor and triggers associated callback when operation has finished.
          */
-        template<typename DeleteBucketInventoryConfigurationRequestT = Model::DeleteBucketInventoryConfigurationRequest>
+        template<int version = 1, typename DeleteBucketInventoryConfigurationRequestT = Model::DeleteBucketInventoryConfigurationRequest>
         void DeleteBucketInventoryConfigurationAsync(const DeleteBucketInventoryConfigurationRequestT& request, const DeleteBucketInventoryConfigurationResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context = nullptr) const
         {
-            return SubmitAsync(&S3Client::DeleteBucketInventoryConfiguration, request, handler, context);
+            if(version == 2)
+              return SubmitAsyncV2< DeleteBucketInventoryConfigurationRequestT, Model::DeleteBucketInventoryConfigurationOutcome, XmlOutcome>(&S3Client::SubmitOpDeleteBucketInventoryConfiguration, request, handler, context);
+            else
+              return SubmitAsync(&S3Client::DeleteBucketInventoryConfiguration, request, handler, context);
         }
 
         /**
@@ -995,6 +1059,9 @@ namespace Aws
          */
         virtual Model::DeleteBucketLifecycleOutcome DeleteBucketLifecycle(const Model::DeleteBucketLifecycleRequest& request) const;
 
+        void SubmitOpDeleteBucketLifecycle(Model::DeleteBucketLifecycleRequest const * const pRequest,
+                                      std::function<void(XmlOutcome)> responseHandler, std::shared_ptr<Aws::Utils::Threading::Executor> pExecutor) const;
+
         /**
          * A Callable wrapper for DeleteBucketLifecycle that returns a future to the operation so that it can be executed in parallel to other requests.
          */
@@ -1007,10 +1074,13 @@ namespace Aws
         /**
          * An Async wrapper for DeleteBucketLifecycle that queues the request into a thread executor and triggers associated callback when operation has finished.
          */
-        template<typename DeleteBucketLifecycleRequestT = Model::DeleteBucketLifecycleRequest>
+        template<int version = 1, typename DeleteBucketLifecycleRequestT = Model::DeleteBucketLifecycleRequest>
         void DeleteBucketLifecycleAsync(const DeleteBucketLifecycleRequestT& request, const DeleteBucketLifecycleResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context = nullptr) const
         {
-            return SubmitAsync(&S3Client::DeleteBucketLifecycle, request, handler, context);
+            if(version == 2)
+              return SubmitAsyncV2< DeleteBucketLifecycleRequestT, Model::DeleteBucketLifecycleOutcome, XmlOutcome>(&S3Client::SubmitOpDeleteBucketLifecycle, request, handler, context);
+            else
+              return SubmitAsync(&S3Client::DeleteBucketLifecycle, request, handler, context);
         }
 
         /**
@@ -1041,6 +1111,9 @@ namespace Aws
          */
         virtual Model::DeleteBucketMetricsConfigurationOutcome DeleteBucketMetricsConfiguration(const Model::DeleteBucketMetricsConfigurationRequest& request) const;
 
+        void SubmitOpDeleteBucketMetricsConfiguration(Model::DeleteBucketMetricsConfigurationRequest const * const pRequest,
+                                      std::function<void(XmlOutcome)> responseHandler, std::shared_ptr<Aws::Utils::Threading::Executor> pExecutor) const;
+
         /**
          * A Callable wrapper for DeleteBucketMetricsConfiguration that returns a future to the operation so that it can be executed in parallel to other requests.
          */
@@ -1053,10 +1126,13 @@ namespace Aws
         /**
          * An Async wrapper for DeleteBucketMetricsConfiguration that queues the request into a thread executor and triggers associated callback when operation has finished.
          */
-        template<typename DeleteBucketMetricsConfigurationRequestT = Model::DeleteBucketMetricsConfigurationRequest>
+        template<int version = 1, typename DeleteBucketMetricsConfigurationRequestT = Model::DeleteBucketMetricsConfigurationRequest>
         void DeleteBucketMetricsConfigurationAsync(const DeleteBucketMetricsConfigurationRequestT& request, const DeleteBucketMetricsConfigurationResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context = nullptr) const
         {
-            return SubmitAsync(&S3Client::DeleteBucketMetricsConfiguration, request, handler, context);
+            if(version == 2)
+              return SubmitAsyncV2< DeleteBucketMetricsConfigurationRequestT, Model::DeleteBucketMetricsConfigurationOutcome, XmlOutcome>(&S3Client::SubmitOpDeleteBucketMetricsConfiguration, request, handler, context);
+            else
+              return SubmitAsync(&S3Client::DeleteBucketMetricsConfiguration, request, handler, context);
         }
 
         /**
@@ -1076,6 +1152,9 @@ namespace Aws
          */
         virtual Model::DeleteBucketOwnershipControlsOutcome DeleteBucketOwnershipControls(const Model::DeleteBucketOwnershipControlsRequest& request) const;
 
+        void SubmitOpDeleteBucketOwnershipControls(Model::DeleteBucketOwnershipControlsRequest const * const pRequest,
+                                      std::function<void(XmlOutcome)> responseHandler, std::shared_ptr<Aws::Utils::Threading::Executor> pExecutor) const;
+
         /**
          * A Callable wrapper for DeleteBucketOwnershipControls that returns a future to the operation so that it can be executed in parallel to other requests.
          */
@@ -1088,10 +1167,13 @@ namespace Aws
         /**
          * An Async wrapper for DeleteBucketOwnershipControls that queues the request into a thread executor and triggers associated callback when operation has finished.
          */
-        template<typename DeleteBucketOwnershipControlsRequestT = Model::DeleteBucketOwnershipControlsRequest>
+        template<int version = 1, typename DeleteBucketOwnershipControlsRequestT = Model::DeleteBucketOwnershipControlsRequest>
         void DeleteBucketOwnershipControlsAsync(const DeleteBucketOwnershipControlsRequestT& request, const DeleteBucketOwnershipControlsResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context = nullptr) const
         {
-            return SubmitAsync(&S3Client::DeleteBucketOwnershipControls, request, handler, context);
+            if(version == 2)
+              return SubmitAsyncV2< DeleteBucketOwnershipControlsRequestT, Model::DeleteBucketOwnershipControlsOutcome, XmlOutcome>(&S3Client::SubmitOpDeleteBucketOwnershipControls, request, handler, context);
+            else
+              return SubmitAsync(&S3Client::DeleteBucketOwnershipControls, request, handler, context);
         }
 
         /**
@@ -1125,6 +1207,9 @@ namespace Aws
          */
         virtual Model::DeleteBucketPolicyOutcome DeleteBucketPolicy(const Model::DeleteBucketPolicyRequest& request) const;
 
+        void SubmitOpDeleteBucketPolicy(Model::DeleteBucketPolicyRequest const * const pRequest,
+                                      std::function<void(XmlOutcome)> responseHandler, std::shared_ptr<Aws::Utils::Threading::Executor> pExecutor) const;
+
         /**
          * A Callable wrapper for DeleteBucketPolicy that returns a future to the operation so that it can be executed in parallel to other requests.
          */
@@ -1137,10 +1222,13 @@ namespace Aws
         /**
          * An Async wrapper for DeleteBucketPolicy that queues the request into a thread executor and triggers associated callback when operation has finished.
          */
-        template<typename DeleteBucketPolicyRequestT = Model::DeleteBucketPolicyRequest>
+        template<int version = 1, typename DeleteBucketPolicyRequestT = Model::DeleteBucketPolicyRequest>
         void DeleteBucketPolicyAsync(const DeleteBucketPolicyRequestT& request, const DeleteBucketPolicyResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context = nullptr) const
         {
-            return SubmitAsync(&S3Client::DeleteBucketPolicy, request, handler, context);
+            if(version == 2)
+              return SubmitAsyncV2< DeleteBucketPolicyRequestT, Model::DeleteBucketPolicyOutcome, XmlOutcome>(&S3Client::SubmitOpDeleteBucketPolicy, request, handler, context);
+            else
+              return SubmitAsync(&S3Client::DeleteBucketPolicy, request, handler, context);
         }
 
         /**
@@ -1167,6 +1255,9 @@ namespace Aws
          */
         virtual Model::DeleteBucketReplicationOutcome DeleteBucketReplication(const Model::DeleteBucketReplicationRequest& request) const;
 
+        void SubmitOpDeleteBucketReplication(Model::DeleteBucketReplicationRequest const * const pRequest,
+                                      std::function<void(XmlOutcome)> responseHandler, std::shared_ptr<Aws::Utils::Threading::Executor> pExecutor) const;
+
         /**
          * A Callable wrapper for DeleteBucketReplication that returns a future to the operation so that it can be executed in parallel to other requests.
          */
@@ -1179,10 +1270,13 @@ namespace Aws
         /**
          * An Async wrapper for DeleteBucketReplication that queues the request into a thread executor and triggers associated callback when operation has finished.
          */
-        template<typename DeleteBucketReplicationRequestT = Model::DeleteBucketReplicationRequest>
+        template<int version = 1, typename DeleteBucketReplicationRequestT = Model::DeleteBucketReplicationRequest>
         void DeleteBucketReplicationAsync(const DeleteBucketReplicationRequestT& request, const DeleteBucketReplicationResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context = nullptr) const
         {
-            return SubmitAsync(&S3Client::DeleteBucketReplication, request, handler, context);
+            if(version == 2)
+              return SubmitAsyncV2< DeleteBucketReplicationRequestT, Model::DeleteBucketReplicationOutcome, XmlOutcome>(&S3Client::SubmitOpDeleteBucketReplication, request, handler, context);
+            else
+              return SubmitAsync(&S3Client::DeleteBucketReplication, request, handler, context);
         }
 
         /**
@@ -1200,6 +1294,9 @@ namespace Aws
          */
         virtual Model::DeleteBucketTaggingOutcome DeleteBucketTagging(const Model::DeleteBucketTaggingRequest& request) const;
 
+        void SubmitOpDeleteBucketTagging(Model::DeleteBucketTaggingRequest const * const pRequest,
+                                      std::function<void(XmlOutcome)> responseHandler, std::shared_ptr<Aws::Utils::Threading::Executor> pExecutor) const;
+
         /**
          * A Callable wrapper for DeleteBucketTagging that returns a future to the operation so that it can be executed in parallel to other requests.
          */
@@ -1212,10 +1309,13 @@ namespace Aws
         /**
          * An Async wrapper for DeleteBucketTagging that queues the request into a thread executor and triggers associated callback when operation has finished.
          */
-        template<typename DeleteBucketTaggingRequestT = Model::DeleteBucketTaggingRequest>
+        template<int version = 1, typename DeleteBucketTaggingRequestT = Model::DeleteBucketTaggingRequest>
         void DeleteBucketTaggingAsync(const DeleteBucketTaggingRequestT& request, const DeleteBucketTaggingResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context = nullptr) const
         {
-            return SubmitAsync(&S3Client::DeleteBucketTagging, request, handler, context);
+            if(version == 2)
+              return SubmitAsyncV2< DeleteBucketTaggingRequestT, Model::DeleteBucketTaggingOutcome, XmlOutcome>(&S3Client::SubmitOpDeleteBucketTagging, request, handler, context);
+            else
+              return SubmitAsync(&S3Client::DeleteBucketTagging, request, handler, context);
         }
 
         /**
@@ -1242,6 +1342,9 @@ namespace Aws
          */
         virtual Model::DeleteBucketWebsiteOutcome DeleteBucketWebsite(const Model::DeleteBucketWebsiteRequest& request) const;
 
+        void SubmitOpDeleteBucketWebsite(Model::DeleteBucketWebsiteRequest const * const pRequest,
+                                      std::function<void(XmlOutcome)> responseHandler, std::shared_ptr<Aws::Utils::Threading::Executor> pExecutor) const;
+
         /**
          * A Callable wrapper for DeleteBucketWebsite that returns a future to the operation so that it can be executed in parallel to other requests.
          */
@@ -1254,10 +1357,13 @@ namespace Aws
         /**
          * An Async wrapper for DeleteBucketWebsite that queues the request into a thread executor and triggers associated callback when operation has finished.
          */
-        template<typename DeleteBucketWebsiteRequestT = Model::DeleteBucketWebsiteRequest>
+        template<int version = 1, typename DeleteBucketWebsiteRequestT = Model::DeleteBucketWebsiteRequest>
         void DeleteBucketWebsiteAsync(const DeleteBucketWebsiteRequestT& request, const DeleteBucketWebsiteResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context = nullptr) const
         {
-            return SubmitAsync(&S3Client::DeleteBucketWebsite, request, handler, context);
+            if(version == 2)
+              return SubmitAsyncV2< DeleteBucketWebsiteRequestT, Model::DeleteBucketWebsiteOutcome, XmlOutcome>(&S3Client::SubmitOpDeleteBucketWebsite, request, handler, context);
+            else
+              return SubmitAsync(&S3Client::DeleteBucketWebsite, request, handler, context);
         }
 
         /**
@@ -1291,6 +1397,9 @@ namespace Aws
          */
         virtual Model::DeleteObjectOutcome DeleteObject(const Model::DeleteObjectRequest& request) const;
 
+        void SubmitOpDeleteObject(Model::DeleteObjectRequest const * const pRequest,
+                                      std::function<void(XmlOutcome)> responseHandler, std::shared_ptr<Aws::Utils::Threading::Executor> pExecutor) const;
+
         /**
          * A Callable wrapper for DeleteObject that returns a future to the operation so that it can be executed in parallel to other requests.
          */
@@ -1303,10 +1412,13 @@ namespace Aws
         /**
          * An Async wrapper for DeleteObject that queues the request into a thread executor and triggers associated callback when operation has finished.
          */
-        template<typename DeleteObjectRequestT = Model::DeleteObjectRequest>
+        template<int version = 1, typename DeleteObjectRequestT = Model::DeleteObjectRequest>
         void DeleteObjectAsync(const DeleteObjectRequestT& request, const DeleteObjectResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context = nullptr) const
         {
-            return SubmitAsync(&S3Client::DeleteObject, request, handler, context);
+            if(version == 2)
+              return SubmitAsyncV2< DeleteObjectRequestT, Model::DeleteObjectOutcome, XmlOutcome>(&S3Client::SubmitOpDeleteObject, request, handler, context);
+            else
+              return SubmitAsync(&S3Client::DeleteObject, request, handler, context);
         }
 
         /**
@@ -1328,6 +1440,9 @@ namespace Aws
          */
         virtual Model::DeleteObjectTaggingOutcome DeleteObjectTagging(const Model::DeleteObjectTaggingRequest& request) const;
 
+        void SubmitOpDeleteObjectTagging(Model::DeleteObjectTaggingRequest const * const pRequest,
+                                      std::function<void(XmlOutcome)> responseHandler, std::shared_ptr<Aws::Utils::Threading::Executor> pExecutor) const;
+
         /**
          * A Callable wrapper for DeleteObjectTagging that returns a future to the operation so that it can be executed in parallel to other requests.
          */
@@ -1340,10 +1455,13 @@ namespace Aws
         /**
          * An Async wrapper for DeleteObjectTagging that queues the request into a thread executor and triggers associated callback when operation has finished.
          */
-        template<typename DeleteObjectTaggingRequestT = Model::DeleteObjectTaggingRequest>
+        template<int version = 1, typename DeleteObjectTaggingRequestT = Model::DeleteObjectTaggingRequest>
         void DeleteObjectTaggingAsync(const DeleteObjectTaggingRequestT& request, const DeleteObjectTaggingResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context = nullptr) const
         {
-            return SubmitAsync(&S3Client::DeleteObjectTagging, request, handler, context);
+            if(version == 2)
+              return SubmitAsyncV2< DeleteObjectTaggingRequestT, Model::DeleteObjectTaggingOutcome, XmlOutcome>(&S3Client::SubmitOpDeleteObjectTagging, request, handler, context);
+            else
+              return SubmitAsync(&S3Client::DeleteObjectTagging, request, handler, context);
         }
 
         /**
@@ -1388,6 +1506,9 @@ namespace Aws
          */
         virtual Model::DeleteObjectsOutcome DeleteObjects(const Model::DeleteObjectsRequest& request) const;
 
+        void SubmitOpDeleteObjects(Model::DeleteObjectsRequest const * const pRequest,
+                                      std::function<void(XmlOutcome)> responseHandler, std::shared_ptr<Aws::Utils::Threading::Executor> pExecutor) const;
+
         /**
          * A Callable wrapper for DeleteObjects that returns a future to the operation so that it can be executed in parallel to other requests.
          */
@@ -1400,10 +1521,13 @@ namespace Aws
         /**
          * An Async wrapper for DeleteObjects that queues the request into a thread executor and triggers associated callback when operation has finished.
          */
-        template<typename DeleteObjectsRequestT = Model::DeleteObjectsRequest>
+        template<int version = 1, typename DeleteObjectsRequestT = Model::DeleteObjectsRequest>
         void DeleteObjectsAsync(const DeleteObjectsRequestT& request, const DeleteObjectsResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context = nullptr) const
         {
-            return SubmitAsync(&S3Client::DeleteObjects, request, handler, context);
+            if(version == 2)
+              return SubmitAsyncV2< DeleteObjectsRequestT, Model::DeleteObjectsOutcome, XmlOutcome>(&S3Client::SubmitOpDeleteObjects, request, handler, context);
+            else
+              return SubmitAsync(&S3Client::DeleteObjects, request, handler, context);
         }
 
         /**
@@ -1430,6 +1554,9 @@ namespace Aws
          */
         virtual Model::DeletePublicAccessBlockOutcome DeletePublicAccessBlock(const Model::DeletePublicAccessBlockRequest& request) const;
 
+        void SubmitOpDeletePublicAccessBlock(Model::DeletePublicAccessBlockRequest const * const pRequest,
+                                      std::function<void(XmlOutcome)> responseHandler, std::shared_ptr<Aws::Utils::Threading::Executor> pExecutor) const;
+
         /**
          * A Callable wrapper for DeletePublicAccessBlock that returns a future to the operation so that it can be executed in parallel to other requests.
          */
@@ -1442,10 +1569,13 @@ namespace Aws
         /**
          * An Async wrapper for DeletePublicAccessBlock that queues the request into a thread executor and triggers associated callback when operation has finished.
          */
-        template<typename DeletePublicAccessBlockRequestT = Model::DeletePublicAccessBlockRequest>
+        template<int version = 1, typename DeletePublicAccessBlockRequestT = Model::DeletePublicAccessBlockRequest>
         void DeletePublicAccessBlockAsync(const DeletePublicAccessBlockRequestT& request, const DeletePublicAccessBlockResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context = nullptr) const
         {
-            return SubmitAsync(&S3Client::DeletePublicAccessBlock, request, handler, context);
+            if(version == 2)
+              return SubmitAsyncV2< DeletePublicAccessBlockRequestT, Model::DeletePublicAccessBlockOutcome, XmlOutcome>(&S3Client::SubmitOpDeletePublicAccessBlock, request, handler, context);
+            else
+              return SubmitAsync(&S3Client::DeletePublicAccessBlock, request, handler, context);
         }
 
         /**
@@ -1479,6 +1609,9 @@ namespace Aws
          */
         virtual Model::GetBucketAccelerateConfigurationOutcome GetBucketAccelerateConfiguration(const Model::GetBucketAccelerateConfigurationRequest& request) const;
 
+        void SubmitOpGetBucketAccelerateConfiguration(Model::GetBucketAccelerateConfigurationRequest const * const pRequest,
+                                      std::function<void(XmlOutcome)> responseHandler, std::shared_ptr<Aws::Utils::Threading::Executor> pExecutor) const;
+
         /**
          * A Callable wrapper for GetBucketAccelerateConfiguration that returns a future to the operation so that it can be executed in parallel to other requests.
          */
@@ -1491,10 +1624,13 @@ namespace Aws
         /**
          * An Async wrapper for GetBucketAccelerateConfiguration that queues the request into a thread executor and triggers associated callback when operation has finished.
          */
-        template<typename GetBucketAccelerateConfigurationRequestT = Model::GetBucketAccelerateConfigurationRequest>
+        template<int version = 1, typename GetBucketAccelerateConfigurationRequestT = Model::GetBucketAccelerateConfigurationRequest>
         void GetBucketAccelerateConfigurationAsync(const GetBucketAccelerateConfigurationRequestT& request, const GetBucketAccelerateConfigurationResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context = nullptr) const
         {
-            return SubmitAsync(&S3Client::GetBucketAccelerateConfiguration, request, handler, context);
+            if(version == 2)
+              return SubmitAsyncV2< GetBucketAccelerateConfigurationRequestT, Model::GetBucketAccelerateConfigurationOutcome, XmlOutcome>(&S3Client::SubmitOpGetBucketAccelerateConfiguration, request, handler, context);
+            else
+              return SubmitAsync(&S3Client::GetBucketAccelerateConfiguration, request, handler, context);
         }
 
         /**
@@ -1526,6 +1662,9 @@ namespace Aws
          */
         virtual Model::GetBucketAclOutcome GetBucketAcl(const Model::GetBucketAclRequest& request) const;
 
+        void SubmitOpGetBucketAcl(Model::GetBucketAclRequest const * const pRequest,
+                                      std::function<void(XmlOutcome)> responseHandler, std::shared_ptr<Aws::Utils::Threading::Executor> pExecutor) const;
+
         /**
          * A Callable wrapper for GetBucketAcl that returns a future to the operation so that it can be executed in parallel to other requests.
          */
@@ -1538,10 +1677,13 @@ namespace Aws
         /**
          * An Async wrapper for GetBucketAcl that queues the request into a thread executor and triggers associated callback when operation has finished.
          */
-        template<typename GetBucketAclRequestT = Model::GetBucketAclRequest>
+        template<int version = 1, typename GetBucketAclRequestT = Model::GetBucketAclRequest>
         void GetBucketAclAsync(const GetBucketAclRequestT& request, const GetBucketAclResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context = nullptr) const
         {
-            return SubmitAsync(&S3Client::GetBucketAcl, request, handler, context);
+            if(version == 2)
+              return SubmitAsyncV2< GetBucketAclRequestT, Model::GetBucketAclOutcome, XmlOutcome>(&S3Client::SubmitOpGetBucketAcl, request, handler, context);
+            else
+              return SubmitAsync(&S3Client::GetBucketAcl, request, handler, context);
         }
 
         /**
@@ -1571,6 +1713,9 @@ namespace Aws
          */
         virtual Model::GetBucketAnalyticsConfigurationOutcome GetBucketAnalyticsConfiguration(const Model::GetBucketAnalyticsConfigurationRequest& request) const;
 
+        void SubmitOpGetBucketAnalyticsConfiguration(Model::GetBucketAnalyticsConfigurationRequest const * const pRequest,
+                                      std::function<void(XmlOutcome)> responseHandler, std::shared_ptr<Aws::Utils::Threading::Executor> pExecutor) const;
+
         /**
          * A Callable wrapper for GetBucketAnalyticsConfiguration that returns a future to the operation so that it can be executed in parallel to other requests.
          */
@@ -1583,10 +1728,13 @@ namespace Aws
         /**
          * An Async wrapper for GetBucketAnalyticsConfiguration that queues the request into a thread executor and triggers associated callback when operation has finished.
          */
-        template<typename GetBucketAnalyticsConfigurationRequestT = Model::GetBucketAnalyticsConfigurationRequest>
+        template<int version = 1, typename GetBucketAnalyticsConfigurationRequestT = Model::GetBucketAnalyticsConfigurationRequest>
         void GetBucketAnalyticsConfigurationAsync(const GetBucketAnalyticsConfigurationRequestT& request, const GetBucketAnalyticsConfigurationResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context = nullptr) const
         {
-            return SubmitAsync(&S3Client::GetBucketAnalyticsConfiguration, request, handler, context);
+            if(version == 2)
+              return SubmitAsyncV2< GetBucketAnalyticsConfigurationRequestT, Model::GetBucketAnalyticsConfigurationOutcome, XmlOutcome>(&S3Client::SubmitOpGetBucketAnalyticsConfiguration, request, handler, context);
+            else
+              return SubmitAsync(&S3Client::GetBucketAnalyticsConfiguration, request, handler, context);
         }
 
         /**
@@ -1614,6 +1762,9 @@ namespace Aws
          */
         virtual Model::GetBucketCorsOutcome GetBucketCors(const Model::GetBucketCorsRequest& request) const;
 
+        void SubmitOpGetBucketCors(Model::GetBucketCorsRequest const * const pRequest,
+                                      std::function<void(XmlOutcome)> responseHandler, std::shared_ptr<Aws::Utils::Threading::Executor> pExecutor) const;
+
         /**
          * A Callable wrapper for GetBucketCors that returns a future to the operation so that it can be executed in parallel to other requests.
          */
@@ -1626,10 +1777,13 @@ namespace Aws
         /**
          * An Async wrapper for GetBucketCors that queues the request into a thread executor and triggers associated callback when operation has finished.
          */
-        template<typename GetBucketCorsRequestT = Model::GetBucketCorsRequest>
+        template<int version = 1, typename GetBucketCorsRequestT = Model::GetBucketCorsRequest>
         void GetBucketCorsAsync(const GetBucketCorsRequestT& request, const GetBucketCorsResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context = nullptr) const
         {
-            return SubmitAsync(&S3Client::GetBucketCors, request, handler, context);
+            if(version == 2)
+              return SubmitAsyncV2< GetBucketCorsRequestT, Model::GetBucketCorsOutcome, XmlOutcome>(&S3Client::SubmitOpGetBucketCors, request, handler, context);
+            else
+              return SubmitAsync(&S3Client::GetBucketCors, request, handler, context);
         }
 
         /**
@@ -1657,6 +1811,9 @@ namespace Aws
          */
         virtual Model::GetBucketEncryptionOutcome GetBucketEncryption(const Model::GetBucketEncryptionRequest& request) const;
 
+        void SubmitOpGetBucketEncryption(Model::GetBucketEncryptionRequest const * const pRequest,
+                                      std::function<void(XmlOutcome)> responseHandler, std::shared_ptr<Aws::Utils::Threading::Executor> pExecutor) const;
+
         /**
          * A Callable wrapper for GetBucketEncryption that returns a future to the operation so that it can be executed in parallel to other requests.
          */
@@ -1669,10 +1826,13 @@ namespace Aws
         /**
          * An Async wrapper for GetBucketEncryption that queues the request into a thread executor and triggers associated callback when operation has finished.
          */
-        template<typename GetBucketEncryptionRequestT = Model::GetBucketEncryptionRequest>
+        template<int version = 1, typename GetBucketEncryptionRequestT = Model::GetBucketEncryptionRequest>
         void GetBucketEncryptionAsync(const GetBucketEncryptionRequestT& request, const GetBucketEncryptionResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context = nullptr) const
         {
-            return SubmitAsync(&S3Client::GetBucketEncryption, request, handler, context);
+            if(version == 2)
+              return SubmitAsyncV2< GetBucketEncryptionRequestT, Model::GetBucketEncryptionOutcome, XmlOutcome>(&S3Client::SubmitOpGetBucketEncryption, request, handler, context);
+            else
+              return SubmitAsync(&S3Client::GetBucketEncryption, request, handler, context);
         }
 
         /**
@@ -1705,6 +1865,9 @@ namespace Aws
          */
         virtual Model::GetBucketIntelligentTieringConfigurationOutcome GetBucketIntelligentTieringConfiguration(const Model::GetBucketIntelligentTieringConfigurationRequest& request) const;
 
+        void SubmitOpGetBucketIntelligentTieringConfiguration(Model::GetBucketIntelligentTieringConfigurationRequest const * const pRequest,
+                                      std::function<void(XmlOutcome)> responseHandler, std::shared_ptr<Aws::Utils::Threading::Executor> pExecutor) const;
+
         /**
          * A Callable wrapper for GetBucketIntelligentTieringConfiguration that returns a future to the operation so that it can be executed in parallel to other requests.
          */
@@ -1717,10 +1880,13 @@ namespace Aws
         /**
          * An Async wrapper for GetBucketIntelligentTieringConfiguration that queues the request into a thread executor and triggers associated callback when operation has finished.
          */
-        template<typename GetBucketIntelligentTieringConfigurationRequestT = Model::GetBucketIntelligentTieringConfigurationRequest>
+        template<int version = 1, typename GetBucketIntelligentTieringConfigurationRequestT = Model::GetBucketIntelligentTieringConfigurationRequest>
         void GetBucketIntelligentTieringConfigurationAsync(const GetBucketIntelligentTieringConfigurationRequestT& request, const GetBucketIntelligentTieringConfigurationResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context = nullptr) const
         {
-            return SubmitAsync(&S3Client::GetBucketIntelligentTieringConfiguration, request, handler, context);
+            if(version == 2)
+              return SubmitAsyncV2< GetBucketIntelligentTieringConfigurationRequestT, Model::GetBucketIntelligentTieringConfigurationOutcome, XmlOutcome>(&S3Client::SubmitOpGetBucketIntelligentTieringConfiguration, request, handler, context);
+            else
+              return SubmitAsync(&S3Client::GetBucketIntelligentTieringConfiguration, request, handler, context);
         }
 
         /**
@@ -1748,6 +1914,9 @@ namespace Aws
          */
         virtual Model::GetBucketInventoryConfigurationOutcome GetBucketInventoryConfiguration(const Model::GetBucketInventoryConfigurationRequest& request) const;
 
+        void SubmitOpGetBucketInventoryConfiguration(Model::GetBucketInventoryConfigurationRequest const * const pRequest,
+                                      std::function<void(XmlOutcome)> responseHandler, std::shared_ptr<Aws::Utils::Threading::Executor> pExecutor) const;
+
         /**
          * A Callable wrapper for GetBucketInventoryConfiguration that returns a future to the operation so that it can be executed in parallel to other requests.
          */
@@ -1760,10 +1929,13 @@ namespace Aws
         /**
          * An Async wrapper for GetBucketInventoryConfiguration that queues the request into a thread executor and triggers associated callback when operation has finished.
          */
-        template<typename GetBucketInventoryConfigurationRequestT = Model::GetBucketInventoryConfigurationRequest>
+        template<int version = 1, typename GetBucketInventoryConfigurationRequestT = Model::GetBucketInventoryConfigurationRequest>
         void GetBucketInventoryConfigurationAsync(const GetBucketInventoryConfigurationRequestT& request, const GetBucketInventoryConfigurationResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context = nullptr) const
         {
-            return SubmitAsync(&S3Client::GetBucketInventoryConfiguration, request, handler, context);
+            if(version == 2)
+              return SubmitAsyncV2< GetBucketInventoryConfigurationRequestT, Model::GetBucketInventoryConfigurationOutcome, XmlOutcome>(&S3Client::SubmitOpGetBucketInventoryConfiguration, request, handler, context);
+            else
+              return SubmitAsync(&S3Client::GetBucketInventoryConfiguration, request, handler, context);
         }
 
         /**
@@ -1803,6 +1975,9 @@ namespace Aws
          */
         virtual Model::GetBucketLifecycleConfigurationOutcome GetBucketLifecycleConfiguration(const Model::GetBucketLifecycleConfigurationRequest& request) const;
 
+        void SubmitOpGetBucketLifecycleConfiguration(Model::GetBucketLifecycleConfigurationRequest const * const pRequest,
+                                      std::function<void(XmlOutcome)> responseHandler, std::shared_ptr<Aws::Utils::Threading::Executor> pExecutor) const;
+
         /**
          * A Callable wrapper for GetBucketLifecycleConfiguration that returns a future to the operation so that it can be executed in parallel to other requests.
          */
@@ -1815,10 +1990,13 @@ namespace Aws
         /**
          * An Async wrapper for GetBucketLifecycleConfiguration that queues the request into a thread executor and triggers associated callback when operation has finished.
          */
-        template<typename GetBucketLifecycleConfigurationRequestT = Model::GetBucketLifecycleConfigurationRequest>
+        template<int version = 1, typename GetBucketLifecycleConfigurationRequestT = Model::GetBucketLifecycleConfigurationRequest>
         void GetBucketLifecycleConfigurationAsync(const GetBucketLifecycleConfigurationRequestT& request, const GetBucketLifecycleConfigurationResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context = nullptr) const
         {
-            return SubmitAsync(&S3Client::GetBucketLifecycleConfiguration, request, handler, context);
+            if(version == 2)
+              return SubmitAsyncV2< GetBucketLifecycleConfigurationRequestT, Model::GetBucketLifecycleConfigurationOutcome, XmlOutcome>(&S3Client::SubmitOpGetBucketLifecycleConfiguration, request, handler, context);
+            else
+              return SubmitAsync(&S3Client::GetBucketLifecycleConfiguration, request, handler, context);
         }
 
         /**
@@ -1848,6 +2026,9 @@ namespace Aws
          */
         virtual Model::GetBucketLocationOutcome GetBucketLocation(const Model::GetBucketLocationRequest& request) const;
 
+        void SubmitOpGetBucketLocation(Model::GetBucketLocationRequest const * const pRequest,
+                                      std::function<void(XmlOutcome)> responseHandler, std::shared_ptr<Aws::Utils::Threading::Executor> pExecutor) const;
+
         /**
          * A Callable wrapper for GetBucketLocation that returns a future to the operation so that it can be executed in parallel to other requests.
          */
@@ -1860,10 +2041,13 @@ namespace Aws
         /**
          * An Async wrapper for GetBucketLocation that queues the request into a thread executor and triggers associated callback when operation has finished.
          */
-        template<typename GetBucketLocationRequestT = Model::GetBucketLocationRequest>
+        template<int version = 1, typename GetBucketLocationRequestT = Model::GetBucketLocationRequest>
         void GetBucketLocationAsync(const GetBucketLocationRequestT& request, const GetBucketLocationResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context = nullptr) const
         {
-            return SubmitAsync(&S3Client::GetBucketLocation, request, handler, context);
+            if(version == 2)
+              return SubmitAsyncV2< GetBucketLocationRequestT, Model::GetBucketLocationOutcome, XmlOutcome>(&S3Client::SubmitOpGetBucketLocation, request, handler, context);
+            else
+              return SubmitAsync(&S3Client::GetBucketLocation, request, handler, context);
         }
 
         /**
@@ -1879,6 +2063,9 @@ namespace Aws
          */
         virtual Model::GetBucketLoggingOutcome GetBucketLogging(const Model::GetBucketLoggingRequest& request) const;
 
+        void SubmitOpGetBucketLogging(Model::GetBucketLoggingRequest const * const pRequest,
+                                      std::function<void(XmlOutcome)> responseHandler, std::shared_ptr<Aws::Utils::Threading::Executor> pExecutor) const;
+
         /**
          * A Callable wrapper for GetBucketLogging that returns a future to the operation so that it can be executed in parallel to other requests.
          */
@@ -1891,10 +2078,13 @@ namespace Aws
         /**
          * An Async wrapper for GetBucketLogging that queues the request into a thread executor and triggers associated callback when operation has finished.
          */
-        template<typename GetBucketLoggingRequestT = Model::GetBucketLoggingRequest>
+        template<int version = 1, typename GetBucketLoggingRequestT = Model::GetBucketLoggingRequest>
         void GetBucketLoggingAsync(const GetBucketLoggingRequestT& request, const GetBucketLoggingResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context = nullptr) const
         {
-            return SubmitAsync(&S3Client::GetBucketLogging, request, handler, context);
+            if(version == 2)
+              return SubmitAsyncV2< GetBucketLoggingRequestT, Model::GetBucketLoggingOutcome, XmlOutcome>(&S3Client::SubmitOpGetBucketLogging, request, handler, context);
+            else
+              return SubmitAsync(&S3Client::GetBucketLogging, request, handler, context);
         }
 
         /**
@@ -1925,6 +2115,9 @@ namespace Aws
          */
         virtual Model::GetBucketMetricsConfigurationOutcome GetBucketMetricsConfiguration(const Model::GetBucketMetricsConfigurationRequest& request) const;
 
+        void SubmitOpGetBucketMetricsConfiguration(Model::GetBucketMetricsConfigurationRequest const * const pRequest,
+                                      std::function<void(XmlOutcome)> responseHandler, std::shared_ptr<Aws::Utils::Threading::Executor> pExecutor) const;
+
         /**
          * A Callable wrapper for GetBucketMetricsConfiguration that returns a future to the operation so that it can be executed in parallel to other requests.
          */
@@ -1937,10 +2130,13 @@ namespace Aws
         /**
          * An Async wrapper for GetBucketMetricsConfiguration that queues the request into a thread executor and triggers associated callback when operation has finished.
          */
-        template<typename GetBucketMetricsConfigurationRequestT = Model::GetBucketMetricsConfigurationRequest>
+        template<int version = 1, typename GetBucketMetricsConfigurationRequestT = Model::GetBucketMetricsConfigurationRequest>
         void GetBucketMetricsConfigurationAsync(const GetBucketMetricsConfigurationRequestT& request, const GetBucketMetricsConfigurationResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context = nullptr) const
         {
-            return SubmitAsync(&S3Client::GetBucketMetricsConfiguration, request, handler, context);
+            if(version == 2)
+              return SubmitAsyncV2< GetBucketMetricsConfigurationRequestT, Model::GetBucketMetricsConfigurationOutcome, XmlOutcome>(&S3Client::SubmitOpGetBucketMetricsConfiguration, request, handler, context);
+            else
+              return SubmitAsync(&S3Client::GetBucketMetricsConfiguration, request, handler, context);
         }
 
         /**
@@ -1973,6 +2169,9 @@ namespace Aws
          */
         virtual Model::GetBucketNotificationConfigurationOutcome GetBucketNotificationConfiguration(const Model::GetBucketNotificationConfigurationRequest& request) const;
 
+        void SubmitOpGetBucketNotificationConfiguration(Model::GetBucketNotificationConfigurationRequest const * const pRequest,
+                                      std::function<void(XmlOutcome)> responseHandler, std::shared_ptr<Aws::Utils::Threading::Executor> pExecutor) const;
+
         /**
          * A Callable wrapper for GetBucketNotificationConfiguration that returns a future to the operation so that it can be executed in parallel to other requests.
          */
@@ -1985,10 +2184,13 @@ namespace Aws
         /**
          * An Async wrapper for GetBucketNotificationConfiguration that queues the request into a thread executor and triggers associated callback when operation has finished.
          */
-        template<typename GetBucketNotificationConfigurationRequestT = Model::GetBucketNotificationConfigurationRequest>
+        template<int version = 1, typename GetBucketNotificationConfigurationRequestT = Model::GetBucketNotificationConfigurationRequest>
         void GetBucketNotificationConfigurationAsync(const GetBucketNotificationConfigurationRequestT& request, const GetBucketNotificationConfigurationResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context = nullptr) const
         {
-            return SubmitAsync(&S3Client::GetBucketNotificationConfiguration, request, handler, context);
+            if(version == 2)
+              return SubmitAsyncV2< GetBucketNotificationConfigurationRequestT, Model::GetBucketNotificationConfigurationOutcome, XmlOutcome>(&S3Client::SubmitOpGetBucketNotificationConfiguration, request, handler, context);
+            else
+              return SubmitAsync(&S3Client::GetBucketNotificationConfiguration, request, handler, context);
         }
 
         /**
@@ -2008,6 +2210,9 @@ namespace Aws
          */
         virtual Model::GetBucketOwnershipControlsOutcome GetBucketOwnershipControls(const Model::GetBucketOwnershipControlsRequest& request) const;
 
+        void SubmitOpGetBucketOwnershipControls(Model::GetBucketOwnershipControlsRequest const * const pRequest,
+                                      std::function<void(XmlOutcome)> responseHandler, std::shared_ptr<Aws::Utils::Threading::Executor> pExecutor) const;
+
         /**
          * A Callable wrapper for GetBucketOwnershipControls that returns a future to the operation so that it can be executed in parallel to other requests.
          */
@@ -2020,10 +2225,13 @@ namespace Aws
         /**
          * An Async wrapper for GetBucketOwnershipControls that queues the request into a thread executor and triggers associated callback when operation has finished.
          */
-        template<typename GetBucketOwnershipControlsRequestT = Model::GetBucketOwnershipControlsRequest>
+        template<int version = 1, typename GetBucketOwnershipControlsRequestT = Model::GetBucketOwnershipControlsRequest>
         void GetBucketOwnershipControlsAsync(const GetBucketOwnershipControlsRequestT& request, const GetBucketOwnershipControlsResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context = nullptr) const
         {
-            return SubmitAsync(&S3Client::GetBucketOwnershipControls, request, handler, context);
+            if(version == 2)
+              return SubmitAsyncV2< GetBucketOwnershipControlsRequestT, Model::GetBucketOwnershipControlsOutcome, XmlOutcome>(&S3Client::SubmitOpGetBucketOwnershipControls, request, handler, context);
+            else
+              return SubmitAsync(&S3Client::GetBucketOwnershipControls, request, handler, context);
         }
 
         /**
@@ -2061,6 +2269,9 @@ namespace Aws
          */
         virtual Model::GetBucketPolicyOutcome GetBucketPolicy(const Model::GetBucketPolicyRequest& request) const;
 
+        void SubmitOpGetBucketPolicy(Model::GetBucketPolicyRequest const * const pRequest,
+                                      std::function<void(XmlOutcome)> responseHandler, std::shared_ptr<Aws::Utils::Threading::Executor> pExecutor) const;
+
         /**
          * A Callable wrapper for GetBucketPolicy that returns a future to the operation so that it can be executed in parallel to other requests.
          */
@@ -2073,10 +2284,13 @@ namespace Aws
         /**
          * An Async wrapper for GetBucketPolicy that queues the request into a thread executor and triggers associated callback when operation has finished.
          */
-        template<typename GetBucketPolicyRequestT = Model::GetBucketPolicyRequest>
+        template<int version = 1, typename GetBucketPolicyRequestT = Model::GetBucketPolicyRequest>
         void GetBucketPolicyAsync(const GetBucketPolicyRequestT& request, const GetBucketPolicyResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context = nullptr) const
         {
-            return SubmitAsync(&S3Client::GetBucketPolicy, request, handler, context);
+            if(version == 2)
+              return SubmitAsyncV2< GetBucketPolicyRequestT, Model::GetBucketPolicyOutcome, XmlOutcome>(&S3Client::SubmitOpGetBucketPolicy, request, handler, context);
+            else
+              return SubmitAsync(&S3Client::GetBucketPolicy, request, handler, context);
         }
 
         /**
@@ -2103,6 +2317,9 @@ namespace Aws
          */
         virtual Model::GetBucketPolicyStatusOutcome GetBucketPolicyStatus(const Model::GetBucketPolicyStatusRequest& request) const;
 
+        void SubmitOpGetBucketPolicyStatus(Model::GetBucketPolicyStatusRequest const * const pRequest,
+                                      std::function<void(XmlOutcome)> responseHandler, std::shared_ptr<Aws::Utils::Threading::Executor> pExecutor) const;
+
         /**
          * A Callable wrapper for GetBucketPolicyStatus that returns a future to the operation so that it can be executed in parallel to other requests.
          */
@@ -2115,10 +2332,13 @@ namespace Aws
         /**
          * An Async wrapper for GetBucketPolicyStatus that queues the request into a thread executor and triggers associated callback when operation has finished.
          */
-        template<typename GetBucketPolicyStatusRequestT = Model::GetBucketPolicyStatusRequest>
+        template<int version = 1, typename GetBucketPolicyStatusRequestT = Model::GetBucketPolicyStatusRequest>
         void GetBucketPolicyStatusAsync(const GetBucketPolicyStatusRequestT& request, const GetBucketPolicyStatusResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context = nullptr) const
         {
-            return SubmitAsync(&S3Client::GetBucketPolicyStatus, request, handler, context);
+            if(version == 2)
+              return SubmitAsyncV2< GetBucketPolicyStatusRequestT, Model::GetBucketPolicyStatusOutcome, XmlOutcome>(&S3Client::SubmitOpGetBucketPolicyStatus, request, handler, context);
+            else
+              return SubmitAsync(&S3Client::GetBucketPolicyStatus, request, handler, context);
         }
 
         /**
@@ -2148,6 +2368,9 @@ namespace Aws
          */
         virtual Model::GetBucketReplicationOutcome GetBucketReplication(const Model::GetBucketReplicationRequest& request) const;
 
+        void SubmitOpGetBucketReplication(Model::GetBucketReplicationRequest const * const pRequest,
+                                      std::function<void(XmlOutcome)> responseHandler, std::shared_ptr<Aws::Utils::Threading::Executor> pExecutor) const;
+
         /**
          * A Callable wrapper for GetBucketReplication that returns a future to the operation so that it can be executed in parallel to other requests.
          */
@@ -2160,10 +2383,13 @@ namespace Aws
         /**
          * An Async wrapper for GetBucketReplication that queues the request into a thread executor and triggers associated callback when operation has finished.
          */
-        template<typename GetBucketReplicationRequestT = Model::GetBucketReplicationRequest>
+        template<int version = 1, typename GetBucketReplicationRequestT = Model::GetBucketReplicationRequest>
         void GetBucketReplicationAsync(const GetBucketReplicationRequestT& request, const GetBucketReplicationResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context = nullptr) const
         {
-            return SubmitAsync(&S3Client::GetBucketReplication, request, handler, context);
+            if(version == 2)
+              return SubmitAsyncV2< GetBucketReplicationRequestT, Model::GetBucketReplicationOutcome, XmlOutcome>(&S3Client::SubmitOpGetBucketReplication, request, handler, context);
+            else
+              return SubmitAsync(&S3Client::GetBucketReplication, request, handler, context);
         }
 
         /**
@@ -2179,6 +2405,9 @@ namespace Aws
          */
         virtual Model::GetBucketRequestPaymentOutcome GetBucketRequestPayment(const Model::GetBucketRequestPaymentRequest& request) const;
 
+        void SubmitOpGetBucketRequestPayment(Model::GetBucketRequestPaymentRequest const * const pRequest,
+                                      std::function<void(XmlOutcome)> responseHandler, std::shared_ptr<Aws::Utils::Threading::Executor> pExecutor) const;
+
         /**
          * A Callable wrapper for GetBucketRequestPayment that returns a future to the operation so that it can be executed in parallel to other requests.
          */
@@ -2191,10 +2420,13 @@ namespace Aws
         /**
          * An Async wrapper for GetBucketRequestPayment that queues the request into a thread executor and triggers associated callback when operation has finished.
          */
-        template<typename GetBucketRequestPaymentRequestT = Model::GetBucketRequestPaymentRequest>
+        template<int version = 1, typename GetBucketRequestPaymentRequestT = Model::GetBucketRequestPaymentRequest>
         void GetBucketRequestPaymentAsync(const GetBucketRequestPaymentRequestT& request, const GetBucketRequestPaymentResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context = nullptr) const
         {
-            return SubmitAsync(&S3Client::GetBucketRequestPayment, request, handler, context);
+            if(version == 2)
+              return SubmitAsyncV2< GetBucketRequestPaymentRequestT, Model::GetBucketRequestPaymentOutcome, XmlOutcome>(&S3Client::SubmitOpGetBucketRequestPayment, request, handler, context);
+            else
+              return SubmitAsync(&S3Client::GetBucketRequestPayment, request, handler, context);
         }
 
         /**
@@ -2215,6 +2447,9 @@ namespace Aws
          */
         virtual Model::GetBucketTaggingOutcome GetBucketTagging(const Model::GetBucketTaggingRequest& request) const;
 
+        void SubmitOpGetBucketTagging(Model::GetBucketTaggingRequest const * const pRequest,
+                                      std::function<void(XmlOutcome)> responseHandler, std::shared_ptr<Aws::Utils::Threading::Executor> pExecutor) const;
+
         /**
          * A Callable wrapper for GetBucketTagging that returns a future to the operation so that it can be executed in parallel to other requests.
          */
@@ -2227,10 +2462,13 @@ namespace Aws
         /**
          * An Async wrapper for GetBucketTagging that queues the request into a thread executor and triggers associated callback when operation has finished.
          */
-        template<typename GetBucketTaggingRequestT = Model::GetBucketTaggingRequest>
+        template<int version = 1, typename GetBucketTaggingRequestT = Model::GetBucketTaggingRequest>
         void GetBucketTaggingAsync(const GetBucketTaggingRequestT& request, const GetBucketTaggingResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context = nullptr) const
         {
-            return SubmitAsync(&S3Client::GetBucketTagging, request, handler, context);
+            if(version == 2)
+              return SubmitAsyncV2< GetBucketTaggingRequestT, Model::GetBucketTaggingOutcome, XmlOutcome>(&S3Client::SubmitOpGetBucketTagging, request, handler, context);
+            else
+              return SubmitAsync(&S3Client::GetBucketTagging, request, handler, context);
         }
 
         /**
@@ -2251,6 +2489,9 @@ namespace Aws
          */
         virtual Model::GetBucketVersioningOutcome GetBucketVersioning(const Model::GetBucketVersioningRequest& request) const;
 
+        void SubmitOpGetBucketVersioning(Model::GetBucketVersioningRequest const * const pRequest,
+                                      std::function<void(XmlOutcome)> responseHandler, std::shared_ptr<Aws::Utils::Threading::Executor> pExecutor) const;
+
         /**
          * A Callable wrapper for GetBucketVersioning that returns a future to the operation so that it can be executed in parallel to other requests.
          */
@@ -2263,10 +2504,13 @@ namespace Aws
         /**
          * An Async wrapper for GetBucketVersioning that queues the request into a thread executor and triggers associated callback when operation has finished.
          */
-        template<typename GetBucketVersioningRequestT = Model::GetBucketVersioningRequest>
+        template<int version = 1, typename GetBucketVersioningRequestT = Model::GetBucketVersioningRequest>
         void GetBucketVersioningAsync(const GetBucketVersioningRequestT& request, const GetBucketVersioningResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context = nullptr) const
         {
-            return SubmitAsync(&S3Client::GetBucketVersioning, request, handler, context);
+            if(version == 2)
+              return SubmitAsyncV2< GetBucketVersioningRequestT, Model::GetBucketVersioningOutcome, XmlOutcome>(&S3Client::SubmitOpGetBucketVersioning, request, handler, context);
+            else
+              return SubmitAsync(&S3Client::GetBucketVersioning, request, handler, context);
         }
 
         /**
@@ -2290,6 +2534,9 @@ namespace Aws
          */
         virtual Model::GetBucketWebsiteOutcome GetBucketWebsite(const Model::GetBucketWebsiteRequest& request) const;
 
+        void SubmitOpGetBucketWebsite(Model::GetBucketWebsiteRequest const * const pRequest,
+                                      std::function<void(XmlOutcome)> responseHandler, std::shared_ptr<Aws::Utils::Threading::Executor> pExecutor) const;
+
         /**
          * A Callable wrapper for GetBucketWebsite that returns a future to the operation so that it can be executed in parallel to other requests.
          */
@@ -2302,10 +2549,13 @@ namespace Aws
         /**
          * An Async wrapper for GetBucketWebsite that queues the request into a thread executor and triggers associated callback when operation has finished.
          */
-        template<typename GetBucketWebsiteRequestT = Model::GetBucketWebsiteRequest>
+        template<int version = 1, typename GetBucketWebsiteRequestT = Model::GetBucketWebsiteRequest>
         void GetBucketWebsiteAsync(const GetBucketWebsiteRequestT& request, const GetBucketWebsiteResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context = nullptr) const
         {
-            return SubmitAsync(&S3Client::GetBucketWebsite, request, handler, context);
+            if(version == 2)
+              return SubmitAsyncV2< GetBucketWebsiteRequestT, Model::GetBucketWebsiteOutcome, XmlOutcome>(&S3Client::SubmitOpGetBucketWebsite, request, handler, context);
+            else
+              return SubmitAsync(&S3Client::GetBucketWebsite, request, handler, context);
         }
 
         /**
@@ -2425,6 +2675,9 @@ namespace Aws
          */
         virtual Model::GetObjectOutcome GetObject(const Model::GetObjectRequest& request) const;
 
+        void SubmitOpGetObject(Model::GetObjectRequest const * const pRequest,
+                                      std::function<void(XmlOutcome)> responseHandler, std::shared_ptr<Aws::Utils::Threading::Executor> pExecutor) const;
+
         /**
          * A Callable wrapper for GetObject that returns a future to the operation so that it can be executed in parallel to other requests.
          */
@@ -2465,6 +2718,9 @@ namespace Aws
          */
         virtual Model::GetObjectAclOutcome GetObjectAcl(const Model::GetObjectAclRequest& request) const;
 
+        void SubmitOpGetObjectAcl(Model::GetObjectAclRequest const * const pRequest,
+                                      std::function<void(XmlOutcome)> responseHandler, std::shared_ptr<Aws::Utils::Threading::Executor> pExecutor) const;
+
         /**
          * A Callable wrapper for GetObjectAcl that returns a future to the operation so that it can be executed in parallel to other requests.
          */
@@ -2477,10 +2733,13 @@ namespace Aws
         /**
          * An Async wrapper for GetObjectAcl that queues the request into a thread executor and triggers associated callback when operation has finished.
          */
-        template<typename GetObjectAclRequestT = Model::GetObjectAclRequest>
+        template<int version = 1, typename GetObjectAclRequestT = Model::GetObjectAclRequest>
         void GetObjectAclAsync(const GetObjectAclRequestT& request, const GetObjectAclResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context = nullptr) const
         {
-            return SubmitAsync(&S3Client::GetObjectAcl, request, handler, context);
+            if(version == 2)
+              return SubmitAsyncV2< GetObjectAclRequestT, Model::GetObjectAclOutcome, XmlOutcome>(&S3Client::SubmitOpGetObjectAcl, request, handler, context);
+            else
+              return SubmitAsync(&S3Client::GetObjectAcl, request, handler, context);
         }
 
         /**
@@ -2558,6 +2817,9 @@ namespace Aws
          */
         virtual Model::GetObjectAttributesOutcome GetObjectAttributes(const Model::GetObjectAttributesRequest& request) const;
 
+        void SubmitOpGetObjectAttributes(Model::GetObjectAttributesRequest const * const pRequest,
+                                      std::function<void(XmlOutcome)> responseHandler, std::shared_ptr<Aws::Utils::Threading::Executor> pExecutor) const;
+
         /**
          * A Callable wrapper for GetObjectAttributes that returns a future to the operation so that it can be executed in parallel to other requests.
          */
@@ -2570,10 +2832,13 @@ namespace Aws
         /**
          * An Async wrapper for GetObjectAttributes that queues the request into a thread executor and triggers associated callback when operation has finished.
          */
-        template<typename GetObjectAttributesRequestT = Model::GetObjectAttributesRequest>
+        template<int version = 1, typename GetObjectAttributesRequestT = Model::GetObjectAttributesRequest>
         void GetObjectAttributesAsync(const GetObjectAttributesRequestT& request, const GetObjectAttributesResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context = nullptr) const
         {
-            return SubmitAsync(&S3Client::GetObjectAttributes, request, handler, context);
+            if(version == 2)
+              return SubmitAsyncV2< GetObjectAttributesRequestT, Model::GetObjectAttributesOutcome, XmlOutcome>(&S3Client::SubmitOpGetObjectAttributes, request, handler, context);
+            else
+              return SubmitAsync(&S3Client::GetObjectAttributes, request, handler, context);
         }
 
         /**
@@ -2589,6 +2854,9 @@ namespace Aws
          */
         virtual Model::GetObjectLegalHoldOutcome GetObjectLegalHold(const Model::GetObjectLegalHoldRequest& request) const;
 
+        void SubmitOpGetObjectLegalHold(Model::GetObjectLegalHoldRequest const * const pRequest,
+                                      std::function<void(XmlOutcome)> responseHandler, std::shared_ptr<Aws::Utils::Threading::Executor> pExecutor) const;
+
         /**
          * A Callable wrapper for GetObjectLegalHold that returns a future to the operation so that it can be executed in parallel to other requests.
          */
@@ -2601,10 +2869,13 @@ namespace Aws
         /**
          * An Async wrapper for GetObjectLegalHold that queues the request into a thread executor and triggers associated callback when operation has finished.
          */
-        template<typename GetObjectLegalHoldRequestT = Model::GetObjectLegalHoldRequest>
+        template<int version = 1, typename GetObjectLegalHoldRequestT = Model::GetObjectLegalHoldRequest>
         void GetObjectLegalHoldAsync(const GetObjectLegalHoldRequestT& request, const GetObjectLegalHoldResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context = nullptr) const
         {
-            return SubmitAsync(&S3Client::GetObjectLegalHold, request, handler, context);
+            if(version == 2)
+              return SubmitAsyncV2< GetObjectLegalHoldRequestT, Model::GetObjectLegalHoldOutcome, XmlOutcome>(&S3Client::SubmitOpGetObjectLegalHold, request, handler, context);
+            else
+              return SubmitAsync(&S3Client::GetObjectLegalHold, request, handler, context);
         }
 
         /**
@@ -2621,6 +2892,9 @@ namespace Aws
          */
         virtual Model::GetObjectLockConfigurationOutcome GetObjectLockConfiguration(const Model::GetObjectLockConfigurationRequest& request) const;
 
+        void SubmitOpGetObjectLockConfiguration(Model::GetObjectLockConfigurationRequest const * const pRequest,
+                                      std::function<void(XmlOutcome)> responseHandler, std::shared_ptr<Aws::Utils::Threading::Executor> pExecutor) const;
+
         /**
          * A Callable wrapper for GetObjectLockConfiguration that returns a future to the operation so that it can be executed in parallel to other requests.
          */
@@ -2633,10 +2907,13 @@ namespace Aws
         /**
          * An Async wrapper for GetObjectLockConfiguration that queues the request into a thread executor and triggers associated callback when operation has finished.
          */
-        template<typename GetObjectLockConfigurationRequestT = Model::GetObjectLockConfigurationRequest>
+        template<int version = 1, typename GetObjectLockConfigurationRequestT = Model::GetObjectLockConfigurationRequest>
         void GetObjectLockConfigurationAsync(const GetObjectLockConfigurationRequestT& request, const GetObjectLockConfigurationResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context = nullptr) const
         {
-            return SubmitAsync(&S3Client::GetObjectLockConfiguration, request, handler, context);
+            if(version == 2)
+              return SubmitAsyncV2< GetObjectLockConfigurationRequestT, Model::GetObjectLockConfigurationOutcome, XmlOutcome>(&S3Client::SubmitOpGetObjectLockConfiguration, request, handler, context);
+            else
+              return SubmitAsync(&S3Client::GetObjectLockConfiguration, request, handler, context);
         }
 
         /**
@@ -2652,6 +2929,9 @@ namespace Aws
          */
         virtual Model::GetObjectRetentionOutcome GetObjectRetention(const Model::GetObjectRetentionRequest& request) const;
 
+        void SubmitOpGetObjectRetention(Model::GetObjectRetentionRequest const * const pRequest,
+                                      std::function<void(XmlOutcome)> responseHandler, std::shared_ptr<Aws::Utils::Threading::Executor> pExecutor) const;
+
         /**
          * A Callable wrapper for GetObjectRetention that returns a future to the operation so that it can be executed in parallel to other requests.
          */
@@ -2664,10 +2944,13 @@ namespace Aws
         /**
          * An Async wrapper for GetObjectRetention that queues the request into a thread executor and triggers associated callback when operation has finished.
          */
-        template<typename GetObjectRetentionRequestT = Model::GetObjectRetentionRequest>
+        template<int version = 1, typename GetObjectRetentionRequestT = Model::GetObjectRetentionRequest>
         void GetObjectRetentionAsync(const GetObjectRetentionRequestT& request, const GetObjectRetentionResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context = nullptr) const
         {
-            return SubmitAsync(&S3Client::GetObjectRetention, request, handler, context);
+            if(version == 2)
+              return SubmitAsyncV2< GetObjectRetentionRequestT, Model::GetObjectRetentionOutcome, XmlOutcome>(&S3Client::SubmitOpGetObjectRetention, request, handler, context);
+            else
+              return SubmitAsync(&S3Client::GetObjectRetention, request, handler, context);
         }
 
         /**
@@ -2695,6 +2978,9 @@ namespace Aws
          */
         virtual Model::GetObjectTaggingOutcome GetObjectTagging(const Model::GetObjectTaggingRequest& request) const;
 
+        void SubmitOpGetObjectTagging(Model::GetObjectTaggingRequest const * const pRequest,
+                                      std::function<void(XmlOutcome)> responseHandler, std::shared_ptr<Aws::Utils::Threading::Executor> pExecutor) const;
+
         /**
          * A Callable wrapper for GetObjectTagging that returns a future to the operation so that it can be executed in parallel to other requests.
          */
@@ -2707,10 +2993,13 @@ namespace Aws
         /**
          * An Async wrapper for GetObjectTagging that queues the request into a thread executor and triggers associated callback when operation has finished.
          */
-        template<typename GetObjectTaggingRequestT = Model::GetObjectTaggingRequest>
+        template<int version = 1, typename GetObjectTaggingRequestT = Model::GetObjectTaggingRequest>
         void GetObjectTaggingAsync(const GetObjectTaggingRequestT& request, const GetObjectTaggingResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context = nullptr) const
         {
-            return SubmitAsync(&S3Client::GetObjectTagging, request, handler, context);
+            if(version == 2)
+              return SubmitAsyncV2< GetObjectTaggingRequestT, Model::GetObjectTaggingOutcome, XmlOutcome>(&S3Client::SubmitOpGetObjectTagging, request, handler, context);
+            else
+              return SubmitAsync(&S3Client::GetObjectTagging, request, handler, context);
         }
 
         /**
@@ -2728,6 +3017,9 @@ namespace Aws
          */
         virtual Model::GetObjectTorrentOutcome GetObjectTorrent(const Model::GetObjectTorrentRequest& request) const;
 
+        void SubmitOpGetObjectTorrent(Model::GetObjectTorrentRequest const * const pRequest,
+                                      std::function<void(XmlOutcome)> responseHandler, std::shared_ptr<Aws::Utils::Threading::Executor> pExecutor) const;
+
         /**
          * A Callable wrapper for GetObjectTorrent that returns a future to the operation so that it can be executed in parallel to other requests.
          */
@@ -2740,10 +3032,13 @@ namespace Aws
         /**
          * An Async wrapper for GetObjectTorrent that queues the request into a thread executor and triggers associated callback when operation has finished.
          */
-        template<typename GetObjectTorrentRequestT = Model::GetObjectTorrentRequest>
+        template<int version = 1, typename GetObjectTorrentRequestT = Model::GetObjectTorrentRequest>
         void GetObjectTorrentAsync(const GetObjectTorrentRequestT& request, const GetObjectTorrentResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context = nullptr) const
         {
-            return SubmitAsync(&S3Client::GetObjectTorrent, request, handler, context);
+            if(version == 2)
+              return SubmitAsyncV2< GetObjectTorrentRequestT, Model::GetObjectTorrentOutcome, XmlOutcome>(&S3Client::SubmitOpGetObjectTorrent, request, handler, context);
+            else
+              return SubmitAsync(&S3Client::GetObjectTorrent, request, handler, context);
         }
 
         /**
@@ -2776,6 +3071,9 @@ namespace Aws
          */
         virtual Model::GetPublicAccessBlockOutcome GetPublicAccessBlock(const Model::GetPublicAccessBlockRequest& request) const;
 
+        void SubmitOpGetPublicAccessBlock(Model::GetPublicAccessBlockRequest const * const pRequest,
+                                      std::function<void(XmlOutcome)> responseHandler, std::shared_ptr<Aws::Utils::Threading::Executor> pExecutor) const;
+
         /**
          * A Callable wrapper for GetPublicAccessBlock that returns a future to the operation so that it can be executed in parallel to other requests.
          */
@@ -2788,10 +3086,13 @@ namespace Aws
         /**
          * An Async wrapper for GetPublicAccessBlock that queues the request into a thread executor and triggers associated callback when operation has finished.
          */
-        template<typename GetPublicAccessBlockRequestT = Model::GetPublicAccessBlockRequest>
+        template<int version = 1, typename GetPublicAccessBlockRequestT = Model::GetPublicAccessBlockRequest>
         void GetPublicAccessBlockAsync(const GetPublicAccessBlockRequestT& request, const GetPublicAccessBlockResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context = nullptr) const
         {
-            return SubmitAsync(&S3Client::GetPublicAccessBlock, request, handler, context);
+            if(version == 2)
+              return SubmitAsyncV2< GetPublicAccessBlockRequestT, Model::GetPublicAccessBlockOutcome, XmlOutcome>(&S3Client::SubmitOpGetPublicAccessBlock, request, handler, context);
+            else
+              return SubmitAsync(&S3Client::GetPublicAccessBlock, request, handler, context);
         }
 
         /**
@@ -2829,6 +3130,9 @@ namespace Aws
          */
         virtual Model::HeadBucketOutcome HeadBucket(const Model::HeadBucketRequest& request) const;
 
+        void SubmitOpHeadBucket(Model::HeadBucketRequest const * const pRequest,
+                                      std::function<void(XmlOutcome)> responseHandler, std::shared_ptr<Aws::Utils::Threading::Executor> pExecutor) const;
+
         /**
          * A Callable wrapper for HeadBucket that returns a future to the operation so that it can be executed in parallel to other requests.
          */
@@ -2841,10 +3145,13 @@ namespace Aws
         /**
          * An Async wrapper for HeadBucket that queues the request into a thread executor and triggers associated callback when operation has finished.
          */
-        template<typename HeadBucketRequestT = Model::HeadBucketRequest>
+        template<int version = 1, typename HeadBucketRequestT = Model::HeadBucketRequest>
         void HeadBucketAsync(const HeadBucketRequestT& request, const HeadBucketResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context = nullptr) const
         {
-            return SubmitAsync(&S3Client::HeadBucket, request, handler, context);
+            if(version == 2)
+              return SubmitAsyncV2< HeadBucketRequestT, Model::HeadBucketOutcome, XmlOutcome>(&S3Client::SubmitOpHeadBucket, request, handler, context);
+            else
+              return SubmitAsync(&S3Client::HeadBucket, request, handler, context);
         }
 
         /**
@@ -2912,6 +3219,9 @@ namespace Aws
          */
         virtual Model::HeadObjectOutcome HeadObject(const Model::HeadObjectRequest& request) const;
 
+        void SubmitOpHeadObject(Model::HeadObjectRequest const * const pRequest,
+                                      std::function<void(XmlOutcome)> responseHandler, std::shared_ptr<Aws::Utils::Threading::Executor> pExecutor) const;
+
         /**
          * A Callable wrapper for HeadObject that returns a future to the operation so that it can be executed in parallel to other requests.
          */
@@ -2924,10 +3234,13 @@ namespace Aws
         /**
          * An Async wrapper for HeadObject that queues the request into a thread executor and triggers associated callback when operation has finished.
          */
-        template<typename HeadObjectRequestT = Model::HeadObjectRequest>
+        template<int version = 1, typename HeadObjectRequestT = Model::HeadObjectRequest>
         void HeadObjectAsync(const HeadObjectRequestT& request, const HeadObjectResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context = nullptr) const
         {
-            return SubmitAsync(&S3Client::HeadObject, request, handler, context);
+            if(version == 2)
+              return SubmitAsyncV2< HeadObjectRequestT, Model::HeadObjectOutcome, XmlOutcome>(&S3Client::SubmitOpHeadObject, request, handler, context);
+            else
+              return SubmitAsync(&S3Client::HeadObject, request, handler, context);
         }
 
         /**
@@ -2963,6 +3276,9 @@ namespace Aws
          */
         virtual Model::ListBucketAnalyticsConfigurationsOutcome ListBucketAnalyticsConfigurations(const Model::ListBucketAnalyticsConfigurationsRequest& request) const;
 
+        void SubmitOpListBucketAnalyticsConfigurations(Model::ListBucketAnalyticsConfigurationsRequest const * const pRequest,
+                                      std::function<void(XmlOutcome)> responseHandler, std::shared_ptr<Aws::Utils::Threading::Executor> pExecutor) const;
+
         /**
          * A Callable wrapper for ListBucketAnalyticsConfigurations that returns a future to the operation so that it can be executed in parallel to other requests.
          */
@@ -2975,10 +3291,13 @@ namespace Aws
         /**
          * An Async wrapper for ListBucketAnalyticsConfigurations that queues the request into a thread executor and triggers associated callback when operation has finished.
          */
-        template<typename ListBucketAnalyticsConfigurationsRequestT = Model::ListBucketAnalyticsConfigurationsRequest>
+        template<int version = 1, typename ListBucketAnalyticsConfigurationsRequestT = Model::ListBucketAnalyticsConfigurationsRequest>
         void ListBucketAnalyticsConfigurationsAsync(const ListBucketAnalyticsConfigurationsRequestT& request, const ListBucketAnalyticsConfigurationsResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context = nullptr) const
         {
-            return SubmitAsync(&S3Client::ListBucketAnalyticsConfigurations, request, handler, context);
+            if(version == 2)
+              return SubmitAsyncV2< ListBucketAnalyticsConfigurationsRequestT, Model::ListBucketAnalyticsConfigurationsOutcome, XmlOutcome>(&S3Client::SubmitOpListBucketAnalyticsConfigurations, request, handler, context);
+            else
+              return SubmitAsync(&S3Client::ListBucketAnalyticsConfigurations, request, handler, context);
         }
 
         /**
@@ -3011,6 +3330,9 @@ namespace Aws
          */
         virtual Model::ListBucketIntelligentTieringConfigurationsOutcome ListBucketIntelligentTieringConfigurations(const Model::ListBucketIntelligentTieringConfigurationsRequest& request) const;
 
+        void SubmitOpListBucketIntelligentTieringConfigurations(Model::ListBucketIntelligentTieringConfigurationsRequest const * const pRequest,
+                                      std::function<void(XmlOutcome)> responseHandler, std::shared_ptr<Aws::Utils::Threading::Executor> pExecutor) const;
+
         /**
          * A Callable wrapper for ListBucketIntelligentTieringConfigurations that returns a future to the operation so that it can be executed in parallel to other requests.
          */
@@ -3023,10 +3345,13 @@ namespace Aws
         /**
          * An Async wrapper for ListBucketIntelligentTieringConfigurations that queues the request into a thread executor and triggers associated callback when operation has finished.
          */
-        template<typename ListBucketIntelligentTieringConfigurationsRequestT = Model::ListBucketIntelligentTieringConfigurationsRequest>
+        template<int version = 1, typename ListBucketIntelligentTieringConfigurationsRequestT = Model::ListBucketIntelligentTieringConfigurationsRequest>
         void ListBucketIntelligentTieringConfigurationsAsync(const ListBucketIntelligentTieringConfigurationsRequestT& request, const ListBucketIntelligentTieringConfigurationsResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context = nullptr) const
         {
-            return SubmitAsync(&S3Client::ListBucketIntelligentTieringConfigurations, request, handler, context);
+            if(version == 2)
+              return SubmitAsyncV2< ListBucketIntelligentTieringConfigurationsRequestT, Model::ListBucketIntelligentTieringConfigurationsOutcome, XmlOutcome>(&S3Client::SubmitOpListBucketIntelligentTieringConfigurations, request, handler, context);
+            else
+              return SubmitAsync(&S3Client::ListBucketIntelligentTieringConfigurations, request, handler, context);
         }
 
         /**
@@ -3062,6 +3387,9 @@ namespace Aws
          */
         virtual Model::ListBucketInventoryConfigurationsOutcome ListBucketInventoryConfigurations(const Model::ListBucketInventoryConfigurationsRequest& request) const;
 
+        void SubmitOpListBucketInventoryConfigurations(Model::ListBucketInventoryConfigurationsRequest const * const pRequest,
+                                      std::function<void(XmlOutcome)> responseHandler, std::shared_ptr<Aws::Utils::Threading::Executor> pExecutor) const;
+
         /**
          * A Callable wrapper for ListBucketInventoryConfigurations that returns a future to the operation so that it can be executed in parallel to other requests.
          */
@@ -3074,10 +3402,13 @@ namespace Aws
         /**
          * An Async wrapper for ListBucketInventoryConfigurations that queues the request into a thread executor and triggers associated callback when operation has finished.
          */
-        template<typename ListBucketInventoryConfigurationsRequestT = Model::ListBucketInventoryConfigurationsRequest>
+        template<int version = 1, typename ListBucketInventoryConfigurationsRequestT = Model::ListBucketInventoryConfigurationsRequest>
         void ListBucketInventoryConfigurationsAsync(const ListBucketInventoryConfigurationsRequestT& request, const ListBucketInventoryConfigurationsResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context = nullptr) const
         {
-            return SubmitAsync(&S3Client::ListBucketInventoryConfigurations, request, handler, context);
+            if(version == 2)
+              return SubmitAsyncV2< ListBucketInventoryConfigurationsRequestT, Model::ListBucketInventoryConfigurationsOutcome, XmlOutcome>(&S3Client::SubmitOpListBucketInventoryConfigurations, request, handler, context);
+            else
+              return SubmitAsync(&S3Client::ListBucketInventoryConfigurations, request, handler, context);
         }
 
         /**
@@ -3115,6 +3446,9 @@ namespace Aws
          */
         virtual Model::ListBucketMetricsConfigurationsOutcome ListBucketMetricsConfigurations(const Model::ListBucketMetricsConfigurationsRequest& request) const;
 
+        void SubmitOpListBucketMetricsConfigurations(Model::ListBucketMetricsConfigurationsRequest const * const pRequest,
+                                      std::function<void(XmlOutcome)> responseHandler, std::shared_ptr<Aws::Utils::Threading::Executor> pExecutor) const;
+
         /**
          * A Callable wrapper for ListBucketMetricsConfigurations that returns a future to the operation so that it can be executed in parallel to other requests.
          */
@@ -3127,10 +3461,13 @@ namespace Aws
         /**
          * An Async wrapper for ListBucketMetricsConfigurations that queues the request into a thread executor and triggers associated callback when operation has finished.
          */
-        template<typename ListBucketMetricsConfigurationsRequestT = Model::ListBucketMetricsConfigurationsRequest>
+        template<int version = 1, typename ListBucketMetricsConfigurationsRequestT = Model::ListBucketMetricsConfigurationsRequest>
         void ListBucketMetricsConfigurationsAsync(const ListBucketMetricsConfigurationsRequestT& request, const ListBucketMetricsConfigurationsResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context = nullptr) const
         {
-            return SubmitAsync(&S3Client::ListBucketMetricsConfigurations, request, handler, context);
+            if(version == 2)
+              return SubmitAsyncV2< ListBucketMetricsConfigurationsRequestT, Model::ListBucketMetricsConfigurationsOutcome, XmlOutcome>(&S3Client::SubmitOpListBucketMetricsConfigurations, request, handler, context);
+            else
+              return SubmitAsync(&S3Client::ListBucketMetricsConfigurations, request, handler, context);
         }
 
         /**
@@ -3200,6 +3537,9 @@ namespace Aws
          */
         virtual Model::ListMultipartUploadsOutcome ListMultipartUploads(const Model::ListMultipartUploadsRequest& request) const;
 
+        void SubmitOpListMultipartUploads(Model::ListMultipartUploadsRequest const * const pRequest,
+                                      std::function<void(XmlOutcome)> responseHandler, std::shared_ptr<Aws::Utils::Threading::Executor> pExecutor) const;
+
         /**
          * A Callable wrapper for ListMultipartUploads that returns a future to the operation so that it can be executed in parallel to other requests.
          */
@@ -3212,10 +3552,13 @@ namespace Aws
         /**
          * An Async wrapper for ListMultipartUploads that queues the request into a thread executor and triggers associated callback when operation has finished.
          */
-        template<typename ListMultipartUploadsRequestT = Model::ListMultipartUploadsRequest>
+        template<int version = 1, typename ListMultipartUploadsRequestT = Model::ListMultipartUploadsRequest>
         void ListMultipartUploadsAsync(const ListMultipartUploadsRequestT& request, const ListMultipartUploadsResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context = nullptr) const
         {
-            return SubmitAsync(&S3Client::ListMultipartUploads, request, handler, context);
+            if(version == 2)
+              return SubmitAsyncV2< ListMultipartUploadsRequestT, Model::ListMultipartUploadsOutcome, XmlOutcome>(&S3Client::SubmitOpListMultipartUploads, request, handler, context);
+            else
+              return SubmitAsync(&S3Client::ListMultipartUploads, request, handler, context);
         }
 
         /**
@@ -3242,6 +3585,9 @@ namespace Aws
          */
         virtual Model::ListObjectVersionsOutcome ListObjectVersions(const Model::ListObjectVersionsRequest& request) const;
 
+        void SubmitOpListObjectVersions(Model::ListObjectVersionsRequest const * const pRequest,
+                                      std::function<void(XmlOutcome)> responseHandler, std::shared_ptr<Aws::Utils::Threading::Executor> pExecutor) const;
+
         /**
          * A Callable wrapper for ListObjectVersions that returns a future to the operation so that it can be executed in parallel to other requests.
          */
@@ -3254,10 +3600,13 @@ namespace Aws
         /**
          * An Async wrapper for ListObjectVersions that queues the request into a thread executor and triggers associated callback when operation has finished.
          */
-        template<typename ListObjectVersionsRequestT = Model::ListObjectVersionsRequest>
+        template<int version = 1, typename ListObjectVersionsRequestT = Model::ListObjectVersionsRequest>
         void ListObjectVersionsAsync(const ListObjectVersionsRequestT& request, const ListObjectVersionsResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context = nullptr) const
         {
-            return SubmitAsync(&S3Client::ListObjectVersions, request, handler, context);
+            if(version == 2)
+              return SubmitAsyncV2< ListObjectVersionsRequestT, Model::ListObjectVersionsOutcome, XmlOutcome>(&S3Client::SubmitOpListObjectVersions, request, handler, context);
+            else
+              return SubmitAsync(&S3Client::ListObjectVersions, request, handler, context);
         }
 
         /**
@@ -3286,6 +3635,9 @@ namespace Aws
          */
         virtual Model::ListObjectsOutcome ListObjects(const Model::ListObjectsRequest& request) const;
 
+        void SubmitOpListObjects(Model::ListObjectsRequest const * const pRequest,
+                                      std::function<void(XmlOutcome)> responseHandler, std::shared_ptr<Aws::Utils::Threading::Executor> pExecutor) const;
+
         /**
          * A Callable wrapper for ListObjects that returns a future to the operation so that it can be executed in parallel to other requests.
          */
@@ -3298,10 +3650,13 @@ namespace Aws
         /**
          * An Async wrapper for ListObjects that queues the request into a thread executor and triggers associated callback when operation has finished.
          */
-        template<typename ListObjectsRequestT = Model::ListObjectsRequest>
+        template<int version = 1, typename ListObjectsRequestT = Model::ListObjectsRequest>
         void ListObjectsAsync(const ListObjectsRequestT& request, const ListObjectsResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context = nullptr) const
         {
-            return SubmitAsync(&S3Client::ListObjects, request, handler, context);
+            if(version == 2)
+              return SubmitAsyncV2< ListObjectsRequestT, Model::ListObjectsOutcome, XmlOutcome>(&S3Client::SubmitOpListObjects, request, handler, context);
+            else
+              return SubmitAsync(&S3Client::ListObjects, request, handler, context);
         }
 
         /**
@@ -3343,6 +3698,9 @@ namespace Aws
          */
         virtual Model::ListObjectsV2Outcome ListObjectsV2(const Model::ListObjectsV2Request& request) const;
 
+        void SubmitOpListObjectsV2(Model::ListObjectsV2Request const * const pRequest,
+                                      std::function<void(XmlOutcome)> responseHandler, std::shared_ptr<Aws::Utils::Threading::Executor> pExecutor) const;
+
         /**
          * A Callable wrapper for ListObjectsV2 that returns a future to the operation so that it can be executed in parallel to other requests.
          */
@@ -3355,10 +3713,13 @@ namespace Aws
         /**
          * An Async wrapper for ListObjectsV2 that queues the request into a thread executor and triggers associated callback when operation has finished.
          */
-        template<typename ListObjectsV2RequestT = Model::ListObjectsV2Request>
+        template<int version = 1, typename ListObjectsV2RequestT = Model::ListObjectsV2Request>
         void ListObjectsV2Async(const ListObjectsV2RequestT& request, const ListObjectsV2ResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context = nullptr) const
         {
-            return SubmitAsync(&S3Client::ListObjectsV2, request, handler, context);
+            if(version == 2)
+              return SubmitAsyncV2< ListObjectsV2RequestT, Model::ListObjectsV2Outcome, XmlOutcome>(&S3Client::SubmitOpListObjectsV2, request, handler, context);
+            else
+              return SubmitAsync(&S3Client::ListObjectsV2, request, handler, context);
         }
 
         /**
@@ -3400,6 +3761,9 @@ namespace Aws
          */
         virtual Model::ListPartsOutcome ListParts(const Model::ListPartsRequest& request) const;
 
+        void SubmitOpListParts(Model::ListPartsRequest const * const pRequest,
+                                      std::function<void(XmlOutcome)> responseHandler, std::shared_ptr<Aws::Utils::Threading::Executor> pExecutor) const;
+
         /**
          * A Callable wrapper for ListParts that returns a future to the operation so that it can be executed in parallel to other requests.
          */
@@ -3412,10 +3776,13 @@ namespace Aws
         /**
          * An Async wrapper for ListParts that queues the request into a thread executor and triggers associated callback when operation has finished.
          */
-        template<typename ListPartsRequestT = Model::ListPartsRequest>
+        template<int version = 1, typename ListPartsRequestT = Model::ListPartsRequest>
         void ListPartsAsync(const ListPartsRequestT& request, const ListPartsResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context = nullptr) const
         {
-            return SubmitAsync(&S3Client::ListParts, request, handler, context);
+            if(version == 2)
+              return SubmitAsyncV2< ListPartsRequestT, Model::ListPartsOutcome, XmlOutcome>(&S3Client::SubmitOpListParts, request, handler, context);
+            else
+              return SubmitAsync(&S3Client::ListParts, request, handler, context);
         }
 
         /**
@@ -3452,6 +3819,9 @@ namespace Aws
          */
         virtual Model::PutBucketAccelerateConfigurationOutcome PutBucketAccelerateConfiguration(const Model::PutBucketAccelerateConfigurationRequest& request) const;
 
+        void SubmitOpPutBucketAccelerateConfiguration(Model::PutBucketAccelerateConfigurationRequest const * const pRequest,
+                                      std::function<void(XmlOutcome)> responseHandler, std::shared_ptr<Aws::Utils::Threading::Executor> pExecutor) const;
+
         /**
          * A Callable wrapper for PutBucketAccelerateConfiguration that returns a future to the operation so that it can be executed in parallel to other requests.
          */
@@ -3464,10 +3834,13 @@ namespace Aws
         /**
          * An Async wrapper for PutBucketAccelerateConfiguration that queues the request into a thread executor and triggers associated callback when operation has finished.
          */
-        template<typename PutBucketAccelerateConfigurationRequestT = Model::PutBucketAccelerateConfigurationRequest>
+        template<int version = 1, typename PutBucketAccelerateConfigurationRequestT = Model::PutBucketAccelerateConfigurationRequest>
         void PutBucketAccelerateConfigurationAsync(const PutBucketAccelerateConfigurationRequestT& request, const PutBucketAccelerateConfigurationResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context = nullptr) const
         {
-            return SubmitAsync(&S3Client::PutBucketAccelerateConfiguration, request, handler, context);
+            if(version == 2)
+              return SubmitAsyncV2< PutBucketAccelerateConfigurationRequestT, Model::PutBucketAccelerateConfigurationOutcome, XmlOutcome>(&S3Client::SubmitOpPutBucketAccelerateConfiguration, request, handler, context);
+            else
+              return SubmitAsync(&S3Client::PutBucketAccelerateConfiguration, request, handler, context);
         }
 
         /**
@@ -3566,6 +3939,9 @@ namespace Aws
          */
         virtual Model::PutBucketAclOutcome PutBucketAcl(const Model::PutBucketAclRequest& request) const;
 
+        void SubmitOpPutBucketAcl(Model::PutBucketAclRequest const * const pRequest,
+                                      std::function<void(XmlOutcome)> responseHandler, std::shared_ptr<Aws::Utils::Threading::Executor> pExecutor) const;
+
         /**
          * A Callable wrapper for PutBucketAcl that returns a future to the operation so that it can be executed in parallel to other requests.
          */
@@ -3578,10 +3954,13 @@ namespace Aws
         /**
          * An Async wrapper for PutBucketAcl that queues the request into a thread executor and triggers associated callback when operation has finished.
          */
-        template<typename PutBucketAclRequestT = Model::PutBucketAclRequest>
+        template<int version = 1, typename PutBucketAclRequestT = Model::PutBucketAclRequest>
         void PutBucketAclAsync(const PutBucketAclRequestT& request, const PutBucketAclResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context = nullptr) const
         {
-            return SubmitAsync(&S3Client::PutBucketAcl, request, handler, context);
+            if(version == 2)
+              return SubmitAsyncV2< PutBucketAclRequestT, Model::PutBucketAclOutcome, XmlOutcome>(&S3Client::SubmitOpPutBucketAcl, request, handler, context);
+            else
+              return SubmitAsync(&S3Client::PutBucketAcl, request, handler, context);
         }
 
         /**
@@ -3635,6 +4014,9 @@ namespace Aws
          */
         virtual Model::PutBucketAnalyticsConfigurationOutcome PutBucketAnalyticsConfiguration(const Model::PutBucketAnalyticsConfigurationRequest& request) const;
 
+        void SubmitOpPutBucketAnalyticsConfiguration(Model::PutBucketAnalyticsConfigurationRequest const * const pRequest,
+                                      std::function<void(XmlOutcome)> responseHandler, std::shared_ptr<Aws::Utils::Threading::Executor> pExecutor) const;
+
         /**
          * A Callable wrapper for PutBucketAnalyticsConfiguration that returns a future to the operation so that it can be executed in parallel to other requests.
          */
@@ -3647,10 +4029,13 @@ namespace Aws
         /**
          * An Async wrapper for PutBucketAnalyticsConfiguration that queues the request into a thread executor and triggers associated callback when operation has finished.
          */
-        template<typename PutBucketAnalyticsConfigurationRequestT = Model::PutBucketAnalyticsConfigurationRequest>
+        template<int version = 1, typename PutBucketAnalyticsConfigurationRequestT = Model::PutBucketAnalyticsConfigurationRequest>
         void PutBucketAnalyticsConfigurationAsync(const PutBucketAnalyticsConfigurationRequestT& request, const PutBucketAnalyticsConfigurationResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context = nullptr) const
         {
-            return SubmitAsync(&S3Client::PutBucketAnalyticsConfiguration, request, handler, context);
+            if(version == 2)
+              return SubmitAsyncV2< PutBucketAnalyticsConfigurationRequestT, Model::PutBucketAnalyticsConfigurationOutcome, XmlOutcome>(&S3Client::SubmitOpPutBucketAnalyticsConfiguration, request, handler, context);
+            else
+              return SubmitAsync(&S3Client::PutBucketAnalyticsConfiguration, request, handler, context);
         }
 
         /**
@@ -3695,6 +4080,9 @@ namespace Aws
          */
         virtual Model::PutBucketCorsOutcome PutBucketCors(const Model::PutBucketCorsRequest& request) const;
 
+        void SubmitOpPutBucketCors(Model::PutBucketCorsRequest const * const pRequest,
+                                      std::function<void(XmlOutcome)> responseHandler, std::shared_ptr<Aws::Utils::Threading::Executor> pExecutor) const;
+
         /**
          * A Callable wrapper for PutBucketCors that returns a future to the operation so that it can be executed in parallel to other requests.
          */
@@ -3707,10 +4095,13 @@ namespace Aws
         /**
          * An Async wrapper for PutBucketCors that queues the request into a thread executor and triggers associated callback when operation has finished.
          */
-        template<typename PutBucketCorsRequestT = Model::PutBucketCorsRequest>
+        template<int version = 1, typename PutBucketCorsRequestT = Model::PutBucketCorsRequest>
         void PutBucketCorsAsync(const PutBucketCorsRequestT& request, const PutBucketCorsResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context = nullptr) const
         {
-            return SubmitAsync(&S3Client::PutBucketCors, request, handler, context);
+            if(version == 2)
+              return SubmitAsyncV2< PutBucketCorsRequestT, Model::PutBucketCorsOutcome, XmlOutcome>(&S3Client::SubmitOpPutBucketCors, request, handler, context);
+            else
+              return SubmitAsync(&S3Client::PutBucketCors, request, handler, context);
         }
 
         /**
@@ -3750,6 +4141,9 @@ namespace Aws
          */
         virtual Model::PutBucketEncryptionOutcome PutBucketEncryption(const Model::PutBucketEncryptionRequest& request) const;
 
+        void SubmitOpPutBucketEncryption(Model::PutBucketEncryptionRequest const * const pRequest,
+                                      std::function<void(XmlOutcome)> responseHandler, std::shared_ptr<Aws::Utils::Threading::Executor> pExecutor) const;
+
         /**
          * A Callable wrapper for PutBucketEncryption that returns a future to the operation so that it can be executed in parallel to other requests.
          */
@@ -3762,10 +4156,13 @@ namespace Aws
         /**
          * An Async wrapper for PutBucketEncryption that queues the request into a thread executor and triggers associated callback when operation has finished.
          */
-        template<typename PutBucketEncryptionRequestT = Model::PutBucketEncryptionRequest>
+        template<int version = 1, typename PutBucketEncryptionRequestT = Model::PutBucketEncryptionRequest>
         void PutBucketEncryptionAsync(const PutBucketEncryptionRequestT& request, const PutBucketEncryptionResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context = nullptr) const
         {
-            return SubmitAsync(&S3Client::PutBucketEncryption, request, handler, context);
+            if(version == 2)
+              return SubmitAsyncV2< PutBucketEncryptionRequestT, Model::PutBucketEncryptionOutcome, XmlOutcome>(&S3Client::SubmitOpPutBucketEncryption, request, handler, context);
+            else
+              return SubmitAsync(&S3Client::PutBucketEncryption, request, handler, context);
         }
 
         /**
@@ -3811,6 +4208,9 @@ namespace Aws
          */
         virtual Model::PutBucketIntelligentTieringConfigurationOutcome PutBucketIntelligentTieringConfiguration(const Model::PutBucketIntelligentTieringConfigurationRequest& request) const;
 
+        void SubmitOpPutBucketIntelligentTieringConfiguration(Model::PutBucketIntelligentTieringConfigurationRequest const * const pRequest,
+                                      std::function<void(XmlOutcome)> responseHandler, std::shared_ptr<Aws::Utils::Threading::Executor> pExecutor) const;
+
         /**
          * A Callable wrapper for PutBucketIntelligentTieringConfiguration that returns a future to the operation so that it can be executed in parallel to other requests.
          */
@@ -3823,10 +4223,13 @@ namespace Aws
         /**
          * An Async wrapper for PutBucketIntelligentTieringConfiguration that queues the request into a thread executor and triggers associated callback when operation has finished.
          */
-        template<typename PutBucketIntelligentTieringConfigurationRequestT = Model::PutBucketIntelligentTieringConfigurationRequest>
+        template<int version = 1, typename PutBucketIntelligentTieringConfigurationRequestT = Model::PutBucketIntelligentTieringConfigurationRequest>
         void PutBucketIntelligentTieringConfigurationAsync(const PutBucketIntelligentTieringConfigurationRequestT& request, const PutBucketIntelligentTieringConfigurationResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context = nullptr) const
         {
-            return SubmitAsync(&S3Client::PutBucketIntelligentTieringConfiguration, request, handler, context);
+            if(version == 2)
+              return SubmitAsyncV2< PutBucketIntelligentTieringConfigurationRequestT, Model::PutBucketIntelligentTieringConfigurationOutcome, XmlOutcome>(&S3Client::SubmitOpPutBucketIntelligentTieringConfiguration, request, handler, context);
+            else
+              return SubmitAsync(&S3Client::PutBucketIntelligentTieringConfiguration, request, handler, context);
         }
 
         /**
@@ -3893,6 +4296,9 @@ namespace Aws
          */
         virtual Model::PutBucketInventoryConfigurationOutcome PutBucketInventoryConfiguration(const Model::PutBucketInventoryConfigurationRequest& request) const;
 
+        void SubmitOpPutBucketInventoryConfiguration(Model::PutBucketInventoryConfigurationRequest const * const pRequest,
+                                      std::function<void(XmlOutcome)> responseHandler, std::shared_ptr<Aws::Utils::Threading::Executor> pExecutor) const;
+
         /**
          * A Callable wrapper for PutBucketInventoryConfiguration that returns a future to the operation so that it can be executed in parallel to other requests.
          */
@@ -3905,10 +4311,13 @@ namespace Aws
         /**
          * An Async wrapper for PutBucketInventoryConfiguration that queues the request into a thread executor and triggers associated callback when operation has finished.
          */
-        template<typename PutBucketInventoryConfigurationRequestT = Model::PutBucketInventoryConfigurationRequest>
+        template<int version = 1, typename PutBucketInventoryConfigurationRequestT = Model::PutBucketInventoryConfigurationRequest>
         void PutBucketInventoryConfigurationAsync(const PutBucketInventoryConfigurationRequestT& request, const PutBucketInventoryConfigurationResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context = nullptr) const
         {
-            return SubmitAsync(&S3Client::PutBucketInventoryConfiguration, request, handler, context);
+            if(version == 2)
+              return SubmitAsyncV2< PutBucketInventoryConfigurationRequestT, Model::PutBucketInventoryConfigurationOutcome, XmlOutcome>(&S3Client::SubmitOpPutBucketInventoryConfiguration, request, handler, context);
+            else
+              return SubmitAsync(&S3Client::PutBucketInventoryConfiguration, request, handler, context);
         }
 
         /**
@@ -3971,6 +4380,9 @@ namespace Aws
          */
         virtual Model::PutBucketLifecycleConfigurationOutcome PutBucketLifecycleConfiguration(const Model::PutBucketLifecycleConfigurationRequest& request) const;
 
+        void SubmitOpPutBucketLifecycleConfiguration(Model::PutBucketLifecycleConfigurationRequest const * const pRequest,
+                                      std::function<void(XmlOutcome)> responseHandler, std::shared_ptr<Aws::Utils::Threading::Executor> pExecutor) const;
+
         /**
          * A Callable wrapper for PutBucketLifecycleConfiguration that returns a future to the operation so that it can be executed in parallel to other requests.
          */
@@ -3983,10 +4395,13 @@ namespace Aws
         /**
          * An Async wrapper for PutBucketLifecycleConfiguration that queues the request into a thread executor and triggers associated callback when operation has finished.
          */
-        template<typename PutBucketLifecycleConfigurationRequestT = Model::PutBucketLifecycleConfigurationRequest>
+        template<int version = 1, typename PutBucketLifecycleConfigurationRequestT = Model::PutBucketLifecycleConfigurationRequest>
         void PutBucketLifecycleConfigurationAsync(const PutBucketLifecycleConfigurationRequestT& request, const PutBucketLifecycleConfigurationResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context = nullptr) const
         {
-            return SubmitAsync(&S3Client::PutBucketLifecycleConfiguration, request, handler, context);
+            if(version == 2)
+              return SubmitAsyncV2< PutBucketLifecycleConfigurationRequestT, Model::PutBucketLifecycleConfigurationOutcome, XmlOutcome>(&S3Client::SubmitOpPutBucketLifecycleConfiguration, request, handler, context);
+            else
+              return SubmitAsync(&S3Client::PutBucketLifecycleConfiguration, request, handler, context);
         }
 
         /**
@@ -4043,6 +4458,9 @@ namespace Aws
          */
         virtual Model::PutBucketLoggingOutcome PutBucketLogging(const Model::PutBucketLoggingRequest& request) const;
 
+        void SubmitOpPutBucketLogging(Model::PutBucketLoggingRequest const * const pRequest,
+                                      std::function<void(XmlOutcome)> responseHandler, std::shared_ptr<Aws::Utils::Threading::Executor> pExecutor) const;
+
         /**
          * A Callable wrapper for PutBucketLogging that returns a future to the operation so that it can be executed in parallel to other requests.
          */
@@ -4055,10 +4473,13 @@ namespace Aws
         /**
          * An Async wrapper for PutBucketLogging that queues the request into a thread executor and triggers associated callback when operation has finished.
          */
-        template<typename PutBucketLoggingRequestT = Model::PutBucketLoggingRequest>
+        template<int version = 1, typename PutBucketLoggingRequestT = Model::PutBucketLoggingRequest>
         void PutBucketLoggingAsync(const PutBucketLoggingRequestT& request, const PutBucketLoggingResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context = nullptr) const
         {
-            return SubmitAsync(&S3Client::PutBucketLogging, request, handler, context);
+            if(version == 2)
+              return SubmitAsyncV2< PutBucketLoggingRequestT, Model::PutBucketLoggingOutcome, XmlOutcome>(&S3Client::SubmitOpPutBucketLogging, request, handler, context);
+            else
+              return SubmitAsync(&S3Client::PutBucketLogging, request, handler, context);
         }
 
         /**
@@ -4094,6 +4515,9 @@ namespace Aws
          */
         virtual Model::PutBucketMetricsConfigurationOutcome PutBucketMetricsConfiguration(const Model::PutBucketMetricsConfigurationRequest& request) const;
 
+        void SubmitOpPutBucketMetricsConfiguration(Model::PutBucketMetricsConfigurationRequest const * const pRequest,
+                                      std::function<void(XmlOutcome)> responseHandler, std::shared_ptr<Aws::Utils::Threading::Executor> pExecutor) const;
+
         /**
          * A Callable wrapper for PutBucketMetricsConfiguration that returns a future to the operation so that it can be executed in parallel to other requests.
          */
@@ -4106,10 +4530,13 @@ namespace Aws
         /**
          * An Async wrapper for PutBucketMetricsConfiguration that queues the request into a thread executor and triggers associated callback when operation has finished.
          */
-        template<typename PutBucketMetricsConfigurationRequestT = Model::PutBucketMetricsConfigurationRequest>
+        template<int version = 1, typename PutBucketMetricsConfigurationRequestT = Model::PutBucketMetricsConfigurationRequest>
         void PutBucketMetricsConfigurationAsync(const PutBucketMetricsConfigurationRequestT& request, const PutBucketMetricsConfigurationResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context = nullptr) const
         {
-            return SubmitAsync(&S3Client::PutBucketMetricsConfiguration, request, handler, context);
+            if(version == 2)
+              return SubmitAsyncV2< PutBucketMetricsConfigurationRequestT, Model::PutBucketMetricsConfigurationOutcome, XmlOutcome>(&S3Client::SubmitOpPutBucketMetricsConfiguration, request, handler, context);
+            else
+              return SubmitAsync(&S3Client::PutBucketMetricsConfiguration, request, handler, context);
         }
 
         /**
@@ -4161,6 +4588,9 @@ namespace Aws
          */
         virtual Model::PutBucketNotificationConfigurationOutcome PutBucketNotificationConfiguration(const Model::PutBucketNotificationConfigurationRequest& request) const;
 
+        void SubmitOpPutBucketNotificationConfiguration(Model::PutBucketNotificationConfigurationRequest const * const pRequest,
+                                      std::function<void(XmlOutcome)> responseHandler, std::shared_ptr<Aws::Utils::Threading::Executor> pExecutor) const;
+
         /**
          * A Callable wrapper for PutBucketNotificationConfiguration that returns a future to the operation so that it can be executed in parallel to other requests.
          */
@@ -4173,10 +4603,13 @@ namespace Aws
         /**
          * An Async wrapper for PutBucketNotificationConfiguration that queues the request into a thread executor and triggers associated callback when operation has finished.
          */
-        template<typename PutBucketNotificationConfigurationRequestT = Model::PutBucketNotificationConfigurationRequest>
+        template<int version = 1, typename PutBucketNotificationConfigurationRequestT = Model::PutBucketNotificationConfigurationRequest>
         void PutBucketNotificationConfigurationAsync(const PutBucketNotificationConfigurationRequestT& request, const PutBucketNotificationConfigurationResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context = nullptr) const
         {
-            return SubmitAsync(&S3Client::PutBucketNotificationConfiguration, request, handler, context);
+            if(version == 2)
+              return SubmitAsyncV2< PutBucketNotificationConfigurationRequestT, Model::PutBucketNotificationConfigurationOutcome, XmlOutcome>(&S3Client::SubmitOpPutBucketNotificationConfiguration, request, handler, context);
+            else
+              return SubmitAsync(&S3Client::PutBucketNotificationConfiguration, request, handler, context);
         }
 
         /**
@@ -4197,6 +4630,9 @@ namespace Aws
          */
         virtual Model::PutBucketOwnershipControlsOutcome PutBucketOwnershipControls(const Model::PutBucketOwnershipControlsRequest& request) const;
 
+        void SubmitOpPutBucketOwnershipControls(Model::PutBucketOwnershipControlsRequest const * const pRequest,
+                                      std::function<void(XmlOutcome)> responseHandler, std::shared_ptr<Aws::Utils::Threading::Executor> pExecutor) const;
+
         /**
          * A Callable wrapper for PutBucketOwnershipControls that returns a future to the operation so that it can be executed in parallel to other requests.
          */
@@ -4209,10 +4645,13 @@ namespace Aws
         /**
          * An Async wrapper for PutBucketOwnershipControls that queues the request into a thread executor and triggers associated callback when operation has finished.
          */
-        template<typename PutBucketOwnershipControlsRequestT = Model::PutBucketOwnershipControlsRequest>
+        template<int version = 1, typename PutBucketOwnershipControlsRequestT = Model::PutBucketOwnershipControlsRequest>
         void PutBucketOwnershipControlsAsync(const PutBucketOwnershipControlsRequestT& request, const PutBucketOwnershipControlsResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context = nullptr) const
         {
-            return SubmitAsync(&S3Client::PutBucketOwnershipControls, request, handler, context);
+            if(version == 2)
+              return SubmitAsyncV2< PutBucketOwnershipControlsRequestT, Model::PutBucketOwnershipControlsOutcome, XmlOutcome>(&S3Client::SubmitOpPutBucketOwnershipControls, request, handler, context);
+            else
+              return SubmitAsync(&S3Client::PutBucketOwnershipControls, request, handler, context);
         }
 
         /**
@@ -4245,6 +4684,9 @@ namespace Aws
          */
         virtual Model::PutBucketPolicyOutcome PutBucketPolicy(const Model::PutBucketPolicyRequest& request) const;
 
+        void SubmitOpPutBucketPolicy(Model::PutBucketPolicyRequest const * const pRequest,
+                                      std::function<void(XmlOutcome)> responseHandler, std::shared_ptr<Aws::Utils::Threading::Executor> pExecutor) const;
+
         /**
          * A Callable wrapper for PutBucketPolicy that returns a future to the operation so that it can be executed in parallel to other requests.
          */
@@ -4257,10 +4699,13 @@ namespace Aws
         /**
          * An Async wrapper for PutBucketPolicy that queues the request into a thread executor and triggers associated callback when operation has finished.
          */
-        template<typename PutBucketPolicyRequestT = Model::PutBucketPolicyRequest>
+        template<int version = 1, typename PutBucketPolicyRequestT = Model::PutBucketPolicyRequest>
         void PutBucketPolicyAsync(const PutBucketPolicyRequestT& request, const PutBucketPolicyResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context = nullptr) const
         {
-            return SubmitAsync(&S3Client::PutBucketPolicy, request, handler, context);
+            if(version == 2)
+              return SubmitAsyncV2< PutBucketPolicyRequestT, Model::PutBucketPolicyOutcome, XmlOutcome>(&S3Client::SubmitOpPutBucketPolicy, request, handler, context);
+            else
+              return SubmitAsync(&S3Client::PutBucketPolicy, request, handler, context);
         }
 
         /**
@@ -4326,6 +4771,9 @@ namespace Aws
          */
         virtual Model::PutBucketReplicationOutcome PutBucketReplication(const Model::PutBucketReplicationRequest& request) const;
 
+        void SubmitOpPutBucketReplication(Model::PutBucketReplicationRequest const * const pRequest,
+                                      std::function<void(XmlOutcome)> responseHandler, std::shared_ptr<Aws::Utils::Threading::Executor> pExecutor) const;
+
         /**
          * A Callable wrapper for PutBucketReplication that returns a future to the operation so that it can be executed in parallel to other requests.
          */
@@ -4338,10 +4786,13 @@ namespace Aws
         /**
          * An Async wrapper for PutBucketReplication that queues the request into a thread executor and triggers associated callback when operation has finished.
          */
-        template<typename PutBucketReplicationRequestT = Model::PutBucketReplicationRequest>
+        template<int version = 1, typename PutBucketReplicationRequestT = Model::PutBucketReplicationRequest>
         void PutBucketReplicationAsync(const PutBucketReplicationRequestT& request, const PutBucketReplicationResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context = nullptr) const
         {
-            return SubmitAsync(&S3Client::PutBucketReplication, request, handler, context);
+            if(version == 2)
+              return SubmitAsyncV2< PutBucketReplicationRequestT, Model::PutBucketReplicationOutcome, XmlOutcome>(&S3Client::SubmitOpPutBucketReplication, request, handler, context);
+            else
+              return SubmitAsync(&S3Client::PutBucketReplication, request, handler, context);
         }
 
         /**
@@ -4361,6 +4812,9 @@ namespace Aws
          */
         virtual Model::PutBucketRequestPaymentOutcome PutBucketRequestPayment(const Model::PutBucketRequestPaymentRequest& request) const;
 
+        void SubmitOpPutBucketRequestPayment(Model::PutBucketRequestPaymentRequest const * const pRequest,
+                                      std::function<void(XmlOutcome)> responseHandler, std::shared_ptr<Aws::Utils::Threading::Executor> pExecutor) const;
+
         /**
          * A Callable wrapper for PutBucketRequestPayment that returns a future to the operation so that it can be executed in parallel to other requests.
          */
@@ -4373,10 +4827,13 @@ namespace Aws
         /**
          * An Async wrapper for PutBucketRequestPayment that queues the request into a thread executor and triggers associated callback when operation has finished.
          */
-        template<typename PutBucketRequestPaymentRequestT = Model::PutBucketRequestPaymentRequest>
+        template<int version = 1, typename PutBucketRequestPaymentRequestT = Model::PutBucketRequestPaymentRequest>
         void PutBucketRequestPaymentAsync(const PutBucketRequestPaymentRequestT& request, const PutBucketRequestPaymentResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context = nullptr) const
         {
-            return SubmitAsync(&S3Client::PutBucketRequestPayment, request, handler, context);
+            if(version == 2)
+              return SubmitAsyncV2< PutBucketRequestPaymentRequestT, Model::PutBucketRequestPaymentOutcome, XmlOutcome>(&S3Client::SubmitOpPutBucketRequestPayment, request, handler, context);
+            else
+              return SubmitAsync(&S3Client::PutBucketRequestPayment, request, handler, context);
         }
 
         /**
@@ -4425,6 +4882,9 @@ namespace Aws
          */
         virtual Model::PutBucketTaggingOutcome PutBucketTagging(const Model::PutBucketTaggingRequest& request) const;
 
+        void SubmitOpPutBucketTagging(Model::PutBucketTaggingRequest const * const pRequest,
+                                      std::function<void(XmlOutcome)> responseHandler, std::shared_ptr<Aws::Utils::Threading::Executor> pExecutor) const;
+
         /**
          * A Callable wrapper for PutBucketTagging that returns a future to the operation so that it can be executed in parallel to other requests.
          */
@@ -4437,10 +4897,13 @@ namespace Aws
         /**
          * An Async wrapper for PutBucketTagging that queues the request into a thread executor and triggers associated callback when operation has finished.
          */
-        template<typename PutBucketTaggingRequestT = Model::PutBucketTaggingRequest>
+        template<int version = 1, typename PutBucketTaggingRequestT = Model::PutBucketTaggingRequest>
         void PutBucketTaggingAsync(const PutBucketTaggingRequestT& request, const PutBucketTaggingResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context = nullptr) const
         {
-            return SubmitAsync(&S3Client::PutBucketTagging, request, handler, context);
+            if(version == 2)
+              return SubmitAsyncV2< PutBucketTaggingRequestT, Model::PutBucketTaggingOutcome, XmlOutcome>(&S3Client::SubmitOpPutBucketTagging, request, handler, context);
+            else
+              return SubmitAsync(&S3Client::PutBucketTagging, request, handler, context);
         }
 
         /**
@@ -4478,6 +4941,9 @@ namespace Aws
          */
         virtual Model::PutBucketVersioningOutcome PutBucketVersioning(const Model::PutBucketVersioningRequest& request) const;
 
+        void SubmitOpPutBucketVersioning(Model::PutBucketVersioningRequest const * const pRequest,
+                                      std::function<void(XmlOutcome)> responseHandler, std::shared_ptr<Aws::Utils::Threading::Executor> pExecutor) const;
+
         /**
          * A Callable wrapper for PutBucketVersioning that returns a future to the operation so that it can be executed in parallel to other requests.
          */
@@ -4490,10 +4956,13 @@ namespace Aws
         /**
          * An Async wrapper for PutBucketVersioning that queues the request into a thread executor and triggers associated callback when operation has finished.
          */
-        template<typename PutBucketVersioningRequestT = Model::PutBucketVersioningRequest>
+        template<int version = 1, typename PutBucketVersioningRequestT = Model::PutBucketVersioningRequest>
         void PutBucketVersioningAsync(const PutBucketVersioningRequestT& request, const PutBucketVersioningResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context = nullptr) const
         {
-            return SubmitAsync(&S3Client::PutBucketVersioning, request, handler, context);
+            if(version == 2)
+              return SubmitAsyncV2< PutBucketVersioningRequestT, Model::PutBucketVersioningOutcome, XmlOutcome>(&S3Client::SubmitOpPutBucketVersioning, request, handler, context);
+            else
+              return SubmitAsync(&S3Client::PutBucketVersioning, request, handler, context);
         }
 
         /**
@@ -4539,6 +5008,9 @@ namespace Aws
          */
         virtual Model::PutBucketWebsiteOutcome PutBucketWebsite(const Model::PutBucketWebsiteRequest& request) const;
 
+        void SubmitOpPutBucketWebsite(Model::PutBucketWebsiteRequest const * const pRequest,
+                                      std::function<void(XmlOutcome)> responseHandler, std::shared_ptr<Aws::Utils::Threading::Executor> pExecutor) const;
+
         /**
          * A Callable wrapper for PutBucketWebsite that returns a future to the operation so that it can be executed in parallel to other requests.
          */
@@ -4551,10 +5023,13 @@ namespace Aws
         /**
          * An Async wrapper for PutBucketWebsite that queues the request into a thread executor and triggers associated callback when operation has finished.
          */
-        template<typename PutBucketWebsiteRequestT = Model::PutBucketWebsiteRequest>
+        template<int version = 1, typename PutBucketWebsiteRequestT = Model::PutBucketWebsiteRequest>
         void PutBucketWebsiteAsync(const PutBucketWebsiteRequestT& request, const PutBucketWebsiteResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context = nullptr) const
         {
-            return SubmitAsync(&S3Client::PutBucketWebsite, request, handler, context);
+            if(version == 2)
+              return SubmitAsyncV2< PutBucketWebsiteRequestT, Model::PutBucketWebsiteOutcome, XmlOutcome>(&S3Client::SubmitOpPutBucketWebsite, request, handler, context);
+            else
+              return SubmitAsync(&S3Client::PutBucketWebsite, request, handler, context);
         }
 
         /**
@@ -4642,6 +5117,9 @@ namespace Aws
          * Reference</a></p>
          */
         virtual Model::PutObjectOutcome PutObject(const Model::PutObjectRequest& request) const;
+
+        void SubmitOpPutObject(Model::PutObjectRequest const * const pRequest,
+                                      std::function<void(XmlOutcome)> responseHandler, std::shared_ptr<Aws::Utils::Threading::Executor> pExecutor) const;
 
         /**
          * A Callable wrapper for PutObject that returns a future to the operation so that it can be executed in parallel to other requests.
@@ -4751,6 +5229,9 @@ namespace Aws
          */
         virtual Model::PutObjectAclOutcome PutObjectAcl(const Model::PutObjectAclRequest& request) const;
 
+        void SubmitOpPutObjectAcl(Model::PutObjectAclRequest const * const pRequest,
+                                      std::function<void(XmlOutcome)> responseHandler, std::shared_ptr<Aws::Utils::Threading::Executor> pExecutor) const;
+
         /**
          * A Callable wrapper for PutObjectAcl that returns a future to the operation so that it can be executed in parallel to other requests.
          */
@@ -4763,10 +5244,13 @@ namespace Aws
         /**
          * An Async wrapper for PutObjectAcl that queues the request into a thread executor and triggers associated callback when operation has finished.
          */
-        template<typename PutObjectAclRequestT = Model::PutObjectAclRequest>
+        template<int version = 1, typename PutObjectAclRequestT = Model::PutObjectAclRequest>
         void PutObjectAclAsync(const PutObjectAclRequestT& request, const PutObjectAclResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context = nullptr) const
         {
-            return SubmitAsync(&S3Client::PutObjectAcl, request, handler, context);
+            if(version == 2)
+              return SubmitAsyncV2< PutObjectAclRequestT, Model::PutObjectAclOutcome, XmlOutcome>(&S3Client::SubmitOpPutObjectAcl, request, handler, context);
+            else
+              return SubmitAsync(&S3Client::PutObjectAcl, request, handler, context);
         }
 
         /**
@@ -4780,6 +5264,9 @@ namespace Aws
          */
         virtual Model::PutObjectLegalHoldOutcome PutObjectLegalHold(const Model::PutObjectLegalHoldRequest& request) const;
 
+        void SubmitOpPutObjectLegalHold(Model::PutObjectLegalHoldRequest const * const pRequest,
+                                      std::function<void(XmlOutcome)> responseHandler, std::shared_ptr<Aws::Utils::Threading::Executor> pExecutor) const;
+
         /**
          * A Callable wrapper for PutObjectLegalHold that returns a future to the operation so that it can be executed in parallel to other requests.
          */
@@ -4792,10 +5279,13 @@ namespace Aws
         /**
          * An Async wrapper for PutObjectLegalHold that queues the request into a thread executor and triggers associated callback when operation has finished.
          */
-        template<typename PutObjectLegalHoldRequestT = Model::PutObjectLegalHoldRequest>
+        template<int version = 1, typename PutObjectLegalHoldRequestT = Model::PutObjectLegalHoldRequest>
         void PutObjectLegalHoldAsync(const PutObjectLegalHoldRequestT& request, const PutObjectLegalHoldResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context = nullptr) const
         {
-            return SubmitAsync(&S3Client::PutObjectLegalHold, request, handler, context);
+            if(version == 2)
+              return SubmitAsyncV2< PutObjectLegalHoldRequestT, Model::PutObjectLegalHoldOutcome, XmlOutcome>(&S3Client::SubmitOpPutObjectLegalHold, request, handler, context);
+            else
+              return SubmitAsync(&S3Client::PutObjectLegalHold, request, handler, context);
         }
 
         /**
@@ -4816,6 +5306,9 @@ namespace Aws
          */
         virtual Model::PutObjectLockConfigurationOutcome PutObjectLockConfiguration(const Model::PutObjectLockConfigurationRequest& request) const;
 
+        void SubmitOpPutObjectLockConfiguration(Model::PutObjectLockConfigurationRequest const * const pRequest,
+                                      std::function<void(XmlOutcome)> responseHandler, std::shared_ptr<Aws::Utils::Threading::Executor> pExecutor) const;
+
         /**
          * A Callable wrapper for PutObjectLockConfiguration that returns a future to the operation so that it can be executed in parallel to other requests.
          */
@@ -4828,10 +5321,13 @@ namespace Aws
         /**
          * An Async wrapper for PutObjectLockConfiguration that queues the request into a thread executor and triggers associated callback when operation has finished.
          */
-        template<typename PutObjectLockConfigurationRequestT = Model::PutObjectLockConfigurationRequest>
+        template<int version = 1, typename PutObjectLockConfigurationRequestT = Model::PutObjectLockConfigurationRequest>
         void PutObjectLockConfigurationAsync(const PutObjectLockConfigurationRequestT& request, const PutObjectLockConfigurationResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context = nullptr) const
         {
-            return SubmitAsync(&S3Client::PutObjectLockConfiguration, request, handler, context);
+            if(version == 2)
+              return SubmitAsyncV2< PutObjectLockConfigurationRequestT, Model::PutObjectLockConfigurationOutcome, XmlOutcome>(&S3Client::SubmitOpPutObjectLockConfiguration, request, handler, context);
+            else
+              return SubmitAsync(&S3Client::PutObjectLockConfiguration, request, handler, context);
         }
 
         /**
@@ -4848,6 +5344,9 @@ namespace Aws
          */
         virtual Model::PutObjectRetentionOutcome PutObjectRetention(const Model::PutObjectRetentionRequest& request) const;
 
+        void SubmitOpPutObjectRetention(Model::PutObjectRetentionRequest const * const pRequest,
+                                      std::function<void(XmlOutcome)> responseHandler, std::shared_ptr<Aws::Utils::Threading::Executor> pExecutor) const;
+
         /**
          * A Callable wrapper for PutObjectRetention that returns a future to the operation so that it can be executed in parallel to other requests.
          */
@@ -4860,10 +5359,13 @@ namespace Aws
         /**
          * An Async wrapper for PutObjectRetention that queues the request into a thread executor and triggers associated callback when operation has finished.
          */
-        template<typename PutObjectRetentionRequestT = Model::PutObjectRetentionRequest>
+        template<int version = 1, typename PutObjectRetentionRequestT = Model::PutObjectRetentionRequest>
         void PutObjectRetentionAsync(const PutObjectRetentionRequestT& request, const PutObjectRetentionResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context = nullptr) const
         {
-            return SubmitAsync(&S3Client::PutObjectRetention, request, handler, context);
+            if(version == 2)
+              return SubmitAsyncV2< PutObjectRetentionRequestT, Model::PutObjectRetentionOutcome, XmlOutcome>(&S3Client::SubmitOpPutObjectRetention, request, handler, context);
+            else
+              return SubmitAsync(&S3Client::PutObjectRetention, request, handler, context);
         }
 
         /**
@@ -4905,6 +5407,9 @@ namespace Aws
          */
         virtual Model::PutObjectTaggingOutcome PutObjectTagging(const Model::PutObjectTaggingRequest& request) const;
 
+        void SubmitOpPutObjectTagging(Model::PutObjectTaggingRequest const * const pRequest,
+                                      std::function<void(XmlOutcome)> responseHandler, std::shared_ptr<Aws::Utils::Threading::Executor> pExecutor) const;
+
         /**
          * A Callable wrapper for PutObjectTagging that returns a future to the operation so that it can be executed in parallel to other requests.
          */
@@ -4917,10 +5422,13 @@ namespace Aws
         /**
          * An Async wrapper for PutObjectTagging that queues the request into a thread executor and triggers associated callback when operation has finished.
          */
-        template<typename PutObjectTaggingRequestT = Model::PutObjectTaggingRequest>
+        template<int version = 1, typename PutObjectTaggingRequestT = Model::PutObjectTaggingRequest>
         void PutObjectTaggingAsync(const PutObjectTaggingRequestT& request, const PutObjectTaggingResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context = nullptr) const
         {
-            return SubmitAsync(&S3Client::PutObjectTagging, request, handler, context);
+            if(version == 2)
+              return SubmitAsyncV2< PutObjectTaggingRequestT, Model::PutObjectTaggingOutcome, XmlOutcome>(&S3Client::SubmitOpPutObjectTagging, request, handler, context);
+            else
+              return SubmitAsync(&S3Client::PutObjectTagging, request, handler, context);
         }
 
         /**
@@ -4953,6 +5461,9 @@ namespace Aws
          */
         virtual Model::PutPublicAccessBlockOutcome PutPublicAccessBlock(const Model::PutPublicAccessBlockRequest& request) const;
 
+        void SubmitOpPutPublicAccessBlock(Model::PutPublicAccessBlockRequest const * const pRequest,
+                                      std::function<void(XmlOutcome)> responseHandler, std::shared_ptr<Aws::Utils::Threading::Executor> pExecutor) const;
+
         /**
          * A Callable wrapper for PutPublicAccessBlock that returns a future to the operation so that it can be executed in parallel to other requests.
          */
@@ -4965,10 +5476,13 @@ namespace Aws
         /**
          * An Async wrapper for PutPublicAccessBlock that queues the request into a thread executor and triggers associated callback when operation has finished.
          */
-        template<typename PutPublicAccessBlockRequestT = Model::PutPublicAccessBlockRequest>
+        template<int version = 1, typename PutPublicAccessBlockRequestT = Model::PutPublicAccessBlockRequest>
         void PutPublicAccessBlockAsync(const PutPublicAccessBlockRequestT& request, const PutPublicAccessBlockResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context = nullptr) const
         {
-            return SubmitAsync(&S3Client::PutPublicAccessBlock, request, handler, context);
+            if(version == 2)
+              return SubmitAsyncV2< PutPublicAccessBlockRequestT, Model::PutPublicAccessBlockOutcome, XmlOutcome>(&S3Client::SubmitOpPutPublicAccessBlock, request, handler, context);
+            else
+              return SubmitAsync(&S3Client::PutPublicAccessBlock, request, handler, context);
         }
 
         /**
@@ -5119,6 +5633,9 @@ namespace Aws
          */
         virtual Model::RestoreObjectOutcome RestoreObject(const Model::RestoreObjectRequest& request) const;
 
+        void SubmitOpRestoreObject(Model::RestoreObjectRequest const * const pRequest,
+                                      std::function<void(XmlOutcome)> responseHandler, std::shared_ptr<Aws::Utils::Threading::Executor> pExecutor) const;
+
         /**
          * A Callable wrapper for RestoreObject that returns a future to the operation so that it can be executed in parallel to other requests.
          */
@@ -5131,10 +5648,13 @@ namespace Aws
         /**
          * An Async wrapper for RestoreObject that queues the request into a thread executor and triggers associated callback when operation has finished.
          */
-        template<typename RestoreObjectRequestT = Model::RestoreObjectRequest>
+        template<int version = 1, typename RestoreObjectRequestT = Model::RestoreObjectRequest>
         void RestoreObjectAsync(const RestoreObjectRequestT& request, const RestoreObjectResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context = nullptr) const
         {
-            return SubmitAsync(&S3Client::RestoreObject, request, handler, context);
+            if(version == 2)
+              return SubmitAsyncV2< RestoreObjectRequestT, Model::RestoreObjectOutcome, XmlOutcome>(&S3Client::SubmitOpRestoreObject, request, handler, context);
+            else
+              return SubmitAsync(&S3Client::RestoreObject, request, handler, context);
         }
 
         /**
@@ -5218,6 +5738,9 @@ namespace Aws
          */
         virtual Model::SelectObjectContentOutcome SelectObjectContent(Model::SelectObjectContentRequest& request) const;
 
+        void SubmitOpSelectObjectContent(Model::SelectObjectContentRequest * const pRequest,
+                                      std::function<void(XmlOutcome)> responseHandler, std::shared_ptr<Aws::Utils::Threading::Executor> pExecutor) const;
+
         /**
          * A Callable wrapper for SelectObjectContent that returns a future to the operation so that it can be executed in parallel to other requests.
          */
@@ -5230,10 +5753,13 @@ namespace Aws
         /**
          * An Async wrapper for SelectObjectContent that queues the request into a thread executor and triggers associated callback when operation has finished.
          */
-        template<typename SelectObjectContentRequestT = Model::SelectObjectContentRequest>
+        template<int version = 1, typename SelectObjectContentRequestT = Model::SelectObjectContentRequest>
         void SelectObjectContentAsync(SelectObjectContentRequestT& request, const SelectObjectContentResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context = nullptr) const
         {
-            return SubmitAsync(&S3Client::SelectObjectContent, request, handler, context);
+            if(version == 2)
+              return SubmitAsyncV2< SelectObjectContentRequestT, Model::SelectObjectContentOutcome, XmlOutcome>(&S3Client::SubmitOpSelectObjectContent, request, handler, context);
+            else
+              return SubmitAsync(&S3Client::SelectObjectContent, request, handler, context);
         }
 
         /**
@@ -5324,6 +5850,9 @@ namespace Aws
          */
         virtual Model::UploadPartOutcome UploadPart(const Model::UploadPartRequest& request) const;
 
+        void SubmitOpUploadPart(Model::UploadPartRequest const * const pRequest,
+                                      std::function<void(XmlOutcome)> responseHandler, std::shared_ptr<Aws::Utils::Threading::Executor> pExecutor) const;
+
         /**
          * A Callable wrapper for UploadPart that returns a future to the operation so that it can be executed in parallel to other requests.
          */
@@ -5336,10 +5865,13 @@ namespace Aws
         /**
          * An Async wrapper for UploadPart that queues the request into a thread executor and triggers associated callback when operation has finished.
          */
-        template<typename UploadPartRequestT = Model::UploadPartRequest>
+        template<int version = 1, typename UploadPartRequestT = Model::UploadPartRequest>
         void UploadPartAsync(const UploadPartRequestT& request, const UploadPartResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context = nullptr) const
         {
-            return SubmitAsync(&S3Client::UploadPart, request, handler, context);
+            if(version == 2)
+              return SubmitAsyncV2< UploadPartRequestT, Model::UploadPartOutcome, XmlOutcome>(&S3Client::SubmitOpUploadPart, request, handler, context);
+            else
+              return SubmitAsync(&S3Client::UploadPart, request, handler, context);
         }
 
         /**
@@ -5430,6 +5962,9 @@ namespace Aws
          */
         virtual Model::UploadPartCopyOutcome UploadPartCopy(const Model::UploadPartCopyRequest& request) const;
 
+        void SubmitOpUploadPartCopy(Model::UploadPartCopyRequest const * const pRequest,
+                                      std::function<void(XmlOutcome)> responseHandler, std::shared_ptr<Aws::Utils::Threading::Executor> pExecutor) const;
+
         /**
          * A Callable wrapper for UploadPartCopy that returns a future to the operation so that it can be executed in parallel to other requests.
          */
@@ -5442,10 +5977,13 @@ namespace Aws
         /**
          * An Async wrapper for UploadPartCopy that queues the request into a thread executor and triggers associated callback when operation has finished.
          */
-        template<typename UploadPartCopyRequestT = Model::UploadPartCopyRequest>
+        template<int version = 1, typename UploadPartCopyRequestT = Model::UploadPartCopyRequest>
         void UploadPartCopyAsync(const UploadPartCopyRequestT& request, const UploadPartCopyResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context = nullptr) const
         {
-            return SubmitAsync(&S3Client::UploadPartCopy, request, handler, context);
+            if(version == 2)
+              return SubmitAsyncV2< UploadPartCopyRequestT, Model::UploadPartCopyOutcome, XmlOutcome>(&S3Client::SubmitOpUploadPartCopy, request, handler, context);
+            else
+              return SubmitAsync(&S3Client::UploadPartCopy, request, handler, context);
         }
 
         /**
@@ -5496,6 +6034,9 @@ namespace Aws
          */
         virtual Model::WriteGetObjectResponseOutcome WriteGetObjectResponse(const Model::WriteGetObjectResponseRequest& request) const;
 
+        void SubmitOpWriteGetObjectResponse(Model::WriteGetObjectResponseRequest const * const pRequest,
+                                      std::function<void(XmlOutcome)> responseHandler, std::shared_ptr<Aws::Utils::Threading::Executor> pExecutor) const;
+
         /**
          * A Callable wrapper for WriteGetObjectResponse that returns a future to the operation so that it can be executed in parallel to other requests.
          */
@@ -5508,10 +6049,13 @@ namespace Aws
         /**
          * An Async wrapper for WriteGetObjectResponse that queues the request into a thread executor and triggers associated callback when operation has finished.
          */
-        template<typename WriteGetObjectResponseRequestT = Model::WriteGetObjectResponseRequest>
+        template<int version = 1, typename WriteGetObjectResponseRequestT = Model::WriteGetObjectResponseRequest>
         void WriteGetObjectResponseAsync(const WriteGetObjectResponseRequestT& request, const WriteGetObjectResponseResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context = nullptr) const
         {
-            return SubmitAsync(&S3Client::WriteGetObjectResponse, request, handler, context);
+            if(version == 2)
+              return SubmitAsyncV2< WriteGetObjectResponseRequestT, Model::WriteGetObjectResponseOutcome, XmlOutcome>(&S3Client::SubmitOpWriteGetObjectResponse, request, handler, context);
+            else
+              return SubmitAsync(&S3Client::WriteGetObjectResponse, request, handler, context);
         }
 
 

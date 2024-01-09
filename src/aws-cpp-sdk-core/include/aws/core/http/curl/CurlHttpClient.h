@@ -69,6 +69,8 @@ private:
     bool m_allowRedirects = false;
     static std::atomic<bool> isInit;
     std::shared_ptr<smithy::components::tracing::TelemetryProvider> m_telemetryProvider;
+    bool m_enableTcpKeepAlive = true;
+    unsigned long m_tcpKeepAliveIntervalMs = 30000;
 };
 
 using PlatformHttpClient = CurlHttpClient;

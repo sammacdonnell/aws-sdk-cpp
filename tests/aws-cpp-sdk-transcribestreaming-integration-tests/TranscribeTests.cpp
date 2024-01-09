@@ -39,6 +39,7 @@ public:
         testFile.close();
 
         Aws::Client::ClientConfiguration config;
+        config.tcpKeepAliveIntervalMs = 1000;
 #ifdef _WIN32
         // TODO: remove this once we get H2 working with WinHttp client
         config.httpLibOverride = Aws::Http::TransferLibType::WIN_INET_CLIENT;
@@ -60,7 +61,6 @@ public:
 
 };
 
-#if 0
 // Temporarilly bypassing this test
 TEST_F(TranscribeStreamingTests, TranscribeAudioFile)
 {
@@ -140,7 +140,6 @@ TEST_F(TranscribeStreamingTests, TranscribeAudioFile)
     semaphore.WaitOne();
     ASSERT_EQ(0u, transcribedResult.find(EXPECTED_MESSAGE));
 }
-#endif
 
 TEST_F(TranscribeStreamingTests, TranscribeAudioFileWithErrorServiceResponse)
 {

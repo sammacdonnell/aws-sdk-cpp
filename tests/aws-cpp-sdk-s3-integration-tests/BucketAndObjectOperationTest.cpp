@@ -848,8 +848,10 @@ namespace
         Aws::Vector<Aws::String> objectKeysWithNewlineCharacter;
         objectKeysWithNewlineCharacter.push_back(Aws::String(TEST_NEWLINE_KEY) + "-\n-LF");
         objectKeysWithNewlineCharacter.push_back(Aws::String(TEST_NEWLINE_KEY) + "-\r-CR");
+        objectKeysWithNewlineCharacter.push_back(Aws::String(TEST_NEWLINE_KEY) + "-\r\n-CRLF");
         objectKeysWithNewlineCharacter.push_back(Aws::String(TEST_NEWLINE_KEY) + "-" + StringUtils::URLDecode("%c2%85") + "-NEXTLINE");
         objectKeysWithNewlineCharacter.push_back(Aws::String(TEST_NEWLINE_KEY) + "-" + StringUtils::URLDecode("%e2%80%a8") + "-LINESEPARATOR");
+        const Aws::Set<Aws::String> expectedObjects(objectKeysWithNewlineCharacter.begin(), objectKeysWithNewlineCharacter.end());
 
         for (const Aws::String& key : objectKeysWithNewlineCharacter)
         {
@@ -891,6 +893,12 @@ namespace
         DeleteObjectsOutcome deleteObjectsOutcome = Client->DeleteObjects(deleteObjectsRequest);
         AWS_ASSERT_SUCCESS(deleteObjectsOutcome);
         ASSERT_EQ(objectKeysWithNewlineCharacter.size(), deleteObjectsOutcome.GetResult().GetDeleted().size());
+        Aws::Set<Aws::String> deletedObjects;
+        for(const auto& deletedObj : deleteObjectsOutcome.GetResult().GetDeleted())
+        {
+            deletedObjects.insert(deletedObj.GetKey());
+        }
+        ASSERT_EQ(expectedObjects, deletedObjects);
 
         ListObjectsRequest listObjectsRequest;
         listObjectsRequest.SetBucket(fullBucketName);

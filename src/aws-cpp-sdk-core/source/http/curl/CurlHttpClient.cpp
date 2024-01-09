@@ -14,6 +14,10 @@
 #include <aws/core/utils/crypto/Hash.h>
 #include <aws/core/utils/Outcome.h>
 #include <aws/core/monitoring/HttpClientMetrics.h>
+
+#include <aws/crt/Api.h>
+#include <aws/common/clock.h>
+
 #include <cassert>
 #include <algorithm>
 
@@ -578,7 +582,9 @@ CurlHttpClient::CurlHttpClient(const ClientConfiguration& clientConfig) :
     Base(),
     m_curlHandleContainer(clientConfig.maxConnections, clientConfig.httpRequestTimeoutMs, clientConfig.connectTimeoutMs, clientConfig.enableTcpKeepAlive,
                           clientConfig.tcpKeepAliveIntervalMs, clientConfig.requestTimeoutMs, clientConfig.lowSpeedLimit, clientConfig.version),
-    m_isAllowSystemProxy(clientConfig.allowSystemProxy), m_isUsingProxy(!clientConfig.proxyHost.empty()), m_proxyUserName(clientConfig.proxyUserName),
+    m_isAllowSystemProxy(clientConfig.allowSystemProxy),
+    m_isUsingProxy(!clientConfig.proxyHost.empty()),
+    m_proxyUserName(clientConfig.proxyUserName),
     m_proxyPassword(clientConfig.proxyPassword), m_proxyScheme(SchemeMapper::ToString(clientConfig.proxyScheme)), m_proxyHost(clientConfig.proxyHost),
     m_proxySSLCertPath(clientConfig.proxySSLCertPath), m_proxySSLCertType(clientConfig.proxySSLCertType),
     m_proxySSLKeyPath(clientConfig.proxySSLKeyPath), m_proxySSLKeyType(clientConfig.proxySSLKeyType),
@@ -586,7 +592,9 @@ CurlHttpClient::CurlHttpClient(const ClientConfiguration& clientConfig) :
     m_proxyPort(clientConfig.proxyPort), m_verifySSL(clientConfig.verifySSL), m_caPath(clientConfig.caPath),
     m_caFile(clientConfig.caFile),
     m_disableExpectHeader(clientConfig.disableExpectHeader),
-    m_telemetryProvider(clientConfig.telemetryProvider)
+    m_telemetryProvider(clientConfig.telemetryProvider),
+    m_enableTcpKeepAlive(clientConfig.enableTcpKeepAlive),
+    m_tcpKeepAliveIntervalMs(clientConfig.tcpKeepAliveIntervalMs)
 {
     if (clientConfig.followRedirects == FollowRedirectsPolicy::NEVER ||
        (clientConfig.followRedirects == FollowRedirectsPolicy::DEFAULT && clientConfig.region == Aws::Region::AWS_GLOBAL))
@@ -607,6 +615,127 @@ CurlHttpClient::CurlHttpClient(const ClientConfiguration& clientConfig) :
         }
         m_nonProxyHosts = ss.str();
     }
+}
+
+
+struct UpKeepTask
+{
+    std::atomic<bool> enable;
+    CURL *handle;
+    aws_task *task;
+    aws_event_loop *loop;
+    size_t upKeepIntervalMs;
+};
+
+void CancelUpkeep(UpKeepTask*& task)
+{
+  assert(task);
+  if (task->task)
+  {
+//    if (task->loop) {
+//      aws_event_loop_cancel_task(task->loop, task->task);
+//      task->loop = nullptr;
+//    }
+    Aws::Delete(task->task);
+    task->task = nullptr;
+  }
+  Aws::Delete(task);
+  task = nullptr;
+}
+
+void UpKeepCallback(struct aws_task *crtTask, void *arg, enum aws_task_status status);
+
+void ScheduleUpkeepToCrt(UpKeepTask*& task)
+{
+  assert(task);
+
+  Aws::Crt::Io::EventLoopGroup* eventLoopGroup = Aws::Crt::ApiHandle::GetOrCreateStaticDefaultEventLoopGroup();
+  if (!eventLoopGroup) {
+    AWS_LOGSTREAM_FATAL(CURL_HTTP_CLIENT_TAG, "Unable to set upkeep: default CRT event loop group is null!");
+    assert(eventLoopGroup);
+    return;
+  }
+
+  aws_event_loop_group* c_eventLoopGroup = eventLoopGroup->GetUnderlyingHandle();
+  assert(c_eventLoopGroup);
+
+  if (!task->task)
+  {
+    struct aws_task *crt_task = Aws::New<aws_task>(CURL_HTTP_CLIENT_TAG);
+    task->task = crt_task;
+    assert(task->task);
+  }
+  aws_task_init(task->task, UpKeepCallback, task, "CurlClientUpKeepCallback");
+
+  struct aws_event_loop *loop = aws_event_loop_group_get_next_loop(c_eventLoopGroup);
+  if (!loop) {
+    AWS_LOGSTREAM_FATAL(CURL_HTTP_CLIENT_TAG, "Unable to set upkeep: failed to get next event loop!");
+    assert(loop);
+    task->enable = false;
+    return;
+  }
+  task->loop = loop;
+
+  uint64_t run_at_nanos = 0;
+  aws_event_loop_current_clock_time(loop, &run_at_nanos);
+  run_at_nanos += aws_timestamp_convert(task->upKeepIntervalMs, AWS_TIMESTAMP_MILLIS, AWS_TIMESTAMP_NANOS, NULL);
+  aws_event_loop_schedule_task_future(loop, task->task, run_at_nanos);
+}
+
+void UpKeepCallback(struct aws_task *crtTask, void *arg, enum aws_task_status status)
+{
+    AWS_UNREFERENCED_PARAM(status);
+    assert(crtTask && arg);
+
+    UpKeepTask* task = reinterpret_cast<UpKeepTask*>(arg);
+    if (!task->enable || aws_task_status::AWS_TASK_STATUS_CANCELED == status)
+    {
+        CancelUpkeep(task);
+    }
+    else
+    {
+        assert(task->handle);
+        CURLcode curlCode = curl_easy_upkeep(task->handle);
+        if (curlCode != CURLE_OK)
+        {
+            AWS_LOGSTREAM_ERROR(CURL_HTTP_CLIENT_TAG, "Failed to curl_easy_upkeep on handle " << task->handle << ", return code " << curlCode);
+            task->enable = false;
+            return;
+        }
+        else
+        {
+            AWS_LOGSTREAM_TRACE(CURL_HTTP_CLIENT_TAG, "Upkeep succeeded. Scheduling another upkeep task on handle " << task->handle);
+            ScheduleUpkeepToCrt(task);
+        }
+    }
+}
+
+UpKeepTask* ScheduleUpkeep(CURL* easy_handle, size_t upKeepIntervalMs)
+{
+    AWS_LOGSTREAM_TRACE(CURL_HTTP_CLIENT_TAG, "Scheduling upkeep on easy_handle " << easy_handle);
+    UpKeepTask* task = Aws::New<UpKeepTask>(CURL_HTTP_CLIENT_TAG);
+    if (!task) {
+        AWS_LOGSTREAM_FATAL(CURL_HTTP_CLIENT_TAG, "Unable to set upkeep: default CRT event loop group is null!");
+        assert(task);
+        return task;
+    }
+    task->enable = true;
+    task->handle = easy_handle;
+    task->upKeepIntervalMs = upKeepIntervalMs;
+    task->task = nullptr;
+    task->loop = nullptr;
+
+    CURLcode curlCode = curl_easy_setopt(easy_handle, CURLOPT_UPKEEP_INTERVAL_MS, upKeepIntervalMs);
+    if (curlCode != CURLE_OK)
+    {
+        AWS_LOGSTREAM_ERROR(CURL_HTTP_CLIENT_TAG, "Failed to set CURLOPT_UPKEEP_INTERVAL_MS, return code " << curlCode);
+        CancelUpkeep(task);
+        return task;
+    }
+
+    ScheduleUpkeepToCrt(task);
+
+    return task;
 }
 
 
@@ -801,7 +930,17 @@ std::shared_ptr<HttpResponse> CurlHttpClient::MakeRequest(const std::shared_ptr<
 
         OverrideOptionsOnConnectionHandle(connectionHandle);
         Aws::Utils::DateTime startTransmissionTime = Aws::Utils::DateTime::Now();
+        UpKeepTask* upKeepTask = nullptr;
+        if (m_enableTcpKeepAlive && request->IsEventStreamRequest())
+        {
+            upKeepTask = ScheduleUpkeep(connectionHandle, m_tcpKeepAliveIntervalMs);
+        }
         CURLcode curlResponseCode = curl_easy_perform(connectionHandle);
+        if (upKeepTask)
+        {
+            upKeepTask->enable = false;
+            // CancelUpkeep(upKeepTask);
+        }
         bool shouldContinueRequest = ContinueRequest(*request);
         if (curlResponseCode != CURLE_OK && shouldContinueRequest)
         {

@@ -71,7 +71,7 @@ if (LEGACY_BUILD)
     set(AWS_USER_AGENT_CUSTOMIZATION "" CACHE STRING "User agent extension")
     set(AWS_TEST_REGION "US_EAST_1" CACHE STRING "Region to target integration tests against")
     set(AWS_AUTORUN_LD_LIBRARY_PATH CACHE STRING "Path to append into LD_LIBRARY_PATH for unit tests autorun by cmake. Set this if custom runtime libs are required for overridden dependencies.")
-    set(BUILD_ONLY "" CACHE STRING "A semi-colon delimited list of the projects to build")
+    set(BUILD_ONLY "s3;s3-crt;core;transcribe;transcribestreaming;translate;polly" CACHE STRING "A semi-colon delimited list of the projects to build")
     set(CPP_STANDARD "11" CACHE STRING "Flag to upgrade the C++ standard used. The default is 11. The minimum is 11.")
 
     get_property(is_multi_config GLOBAL PROPERTY GENERATOR_IS_MULTI_CONFIG)

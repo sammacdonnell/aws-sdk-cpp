@@ -813,19 +813,20 @@ std::shared_ptr<HttpResponse> CurlHttpClient::MakeRequest(const std::shared_ptr<
             if (request->IsEventStreamRequest() && request->GetEventBufferQueue())
             {
                 auto onDataAvailable =
-                    [&connectionHandle]()
+                    []()
                     {
+                        AWS_LOGSTREAM_TRACE(CURL_HTTP_CLIENT_TAG, "Curl onDataAvailable notified");
                         // While it may feel tempting, take care and notice that you cannot call this function from another thread.
                         // (from here, we are in "another thread")
-                        CURLcode code = curl_easy_pause(connectionHandle, CURLPAUSE_CONT);
-                        if (code != CURLE_OK)
-                        {
-                          AWS_LOGSTREAM_ERROR(CURL_HTTP_CLIENT_TAG, "Curl onDataAvailable code " << code << " - "
-                                                                                                 << curl_easy_strerror(
-                                                                                                     code));
-                        } else {
-                          AWS_LOGSTREAM_TRACE(CURL_HTTP_CLIENT_TAG, "Curl onDataAvailable succeeded to unpause transfer");
-                        }
+//                        CURLcode code = curl_easy_pause(connectionHandle, CURLPAUSE_CONT);
+//                        if (code != CURLE_OK)
+//                        {
+//                          AWS_LOGSTREAM_ERROR(CURL_HTTP_CLIENT_TAG, "Curl onDataAvailable code " << code << " - "
+//                                                                                                 << curl_easy_strerror(
+//                                                                                                     code));
+//                        } else {
+//                          AWS_LOGSTREAM_TRACE(CURL_HTTP_CLIENT_TAG, "Curl onDataAvailable succeeded to unpause transfer");
+//                        }
                     };
                 request->GetEventBufferQueue()->SetOnDataAvailableCallback(std::move(onDataAvailable));
             }

@@ -27,8 +27,10 @@ namespace Aws
             {
                 auto bits = m_encoder.EncodeAndSign(msg);
 
+                AWS_LOGSTREAM_TRACE("EventEncoderStream::WriteEvent", "bits size: " << bits.size());
+                const Aws::Utils::ByteBuffer bBuffer(bits.data(), bits.size());
                 AWS_LOGSTREAM_TRACE("EventEncoderStream::WriteEvent", "Encoded event (base64 encoded): " <<
-                                    Aws::Utils::HashingUtils::Base64Encode((bits.data(), bits.size())));
+                                      Aws::Utils::HashingUtils::Base64Encode(bBuffer));
 
 
                 EventBufferQueue::PublishEvent(std::move(bits));

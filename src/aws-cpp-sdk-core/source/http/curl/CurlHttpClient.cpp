@@ -6,6 +6,7 @@
 #include <aws/core/http/curl/CurlHttpClient.h>
 #include <aws/core/http/HttpRequest.h>
 #include <aws/core/http/standard/StandardHttpResponse.h>
+#include <aws/core/utils/event/EventBufferQueue.h>
 #include <aws/core/utils/StringUtils.h>
 #include <aws/core/utils/HashingUtils.h>
 #include <aws/core/utils/logging/LogMacros.h>
@@ -16,6 +17,7 @@
 #include <aws/core/monitoring/HttpClientMetrics.h>
 #include <cassert>
 #include <algorithm>
+#include <thread>
 
 
 using namespace Aws::Client;
@@ -294,20 +296,40 @@ static size_t ReadBody(char* ptr, size_t size, size_t nmemb, void* userdata, boo
         amountToRead -= (amountToReadHexString.size() + 4);
     }
 
-    if (ioStream != nullptr && amountToRead > 0)
+    if (((isStreaming && request->GetEventBufferQueue()) || ioStream) && amountToRead > 0)
     {
+        size_t amountRead = 0;
         if (isStreaming)
         {
-            if (ioStream->readsome(ptr, amountToRead) == 0 && !ioStream->eof())
+            const std::shared_ptr<HttpRequest::EventBufferQueue> eventBufferQueue = request->GetEventBufferQueue();
+            assert(eventBufferQueue);
+            if (eventBufferQueue->IsOutputOpen())
             {
+              Aws::Crt::Optional<Aws::Utils::Event::EventBufferQueue::EventBuffer> eventPayload = eventBufferQueue->GetAvailableEvent();
+              if (!eventPayload)
+              {
                 return CURL_READFUNC_PAUSE;
+              }
+              if (eventPayload->empty())
+              {
+                AWS_LOGSTREAM_WARN(CURL_HTTP_CLIENT_TAG, "Received an empty streaming payload!");
+              }
+              size_t toCopy = std::min(eventPayload->size(), amountToRead);
+              std::copy(eventPayload->data(), eventPayload->data() + toCopy,
+                        ptr);
+              if (toCopy > eventPayload->size())
+              {
+                eventPayload->erase(eventPayload->begin(), eventPayload->begin() + eventPayload->size() - toCopy);
+                eventBufferQueue->PushFront(std::move(*eventPayload));
+              }
+              amountRead = toCopy;
             }
         }
         else
         {
             ioStream->read(ptr, amountToRead);
+            amountRead = static_cast<size_t>(ioStream->gcount());
         }
-        size_t amountRead = static_cast<size_t>(ioStream->gcount());
 
         if (isAwsChunked)
         {
@@ -415,22 +437,13 @@ static int CurlProgressCallback(void *userdata, double, double, double, double)
 {
     CurlReadCallbackContext* context = reinterpret_cast<CurlReadCallbackContext*>(userdata);
 
-    const std::shared_ptr<Aws::IOStream>& ioStream = context->m_request->GetContentBody();
-    if (ioStream->eof())
+    auto eventBuf = context->m_request->GetEventBufferQueue();
+    size_t eventsInQueue = eventBuf->GetQueueSize();
+    if (!eventsInQueue)
     {
-        curl_easy_pause(context->m_curlHandle, CURLPAUSE_CONT);
-        return 0;
+        std::this_thread::sleep_for(std::chrono::milliseconds(20));
     }
-    char output[1];
-    if (ioStream->readsome(output, 1) > 0)
-    {
-        ioStream->unget();
-        if (!ioStream->good())
-        {
-            AWS_LOGSTREAM_WARN(CURL_HTTP_CLIENT_TAG, "Input stream failed to perform unget().");
-        }
-        curl_easy_pause(context->m_curlHandle, CURLPAUSE_CONT);
-    }
+    curl_easy_pause(context->m_curlHandle, CURLPAUSE_CONT);
 
     return 0;
 }
@@ -779,7 +792,7 @@ std::shared_ptr<HttpResponse> CurlHttpClient::MakeRequest(const std::shared_ptr<
             }
         }
 
-        if (request->GetContentBody())
+        if (request->GetContentBody() || request->GetEventBufferQueue())
         {
             curl_easy_setopt(connectionHandle, CURLOPT_READFUNCTION, ReadBodyFunc);
             curl_easy_setopt(connectionHandle, CURLOPT_READDATA, &readContext);
@@ -797,11 +810,41 @@ std::shared_ptr<HttpResponse> CurlHttpClient::MakeRequest(const std::shared_ptr<
                 curl_easy_setopt(connectionHandle, CURLOPT_PROGRESSDATA, &readContext);
 #endif
             }
+            if (request->IsEventStreamRequest() && request->GetEventBufferQueue())
+            {
+                auto onDataAvailable =
+                    [&connectionHandle]()
+                    {
+                        // While it may feel tempting, take care and notice that you cannot call this function from another thread.
+                        // (from here, we are in "another thread")
+                        CURLcode code = curl_easy_pause(connectionHandle, CURLPAUSE_CONT);
+                        if (code != CURLE_OK)
+                        {
+                          AWS_LOGSTREAM_ERROR(CURL_HTTP_CLIENT_TAG, "Curl onDataAvailable code " << code << " - "
+                                                                                                 << curl_easy_strerror(
+                                                                                                     code));
+                        } else {
+                          AWS_LOGSTREAM_TRACE(CURL_HTTP_CLIENT_TAG, "Curl onDataAvailable succeeded to unpause transfer");
+                        }
+                    };
+                request->GetEventBufferQueue()->SetOnDataAvailableCallback(std::move(onDataAvailable));
+            }
         }
 
         OverrideOptionsOnConnectionHandle(connectionHandle);
         Aws::Utils::DateTime startTransmissionTime = Aws::Utils::DateTime::Now();
         CURLcode curlResponseCode = curl_easy_perform(connectionHandle);
+
+        if (request->IsEventStreamRequest() && request->GetEventBufferQueue())
+        {
+            auto onDataAvailable =
+                []()
+                {
+                    AWS_LOGSTREAM_ERROR(CURL_HTTP_CLIENT_TAG, "HTTP client does not consume event stream buffers anymore!");
+                };
+            request->GetEventBufferQueue()->SetOnDataAvailableCallback(std::move(onDataAvailable));
+        }
+
         bool shouldContinueRequest = ContinueRequest(*request);
         if (curlResponseCode != CURLE_OK && shouldContinueRequest)
         {

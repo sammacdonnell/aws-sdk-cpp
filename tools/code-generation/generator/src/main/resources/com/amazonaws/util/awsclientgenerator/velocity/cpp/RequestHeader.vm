@@ -76,7 +76,7 @@ namespace Model
     // SerializePayload will not be invoked.
     // This request is sent by encoding its data in event-streams which is sent as IOStream via GetBody()
     ${exportMacro} Aws::String SerializePayload() const override { return {}; }
-    ${exportMacro} std::shared_ptr<Aws::IOStream> GetBody() const override;
+    ${exportMacro} std::shared_ptr<Aws::Utils::Event::EventBufferQueue> GetEventBufferQueue() const override;
 #end
 #if($shape.hasQueryStringMembers())
     ${exportMacro} void AddQueryStringParameters(Aws::Http::URI& uri) const override;

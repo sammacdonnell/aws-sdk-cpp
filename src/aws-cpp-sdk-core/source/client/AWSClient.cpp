@@ -973,6 +973,7 @@ void AWSClient::BuildHttpRequest(const Aws::AmazonWebServiceRequest& request, co
     if (request.IsEventStreamRequest())
     {
         httpRequest->AddContentBody(request.GetBody());
+        httpRequest->AddEventBufferQueue(request.GetEventBufferQueue());
     }
     else
     {

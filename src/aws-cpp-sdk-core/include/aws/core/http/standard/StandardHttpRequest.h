@@ -7,6 +7,7 @@
 
 #include <aws/core/Core_EXPORTS.h>
 #include <aws/core/http/HttpRequest.h>
+#include <aws/core/utils/event/EventBufferQueue.h>
 #include <aws/core/utils/memory/stl/AWSMap.h>
 #include <aws/core/utils/memory/stl/AWSStreamFwd.h>
 #include <aws/core/utils/memory/stl/AWSString.h>
@@ -59,6 +60,14 @@ namespace Aws
                  */
                 virtual inline const std::shared_ptr<Aws::IOStream>& GetContentBody() const override { return bodyStream; }
                 /**
+                 * Adds a content body stream to the request. This stream will be used to send the body to the endpoint.
+                 */
+                virtual inline void AddEventBufferQueue(const std::shared_ptr<EventBufferQueue>& eventQueue) override { eventBufferQueue = eventQueue; }
+                /**
+                 * Gets the content body stream that will be used for this request.
+                 */
+                virtual inline const std::shared_ptr<EventBufferQueue> GetEventBufferQueue() const override { return eventBufferQueue; }
+                /**
                  * Returns true if a header exists in the request with name
                  */
                 virtual bool HasHeader(const char*) const override;
@@ -78,6 +87,7 @@ namespace Aws
             private:
                 HeaderValueCollection headerMap;
                 std::shared_ptr<Aws::IOStream> bodyStream;
+                std::shared_ptr<EventBufferQueue> eventBufferQueue;
                 Aws::IOStreamFactory m_responseStreamFactory;
             };
 

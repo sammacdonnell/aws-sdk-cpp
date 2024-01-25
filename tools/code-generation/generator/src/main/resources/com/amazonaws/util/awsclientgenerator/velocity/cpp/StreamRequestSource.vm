@@ -31,7 +31,7 @@ ${typeInfo.className}::${typeInfo.className}()$initializers
 #if($shape.hasEventStreamMembers())
 #foreach($member in $shape.members.entrySet())
 #if($shape.request && $member.value.shape.isEventStream())
-std::shared_ptr<Aws::IOStream> ${typeInfo.className}::GetBody() const
+std::shared_ptr<Aws::Utils::Event::EventBufferQueue> ${typeInfo.className}::GetEventBufferQueue() const
 {
     return $CppViewHelper.computeMemberVariableName($member.key);
 }

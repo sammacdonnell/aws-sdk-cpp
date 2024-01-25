@@ -5,6 +5,7 @@
 
 #include <aws/core/http/HttpRequest.h>
 #include <aws/core/utils/memory/stl/AWSStringStream.h>
+#include <aws/core/utils/event/EventBufferQueue.h>
 #include <aws/http/request_response.h>
 #include <aws/crt/Types.h>
 #include <aws/crt/http/HttpRequestResponse.h>
@@ -85,6 +86,17 @@ namespace Aws
             const char *method = HttpMethodMapper::GetNameForHttpMethod(m_method);
             request->SetMethod(Aws::Crt::ByteCursorFromCString(method));
             return request;
+        }
+
+        void HttpRequest::AddEventBufferQueue(const std::shared_ptr<HttpRequest::EventBufferQueue>& eventBufferQueue)
+        {
+            // dummy implementation to not break backward compatibility
+            AWS_UNREFERENCED_PARAM(eventBufferQueue);
+        }
+
+        const std::shared_ptr<HttpRequest::EventBufferQueue> HttpRequest::GetEventBufferQueue() const
+        {
+          return nullptr;
         }
 
     } // Http

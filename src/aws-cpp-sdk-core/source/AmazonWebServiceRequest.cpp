@@ -4,6 +4,7 @@
  */
 
 #include <aws/core/AmazonWebServiceRequest.h>
+#include <aws/core/utils/event/EventBufferQueue.h>
 #include <aws/core/utils/memory/stl/AWSStringStream.h>
 
 using namespace Aws;
@@ -16,6 +17,11 @@ AmazonWebServiceRequest::AmazonWebServiceRequest() :
     m_onRequestSigned(nullptr),
     m_requestRetryHandler(nullptr)
 {
+}
+
+std::shared_ptr<Aws::Utils::Event::EventBufferQueue> AmazonWebServiceRequest::GetEventBufferQueue() const
+{
+    return nullptr;
 }
 
 AmazonWebServiceRequest::EndpointParameters AmazonWebServiceRequest::GetEndpointContextParams() const

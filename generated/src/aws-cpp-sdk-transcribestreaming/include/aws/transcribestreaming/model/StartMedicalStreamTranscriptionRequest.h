@@ -42,7 +42,7 @@ namespace Model
     // SerializePayload will not be invoked.
     // This request is sent by encoding its data in event-streams which is sent as IOStream via GetBody()
     AWS_TRANSCRIBESTREAMINGSERVICE_API Aws::String SerializePayload() const override { return {}; }
-    AWS_TRANSCRIBESTREAMINGSERVICE_API std::shared_ptr<Aws::IOStream> GetBody() const override;
+    AWS_TRANSCRIBESTREAMINGSERVICE_API std::shared_ptr<Aws::Utils::Event::EventBufferQueue> GetEventBufferQueue() const override;
     AWS_TRANSCRIBESTREAMINGSERVICE_API Aws::Http::HeaderValueCollection GetRequestSpecificHeaders() const override;
 
     /**

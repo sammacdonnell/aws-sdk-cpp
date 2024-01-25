@@ -40,7 +40,7 @@ StartCallAnalyticsStreamTranscriptionRequest::StartCallAnalyticsStreamTranscript
 {
 }
 
-std::shared_ptr<Aws::IOStream> StartCallAnalyticsStreamTranscriptionRequest::GetBody() const
+std::shared_ptr<Aws::Utils::Event::EventBufferQueue> StartCallAnalyticsStreamTranscriptionRequest::GetEventBufferQueue() const
 {
     return m_audioStream;
 }

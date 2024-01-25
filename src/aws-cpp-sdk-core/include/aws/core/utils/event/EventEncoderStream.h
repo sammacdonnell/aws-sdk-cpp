@@ -4,8 +4,8 @@
  */
 
 #include <aws/core/Core_EXPORTS.h>
-#include <aws/core/utils/stream/ConcurrentStreamBuf.h>
 #include <aws/core/utils/event/EventMessage.h>
+#include <aws/core/utils/event/EventBufferQueue.h>
 #include <aws/core/utils/memory/stl/AWSStreamFwd.h>
 #include <aws/core/utils/event/EventStreamEncoder.h>
 
@@ -25,7 +25,7 @@ namespace Aws
             /**
              * A buffered I/O stream that binary-encodes the bits written to it according to the AWS event-stream spec.
              */
-            class AWS_CORE_API EventEncoderStream : public Aws::IOStream
+            class AWS_CORE_API EventEncoderStream : public Aws::Utils::Event::EventBufferQueue
             {
             public:
 
@@ -58,10 +58,15 @@ namespace Aws
                  * Any writes to the stream after this call are not guaranteed to be read by another concurrent
                  * read thread.
                  */
-                void Close() { m_streambuf.SetEof(); setstate(eofbit); }
+                void Close() { EventBufferQueue::CloseInput(); }
+
+                /**
+                 * Blocks the current thread until all submitted data is consumed.
+                 * Returns false on timeout, and true if GetArea and back buffer are empty.
+                 */
+                bool WaitForDrain(int64_t timeoutMs = 1000);
 
             private:
-                Stream::ConcurrentStreamBuf m_streambuf;
                 EventStreamEncoder m_encoder;
             };
         }

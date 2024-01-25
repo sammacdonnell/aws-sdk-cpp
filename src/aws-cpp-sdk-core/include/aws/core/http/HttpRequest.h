@@ -32,6 +32,10 @@ namespace Aws
         {
             class Hash;
         }
+        namespace Event
+        {
+            class EventBufferQueue;
+        }
     }
     namespace Http
     {
@@ -94,6 +98,8 @@ namespace Aws
         class AWS_CORE_API HttpRequest
         {
         public:
+            using EventBufferQueue = Aws::Utils::Event::EventBufferQueue;
+
             /**
              * Initializes an HttpRequest object with uri and http method.
              */
@@ -131,6 +137,14 @@ namespace Aws
              * Gets the content body stream that will be used for this request.
              */
             virtual const std::shared_ptr<Aws::IOStream>& GetContentBody() const = 0;
+            /**
+             * Adds a queue of events (eg. for HTTP2 outgoing events)
+             */
+            virtual void AddEventBufferQueue(const std::shared_ptr<EventBufferQueue>& eventBufferQueue);
+            /**
+             * Gets the queue of events (eg. for HTTP2 outgoing events)
+             */
+            virtual const std::shared_ptr<EventBufferQueue> GetEventBufferQueue() const;
             /**
              * Returns true if a header exists in the request with name
              */

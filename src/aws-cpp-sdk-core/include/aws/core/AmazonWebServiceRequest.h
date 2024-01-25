@@ -25,7 +25,13 @@ namespace Aws
     {
         class URI;
     } // namespace Http
-
+    namespace Utils
+    {
+        namespace Event
+        {
+            class EventBufferQueue;
+        }
+    }
     class AmazonWebServiceRequest;
 
     /**
@@ -50,6 +56,10 @@ namespace Aws
          * Get the payload for the request
          */
         virtual std::shared_ptr<Aws::IOStream> GetBody() const = 0;
+        /**
+         * Get the event queue of payloads for a streaming request
+         */
+        virtual std::shared_ptr<Aws::Utils::Event::EventBufferQueue> GetEventBufferQueue() const;
         /**
          * Get the headers for the request
          */

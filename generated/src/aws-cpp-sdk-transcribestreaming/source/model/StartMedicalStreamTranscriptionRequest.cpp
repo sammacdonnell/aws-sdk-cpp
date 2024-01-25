@@ -39,7 +39,7 @@ StartMedicalStreamTranscriptionRequest::StartMedicalStreamTranscriptionRequest()
 {
 }
 
-std::shared_ptr<Aws::IOStream> StartMedicalStreamTranscriptionRequest::GetBody() const
+std::shared_ptr<Aws::Utils::Event::EventBufferQueue> StartMedicalStreamTranscriptionRequest::GetEventBufferQueue() const
 {
     return m_audioStream;
 }

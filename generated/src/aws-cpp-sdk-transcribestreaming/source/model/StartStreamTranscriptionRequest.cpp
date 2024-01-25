@@ -55,7 +55,7 @@ StartStreamTranscriptionRequest::StartStreamTranscriptionRequest() :
 {
 }
 
-std::shared_ptr<Aws::IOStream> StartStreamTranscriptionRequest::GetBody() const
+std::shared_ptr<Aws::Utils::Event::EventBufferQueue> StartStreamTranscriptionRequest::GetEventBufferQueue() const
 {
     return m_audioStream;
 }

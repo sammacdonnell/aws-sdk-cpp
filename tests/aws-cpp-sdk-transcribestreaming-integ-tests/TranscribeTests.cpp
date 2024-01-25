@@ -413,7 +413,7 @@ Aws::String TranscribeStreamingTests::RunTestLikeSample(size_t timeoutMs, const 
             }
             stream.flush();
             stream.WaitForDrain();
-            std::this_thread::sleep_for(std::chrono::milliseconds(2000)); /* We are investigating why we need this */
+            // std::this_thread::sleep_for(std::chrono::milliseconds(2000)); /* We are investigating why we need this */
             stream.Close();
      };
 

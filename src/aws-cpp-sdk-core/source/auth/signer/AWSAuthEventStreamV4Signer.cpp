@@ -190,17 +190,22 @@ bool AWSAuthEventStreamV4Signer::SignEventMessage(Event::Message& message, Aws::
 
     if (message.GetEventPayload().empty())
     {
-        AWS_LOGSTREAM_WARN(v4StreamingLogTag, "Attempting to sign an empty message (no payload and no headers). "
-                "It is unlikely that this is the intended behavior.");
+        AWS_LOGSTREAM_INFO(v4StreamingLogTag, "Signing an event with an empty payload.");
     }
-    else
+
+
     {
         // use a preallocatedStreamBuf to avoid making a copy.
         // The Hashing API requires either Aws::String or IStream as input.
         // TODO: the hashing API should be accept 'unsigned char*' as input.
-        Utils::Stream::PreallocatedStreamBuf streamBuf(message.GetEventPayload().data(), message.GetEventPayload().size());
-        Aws::IOStream payload(&streamBuf);
-        hashOutcome = m_hash.Calculate(payload);
+        if (!message.GetEventPayload().empty())
+        {
+            Utils::Stream::PreallocatedStreamBuf streamBuf(message.GetEventPayload().data(), message.GetEventPayload().size());
+            Aws::IOStream payload(&streamBuf);
+            hashOutcome = m_hash.Calculate(payload);
+        } else {
+            hashOutcome = m_hash.Calculate("");
+        }
 
         if (!hashOutcome.IsSuccess())
         {
@@ -212,7 +217,9 @@ bool AWSAuthEventStreamV4Signer::SignEventMessage(Event::Message& message, Aws::
         AWS_LOGSTREAM_DEBUG(v4StreamingLogTag, "Payload hash  - " << HashingUtils::HexEncode(payloadHash));
     }
 
-    Aws::Utils::ByteBuffer finalSignatureDigest = GenerateSignature(m_credentialsProvider->GetAWSCredentials(), stringToSign.str(), simpleDate, m_region, m_serviceName);
+    Aws::String canonicalStringToSign = stringToSign.str();
+    AWS_LOGSTREAM_TRACE(v4StreamingLogTag, "Event canonical string to sign: " << canonicalStringToSign);
+    Aws::Utils::ByteBuffer finalSignatureDigest = GenerateSignature(m_credentialsProvider->GetAWSCredentials(), canonicalStringToSign, simpleDate, m_region, m_serviceName);
     const auto finalSignature = HashingUtils::HexEncode(finalSignatureDigest);
     AWS_LOGSTREAM_DEBUG(v4StreamingLogTag, "Final computed signing hash: " << finalSignature);
     priorSignature = finalSignature;

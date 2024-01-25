@@ -53,7 +53,7 @@ namespace Aws
                  * Returns true if successful.
                  * A successfully initialized struct must be cleaned up when you're done with it.
                  */
-                bool InitSignedStruct(const aws_event_stream_message* msg, aws_event_stream_message* signedmsg);
+                bool InitSignedStruct(const aws_event_stream_message* payload, aws_event_stream_message* signedmsg);
 
                 Aws::Client::AWSAuthSigner* m_signer;
                 Aws::String m_signatureSeed;

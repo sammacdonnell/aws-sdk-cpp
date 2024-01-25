@@ -82,11 +82,20 @@ namespace Aws
             {
                 Aws::Vector<unsigned char> outputBits;
 
-                aws_event_stream_message encoded;
-                if (InitEncodedStruct(msg, &encoded))
+                aws_event_stream_message msgEncoded;
+                aws_event_stream_message* pEncodedToSign = nullptr;
+                bool msgEncodeSuccess = true; // null message always "succeed" to encode
+
+                if(!msg.GetEventHeaders().empty() || !msg.GetEventPayload().empty())
+                {
+                  pEncodedToSign = &msgEncoded;
+                  msgEncodeSuccess = InitEncodedStruct(msg, pEncodedToSign);
+                }
+
+                if (msgEncodeSuccess)
                 {
                     aws_event_stream_message signedMessage;
-                    if (InitSignedStruct(&encoded, &signedMessage))
+                    if (InitSignedStruct(pEncodedToSign, &signedMessage))
                     {
                         // success!
                         const auto signedMessageBuffer = aws_event_stream_message_buffer(&signedMessage);
@@ -96,7 +105,10 @@ namespace Aws
 
                         aws_event_stream_message_clean_up(&signedMessage);
                     }
-                    aws_event_stream_message_clean_up(&encoded);
+                    if (pEncodedToSign)
+                    {
+                        aws_event_stream_message_clean_up(pEncodedToSign);
+                    }
                 }
 
                 return outputBits;
@@ -124,14 +136,17 @@ namespace Aws
                 return success;
             }
 
-            bool EventStreamEncoder::InitSignedStruct(const aws_event_stream_message* msg, aws_event_stream_message* signedmsg)
+            bool EventStreamEncoder::InitSignedStruct(const aws_event_stream_message* payload, aws_event_stream_message* signedmsg)
             {
                 bool success = false;
 
-                const auto msgbuf = aws_event_stream_message_buffer(msg);
-                const auto msglen = aws_event_stream_message_total_length(msg);
                 Event::Message signedMessage;
-                signedMessage.WriteEventPayload(msgbuf, msglen);
+                if (payload)
+                {
+                    const auto msgbuf = aws_event_stream_message_buffer(payload);
+                    const auto msglen = aws_event_stream_message_total_length(payload);
+                    signedMessage.WriteEventPayload(msgbuf, msglen);
+                }
 
                 assert(m_signer);
                 if (m_signer->SignEventMessage(signedMessage, m_signatureSeed))
@@ -139,9 +154,9 @@ namespace Aws
                     aws_array_list headers;
                     EncodeHeaders(signedMessage, &headers);
 
-                    aws_byte_buf payload = aws_byte_buf_from_array(signedMessage.GetEventPayload().data(), signedMessage.GetEventPayload().size());
+                    aws_byte_buf unsignedPayload = aws_byte_buf_from_array(signedMessage.GetEventPayload().data(), signedMessage.GetEventPayload().size());
 
-                    if(aws_event_stream_message_init(signedmsg, get_aws_allocator(), &headers, &payload) == AWS_OP_SUCCESS)
+                    if(aws_event_stream_message_init(signedmsg, get_aws_allocator(), &headers, &unsignedPayload) == AWS_OP_SUCCESS)
                     {
                         success = true;
                     }

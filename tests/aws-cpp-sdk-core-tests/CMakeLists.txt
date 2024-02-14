@@ -118,7 +118,7 @@ endif()
 if (AUTORUN_UNIT_TESTS)
     ADD_CUSTOM_COMMAND( TARGET ${PROJECT_NAME} POST_BUILD
         COMMAND ${CMAKE_COMMAND} -E env LD_LIBRARY_PATH=${AWS_AUTORUN_LD_LIBRARY_PATH}:$ENV{LD_LIBRARY_PATH} $<TARGET_FILE:${PROJECT_NAME}>
-        ARGS "--gtest_shuffle" "--gtest_repeat=3" "--gtest_brief=1")
+        ARGS "--gtest_shuffle" "--gtest_repeat=100" "--gtest_brief=1")
 endif()
 
 if(NOT CMAKE_CROSSCOMPILING)

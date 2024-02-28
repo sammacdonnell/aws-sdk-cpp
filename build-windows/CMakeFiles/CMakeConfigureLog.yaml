@@ -1,0 +1,1447 @@
+
+---
+events:
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-3.29/Modules/CMakeDetermineSystem.cmake:205 (message)"
+      - "CMakeLists.txt:167 (project)"
+    message: |
+      The system is: Windows - 10.0.22621 - AMD64
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-3.29/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "C:/Program Files/CMake/share/cmake-3.29/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "C:/Program Files/CMake/share/cmake-3.29/Modules/CMakeDetermineCXXCompiler.cmake:126 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:167 (project)"
+    message: |
+      Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" succeeded.
+      Compiler:  
+      Build flags: 
+      Id flags:  
+      
+      The output was:
+      0
+      MSBuild version 17.5.1+f6fdcf537 for .NET Framework
+      Build started 2/27/2024 8:21:38 PM.
+      Included response file: D:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\MSBuild\\Current\\Bin\\amd64\\MSBuild.rsp
+      
+      Project "D:\\Unreal Projects\\aws-sdk-cpp\\build-windows\\CMakeFiles\\3.29.0-rc2\\CompilerIdCXX\\CompilerIdCXX.vcxproj" on node 1 (default targets).
+      PrepareForBuild:
+        Creating directory "Debug\\".
+        Creating directory "Debug\\CompilerIdCXX.tlog\\".
+      InitializeBuildStatus:
+        Creating "Debug\\CompilerIdCXX.tlog\\unsuccessfulbuild" because "AlwaysCreate" was specified.
+      ClCompile:
+        D:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.34.31933\\bin\\HostX64\\x64\\CL.exe /c /nologo /W0 /WX- /diagnostics:column /Od /D _MBCS /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"Debug\\\\" /Fd"Debug\\vc143.pdb" /external:W0 /Gd /TP /FC /errorReport:queue CMakeCXXCompilerId.cpp
+        CMakeCXXCompilerId.cpp
+      Link:
+        D:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.34.31933\\bin\\HostX64\\x64\\link.exe /ERRORREPORT:QUEUE /OUT:".\\CompilerIdCXX.exe" /INCREMENTAL:NO /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /PDB:".\\CompilerIdCXX.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:".\\CompilerIdCXX.lib" /MACHINE:X64 Debug\\CMakeCXXCompilerId.obj
+        CompilerIdCXX.vcxproj -> D:\\Unreal Projects\\aws-sdk-cpp\\build-windows\\CMakeFiles\\3.29.0-rc2\\CompilerIdCXX\\CompilerIdCXX.exe
+      PostBuildEvent:
+        for %%i in (cl.exe) do @echo CMAKE_CXX_COMPILER=%%~$PATH:i
+        :VCEnd
+        CMAKE_CXX_COMPILER=D:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.34.31933\\bin\\Hostx64\\x64\\cl.exe
+      FinalizeBuildStatus:
+        Deleting file "Debug\\CompilerIdCXX.tlog\\unsuccessfulbuild".
+        Touching "Debug\\CompilerIdCXX.tlog\\CompilerIdCXX.lastbuildstate".
+      Done Building Project "D:\\Unreal Projects\\aws-sdk-cpp\\build-windows\\CMakeFiles\\3.29.0-rc2\\CompilerIdCXX\\CompilerIdCXX.vcxproj" (default targets).
+      
+      Build succeeded.
+          0 Warning(s)
+          0 Error(s)
+      
+      Time Elapsed 00:00:01.08
+      
+      
+      Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "CompilerIdCXX.exe"
+      
+      Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "CompilerIdCXX.vcxproj"
+      
+      The CXX compiler identification is MSVC, found in:
+        D:/Unreal Projects/aws-sdk-cpp/build-windows/CMakeFiles/3.29.0-rc2/CompilerIdCXX/CompilerIdCXX.exe
+      
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-3.29/Modules/CMakeDetermineCompilerABI.cmake:64 (try_compile)"
+      - "C:/Program Files/CMake/share/cmake-3.29/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:167 (project)"
+    checks:
+      - "Detecting CXX compiler ABI info"
+    directories:
+      source: "D:/Unreal Projects/aws-sdk-cpp/build-windows/CMakeFiles/CMakeScratch/TryCompile-lkk70n"
+      binary: "D:/Unreal Projects/aws-sdk-cpp/build-windows/CMakeFiles/CMakeScratch/TryCompile-lkk70n"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: "/DWIN32 /D_WINDOWS /W3 /GR /EHsc"
+      CMAKE_CXX_FLAGS_DEBUG: "/MDd /Zi /Ob0 /Od /RTC1"
+      CMAKE_EXE_LINKER_FLAGS: "/machine:x64"
+      CMAKE_MODULE_PATH: "D:/Unreal Projects/aws-sdk-cpp/cmake;//cmake"
+    buildResult:
+      variable: "CMAKE_CXX_ABI_COMPILED"
+      cached: true
+      stdout: |
+        Change Dir: 'D:/Unreal Projects/aws-sdk-cpp/build-windows/CMakeFiles/CMakeScratch/TryCompile-lkk70n'
+        
+        Run Build Command(s): "D:/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/amd64/MSBuild.exe" cmTC_8ec2d.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:n
+        MSBuild version 17.5.1+f6fdcf537 for .NET Framework
+        Build started 2/27/2024 8:21:40 PM.
+        Included response file: D:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\MSBuild\\Current\\Bin\\amd64\\MSBuild.rsp
+        
+        Project "D:\\Unreal Projects\\aws-sdk-cpp\\build-windows\\CMakeFiles\\CMakeScratch\\TryCompile-lkk70n\\cmTC_8ec2d.vcxproj" on node 1 (default targets).
+        PrepareForBuild:
+          Creating directory "cmTC_8ec2d.dir\\Debug\\".
+          Creating directory "D:\\Unreal Projects\\aws-sdk-cpp\\build-windows\\CMakeFiles\\CMakeScratch\\TryCompile-lkk70n\\Debug\\".
+          Creating directory "cmTC_8ec2d.dir\\Debug\\cmTC_8ec2d.tlog\\".
+        InitializeBuildStatus:
+          Creating "cmTC_8ec2d.dir\\Debug\\cmTC_8ec2d.tlog\\unsuccessfulbuild" because "AlwaysCreate" was specified.
+        ClCompile:
+          D:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.34.31933\\bin\\HostX64\\x64\\CL.exe /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /GR /Fo"cmTC_8ec2d.dir\\Debug\\\\" /Fd"cmTC_8ec2d.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TP /errorReport:queue "C:\\Program Files\\CMake\\share\\cmake-3.29\\Modules\\CMakeCXXCompilerABI.cpp"
+          Microsoft (R) C/C++ Optimizing Compiler Version 19.34.31944 for x64
+          CMakeCXXCompilerABI.cpp
+          Copyright (C) Microsoft Corporation.  All rights reserved.
+          cl /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /GR /Fo"cmTC_8ec2d.dir\\Debug\\\\" /Fd"cmTC_8ec2d.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TP /errorReport:queue "C:\\Program Files\\CMake\\share\\cmake-3.29\\Modules\\CMakeCXXCompilerABI.cpp"
+        Link:
+          D:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.34.31933\\bin\\HostX64\\x64\\link.exe /ERRORREPORT:QUEUE /OUT:"D:\\Unreal Projects\\aws-sdk-cpp\\build-windows\\CMakeFiles\\CMakeScratch\\TryCompile-lkk70n\\Debug\\cmTC_8ec2d.exe" /INCREMENTAL /ILK:"cmTC_8ec2d.dir\\Debug\\cmTC_8ec2d.ilk" /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"D:/Unreal Projects/aws-sdk-cpp/build-windows/CMakeFiles/CMakeScratch/TryCompile-lkk70n/Debug/cmTC_8ec2d.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"D:/Unreal Projects/aws-sdk-cpp/build-windows/CMakeFiles/CMakeScratch/TryCompile-lkk70n/Debug/cmTC_8ec2d.lib" /MACHINE:X64  /machine:x64 cmTC_8ec2d.dir\\Debug\\CMakeCXXCompilerABI.obj
+          cmTC_8ec2d.vcxproj -> D:\\Unreal Projects\\aws-sdk-cpp\\build-windows\\CMakeFiles\\CMakeScratch\\TryCompile-lkk70n\\Debug\\cmTC_8ec2d.exe
+        FinalizeBuildStatus:
+          Deleting file "cmTC_8ec2d.dir\\Debug\\cmTC_8ec2d.tlog\\unsuccessfulbuild".
+          Touching "cmTC_8ec2d.dir\\Debug\\cmTC_8ec2d.tlog\\cmTC_8ec2d.lastbuildstate".
+        Done Building Project "D:\\Unreal Projects\\aws-sdk-cpp\\build-windows\\CMakeFiles\\CMakeScratch\\TryCompile-lkk70n\\cmTC_8ec2d.vcxproj" (default targets).
+        
+        Build succeeded.
+            0 Warning(s)
+            0 Error(s)
+        
+        Time Elapsed 00:00:00.64
+        
+      exitCode: 0
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-3.29/Modules/CMakeDetermineCompilerABI.cmake:170 (message)"
+      - "C:/Program Files/CMake/share/cmake-3.29/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:167 (project)"
+    message: |
+      Parsed CXX implicit link information:
+        link line regex: [^( *|.*[/\\])(ld[0-9]*(\\.[a-z]+)?|link\\.exe|lld-link(\\.exe)?|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\\]+-)?ld|collect2)[^/\\]*( |$)]
+        linker tool regex: [^[ 	]*(->|")?[ 	]*(([^"]*[/\\])?(ld[0-9]*(\\.[a-z]+)?|link\\.exe|lld-link(\\.exe)?))("|,| |$)]
+        linker tool for 'CXX': D:/Program Files/Microsoft Visual Studio/2022/Community/VC/Tools/MSVC/14.34.31933/bin/HostX64/x64/link.exe
+        implicit libs: []
+        implicit objs: []
+        implicit dirs: []
+        implicit fwks: []
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-3.29/Modules/Internal/CMakeDetermineLinkerId.cmake:40 (message)"
+      - "C:/Program Files/CMake/share/cmake-3.29/Modules/CMakeDetermineCompilerABI.cmake:207 (cmake_determine_linker_id)"
+      - "C:/Program Files/CMake/share/cmake-3.29/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:167 (project)"
+    message: |
+      Running the CXX compiler's linker: "D:/Program Files/Microsoft Visual Studio/2022/Community/VC/Tools/MSVC/14.34.31933/bin/HostX64/x64/link.exe" "-v"
+      Microsoft (R) Incremental Linker Version 14.34.31944.0
+      Copyright (C) Microsoft Corporation.  All rights reserved.
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-3.29/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "C:/Program Files/CMake/share/cmake-3.29/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "C:/Program Files/CMake/share/cmake-3.29/Modules/CMakeDetermineCCompiler.cmake:123 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "crt/aws-crt-cpp/CMakeLists.txt:28 (project)"
+    message: |
+      Compiling the C compiler identification source file "CMakeCCompilerId.c" succeeded.
+      Compiler:  
+      Build flags: 
+      Id flags:  
+      
+      The output was:
+      0
+      MSBuild version 17.5.1+f6fdcf537 for .NET Framework
+      Build started 2/27/2024 8:21:41 PM.
+      Included response file: D:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\MSBuild\\Current\\Bin\\amd64\\MSBuild.rsp
+      
+      Project "D:\\Unreal Projects\\aws-sdk-cpp\\build-windows\\CMakeFiles\\3.29.0-rc2\\CompilerIdC\\CompilerIdC.vcxproj" on node 1 (default targets).
+      PrepareForBuild:
+        Creating directory "Debug\\".
+        Creating directory "Debug\\CompilerIdC.tlog\\".
+      InitializeBuildStatus:
+        Creating "Debug\\CompilerIdC.tlog\\unsuccessfulbuild" because "AlwaysCreate" was specified.
+      ClCompile:
+        D:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.34.31933\\bin\\HostX64\\x64\\CL.exe /c /nologo /W0 /WX- /diagnostics:column /Od /D _MBCS /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"Debug\\\\" /Fd"Debug\\vc143.pdb" /external:W0 /Gd /TC /FC /errorReport:queue CMakeCCompilerId.c
+        CMakeCCompilerId.c
+      Link:
+        D:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.34.31933\\bin\\HostX64\\x64\\link.exe /ERRORREPORT:QUEUE /OUT:".\\CompilerIdC.exe" /INCREMENTAL:NO /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /PDB:".\\CompilerIdC.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:".\\CompilerIdC.lib" /MACHINE:X64 Debug\\CMakeCCompilerId.obj
+        CompilerIdC.vcxproj -> D:\\Unreal Projects\\aws-sdk-cpp\\build-windows\\CMakeFiles\\3.29.0-rc2\\CompilerIdC\\CompilerIdC.exe
+      PostBuildEvent:
+        for %%i in (cl.exe) do @echo CMAKE_C_COMPILER=%%~$PATH:i
+        :VCEnd
+        CMAKE_C_COMPILER=D:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.34.31933\\bin\\Hostx64\\x64\\cl.exe
+      FinalizeBuildStatus:
+        Deleting file "Debug\\CompilerIdC.tlog\\unsuccessfulbuild".
+        Touching "Debug\\CompilerIdC.tlog\\CompilerIdC.lastbuildstate".
+      Done Building Project "D:\\Unreal Projects\\aws-sdk-cpp\\build-windows\\CMakeFiles\\3.29.0-rc2\\CompilerIdC\\CompilerIdC.vcxproj" (default targets).
+      
+      Build succeeded.
+          0 Warning(s)
+          0 Error(s)
+      
+      Time Elapsed 00:00:00.62
+      
+      
+      Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "CompilerIdC.exe"
+      
+      Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "CompilerIdC.vcxproj"
+      
+      The C compiler identification is MSVC, found in:
+        D:/Unreal Projects/aws-sdk-cpp/build-windows/CMakeFiles/3.29.0-rc2/CompilerIdC/CompilerIdC.exe
+      
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-3.29/Modules/CMakeDetermineCompilerABI.cmake:64 (try_compile)"
+      - "C:/Program Files/CMake/share/cmake-3.29/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "crt/aws-crt-cpp/CMakeLists.txt:28 (project)"
+    checks:
+      - "Detecting C compiler ABI info"
+    directories:
+      source: "D:/Unreal Projects/aws-sdk-cpp/build-windows/CMakeFiles/CMakeScratch/TryCompile-m8q8h6"
+      binary: "D:/Unreal Projects/aws-sdk-cpp/build-windows/CMakeFiles/CMakeScratch/TryCompile-m8q8h6"
+    cmakeVariables:
+      CMAKE_C_FLAGS: "/DWIN32 /D_WINDOWS /W3"
+      CMAKE_MODULE_PATH: "D:/Unreal Projects/aws-sdk-cpp/cmake;//cmake;D:/Unreal Projects/aws-sdk-cpp/crt/aws-crt-cpp/crt/aws-c-common/cmake;D:/Unreal Projects/aws-sdk-cpp/crt/aws-crt-cpp/cmake"
+    buildResult:
+      variable: "CMAKE_C_ABI_COMPILED"
+      cached: true
+      stdout: |
+        Change Dir: 'D:/Unreal Projects/aws-sdk-cpp/build-windows/CMakeFiles/CMakeScratch/TryCompile-m8q8h6'
+        
+        Run Build Command(s): "D:/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/amd64/MSBuild.exe" cmTC_6272f.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:n
+        MSBuild version 17.5.1+f6fdcf537 for .NET Framework
+        Build started 2/27/2024 8:21:42 PM.
+        Included response file: D:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\MSBuild\\Current\\Bin\\amd64\\MSBuild.rsp
+        
+        Project "D:\\Unreal Projects\\aws-sdk-cpp\\build-windows\\CMakeFiles\\CMakeScratch\\TryCompile-m8q8h6\\cmTC_6272f.vcxproj" on node 1 (default targets).
+        PrepareForBuild:
+          Creating directory "cmTC_6272f.dir\\Debug\\".
+          Creating directory "D:\\Unreal Projects\\aws-sdk-cpp\\build-windows\\CMakeFiles\\CMakeScratch\\TryCompile-m8q8h6\\Debug\\".
+          Creating directory "cmTC_6272f.dir\\Debug\\cmTC_6272f.tlog\\".
+        InitializeBuildStatus:
+          Creating "cmTC_6272f.dir\\Debug\\cmTC_6272f.tlog\\unsuccessfulbuild" because "AlwaysCreate" was specified.
+        ClCompile:
+          D:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.34.31933\\bin\\HostX64\\x64\\CL.exe /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_6272f.dir\\Debug\\\\" /Fd"cmTC_6272f.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TC /errorReport:queue "C:\\Program Files\\CMake\\share\\cmake-3.29\\Modules\\CMakeCCompilerABI.c"
+          Microsoft (R) C/C++ Optimizing Compiler Version 19.34.31944 for x64
+          CMakeCCompilerABI.c
+          Copyright (C) Microsoft Corporation.  All rights reserved.
+          cl /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_6272f.dir\\Debug\\\\" /Fd"cmTC_6272f.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TC /errorReport:queue "C:\\Program Files\\CMake\\share\\cmake-3.29\\Modules\\CMakeCCompilerABI.c"
+        Link:
+          D:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.34.31933\\bin\\HostX64\\x64\\link.exe /ERRORREPORT:QUEUE /OUT:"D:\\Unreal Projects\\aws-sdk-cpp\\build-windows\\CMakeFiles\\CMakeScratch\\TryCompile-m8q8h6\\Debug\\cmTC_6272f.exe" /INCREMENTAL /ILK:"cmTC_6272f.dir\\Debug\\cmTC_6272f.ilk" /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"D:/Unreal Projects/aws-sdk-cpp/build-windows/CMakeFiles/CMakeScratch/TryCompile-m8q8h6/Debug/cmTC_6272f.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"D:/Unreal Projects/aws-sdk-cpp/build-windows/CMakeFiles/CMakeScratch/TryCompile-m8q8h6/Debug/cmTC_6272f.lib" /MACHINE:X64  /machine:x64 cmTC_6272f.dir\\Debug\\CMakeCCompilerABI.obj
+          cmTC_6272f.vcxproj -> D:\\Unreal Projects\\aws-sdk-cpp\\build-windows\\CMakeFiles\\CMakeScratch\\TryCompile-m8q8h6\\Debug\\cmTC_6272f.exe
+        FinalizeBuildStatus:
+          Deleting file "cmTC_6272f.dir\\Debug\\cmTC_6272f.tlog\\unsuccessfulbuild".
+          Touching "cmTC_6272f.dir\\Debug\\cmTC_6272f.tlog\\cmTC_6272f.lastbuildstate".
+        Done Building Project "D:\\Unreal Projects\\aws-sdk-cpp\\build-windows\\CMakeFiles\\CMakeScratch\\TryCompile-m8q8h6\\cmTC_6272f.vcxproj" (default targets).
+        
+        Build succeeded.
+            0 Warning(s)
+            0 Error(s)
+        
+        Time Elapsed 00:00:00.61
+        
+      exitCode: 0
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-3.29/Modules/CMakeDetermineCompilerABI.cmake:170 (message)"
+      - "C:/Program Files/CMake/share/cmake-3.29/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "crt/aws-crt-cpp/CMakeLists.txt:28 (project)"
+    message: |
+      Parsed C implicit link information:
+        link line regex: [^( *|.*[/\\])(ld[0-9]*(\\.[a-z]+)?|link\\.exe|lld-link(\\.exe)?|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\\]+-)?ld|collect2)[^/\\]*( |$)]
+        linker tool regex: [^[ 	]*(->|")?[ 	]*(([^"]*[/\\])?(ld[0-9]*(\\.[a-z]+)?|link\\.exe|lld-link(\\.exe)?))("|,| |$)]
+        linker tool for 'C': D:/Program Files/Microsoft Visual Studio/2022/Community/VC/Tools/MSVC/14.34.31933/bin/HostX64/x64/link.exe
+        implicit libs: []
+        implicit objs: []
+        implicit dirs: []
+        implicit fwks: []
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-3.29/Modules/Internal/CMakeDetermineLinkerId.cmake:40 (message)"
+      - "C:/Program Files/CMake/share/cmake-3.29/Modules/CMakeDetermineCompilerABI.cmake:207 (cmake_determine_linker_id)"
+      - "C:/Program Files/CMake/share/cmake-3.29/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "crt/aws-crt-cpp/CMakeLists.txt:28 (project)"
+    message: |
+      Running the C compiler's linker: "D:/Program Files/Microsoft Visual Studio/2022/Community/VC/Tools/MSVC/14.34.31933/bin/HostX64/x64/link.exe" "-v"
+      Microsoft (R) Incremental Linker Version 14.34.31944.0
+      Copyright (C) Microsoft Corporation.  All rights reserved.
+  -
+    kind: "try_run-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-3.29/Modules/Internal/CheckSourceRuns.cmake:93 (try_run)"
+      - "C:/Program Files/CMake/share/cmake-3.29/Modules/CheckCSourceRuns.cmake:52 (cmake_check_source_runs)"
+      - "crt/aws-crt-cpp/crt/aws-c-common/cmake/AwsFeatureTests.cmake:21 (check_c_source_runs)"
+      - "crt/aws-crt-cpp/crt/aws-c-common/CMakeLists.txt:23 (include)"
+    checks:
+      - "Performing Test AWS_HAVE_GCC_OVERFLOW_MATH_EXTENSIONS"
+    directories:
+      source: "D:/Unreal Projects/aws-sdk-cpp/build-windows/CMakeFiles/CMakeScratch/TryCompile-c37ihd"
+      binary: "D:/Unreal Projects/aws-sdk-cpp/build-windows/CMakeFiles/CMakeScratch/TryCompile-c37ihd"
+    cmakeVariables:
+      CMAKE_C_FLAGS: "/DWIN32 /D_WINDOWS /W3"
+      CMAKE_MODULE_PATH: "D:/Unreal Projects/aws-sdk-cpp/cmake;//cmake;D:/Unreal Projects/aws-sdk-cpp/crt/aws-crt-cpp/crt/aws-c-common/cmake;D:/Unreal Projects/aws-sdk-cpp/crt/aws-crt-cpp/cmake;/lib/cmake;D:/Unreal Projects/aws-sdk-cpp/crt/aws-crt-cpp/crt/aws-c-common/cmake;D:/Unreal Projects/aws-sdk-cpp/crt/aws-crt-cpp/crt/aws-c-common/cmake"
+    buildResult:
+      variable: "AWS_HAVE_GCC_OVERFLOW_MATH_EXTENSIONS_COMPILED"
+      cached: true
+      stdout: |
+        Change Dir: 'D:/Unreal Projects/aws-sdk-cpp/build-windows/CMakeFiles/CMakeScratch/TryCompile-c37ihd'
+        
+        Run Build Command(s): "D:/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/amd64/MSBuild.exe" cmTC_b0e3d.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:n
+        MSBuild version 17.5.1+f6fdcf537 for .NET Framework
+        Build started 2/27/2024 8:21:43 PM.
+        Included response file: D:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\MSBuild\\Current\\Bin\\amd64\\MSBuild.rsp
+        
+        Project "D:\\Unreal Projects\\aws-sdk-cpp\\build-windows\\CMakeFiles\\CMakeScratch\\TryCompile-c37ihd\\cmTC_b0e3d.vcxproj" on node 1 (default targets).
+        PrepareForBuild:
+          Creating directory "cmTC_b0e3d.dir\\Debug\\".
+          Creating directory "D:\\Unreal Projects\\aws-sdk-cpp\\build-windows\\CMakeFiles\\CMakeScratch\\TryCompile-c37ihd\\Debug\\".
+          Creating directory "cmTC_b0e3d.dir\\Debug\\cmTC_b0e3d.tlog\\".
+        InitializeBuildStatus:
+          Creating "cmTC_b0e3d.dir\\Debug\\cmTC_b0e3d.tlog\\unsuccessfulbuild" because "AlwaysCreate" was specified.
+        ClCompile:
+          D:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.34.31933\\bin\\HostX64\\x64\\CL.exe /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D AWS_HAVE_GCC_OVERFLOW_MATH_EXTENSIONS /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_b0e3d.dir\\Debug\\\\" /Fd"cmTC_b0e3d.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TC /errorReport:queue "D:\\Unreal Projects\\aws-sdk-cpp\\build-windows\\CMakeFiles\\CMakeScratch\\TryCompile-c37ihd\\src.c"
+          Microsoft (R) C/C++ Optimizing Compiler Version 19.34.31944 for x64
+          src.c
+          Copyright (C) Microsoft Corporation.  All rights reserved.
+          cl /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D AWS_HAVE_GCC_OVERFLOW_MATH_EXTENSIONS /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_b0e3d.dir\\Debug\\\\" /Fd"cmTC_b0e3d.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TC /errorReport:queue "D:\\Unreal Projects\\aws-sdk-cpp\\build-windows\\CMakeFiles\\CMakeScratch\\TryCompile-c37ihd\\src.c"
+        D:\\Unreal Projects\\aws-sdk-cpp\\build-windows\\CMakeFiles\\CMakeScratch\\TryCompile-c37ihd\\src.c(4,16): warning C4013: '__builtin_mul_overflow' undefined; assuming extern returning int [D:\\Unreal Projects\\aws-sdk-cpp\\build-windows\\CMakeFiles\\CMakeScratch\\TryCompile-c37ihd\\cmTC_b0e3d.vcxproj]
+        Link:
+          D:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.34.31933\\bin\\HostX64\\x64\\link.exe /ERRORREPORT:QUEUE /OUT:"D:\\Unreal Projects\\aws-sdk-cpp\\build-windows\\CMakeFiles\\CMakeScratch\\TryCompile-c37ihd\\Debug\\cmTC_b0e3d.exe" /INCREMENTAL /ILK:"cmTC_b0e3d.dir\\Debug\\cmTC_b0e3d.ilk" /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"D:/Unreal Projects/aws-sdk-cpp/build-windows/CMakeFiles/CMakeScratch/TryCompile-c37ihd/Debug/cmTC_b0e3d.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"D:/Unreal Projects/aws-sdk-cpp/build-windows/CMakeFiles/CMakeScratch/TryCompile-c37ihd/Debug/cmTC_b0e3d.lib" /MACHINE:X64  /machine:x64 cmTC_b0e3d.dir\\Debug\\src.obj
+        src.obj : error LNK2019: unresolved external symbol __builtin_mul_overflow referenced in function foo [D:\\Unreal Projects\\aws-sdk-cpp\\build-windows\\CMakeFiles\\CMakeScratch\\TryCompile-c37ihd\\cmTC_b0e3d.vcxproj]
+        D:\\Unreal Projects\\aws-sdk-cpp\\build-windows\\CMakeFiles\\CMakeScratch\\TryCompile-c37ihd\\Debug\\cmTC_b0e3d.exe : fatal error LNK1120: 1 unresolved externals [D:\\Unreal Projects\\aws-sdk-cpp\\build-windows\\CMakeFiles\\CMakeScratch\\TryCompile-c37ihd\\cmTC_b0e3d.vcxproj]
+        Done Building Project "D:\\Unreal Projects\\aws-sdk-cpp\\build-windows\\CMakeFiles\\CMakeScratch\\TryCompile-c37ihd\\cmTC_b0e3d.vcxproj" (default targets) -- FAILED.
+        
+        Build FAILED.
+        
+        "D:\\Unreal Projects\\aws-sdk-cpp\\build-windows\\CMakeFiles\\CMakeScratch\\TryCompile-c37ihd\\cmTC_b0e3d.vcxproj" (default target) (1) ->
+        (ClCompile target) -> 
+          D:\\Unreal Projects\\aws-sdk-cpp\\build-windows\\CMakeFiles\\CMakeScratch\\TryCompile-c37ihd\\src.c(4,16): warning C4013: '__builtin_mul_overflow' undefined; assuming extern returning int [D:\\Unreal Projects\\aws-sdk-cpp\\build-windows\\CMakeFiles\\CMakeScratch\\TryCompile-c37ihd\\cmTC_b0e3d.vcxproj]
+        
+        
+        "D:\\Unreal Projects\\aws-sdk-cpp\\build-windows\\CMakeFiles\\CMakeScratch\\TryCompile-c37ihd\\cmTC_b0e3d.vcxproj" (default target) (1) ->
+        (Link target) -> 
+          src.obj : error LNK2019: unresolved external symbol __builtin_mul_overflow referenced in function foo [D:\\Unreal Projects\\aws-sdk-cpp\\build-windows\\CMakeFiles\\CMakeScratch\\TryCompile-c37ihd\\cmTC_b0e3d.vcxproj]
+          D:\\Unreal Projects\\aws-sdk-cpp\\build-windows\\CMakeFiles\\CMakeScratch\\TryCompile-c37ihd\\Debug\\cmTC_b0e3d.exe : fatal error LNK1120: 1 unresolved externals [D:\\Unreal Projects\\aws-sdk-cpp\\build-windows\\CMakeFiles\\CMakeScratch\\TryCompile-c37ihd\\cmTC_b0e3d.vcxproj]
+        
+            1 Warning(s)
+            2 Error(s)
+        
+        Time Elapsed 00:00:00.57
+        
+      exitCode: 1
+    runResult:
+      variable: "AWS_HAVE_GCC_OVERFLOW_MATH_EXTENSIONS_EXITCODE"
+      cached: true
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-3.29/Modules/Internal/CheckSourceCompiles.cmake:101 (try_compile)"
+      - "C:/Program Files/CMake/share/cmake-3.29/Modules/CheckCSourceCompiles.cmake:52 (cmake_check_source_compiles)"
+      - "crt/aws-crt-cpp/crt/aws-c-common/cmake/AwsFeatureTests.cmake:37 (check_c_source_compiles)"
+      - "crt/aws-crt-cpp/crt/aws-c-common/CMakeLists.txt:23 (include)"
+    checks:
+      - "Performing Test AWS_HAVE_WINAPI_DESKTOP"
+    directories:
+      source: "D:/Unreal Projects/aws-sdk-cpp/build-windows/CMakeFiles/CMakeScratch/TryCompile-lf8w17"
+      binary: "D:/Unreal Projects/aws-sdk-cpp/build-windows/CMakeFiles/CMakeScratch/TryCompile-lf8w17"
+    cmakeVariables:
+      CMAKE_C_FLAGS: "/DWIN32 /D_WINDOWS /W3"
+      CMAKE_MODULE_PATH: "D:/Unreal Projects/aws-sdk-cpp/cmake;//cmake;D:/Unreal Projects/aws-sdk-cpp/crt/aws-crt-cpp/crt/aws-c-common/cmake;D:/Unreal Projects/aws-sdk-cpp/crt/aws-crt-cpp/cmake;/lib/cmake;D:/Unreal Projects/aws-sdk-cpp/crt/aws-crt-cpp/crt/aws-c-common/cmake;D:/Unreal Projects/aws-sdk-cpp/crt/aws-crt-cpp/crt/aws-c-common/cmake"
+    buildResult:
+      variable: "AWS_HAVE_WINAPI_DESKTOP"
+      cached: true
+      stdout: |
+        Change Dir: 'D:/Unreal Projects/aws-sdk-cpp/build-windows/CMakeFiles/CMakeScratch/TryCompile-lf8w17'
+        
+        Run Build Command(s): "D:/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/amd64/MSBuild.exe" cmTC_6ad8f.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:n
+        MSBuild version 17.5.1+f6fdcf537 for .NET Framework
+        Build started 2/27/2024 8:21:43 PM.
+        Included response file: D:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\MSBuild\\Current\\Bin\\amd64\\MSBuild.rsp
+        
+        Project "D:\\Unreal Projects\\aws-sdk-cpp\\build-windows\\CMakeFiles\\CMakeScratch\\TryCompile-lf8w17\\cmTC_6ad8f.vcxproj" on node 1 (default targets).
+        PrepareForBuild:
+          Creating directory "cmTC_6ad8f.dir\\Debug\\".
+          Creating directory "D:\\Unreal Projects\\aws-sdk-cpp\\build-windows\\CMakeFiles\\CMakeScratch\\TryCompile-lf8w17\\Debug\\".
+          Creating directory "cmTC_6ad8f.dir\\Debug\\cmTC_6ad8f.tlog\\".
+        InitializeBuildStatus:
+          Creating "cmTC_6ad8f.dir\\Debug\\cmTC_6ad8f.tlog\\unsuccessfulbuild" because "AlwaysCreate" was specified.
+        ClCompile:
+          D:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.34.31933\\bin\\HostX64\\x64\\CL.exe /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D AWS_HAVE_WINAPI_DESKTOP /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_6ad8f.dir\\Debug\\\\" /Fd"cmTC_6ad8f.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TC /errorReport:queue "D:\\Unreal Projects\\aws-sdk-cpp\\build-windows\\CMakeFiles\\CMakeScratch\\TryCompile-lf8w17\\src.c"
+          Microsoft (R) C/C++ Optimizing Compiler Version 19.34.31944 for x64
+          src.c
+          Copyright (C) Microsoft Corporation.  All rights reserved.
+          cl /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D AWS_HAVE_WINAPI_DESKTOP /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_6ad8f.dir\\Debug\\\\" /Fd"cmTC_6ad8f.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TC /errorReport:queue "D:\\Unreal Projects\\aws-sdk-cpp\\build-windows\\CMakeFiles\\CMakeScratch\\TryCompile-lf8w17\\src.c"
+        Link:
+          D:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.34.31933\\bin\\HostX64\\x64\\link.exe /ERRORREPORT:QUEUE /OUT:"D:\\Unreal Projects\\aws-sdk-cpp\\build-windows\\CMakeFiles\\CMakeScratch\\TryCompile-lf8w17\\Debug\\cmTC_6ad8f.exe" /INCREMENTAL /ILK:"cmTC_6ad8f.dir\\Debug\\cmTC_6ad8f.ilk" /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"D:/Unreal Projects/aws-sdk-cpp/build-windows/CMakeFiles/CMakeScratch/TryCompile-lf8w17/Debug/cmTC_6ad8f.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"D:/Unreal Projects/aws-sdk-cpp/build-windows/CMakeFiles/CMakeScratch/TryCompile-lf8w17/Debug/cmTC_6ad8f.lib" /MACHINE:X64  /machine:x64 cmTC_6ad8f.dir\\Debug\\src.obj
+          cmTC_6ad8f.vcxproj -> D:\\Unreal Projects\\aws-sdk-cpp\\build-windows\\CMakeFiles\\CMakeScratch\\TryCompile-lf8w17\\Debug\\cmTC_6ad8f.exe
+        FinalizeBuildStatus:
+          Deleting file "cmTC_6ad8f.dir\\Debug\\cmTC_6ad8f.tlog\\unsuccessfulbuild".
+          Touching "cmTC_6ad8f.dir\\Debug\\cmTC_6ad8f.tlog\\cmTC_6ad8f.lastbuildstate".
+        Done Building Project "D:\\Unreal Projects\\aws-sdk-cpp\\build-windows\\CMakeFiles\\CMakeScratch\\TryCompile-lf8w17\\cmTC_6ad8f.vcxproj" (default targets).
+        
+        Build succeeded.
+            0 Warning(s)
+            0 Error(s)
+        
+        Time Elapsed 00:00:01.61
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-3.29/Modules/Internal/CheckSourceCompiles.cmake:101 (try_compile)"
+      - "C:/Program Files/CMake/share/cmake-3.29/Modules/CheckCSourceCompiles.cmake:52 (cmake_check_source_compiles)"
+      - "crt/aws-crt-cpp/crt/aws-c-common/cmake/AwsFeatureTests.cmake:48 (check_c_source_compiles)"
+      - "crt/aws-crt-cpp/crt/aws-c-common/CMakeLists.txt:23 (include)"
+    checks:
+      - "Performing Test AWS_ARCH_INTEL"
+    directories:
+      source: "D:/Unreal Projects/aws-sdk-cpp/build-windows/CMakeFiles/CMakeScratch/TryCompile-mwfx45"
+      binary: "D:/Unreal Projects/aws-sdk-cpp/build-windows/CMakeFiles/CMakeScratch/TryCompile-mwfx45"
+    cmakeVariables:
+      CMAKE_C_FLAGS: "/DWIN32 /D_WINDOWS /W3"
+      CMAKE_MODULE_PATH: "D:/Unreal Projects/aws-sdk-cpp/cmake;//cmake;D:/Unreal Projects/aws-sdk-cpp/crt/aws-crt-cpp/crt/aws-c-common/cmake;D:/Unreal Projects/aws-sdk-cpp/crt/aws-crt-cpp/cmake;/lib/cmake;D:/Unreal Projects/aws-sdk-cpp/crt/aws-crt-cpp/crt/aws-c-common/cmake;D:/Unreal Projects/aws-sdk-cpp/crt/aws-crt-cpp/crt/aws-c-common/cmake"
+    buildResult:
+      variable: "AWS_ARCH_INTEL"
+      cached: true
+      stdout: |
+        Change Dir: 'D:/Unreal Projects/aws-sdk-cpp/build-windows/CMakeFiles/CMakeScratch/TryCompile-mwfx45'
+        
+        Run Build Command(s): "D:/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/amd64/MSBuild.exe" cmTC_19006.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:n
+        MSBuild version 17.5.1+f6fdcf537 for .NET Framework
+        Build started 2/27/2024 8:21:45 PM.
+        Included response file: D:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\MSBuild\\Current\\Bin\\amd64\\MSBuild.rsp
+        
+        Project "D:\\Unreal Projects\\aws-sdk-cpp\\build-windows\\CMakeFiles\\CMakeScratch\\TryCompile-mwfx45\\cmTC_19006.vcxproj" on node 1 (default targets).
+        PrepareForBuild:
+          Creating directory "cmTC_19006.dir\\Debug\\".
+          Creating directory "D:\\Unreal Projects\\aws-sdk-cpp\\build-windows\\CMakeFiles\\CMakeScratch\\TryCompile-mwfx45\\Debug\\".
+          Creating directory "cmTC_19006.dir\\Debug\\cmTC_19006.tlog\\".
+        InitializeBuildStatus:
+          Creating "cmTC_19006.dir\\Debug\\cmTC_19006.tlog\\unsuccessfulbuild" because "AlwaysCreate" was specified.
+        ClCompile:
+          D:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.34.31933\\bin\\HostX64\\x64\\CL.exe /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D AWS_ARCH_INTEL /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_19006.dir\\Debug\\\\" /Fd"cmTC_19006.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TC /errorReport:queue "D:\\Unreal Projects\\aws-sdk-cpp\\build-windows\\CMakeFiles\\CMakeScratch\\TryCompile-mwfx45\\src.c"
+          Microsoft (R) C/C++ Optimizing Compiler Version 19.34.31944 for x64
+          src.c
+          Copyright (C) Microsoft Corporation.  All rights reserved.
+          cl /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D AWS_ARCH_INTEL /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_19006.dir\\Debug\\\\" /Fd"cmTC_19006.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TC /errorReport:queue "D:\\Unreal Projects\\aws-sdk-cpp\\build-windows\\CMakeFiles\\CMakeScratch\\TryCompile-mwfx45\\src.c"
+        Link:
+          D:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.34.31933\\bin\\HostX64\\x64\\link.exe /ERRORREPORT:QUEUE /OUT:"D:\\Unreal Projects\\aws-sdk-cpp\\build-windows\\CMakeFiles\\CMakeScratch\\TryCompile-mwfx45\\Debug\\cmTC_19006.exe" /INCREMENTAL /ILK:"cmTC_19006.dir\\Debug\\cmTC_19006.ilk" /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"D:/Unreal Projects/aws-sdk-cpp/build-windows/CMakeFiles/CMakeScratch/TryCompile-mwfx45/Debug/cmTC_19006.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"D:/Unreal Projects/aws-sdk-cpp/build-windows/CMakeFiles/CMakeScratch/TryCompile-mwfx45/Debug/cmTC_19006.lib" /MACHINE:X64  /machine:x64 cmTC_19006.dir\\Debug\\src.obj
+          cmTC_19006.vcxproj -> D:\\Unreal Projects\\aws-sdk-cpp\\build-windows\\CMakeFiles\\CMakeScratch\\TryCompile-mwfx45\\Debug\\cmTC_19006.exe
+        FinalizeBuildStatus:
+          Deleting file "cmTC_19006.dir\\Debug\\cmTC_19006.tlog\\unsuccessfulbuild".
+          Touching "cmTC_19006.dir\\Debug\\cmTC_19006.tlog\\cmTC_19006.lastbuildstate".
+        Done Building Project "D:\\Unreal Projects\\aws-sdk-cpp\\build-windows\\CMakeFiles\\CMakeScratch\\TryCompile-mwfx45\\cmTC_19006.vcxproj" (default targets).
+        
+        Build succeeded.
+            0 Warning(s)
+            0 Error(s)
+        
+        Time Elapsed 00:00:00.62
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-3.29/Modules/Internal/CheckSourceCompiles.cmake:101 (try_compile)"
+      - "C:/Program Files/CMake/share/cmake-3.29/Modules/CheckCSourceCompiles.cmake:52 (cmake_check_source_compiles)"
+      - "crt/aws-crt-cpp/crt/aws-c-common/cmake/AwsFeatureTests.cmake:57 (check_c_source_compiles)"
+      - "crt/aws-crt-cpp/crt/aws-c-common/CMakeLists.txt:23 (include)"
+    checks:
+      - "Performing Test AWS_ARCH_ARM64"
+    directories:
+      source: "D:/Unreal Projects/aws-sdk-cpp/build-windows/CMakeFiles/CMakeScratch/TryCompile-q1ggva"
+      binary: "D:/Unreal Projects/aws-sdk-cpp/build-windows/CMakeFiles/CMakeScratch/TryCompile-q1ggva"
+    cmakeVariables:
+      CMAKE_C_FLAGS: "/DWIN32 /D_WINDOWS /W3"
+      CMAKE_MODULE_PATH: "D:/Unreal Projects/aws-sdk-cpp/cmake;//cmake;D:/Unreal Projects/aws-sdk-cpp/crt/aws-crt-cpp/crt/aws-c-common/cmake;D:/Unreal Projects/aws-sdk-cpp/crt/aws-crt-cpp/cmake;/lib/cmake;D:/Unreal Projects/aws-sdk-cpp/crt/aws-crt-cpp/crt/aws-c-common/cmake;D:/Unreal Projects/aws-sdk-cpp/crt/aws-crt-cpp/crt/aws-c-common/cmake"
+    buildResult:
+      variable: "AWS_ARCH_ARM64"
+      cached: true
+      stdout: |
+        Change Dir: 'D:/Unreal Projects/aws-sdk-cpp/build-windows/CMakeFiles/CMakeScratch/TryCompile-q1ggva'
+        
+        Run Build Command(s): "D:/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/amd64/MSBuild.exe" cmTC_903aa.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:n
+        MSBuild version 17.5.1+f6fdcf537 for .NET Framework
+        Build started 2/27/2024 8:21:46 PM.
+        Included response file: D:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\MSBuild\\Current\\Bin\\amd64\\MSBuild.rsp
+        
+        Project "D:\\Unreal Projects\\aws-sdk-cpp\\build-windows\\CMakeFiles\\CMakeScratch\\TryCompile-q1ggva\\cmTC_903aa.vcxproj" on node 1 (default targets).
+        PrepareForBuild:
+          Creating directory "cmTC_903aa.dir\\Debug\\".
+          Creating directory "D:\\Unreal Projects\\aws-sdk-cpp\\build-windows\\CMakeFiles\\CMakeScratch\\TryCompile-q1ggva\\Debug\\".
+          Creating directory "cmTC_903aa.dir\\Debug\\cmTC_903aa.tlog\\".
+        InitializeBuildStatus:
+          Creating "cmTC_903aa.dir\\Debug\\cmTC_903aa.tlog\\unsuccessfulbuild" because "AlwaysCreate" was specified.
+        ClCompile:
+          D:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.34.31933\\bin\\HostX64\\x64\\CL.exe /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D AWS_ARCH_ARM64 /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_903aa.dir\\Debug\\\\" /Fd"cmTC_903aa.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TC /errorReport:queue "D:\\Unreal Projects\\aws-sdk-cpp\\build-windows\\CMakeFiles\\CMakeScratch\\TryCompile-q1ggva\\src.c"
+          Microsoft (R) C/C++ Optimizing Compiler Version 19.34.31944 for x64
+          src.c
+          Copyright (C) Microsoft Corporation.  All rights reserved.
+          cl /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D AWS_ARCH_ARM64 /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_903aa.dir\\Debug\\\\" /Fd"cmTC_903aa.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TC /errorReport:queue "D:\\Unreal Projects\\aws-sdk-cpp\\build-windows\\CMakeFiles\\CMakeScratch\\TryCompile-q1ggva\\src.c"
+        D:\\Unreal Projects\\aws-sdk-cpp\\build-windows\\CMakeFiles\\CMakeScratch\\TryCompile-q1ggva\\src.c(4,1): fatal  error C1189: #error:  "not arm64" [D:\\Unreal Projects\\aws-sdk-cpp\\build-windows\\CMakeFiles\\CMakeScratch\\TryCompile-q1ggva\\cmTC_903aa.vcxproj]
+        Done Building Project "D:\\Unreal Projects\\aws-sdk-cpp\\build-windows\\CMakeFiles\\CMakeScratch\\TryCompile-q1ggva\\cmTC_903aa.vcxproj" (default targets) -- FAILED.
+        
+        Build FAILED.
+        
+        "D:\\Unreal Projects\\aws-sdk-cpp\\build-windows\\CMakeFiles\\CMakeScratch\\TryCompile-q1ggva\\cmTC_903aa.vcxproj" (default target) (1) ->
+        (ClCompile target) -> 
+          D:\\Unreal Projects\\aws-sdk-cpp\\build-windows\\CMakeFiles\\CMakeScratch\\TryCompile-q1ggva\\src.c(4,1): fatal  error C1189: #error:  "not arm64" [D:\\Unreal Projects\\aws-sdk-cpp\\build-windows\\CMakeFiles\\CMakeScratch\\TryCompile-q1ggva\\cmTC_903aa.vcxproj]
+        
+            0 Warning(s)
+            1 Error(s)
+        
+        Time Elapsed 00:00:00.34
+        
+      exitCode: 1
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-3.29/Modules/Internal/CheckSourceCompiles.cmake:101 (try_compile)"
+      - "C:/Program Files/CMake/share/cmake-3.29/Modules/CheckCSourceCompiles.cmake:52 (cmake_check_source_compiles)"
+      - "crt/aws-crt-cpp/crt/aws-c-common/cmake/AwsFeatureTests.cmake:66 (check_c_source_compiles)"
+      - "crt/aws-crt-cpp/crt/aws-c-common/CMakeLists.txt:23 (include)"
+    checks:
+      - "Performing Test AWS_ARCH_ARM32"
+    directories:
+      source: "D:/Unreal Projects/aws-sdk-cpp/build-windows/CMakeFiles/CMakeScratch/TryCompile-l4m8pm"
+      binary: "D:/Unreal Projects/aws-sdk-cpp/build-windows/CMakeFiles/CMakeScratch/TryCompile-l4m8pm"
+    cmakeVariables:
+      CMAKE_C_FLAGS: "/DWIN32 /D_WINDOWS /W3"
+      CMAKE_MODULE_PATH: "D:/Unreal Projects/aws-sdk-cpp/cmake;//cmake;D:/Unreal Projects/aws-sdk-cpp/crt/aws-crt-cpp/crt/aws-c-common/cmake;D:/Unreal Projects/aws-sdk-cpp/crt/aws-crt-cpp/cmake;/lib/cmake;D:/Unreal Projects/aws-sdk-cpp/crt/aws-crt-cpp/crt/aws-c-common/cmake;D:/Unreal Projects/aws-sdk-cpp/crt/aws-crt-cpp/crt/aws-c-common/cmake"
+    buildResult:
+      variable: "AWS_ARCH_ARM32"
+      cached: true
+      stdout: |
+        Change Dir: 'D:/Unreal Projects/aws-sdk-cpp/build-windows/CMakeFiles/CMakeScratch/TryCompile-l4m8pm'
+        
+        Run Build Command(s): "D:/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/amd64/MSBuild.exe" cmTC_8706f.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:n
+        MSBuild version 17.5.1+f6fdcf537 for .NET Framework
+        Build started 2/27/2024 8:21:47 PM.
+        Included response file: D:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\MSBuild\\Current\\Bin\\amd64\\MSBuild.rsp
+        
+        Project "D:\\Unreal Projects\\aws-sdk-cpp\\build-windows\\CMakeFiles\\CMakeScratch\\TryCompile-l4m8pm\\cmTC_8706f.vcxproj" on node 1 (default targets).
+        PrepareForBuild:
+          Creating directory "cmTC_8706f.dir\\Debug\\".
+          Creating directory "D:\\Unreal Projects\\aws-sdk-cpp\\build-windows\\CMakeFiles\\CMakeScratch\\TryCompile-l4m8pm\\Debug\\".
+          Creating directory "cmTC_8706f.dir\\Debug\\cmTC_8706f.tlog\\".
+        InitializeBuildStatus:
+          Creating "cmTC_8706f.dir\\Debug\\cmTC_8706f.tlog\\unsuccessfulbuild" because "AlwaysCreate" was specified.
+        ClCompile:
+          D:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.34.31933\\bin\\HostX64\\x64\\CL.exe /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D AWS_ARCH_ARM32 /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_8706f.dir\\Debug\\\\" /Fd"cmTC_8706f.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TC /errorReport:queue "D:\\Unreal Projects\\aws-sdk-cpp\\build-windows\\CMakeFiles\\CMakeScratch\\TryCompile-l4m8pm\\src.c"
+          Microsoft (R) C/C++ Optimizing Compiler Version 19.34.31944 for x64
+          src.c
+          Copyright (C) Microsoft Corporation.  All rights reserved.
+          cl /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D AWS_ARCH_ARM32 /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_8706f.dir\\Debug\\\\" /Fd"cmTC_8706f.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TC /errorReport:queue "D:\\Unreal Projects\\aws-sdk-cpp\\build-windows\\CMakeFiles\\CMakeScratch\\TryCompile-l4m8pm\\src.c"
+        D:\\Unreal Projects\\aws-sdk-cpp\\build-windows\\CMakeFiles\\CMakeScratch\\TryCompile-l4m8pm\\src.c(4,1): fatal  error C1189: #error:  "not arm" [D:\\Unreal Projects\\aws-sdk-cpp\\build-windows\\CMakeFiles\\CMakeScratch\\TryCompile-l4m8pm\\cmTC_8706f.vcxproj]
+        Done Building Project "D:\\Unreal Projects\\aws-sdk-cpp\\build-windows\\CMakeFiles\\CMakeScratch\\TryCompile-l4m8pm\\cmTC_8706f.vcxproj" (default targets) -- FAILED.
+        
+        Build FAILED.
+        
+        "D:\\Unreal Projects\\aws-sdk-cpp\\build-windows\\CMakeFiles\\CMakeScratch\\TryCompile-l4m8pm\\cmTC_8706f.vcxproj" (default target) (1) ->
+        (ClCompile target) -> 
+          D:\\Unreal Projects\\aws-sdk-cpp\\build-windows\\CMakeFiles\\CMakeScratch\\TryCompile-l4m8pm\\src.c(4,1): fatal  error C1189: #error:  "not arm" [D:\\Unreal Projects\\aws-sdk-cpp\\build-windows\\CMakeFiles\\CMakeScratch\\TryCompile-l4m8pm\\cmTC_8706f.vcxproj]
+        
+            0 Warning(s)
+            1 Error(s)
+        
+        Time Elapsed 00:00:00.33
+        
+      exitCode: 1
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-3.29/Modules/Internal/CheckSourceCompiles.cmake:101 (try_compile)"
+      - "C:/Program Files/CMake/share/cmake-3.29/Modules/CheckCSourceCompiles.cmake:52 (cmake_check_source_compiles)"
+      - "crt/aws-crt-cpp/crt/aws-c-common/cmake/AwsFeatureTests.cmake:75 (check_c_source_compiles)"
+      - "crt/aws-crt-cpp/crt/aws-c-common/CMakeLists.txt:23 (include)"
+    checks:
+      - "Performing Test AWS_HAVE_GCC_INLINE_ASM"
+    directories:
+      source: "D:/Unreal Projects/aws-sdk-cpp/build-windows/CMakeFiles/CMakeScratch/TryCompile-xma050"
+      binary: "D:/Unreal Projects/aws-sdk-cpp/build-windows/CMakeFiles/CMakeScratch/TryCompile-xma050"
+    cmakeVariables:
+      CMAKE_C_FLAGS: "/DWIN32 /D_WINDOWS /W3"
+      CMAKE_MODULE_PATH: "D:/Unreal Projects/aws-sdk-cpp/cmake;//cmake;D:/Unreal Projects/aws-sdk-cpp/crt/aws-crt-cpp/crt/aws-c-common/cmake;D:/Unreal Projects/aws-sdk-cpp/crt/aws-crt-cpp/cmake;/lib/cmake;D:/Unreal Projects/aws-sdk-cpp/crt/aws-crt-cpp/crt/aws-c-common/cmake;D:/Unreal Projects/aws-sdk-cpp/crt/aws-crt-cpp/crt/aws-c-common/cmake"
+    buildResult:
+      variable: "AWS_HAVE_GCC_INLINE_ASM"
+      cached: true
+      stdout: |
+        Change Dir: 'D:/Unreal Projects/aws-sdk-cpp/build-windows/CMakeFiles/CMakeScratch/TryCompile-xma050'
+        
+        Run Build Command(s): "D:/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/amd64/MSBuild.exe" cmTC_5d659.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:n
+        MSBuild version 17.5.1+f6fdcf537 for .NET Framework
+        Build started 2/27/2024 8:21:47 PM.
+        Included response file: D:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\MSBuild\\Current\\Bin\\amd64\\MSBuild.rsp
+        
+        Project "D:\\Unreal Projects\\aws-sdk-cpp\\build-windows\\CMakeFiles\\CMakeScratch\\TryCompile-xma050\\cmTC_5d659.vcxproj" on node 1 (default targets).
+        PrepareForBuild:
+          Creating directory "cmTC_5d659.dir\\Debug\\".
+          Creating directory "D:\\Unreal Projects\\aws-sdk-cpp\\build-windows\\CMakeFiles\\CMakeScratch\\TryCompile-xma050\\Debug\\".
+          Creating directory "cmTC_5d659.dir\\Debug\\cmTC_5d659.tlog\\".
+        InitializeBuildStatus:
+          Creating "cmTC_5d659.dir\\Debug\\cmTC_5d659.tlog\\unsuccessfulbuild" because "AlwaysCreate" was specified.
+        ClCompile:
+          D:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.34.31933\\bin\\HostX64\\x64\\CL.exe /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D AWS_HAVE_GCC_INLINE_ASM /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_5d659.dir\\Debug\\\\" /Fd"cmTC_5d659.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TC /errorReport:queue "D:\\Unreal Projects\\aws-sdk-cpp\\build-windows\\CMakeFiles\\CMakeScratch\\TryCompile-xma050\\src.c"
+          Microsoft (R) C/C++ Optimizing Compiler Version 19.34.31944 for x64
+          src.c
+          Copyright (C) Microsoft Corporation.  All rights reserved.
+          cl /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D AWS_HAVE_GCC_INLINE_ASM /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_5d659.dir\\Debug\\\\" /Fd"cmTC_5d659.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TC /errorReport:queue "D:\\Unreal Projects\\aws-sdk-cpp\\build-windows\\CMakeFiles\\CMakeScratch\\TryCompile-xma050\\src.c"
+        D:\\Unreal Projects\\aws-sdk-cpp\\build-windows\\CMakeFiles\\CMakeScratch\\TryCompile-xma050\\src.c(4,13): error C2065: '__asm__': undeclared identifier [D:\\Unreal Projects\\aws-sdk-cpp\\build-windows\\CMakeFiles\\CMakeScratch\\TryCompile-xma050\\cmTC_5d659.vcxproj]
+        D:\\Unreal Projects\\aws-sdk-cpp\\build-windows\\CMakeFiles\\CMakeScratch\\TryCompile-xma050\\src.c(4,13): error C2146: syntax error: missing ';' before identifier '__volatile__' [D:\\Unreal Projects\\aws-sdk-cpp\\build-windows\\CMakeFiles\\CMakeScratch\\TryCompile-xma050\\cmTC_5d659.vcxproj]
+        D:\\Unreal Projects\\aws-sdk-cpp\\build-windows\\CMakeFiles\\CMakeScratch\\TryCompile-xma050\\src.c(4,13): warning C4013: '__volatile__' undefined; assuming extern returning int [D:\\Unreal Projects\\aws-sdk-cpp\\build-windows\\CMakeFiles\\CMakeScratch\\TryCompile-xma050\\cmTC_5d659.vcxproj]
+        D:\\Unreal Projects\\aws-sdk-cpp\\build-windows\\CMakeFiles\\CMakeScratch\\TryCompile-xma050\\src.c(4,28): error C2143: syntax error: missing ')' before ':' [D:\\Unreal Projects\\aws-sdk-cpp\\build-windows\\CMakeFiles\\CMakeScratch\\TryCompile-xma050\\cmTC_5d659.vcxproj]
+        Done Building Project "D:\\Unreal Projects\\aws-sdk-cpp\\build-windows\\CMakeFiles\\CMakeScratch\\TryCompile-xma050\\cmTC_5d659.vcxproj" (default targets) -- FAILED.
+        
+        Build FAILED.
+        
+        "D:\\Unreal Projects\\aws-sdk-cpp\\build-windows\\CMakeFiles\\CMakeScratch\\TryCompile-xma050\\cmTC_5d659.vcxproj" (default target) (1) ->
+        (ClCompile target) -> 
+          D:\\Unreal Projects\\aws-sdk-cpp\\build-windows\\CMakeFiles\\CMakeScratch\\TryCompile-xma050\\src.c(4,13): warning C4013: '__volatile__' undefined; assuming extern returning int [D:\\Unreal Projects\\aws-sdk-cpp\\build-windows\\CMakeFiles\\CMakeScratch\\TryCompile-xma050\\cmTC_5d659.vcxproj]
+        
+        
+        "D:\\Unreal Projects\\aws-sdk-cpp\\build-windows\\CMakeFiles\\CMakeScratch\\TryCompile-xma050\\cmTC_5d659.vcxproj" (default target) (1) ->
+        (ClCompile target) -> 
+          D:\\Unreal Projects\\aws-sdk-cpp\\build-windows\\CMakeFiles\\CMakeScratch\\TryCompile-xma050\\src.c(4,13): error C2065: '__asm__': undeclared identifier [D:\\Unreal Projects\\aws-sdk-cpp\\build-windows\\CMakeFiles\\CMakeScratch\\TryCompile-xma050\\cmTC_5d659.vcxproj]
+          D:\\Unreal Projects\\aws-sdk-cpp\\build-windows\\CMakeFiles\\CMakeScratch\\TryCompile-xma050\\src.c(4,13): error C2146: syntax error: missing ';' before identifier '__volatile__' [D:\\Unreal Projects\\aws-sdk-cpp\\build-windows\\CMakeFiles\\CMakeScratch\\TryCompile-xma050\\cmTC_5d659.vcxproj]
+          D:\\Unreal Projects\\aws-sdk-cpp\\build-windows\\CMakeFiles\\CMakeScratch\\TryCompile-xma050\\src.c(4,28): error C2143: syntax error: missing ')' before ':' [D:\\Unreal Projects\\aws-sdk-cpp\\build-windows\\CMakeFiles\\CMakeScratch\\TryCompile-xma050\\cmTC_5d659.vcxproj]
+        
+            1 Warning(s)
+            3 Error(s)
+        
+        Time Elapsed 00:00:00.35
+        
+      exitCode: 1
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-3.29/Modules/Internal/CheckSourceCompiles.cmake:101 (try_compile)"
+      - "C:/Program Files/CMake/share/cmake-3.29/Modules/CheckCSourceCompiles.cmake:52 (cmake_check_source_compiles)"
+      - "crt/aws-crt-cpp/crt/aws-c-common/cmake/AwsFeatureTests.cmake:81 (check_c_source_compiles)"
+      - "crt/aws-crt-cpp/crt/aws-c-common/CMakeLists.txt:23 (include)"
+    checks:
+      - "Performing Test AWS_HAVE_AUXV"
+    directories:
+      source: "D:/Unreal Projects/aws-sdk-cpp/build-windows/CMakeFiles/CMakeScratch/TryCompile-eo0uel"
+      binary: "D:/Unreal Projects/aws-sdk-cpp/build-windows/CMakeFiles/CMakeScratch/TryCompile-eo0uel"
+    cmakeVariables:
+      CMAKE_C_FLAGS: "/DWIN32 /D_WINDOWS /W3"
+      CMAKE_MODULE_PATH: "D:/Unreal Projects/aws-sdk-cpp/cmake;//cmake;D:/Unreal Projects/aws-sdk-cpp/crt/aws-crt-cpp/crt/aws-c-common/cmake;D:/Unreal Projects/aws-sdk-cpp/crt/aws-crt-cpp/cmake;/lib/cmake;D:/Unreal Projects/aws-sdk-cpp/crt/aws-crt-cpp/crt/aws-c-common/cmake;D:/Unreal Projects/aws-sdk-cpp/crt/aws-crt-cpp/crt/aws-c-common/cmake"
+    buildResult:
+      variable: "AWS_HAVE_AUXV"
+      cached: true
+      stdout: |
+        Change Dir: 'D:/Unreal Projects/aws-sdk-cpp/build-windows/CMakeFiles/CMakeScratch/TryCompile-eo0uel'
+        
+        Run Build Command(s): "D:/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/amd64/MSBuild.exe" cmTC_c8185.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:n
+        MSBuild version 17.5.1+f6fdcf537 for .NET Framework
+        Build started 2/27/2024 8:21:48 PM.
+        Included response file: D:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\MSBuild\\Current\\Bin\\amd64\\MSBuild.rsp
+        
+        Project "D:\\Unreal Projects\\aws-sdk-cpp\\build-windows\\CMakeFiles\\CMakeScratch\\TryCompile-eo0uel\\cmTC_c8185.vcxproj" on node 1 (default targets).
+        PrepareForBuild:
+          Creating directory "cmTC_c8185.dir\\Debug\\".
+          Creating directory "D:\\Unreal Projects\\aws-sdk-cpp\\build-windows\\CMakeFiles\\CMakeScratch\\TryCompile-eo0uel\\Debug\\".
+          Creating directory "cmTC_c8185.dir\\Debug\\cmTC_c8185.tlog\\".
+        InitializeBuildStatus:
+          Creating "cmTC_c8185.dir\\Debug\\cmTC_c8185.tlog\\unsuccessfulbuild" because "AlwaysCreate" was specified.
+        ClCompile:
+          D:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.34.31933\\bin\\HostX64\\x64\\CL.exe /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D AWS_HAVE_AUXV /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_c8185.dir\\Debug\\\\" /Fd"cmTC_c8185.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TC /errorReport:queue "D:\\Unreal Projects\\aws-sdk-cpp\\build-windows\\CMakeFiles\\CMakeScratch\\TryCompile-eo0uel\\src.c"
+          Microsoft (R) C/C++ Optimizing Compiler Version 19.34.31944 for x64
+          src.c
+          Copyright (C) Microsoft Corporation.  All rights reserved.
+          cl /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D AWS_HAVE_AUXV /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_c8185.dir\\Debug\\\\" /Fd"cmTC_c8185.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TC /errorReport:queue "D:\\Unreal Projects\\aws-sdk-cpp\\build-windows\\CMakeFiles\\CMakeScratch\\TryCompile-eo0uel\\src.c"
+        D:\\Unreal Projects\\aws-sdk-cpp\\build-windows\\CMakeFiles\\CMakeScratch\\TryCompile-eo0uel\\src.c(2,10): fatal  error C1083: Cannot open include file: 'sys/auxv.h': No such file or directory [D:\\Unreal Projects\\aws-sdk-cpp\\build-windows\\CMakeFiles\\CMakeScratch\\TryCompile-eo0uel\\cmTC_c8185.vcxproj]
+        Done Building Project "D:\\Unreal Projects\\aws-sdk-cpp\\build-windows\\CMakeFiles\\CMakeScratch\\TryCompile-eo0uel\\cmTC_c8185.vcxproj" (default targets) -- FAILED.
+        
+        Build FAILED.
+        
+        "D:\\Unreal Projects\\aws-sdk-cpp\\build-windows\\CMakeFiles\\CMakeScratch\\TryCompile-eo0uel\\cmTC_c8185.vcxproj" (default target) (1) ->
+        (ClCompile target) -> 
+          D:\\Unreal Projects\\aws-sdk-cpp\\build-windows\\CMakeFiles\\CMakeScratch\\TryCompile-eo0uel\\src.c(2,10): fatal  error C1083: Cannot open include file: 'sys/auxv.h': No such file or directory [D:\\Unreal Projects\\aws-sdk-cpp\\build-windows\\CMakeFiles\\CMakeScratch\\TryCompile-eo0uel\\cmTC_c8185.vcxproj]
+        
+            0 Warning(s)
+            1 Error(s)
+        
+        Time Elapsed 00:00:00.32
+        
+      exitCode: 1
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-3.29/Modules/Internal/CheckSourceCompiles.cmake:101 (try_compile)"
+      - "C:/Program Files/CMake/share/cmake-3.29/Modules/CheckCSourceCompiles.cmake:52 (cmake_check_source_compiles)"
+      - "crt/aws-crt-cpp/crt/aws-c-common/cmake/AwsFeatureTests.cmake:94 (check_c_source_compiles)"
+      - "crt/aws-crt-cpp/crt/aws-c-common/CMakeLists.txt:23 (include)"
+    checks:
+      - "Performing Test AWS_HAVE_EXECINFO"
+    directories:
+      source: "D:/Unreal Projects/aws-sdk-cpp/build-windows/CMakeFiles/CMakeScratch/TryCompile-soy4ud"
+      binary: "D:/Unreal Projects/aws-sdk-cpp/build-windows/CMakeFiles/CMakeScratch/TryCompile-soy4ud"
+    cmakeVariables:
+      CMAKE_C_FLAGS: "/DWIN32 /D_WINDOWS /W3"
+      CMAKE_MODULE_PATH: "D:/Unreal Projects/aws-sdk-cpp/cmake;//cmake;D:/Unreal Projects/aws-sdk-cpp/crt/aws-crt-cpp/crt/aws-c-common/cmake;D:/Unreal Projects/aws-sdk-cpp/crt/aws-crt-cpp/cmake;/lib/cmake;D:/Unreal Projects/aws-sdk-cpp/crt/aws-crt-cpp/crt/aws-c-common/cmake;D:/Unreal Projects/aws-sdk-cpp/crt/aws-crt-cpp/crt/aws-c-common/cmake"
+    buildResult:
+      variable: "AWS_HAVE_EXECINFO"
+      cached: true
+      stdout: |
+        Change Dir: 'D:/Unreal Projects/aws-sdk-cpp/build-windows/CMakeFiles/CMakeScratch/TryCompile-soy4ud'
+        
+        Run Build Command(s): "D:/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/amd64/MSBuild.exe" cmTC_d1de6.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:n
+        MSBuild version 17.5.1+f6fdcf537 for .NET Framework
+        Build started 2/27/2024 8:21:48 PM.
+        Included response file: D:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\MSBuild\\Current\\Bin\\amd64\\MSBuild.rsp
+        
+        Project "D:\\Unreal Projects\\aws-sdk-cpp\\build-windows\\CMakeFiles\\CMakeScratch\\TryCompile-soy4ud\\cmTC_d1de6.vcxproj" on node 1 (default targets).
+        PrepareForBuild:
+          Creating directory "cmTC_d1de6.dir\\Debug\\".
+          Creating directory "D:\\Unreal Projects\\aws-sdk-cpp\\build-windows\\CMakeFiles\\CMakeScratch\\TryCompile-soy4ud\\Debug\\".
+          Creating directory "cmTC_d1de6.dir\\Debug\\cmTC_d1de6.tlog\\".
+        InitializeBuildStatus:
+          Creating "cmTC_d1de6.dir\\Debug\\cmTC_d1de6.tlog\\unsuccessfulbuild" because "AlwaysCreate" was specified.
+        ClCompile:
+          D:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.34.31933\\bin\\HostX64\\x64\\CL.exe /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D AWS_HAVE_EXECINFO /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_d1de6.dir\\Debug\\\\" /Fd"cmTC_d1de6.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TC /errorReport:queue "D:\\Unreal Projects\\aws-sdk-cpp\\build-windows\\CMakeFiles\\CMakeScratch\\TryCompile-soy4ud\\src.c"
+          Microsoft (R) C/C++ Optimizing Compiler Version 19.34.31944 for x64
+          src.c
+          Copyright (C) Microsoft Corporation.  All rights reserved.
+          cl /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D AWS_HAVE_EXECINFO /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_d1de6.dir\\Debug\\\\" /Fd"cmTC_d1de6.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TC /errorReport:queue "D:\\Unreal Projects\\aws-sdk-cpp\\build-windows\\CMakeFiles\\CMakeScratch\\TryCompile-soy4ud\\src.c"
+        D:\\Unreal Projects\\aws-sdk-cpp\\build-windows\\CMakeFiles\\CMakeScratch\\TryCompile-soy4ud\\src.c(2,14): fatal  error C1083: Cannot open include file: 'execinfo.h': No such file or directory [D:\\Unreal Projects\\aws-sdk-cpp\\build-windows\\CMakeFiles\\CMakeScratch\\TryCompile-soy4ud\\cmTC_d1de6.vcxproj]
+        Done Building Project "D:\\Unreal Projects\\aws-sdk-cpp\\build-windows\\CMakeFiles\\CMakeScratch\\TryCompile-soy4ud\\cmTC_d1de6.vcxproj" (default targets) -- FAILED.
+        
+        Build FAILED.
+        
+        "D:\\Unreal Projects\\aws-sdk-cpp\\build-windows\\CMakeFiles\\CMakeScratch\\TryCompile-soy4ud\\cmTC_d1de6.vcxproj" (default target) (1) ->
+        (ClCompile target) -> 
+          D:\\Unreal Projects\\aws-sdk-cpp\\build-windows\\CMakeFiles\\CMakeScratch\\TryCompile-soy4ud\\src.c(2,14): fatal  error C1083: Cannot open include file: 'execinfo.h': No such file or directory [D:\\Unreal Projects\\aws-sdk-cpp\\build-windows\\CMakeFiles\\CMakeScratch\\TryCompile-soy4ud\\cmTC_d1de6.vcxproj]
+        
+            0 Warning(s)
+            1 Error(s)
+        
+        Time Elapsed 00:00:00.35
+        
+      exitCode: 1
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-3.29/Modules/Internal/CheckSourceCompiles.cmake:101 (try_compile)"
+      - "C:/Program Files/CMake/share/cmake-3.29/Modules/CheckCSourceCompiles.cmake:52 (cmake_check_source_compiles)"
+      - "crt/aws-crt-cpp/crt/aws-c-common/cmake/AwsFeatureTests.cmake:103 (check_c_source_compiles)"
+      - "crt/aws-crt-cpp/crt/aws-c-common/CMakeLists.txt:23 (include)"
+    checks:
+      - "Performing Test AWS_HAVE_LINUX_IF_LINK_H"
+    directories:
+      source: "D:/Unreal Projects/aws-sdk-cpp/build-windows/CMakeFiles/CMakeScratch/TryCompile-m2j67x"
+      binary: "D:/Unreal Projects/aws-sdk-cpp/build-windows/CMakeFiles/CMakeScratch/TryCompile-m2j67x"
+    cmakeVariables:
+      CMAKE_C_FLAGS: "/DWIN32 /D_WINDOWS /W3"
+      CMAKE_MODULE_PATH: "D:/Unreal Projects/aws-sdk-cpp/cmake;//cmake;D:/Unreal Projects/aws-sdk-cpp/crt/aws-crt-cpp/crt/aws-c-common/cmake;D:/Unreal Projects/aws-sdk-cpp/crt/aws-crt-cpp/cmake;/lib/cmake;D:/Unreal Projects/aws-sdk-cpp/crt/aws-crt-cpp/crt/aws-c-common/cmake;D:/Unreal Projects/aws-sdk-cpp/crt/aws-crt-cpp/crt/aws-c-common/cmake"
+    buildResult:
+      variable: "AWS_HAVE_LINUX_IF_LINK_H"
+      cached: true
+      stdout: |
+        Change Dir: 'D:/Unreal Projects/aws-sdk-cpp/build-windows/CMakeFiles/CMakeScratch/TryCompile-m2j67x'
+        
+        Run Build Command(s): "D:/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/amd64/MSBuild.exe" cmTC_324da.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:n
+        MSBuild version 17.5.1+f6fdcf537 for .NET Framework
+        Build started 2/27/2024 8:21:49 PM.
+        Included response file: D:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\MSBuild\\Current\\Bin\\amd64\\MSBuild.rsp
+        
+        Project "D:\\Unreal Projects\\aws-sdk-cpp\\build-windows\\CMakeFiles\\CMakeScratch\\TryCompile-m2j67x\\cmTC_324da.vcxproj" on node 1 (default targets).
+        PrepareForBuild:
+          Creating directory "cmTC_324da.dir\\Debug\\".
+          Creating directory "D:\\Unreal Projects\\aws-sdk-cpp\\build-windows\\CMakeFiles\\CMakeScratch\\TryCompile-m2j67x\\Debug\\".
+          Creating directory "cmTC_324da.dir\\Debug\\cmTC_324da.tlog\\".
+        InitializeBuildStatus:
+          Creating "cmTC_324da.dir\\Debug\\cmTC_324da.tlog\\unsuccessfulbuild" because "AlwaysCreate" was specified.
+        ClCompile:
+          D:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.34.31933\\bin\\HostX64\\x64\\CL.exe /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D AWS_HAVE_LINUX_IF_LINK_H /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_324da.dir\\Debug\\\\" /Fd"cmTC_324da.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TC /errorReport:queue "D:\\Unreal Projects\\aws-sdk-cpp\\build-windows\\CMakeFiles\\CMakeScratch\\TryCompile-m2j67x\\src.c"
+          Microsoft (R) C/C++ Optimizing Compiler Version 19.34.31944 for x64
+          src.c
+          Copyright (C) Microsoft Corporation.  All rights reserved.
+          cl /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D AWS_HAVE_LINUX_IF_LINK_H /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_324da.dir\\Debug\\\\" /Fd"cmTC_324da.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TC /errorReport:queue "D:\\Unreal Projects\\aws-sdk-cpp\\build-windows\\CMakeFiles\\CMakeScratch\\TryCompile-m2j67x\\src.c"
+        D:\\Unreal Projects\\aws-sdk-cpp\\build-windows\\CMakeFiles\\CMakeScratch\\TryCompile-m2j67x\\src.c(2,10): fatal  error C1083: Cannot open include file: 'linux/if_link.h': No such file or directory [D:\\Unreal Projects\\aws-sdk-cpp\\build-windows\\CMakeFiles\\CMakeScratch\\TryCompile-m2j67x\\cmTC_324da.vcxproj]
+        Done Building Project "D:\\Unreal Projects\\aws-sdk-cpp\\build-windows\\CMakeFiles\\CMakeScratch\\TryCompile-m2j67x\\cmTC_324da.vcxproj" (default targets) -- FAILED.
+        
+        Build FAILED.
+        
+        "D:\\Unreal Projects\\aws-sdk-cpp\\build-windows\\CMakeFiles\\CMakeScratch\\TryCompile-m2j67x\\cmTC_324da.vcxproj" (default target) (1) ->
+        (ClCompile target) -> 
+          D:\\Unreal Projects\\aws-sdk-cpp\\build-windows\\CMakeFiles\\CMakeScratch\\TryCompile-m2j67x\\src.c(2,10): fatal  error C1083: Cannot open include file: 'linux/if_link.h': No such file or directory [D:\\Unreal Projects\\aws-sdk-cpp\\build-windows\\CMakeFiles\\CMakeScratch\\TryCompile-m2j67x\\cmTC_324da.vcxproj]
+        
+            0 Warning(s)
+            1 Error(s)
+        
+        Time Elapsed 00:00:00.33
+        
+      exitCode: 1
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-3.29/Modules/Internal/CheckSourceCompiles.cmake:101 (try_compile)"
+      - "C:/Program Files/CMake/share/cmake-3.29/Modules/CheckCSourceCompiles.cmake:52 (cmake_check_source_compiles)"
+      - "crt/aws-crt-cpp/crt/aws-c-common/cmake/AwsFeatureTests.cmake:110 (check_c_source_compiles)"
+      - "crt/aws-crt-cpp/crt/aws-c-common/CMakeLists.txt:23 (include)"
+    checks:
+      - "Performing Test AWS_HAVE_MSVC_INTRINSICS_X64"
+    directories:
+      source: "D:/Unreal Projects/aws-sdk-cpp/build-windows/CMakeFiles/CMakeScratch/TryCompile-m8a6xw"
+      binary: "D:/Unreal Projects/aws-sdk-cpp/build-windows/CMakeFiles/CMakeScratch/TryCompile-m8a6xw"
+    cmakeVariables:
+      CMAKE_C_FLAGS: "/DWIN32 /D_WINDOWS /W3"
+      CMAKE_MODULE_PATH: "D:/Unreal Projects/aws-sdk-cpp/cmake;//cmake;D:/Unreal Projects/aws-sdk-cpp/crt/aws-crt-cpp/crt/aws-c-common/cmake;D:/Unreal Projects/aws-sdk-cpp/crt/aws-crt-cpp/cmake;/lib/cmake;D:/Unreal Projects/aws-sdk-cpp/crt/aws-crt-cpp/crt/aws-c-common/cmake;D:/Unreal Projects/aws-sdk-cpp/crt/aws-crt-cpp/crt/aws-c-common/cmake"
+    buildResult:
+      variable: "AWS_HAVE_MSVC_INTRINSICS_X64"
+      cached: true
+      stdout: |
+        Change Dir: 'D:/Unreal Projects/aws-sdk-cpp/build-windows/CMakeFiles/CMakeScratch/TryCompile-m8a6xw'
+        
+        Run Build Command(s): "D:/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/amd64/MSBuild.exe" cmTC_e957a.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:n
+        MSBuild version 17.5.1+f6fdcf537 for .NET Framework
+        Build started 2/27/2024 8:21:49 PM.
+        Included response file: D:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\MSBuild\\Current\\Bin\\amd64\\MSBuild.rsp
+        
+        Project "D:\\Unreal Projects\\aws-sdk-cpp\\build-windows\\CMakeFiles\\CMakeScratch\\TryCompile-m8a6xw\\cmTC_e957a.vcxproj" on node 1 (default targets).
+        PrepareForBuild:
+          Creating directory "cmTC_e957a.dir\\Debug\\".
+          Creating directory "D:\\Unreal Projects\\aws-sdk-cpp\\build-windows\\CMakeFiles\\CMakeScratch\\TryCompile-m8a6xw\\Debug\\".
+          Creating directory "cmTC_e957a.dir\\Debug\\cmTC_e957a.tlog\\".
+        InitializeBuildStatus:
+          Creating "cmTC_e957a.dir\\Debug\\cmTC_e957a.tlog\\unsuccessfulbuild" because "AlwaysCreate" was specified.
+        ClCompile:
+          D:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.34.31933\\bin\\HostX64\\x64\\CL.exe /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D AWS_HAVE_MSVC_INTRINSICS_X64 /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_e957a.dir\\Debug\\\\" /Fd"cmTC_e957a.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TC /errorReport:queue "D:\\Unreal Projects\\aws-sdk-cpp\\build-windows\\CMakeFiles\\CMakeScratch\\TryCompile-m8a6xw\\src.c"
+          Microsoft (R) C/C++ Optimizing Compiler Version 19.34.31944 for x64
+          src.c
+          Copyright (C) Microsoft Corporation.  All rights reserved.
+          cl /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D AWS_HAVE_MSVC_INTRINSICS_X64 /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_e957a.dir\\Debug\\\\" /Fd"cmTC_e957a.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TC /errorReport:queue "D:\\Unreal Projects\\aws-sdk-cpp\\build-windows\\CMakeFiles\\CMakeScratch\\TryCompile-m8a6xw\\src.c"
+        Link:
+          D:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.34.31933\\bin\\HostX64\\x64\\link.exe /ERRORREPORT:QUEUE /OUT:"D:\\Unreal Projects\\aws-sdk-cpp\\build-windows\\CMakeFiles\\CMakeScratch\\TryCompile-m8a6xw\\Debug\\cmTC_e957a.exe" /INCREMENTAL /ILK:"cmTC_e957a.dir\\Debug\\cmTC_e957a.ilk" /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"D:/Unreal Projects/aws-sdk-cpp/build-windows/CMakeFiles/CMakeScratch/TryCompile-m8a6xw/Debug/cmTC_e957a.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"D:/Unreal Projects/aws-sdk-cpp/build-windows/CMakeFiles/CMakeScratch/TryCompile-m8a6xw/Debug/cmTC_e957a.lib" /MACHINE:X64  /machine:x64 cmTC_e957a.dir\\Debug\\src.obj
+          cmTC_e957a.vcxproj -> D:\\Unreal Projects\\aws-sdk-cpp\\build-windows\\CMakeFiles\\CMakeScratch\\TryCompile-m8a6xw\\Debug\\cmTC_e957a.exe
+        FinalizeBuildStatus:
+          Deleting file "cmTC_e957a.dir\\Debug\\cmTC_e957a.tlog\\unsuccessfulbuild".
+          Touching "cmTC_e957a.dir\\Debug\\cmTC_e957a.tlog\\cmTC_e957a.lastbuildstate".
+        Done Building Project "D:\\Unreal Projects\\aws-sdk-cpp\\build-windows\\CMakeFiles\\CMakeScratch\\TryCompile-m8a6xw\\cmTC_e957a.vcxproj" (default targets).
+        
+        Build succeeded.
+            0 Warning(s)
+            0 Error(s)
+        
+        Time Elapsed 00:00:00.71
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-3.29/Modules/Internal/CheckSourceCompiles.cmake:101 (try_compile)"
+      - "C:/Program Files/CMake/share/cmake-3.29/Modules/Internal/CheckCompilerFlag.cmake:18 (cmake_check_source_compiles)"
+      - "C:/Program Files/CMake/share/cmake-3.29/Modules/CheckCCompilerFlag.cmake:51 (cmake_check_compiler_flag)"
+      - "crt/aws-crt-cpp/crt/aws-c-common/cmake/AwsSIMD.cmake:9 (check_c_compiler_flag)"
+      - "crt/aws-crt-cpp/crt/aws-c-common/CMakeLists.txt:27 (include)"
+    checks:
+      - "Performing Test HAVE_M_AVX2_FLAG"
+    directories:
+      source: "D:/Unreal Projects/aws-sdk-cpp/build-windows/CMakeFiles/CMakeScratch/TryCompile-c1unwn"
+      binary: "D:/Unreal Projects/aws-sdk-cpp/build-windows/CMakeFiles/CMakeScratch/TryCompile-c1unwn"
+    cmakeVariables:
+      CMAKE_C_FLAGS: "/DWIN32 /D_WINDOWS /W3"
+      CMAKE_MODULE_PATH: "D:/Unreal Projects/aws-sdk-cpp/cmake;//cmake;D:/Unreal Projects/aws-sdk-cpp/crt/aws-crt-cpp/crt/aws-c-common/cmake;D:/Unreal Projects/aws-sdk-cpp/crt/aws-crt-cpp/cmake;/lib/cmake;D:/Unreal Projects/aws-sdk-cpp/crt/aws-crt-cpp/crt/aws-c-common/cmake;D:/Unreal Projects/aws-sdk-cpp/crt/aws-crt-cpp/crt/aws-c-common/cmake"
+    buildResult:
+      variable: "HAVE_M_AVX2_FLAG"
+      cached: true
+      stdout: |
+        Change Dir: 'D:/Unreal Projects/aws-sdk-cpp/build-windows/CMakeFiles/CMakeScratch/TryCompile-c1unwn'
+        
+        Run Build Command(s): "D:/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/amd64/MSBuild.exe" cmTC_ab162.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:n
+        MSBuild version 17.5.1+f6fdcf537 for .NET Framework
+        Build started 2/27/2024 8:21:50 PM.
+        Included response file: D:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\MSBuild\\Current\\Bin\\amd64\\MSBuild.rsp
+        
+        Project "D:\\Unreal Projects\\aws-sdk-cpp\\build-windows\\CMakeFiles\\CMakeScratch\\TryCompile-c1unwn\\cmTC_ab162.vcxproj" on node 1 (default targets).
+        PrepareForBuild:
+          Creating directory "cmTC_ab162.dir\\Debug\\".
+          Creating directory "D:\\Unreal Projects\\aws-sdk-cpp\\build-windows\\CMakeFiles\\CMakeScratch\\TryCompile-c1unwn\\Debug\\".
+          Creating directory "cmTC_ab162.dir\\Debug\\cmTC_ab162.tlog\\".
+        InitializeBuildStatus:
+          Creating "cmTC_ab162.dir\\Debug\\cmTC_ab162.tlog\\unsuccessfulbuild" because "AlwaysCreate" was specified.
+        ClCompile:
+          D:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.34.31933\\bin\\HostX64\\x64\\CL.exe /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D HAVE_M_AVX2_FLAG /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /RTC1 /MDd /GS /arch:AVX2 /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_ab162.dir\\Debug\\\\" /Fd"cmTC_ab162.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TC /errorReport:queue "D:\\Unreal Projects\\aws-sdk-cpp\\build-windows\\CMakeFiles\\CMakeScratch\\TryCompile-c1unwn\\src.c"
+          Microsoft (R) C/C++ Optimizing Compiler Version 19.34.31944 for x64
+          src.c
+          Copyright (C) Microsoft Corporation.  All rights reserved.
+          cl /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D HAVE_M_AVX2_FLAG /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /RTC1 /MDd /GS /arch:AVX2 /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_ab162.dir\\Debug\\\\" /Fd"cmTC_ab162.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TC /errorReport:queue "D:\\Unreal Projects\\aws-sdk-cpp\\build-windows\\CMakeFiles\\CMakeScratch\\TryCompile-c1unwn\\src.c"
+        Link:
+          D:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.34.31933\\bin\\HostX64\\x64\\link.exe /ERRORREPORT:QUEUE /OUT:"D:\\Unreal Projects\\aws-sdk-cpp\\build-windows\\CMakeFiles\\CMakeScratch\\TryCompile-c1unwn\\Debug\\cmTC_ab162.exe" /INCREMENTAL /ILK:"cmTC_ab162.dir\\Debug\\cmTC_ab162.ilk" /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"D:/Unreal Projects/aws-sdk-cpp/build-windows/CMakeFiles/CMakeScratch/TryCompile-c1unwn/Debug/cmTC_ab162.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"D:/Unreal Projects/aws-sdk-cpp/build-windows/CMakeFiles/CMakeScratch/TryCompile-c1unwn/Debug/cmTC_ab162.lib" /MACHINE:X64  /machine:x64 cmTC_ab162.dir\\Debug\\src.obj
+          cmTC_ab162.vcxproj -> D:\\Unreal Projects\\aws-sdk-cpp\\build-windows\\CMakeFiles\\CMakeScratch\\TryCompile-c1unwn\\Debug\\cmTC_ab162.exe
+        FinalizeBuildStatus:
+          Deleting file "cmTC_ab162.dir\\Debug\\cmTC_ab162.tlog\\unsuccessfulbuild".
+          Touching "cmTC_ab162.dir\\Debug\\cmTC_ab162.tlog\\cmTC_ab162.lastbuildstate".
+        Done Building Project "D:\\Unreal Projects\\aws-sdk-cpp\\build-windows\\CMakeFiles\\CMakeScratch\\TryCompile-c1unwn\\cmTC_ab162.vcxproj" (default targets).
+        
+        Build succeeded.
+            0 Warning(s)
+            0 Error(s)
+        
+        Time Elapsed 00:00:00.62
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-3.29/Modules/Internal/CheckSourceCompiles.cmake:101 (try_compile)"
+      - "C:/Program Files/CMake/share/cmake-3.29/Modules/CheckCSourceCompiles.cmake:52 (cmake_check_source_compiles)"
+      - "crt/aws-crt-cpp/crt/aws-c-common/cmake/AwsSIMD.cmake:24 (check_c_source_compiles)"
+      - "crt/aws-crt-cpp/crt/aws-c-common/CMakeLists.txt:27 (include)"
+    checks:
+      - "Performing Test HAVE_AVX2_INTRINSICS"
+    directories:
+      source: "D:/Unreal Projects/aws-sdk-cpp/build-windows/CMakeFiles/CMakeScratch/TryCompile-f8nz35"
+      binary: "D:/Unreal Projects/aws-sdk-cpp/build-windows/CMakeFiles/CMakeScratch/TryCompile-f8nz35"
+    cmakeVariables:
+      CMAKE_C_FLAGS: "/DWIN32 /D_WINDOWS /W3"
+      CMAKE_MODULE_PATH: "D:/Unreal Projects/aws-sdk-cpp/cmake;//cmake;D:/Unreal Projects/aws-sdk-cpp/crt/aws-crt-cpp/crt/aws-c-common/cmake;D:/Unreal Projects/aws-sdk-cpp/crt/aws-crt-cpp/cmake;/lib/cmake;D:/Unreal Projects/aws-sdk-cpp/crt/aws-crt-cpp/crt/aws-c-common/cmake;D:/Unreal Projects/aws-sdk-cpp/crt/aws-crt-cpp/crt/aws-c-common/cmake"
+    buildResult:
+      variable: "HAVE_AVX2_INTRINSICS"
+      cached: true
+      stdout: |
+        Change Dir: 'D:/Unreal Projects/aws-sdk-cpp/build-windows/CMakeFiles/CMakeScratch/TryCompile-f8nz35'
+        
+        Run Build Command(s): "D:/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/amd64/MSBuild.exe" cmTC_0319a.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:n
+        MSBuild version 17.5.1+f6fdcf537 for .NET Framework
+        Build started 2/27/2024 8:21:51 PM.
+        Included response file: D:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\MSBuild\\Current\\Bin\\amd64\\MSBuild.rsp
+        
+        Project "D:\\Unreal Projects\\aws-sdk-cpp\\build-windows\\CMakeFiles\\CMakeScratch\\TryCompile-f8nz35\\cmTC_0319a.vcxproj" on node 1 (default targets).
+        PrepareForBuild:
+          Creating directory "cmTC_0319a.dir\\Debug\\".
+          Creating directory "D:\\Unreal Projects\\aws-sdk-cpp\\build-windows\\CMakeFiles\\CMakeScratch\\TryCompile-f8nz35\\Debug\\".
+          Creating directory "cmTC_0319a.dir\\Debug\\cmTC_0319a.tlog\\".
+        InitializeBuildStatus:
+          Creating "cmTC_0319a.dir\\Debug\\cmTC_0319a.tlog\\unsuccessfulbuild" because "AlwaysCreate" was specified.
+        ClCompile:
+          D:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.34.31933\\bin\\HostX64\\x64\\CL.exe /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D HAVE_AVX2_INTRINSICS /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /RTC1 /MDd /GS /arch:AVX2 /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_0319a.dir\\Debug\\\\" /Fd"cmTC_0319a.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TC /errorReport:queue "D:\\Unreal Projects\\aws-sdk-cpp\\build-windows\\CMakeFiles\\CMakeScratch\\TryCompile-f8nz35\\src.c"
+          Microsoft (R) C/C++ Optimizing Compiler Version 19.34.31944 for x64
+          src.c
+          Copyright (C) Microsoft Corporation.  All rights reserved.
+          cl /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D HAVE_AVX2_INTRINSICS /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /RTC1 /MDd /GS /arch:AVX2 /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_0319a.dir\\Debug\\\\" /Fd"cmTC_0319a.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TC /errorReport:queue "D:\\Unreal Projects\\aws-sdk-cpp\\build-windows\\CMakeFiles\\CMakeScratch\\TryCompile-f8nz35\\src.c"
+        Link:
+          D:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.34.31933\\bin\\HostX64\\x64\\link.exe /ERRORREPORT:QUEUE /OUT:"D:\\Unreal Projects\\aws-sdk-cpp\\build-windows\\CMakeFiles\\CMakeScratch\\TryCompile-f8nz35\\Debug\\cmTC_0319a.exe" /INCREMENTAL /ILK:"cmTC_0319a.dir\\Debug\\cmTC_0319a.ilk" /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"D:/Unreal Projects/aws-sdk-cpp/build-windows/CMakeFiles/CMakeScratch/TryCompile-f8nz35/Debug/cmTC_0319a.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"D:/Unreal Projects/aws-sdk-cpp/build-windows/CMakeFiles/CMakeScratch/TryCompile-f8nz35/Debug/cmTC_0319a.lib" /MACHINE:X64  /machine:x64 cmTC_0319a.dir\\Debug\\src.obj
+          cmTC_0319a.vcxproj -> D:\\Unreal Projects\\aws-sdk-cpp\\build-windows\\CMakeFiles\\CMakeScratch\\TryCompile-f8nz35\\Debug\\cmTC_0319a.exe
+        FinalizeBuildStatus:
+          Deleting file "cmTC_0319a.dir\\Debug\\cmTC_0319a.tlog\\unsuccessfulbuild".
+          Touching "cmTC_0319a.dir\\Debug\\cmTC_0319a.tlog\\cmTC_0319a.lastbuildstate".
+        Done Building Project "D:\\Unreal Projects\\aws-sdk-cpp\\build-windows\\CMakeFiles\\CMakeScratch\\TryCompile-f8nz35\\cmTC_0319a.vcxproj" (default targets).
+        
+        Build succeeded.
+            0 Warning(s)
+            0 Error(s)
+        
+        Time Elapsed 00:00:00.66
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-3.29/Modules/Internal/CheckSourceCompiles.cmake:101 (try_compile)"
+      - "C:/Program Files/CMake/share/cmake-3.29/Modules/CheckCSourceCompiles.cmake:52 (cmake_check_source_compiles)"
+      - "crt/aws-crt-cpp/crt/aws-c-common/cmake/AwsSIMD.cmake:40 (check_c_source_compiles)"
+      - "crt/aws-crt-cpp/crt/aws-c-common/CMakeLists.txt:27 (include)"
+    checks:
+      - "Performing Test HAVE_MM256_EXTRACT_EPI64"
+    directories:
+      source: "D:/Unreal Projects/aws-sdk-cpp/build-windows/CMakeFiles/CMakeScratch/TryCompile-gnf2rq"
+      binary: "D:/Unreal Projects/aws-sdk-cpp/build-windows/CMakeFiles/CMakeScratch/TryCompile-gnf2rq"
+    cmakeVariables:
+      CMAKE_C_FLAGS: "/DWIN32 /D_WINDOWS /W3"
+      CMAKE_MODULE_PATH: "D:/Unreal Projects/aws-sdk-cpp/cmake;//cmake;D:/Unreal Projects/aws-sdk-cpp/crt/aws-crt-cpp/crt/aws-c-common/cmake;D:/Unreal Projects/aws-sdk-cpp/crt/aws-crt-cpp/cmake;/lib/cmake;D:/Unreal Projects/aws-sdk-cpp/crt/aws-crt-cpp/crt/aws-c-common/cmake;D:/Unreal Projects/aws-sdk-cpp/crt/aws-crt-cpp/crt/aws-c-common/cmake"
+    buildResult:
+      variable: "HAVE_MM256_EXTRACT_EPI64"
+      cached: true
+      stdout: |
+        Change Dir: 'D:/Unreal Projects/aws-sdk-cpp/build-windows/CMakeFiles/CMakeScratch/TryCompile-gnf2rq'
+        
+        Run Build Command(s): "D:/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/amd64/MSBuild.exe" cmTC_37588.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:n
+        MSBuild version 17.5.1+f6fdcf537 for .NET Framework
+        Build started 2/27/2024 8:21:52 PM.
+        Included response file: D:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\MSBuild\\Current\\Bin\\amd64\\MSBuild.rsp
+        
+        Project "D:\\Unreal Projects\\aws-sdk-cpp\\build-windows\\CMakeFiles\\CMakeScratch\\TryCompile-gnf2rq\\cmTC_37588.vcxproj" on node 1 (default targets).
+        PrepareForBuild:
+          Creating directory "cmTC_37588.dir\\Debug\\".
+          Creating directory "D:\\Unreal Projects\\aws-sdk-cpp\\build-windows\\CMakeFiles\\CMakeScratch\\TryCompile-gnf2rq\\Debug\\".
+          Creating directory "cmTC_37588.dir\\Debug\\cmTC_37588.tlog\\".
+        InitializeBuildStatus:
+          Creating "cmTC_37588.dir\\Debug\\cmTC_37588.tlog\\unsuccessfulbuild" because "AlwaysCreate" was specified.
+        ClCompile:
+          D:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.34.31933\\bin\\HostX64\\x64\\CL.exe /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D HAVE_MM256_EXTRACT_EPI64 /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /RTC1 /MDd /GS /arch:AVX2 /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_37588.dir\\Debug\\\\" /Fd"cmTC_37588.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TC /errorReport:queue "D:\\Unreal Projects\\aws-sdk-cpp\\build-windows\\CMakeFiles\\CMakeScratch\\TryCompile-gnf2rq\\src.c"
+          Microsoft (R) C/C++ Optimizing Compiler Version 19.34.31944 for x64
+          src.c
+          Copyright (C) Microsoft Corporation.  All rights reserved.
+          cl /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D HAVE_MM256_EXTRACT_EPI64 /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /RTC1 /MDd /GS /arch:AVX2 /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_37588.dir\\Debug\\\\" /Fd"cmTC_37588.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TC /errorReport:queue "D:\\Unreal Projects\\aws-sdk-cpp\\build-windows\\CMakeFiles\\CMakeScratch\\TryCompile-gnf2rq\\src.c"
+        Link:
+          D:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.34.31933\\bin\\HostX64\\x64\\link.exe /ERRORREPORT:QUEUE /OUT:"D:\\Unreal Projects\\aws-sdk-cpp\\build-windows\\CMakeFiles\\CMakeScratch\\TryCompile-gnf2rq\\Debug\\cmTC_37588.exe" /INCREMENTAL /ILK:"cmTC_37588.dir\\Debug\\cmTC_37588.ilk" /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"D:/Unreal Projects/aws-sdk-cpp/build-windows/CMakeFiles/CMakeScratch/TryCompile-gnf2rq/Debug/cmTC_37588.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"D:/Unreal Projects/aws-sdk-cpp/build-windows/CMakeFiles/CMakeScratch/TryCompile-gnf2rq/Debug/cmTC_37588.lib" /MACHINE:X64  /machine:x64 cmTC_37588.dir\\Debug\\src.obj
+          cmTC_37588.vcxproj -> D:\\Unreal Projects\\aws-sdk-cpp\\build-windows\\CMakeFiles\\CMakeScratch\\TryCompile-gnf2rq\\Debug\\cmTC_37588.exe
+        FinalizeBuildStatus:
+          Deleting file "cmTC_37588.dir\\Debug\\cmTC_37588.tlog\\unsuccessfulbuild".
+          Touching "cmTC_37588.dir\\Debug\\cmTC_37588.tlog\\cmTC_37588.lastbuildstate".
+        Done Building Project "D:\\Unreal Projects\\aws-sdk-cpp\\build-windows\\CMakeFiles\\CMakeScratch\\TryCompile-gnf2rq\\cmTC_37588.vcxproj" (default targets).
+        
+        Build succeeded.
+            0 Warning(s)
+            0 Error(s)
+        
+        Time Elapsed 00:00:00.65
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-3.29/Modules/CheckIncludeFile.cmake:90 (try_compile)"
+      - "crt/aws-crt-cpp/crt/aws-c-common/cmake/AwsCFlags.cmake:178 (check_include_file)"
+      - "crt/aws-crt-cpp/crt/aws-c-common/CMakeLists.txt:190 (aws_set_common_properties)"
+    checks:
+      - "Looking for stdint.h"
+    directories:
+      source: "D:/Unreal Projects/aws-sdk-cpp/build-windows/CMakeFiles/CMakeScratch/TryCompile-mnelqq"
+      binary: "D:/Unreal Projects/aws-sdk-cpp/build-windows/CMakeFiles/CMakeScratch/TryCompile-mnelqq"
+    cmakeVariables:
+      CMAKE_C_FLAGS: "/DWIN32 /D_WINDOWS "
+      CMAKE_MODULE_PATH: "D:/Unreal Projects/aws-sdk-cpp/cmake;//cmake;D:/Unreal Projects/aws-sdk-cpp/crt/aws-crt-cpp/crt/aws-c-common/cmake;D:/Unreal Projects/aws-sdk-cpp/crt/aws-crt-cpp/cmake;/lib/cmake;D:/Unreal Projects/aws-sdk-cpp/crt/aws-crt-cpp/crt/aws-c-common/cmake;D:/Unreal Projects/aws-sdk-cpp/crt/aws-crt-cpp/crt/aws-c-common/cmake"
+    buildResult:
+      variable: "HAS_STDINT"
+      cached: true
+      stdout: |
+        Change Dir: 'D:/Unreal Projects/aws-sdk-cpp/build-windows/CMakeFiles/CMakeScratch/TryCompile-mnelqq'
+        
+        Run Build Command(s): "D:/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/amd64/MSBuild.exe" cmTC_2a0ab.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:n
+        MSBuild version 17.5.1+f6fdcf537 for .NET Framework
+        Build started 2/27/2024 8:21:52 PM.
+        Included response file: D:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\MSBuild\\Current\\Bin\\amd64\\MSBuild.rsp
+        
+        Project "D:\\Unreal Projects\\aws-sdk-cpp\\build-windows\\CMakeFiles\\CMakeScratch\\TryCompile-mnelqq\\cmTC_2a0ab.vcxproj" on node 1 (default targets).
+        PrepareForBuild:
+          Creating directory "cmTC_2a0ab.dir\\Debug\\".
+          Creating directory "D:\\Unreal Projects\\aws-sdk-cpp\\build-windows\\CMakeFiles\\CMakeScratch\\TryCompile-mnelqq\\Debug\\".
+          Creating directory "cmTC_2a0ab.dir\\Debug\\cmTC_2a0ab.tlog\\".
+        InitializeBuildStatus:
+          Creating "cmTC_2a0ab.dir\\Debug\\cmTC_2a0ab.tlog\\unsuccessfulbuild" because "AlwaysCreate" was specified.
+        ClCompile:
+          D:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.34.31933\\bin\\HostX64\\x64\\CL.exe /c /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_2a0ab.dir\\Debug\\\\" /Fd"cmTC_2a0ab.dir\\Debug\\vc143.pdb" /external:W1 /Gd /TC /errorReport:queue "D:\\Unreal Projects\\aws-sdk-cpp\\build-windows\\CMakeFiles\\CMakeScratch\\TryCompile-mnelqq\\CheckIncludeFile.c"
+          Microsoft (R) C/C++ Optimizing Compiler Version 19.34.31944 for x64
+          CheckIncludeFile.c
+          Copyright (C) Microsoft Corporation.  All rights reserved.
+          cl /c /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_2a0ab.dir\\Debug\\\\" /Fd"cmTC_2a0ab.dir\\Debug\\vc143.pdb" /external:W1 /Gd /TC /errorReport:queue "D:\\Unreal Projects\\aws-sdk-cpp\\build-windows\\CMakeFiles\\CMakeScratch\\TryCompile-mnelqq\\CheckIncludeFile.c"
+        Link:
+          D:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.34.31933\\bin\\HostX64\\x64\\link.exe /ERRORREPORT:QUEUE /OUT:"D:\\Unreal Projects\\aws-sdk-cpp\\build-windows\\CMakeFiles\\CMakeScratch\\TryCompile-mnelqq\\Debug\\cmTC_2a0ab.exe" /INCREMENTAL /ILK:"cmTC_2a0ab.dir\\Debug\\cmTC_2a0ab.ilk" /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"D:/Unreal Projects/aws-sdk-cpp/build-windows/CMakeFiles/CMakeScratch/TryCompile-mnelqq/Debug/cmTC_2a0ab.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"D:/Unreal Projects/aws-sdk-cpp/build-windows/CMakeFiles/CMakeScratch/TryCompile-mnelqq/Debug/cmTC_2a0ab.lib" /MACHINE:X64  /machine:x64 cmTC_2a0ab.dir\\Debug\\CheckIncludeFile.obj
+          cmTC_2a0ab.vcxproj -> D:\\Unreal Projects\\aws-sdk-cpp\\build-windows\\CMakeFiles\\CMakeScratch\\TryCompile-mnelqq\\Debug\\cmTC_2a0ab.exe
+        FinalizeBuildStatus:
+          Deleting file "cmTC_2a0ab.dir\\Debug\\cmTC_2a0ab.tlog\\unsuccessfulbuild".
+          Touching "cmTC_2a0ab.dir\\Debug\\cmTC_2a0ab.tlog\\cmTC_2a0ab.lastbuildstate".
+        Done Building Project "D:\\Unreal Projects\\aws-sdk-cpp\\build-windows\\CMakeFiles\\CMakeScratch\\TryCompile-mnelqq\\cmTC_2a0ab.vcxproj" (default targets).
+        
+        Build succeeded.
+            0 Warning(s)
+            0 Error(s)
+        
+        Time Elapsed 00:00:00.65
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-3.29/Modules/CheckIncludeFile.cmake:90 (try_compile)"
+      - "crt/aws-crt-cpp/crt/aws-c-common/cmake/AwsCFlags.cmake:179 (check_include_file)"
+      - "crt/aws-crt-cpp/crt/aws-c-common/CMakeLists.txt:190 (aws_set_common_properties)"
+    checks:
+      - "Looking for stdbool.h"
+    directories:
+      source: "D:/Unreal Projects/aws-sdk-cpp/build-windows/CMakeFiles/CMakeScratch/TryCompile-vsz89b"
+      binary: "D:/Unreal Projects/aws-sdk-cpp/build-windows/CMakeFiles/CMakeScratch/TryCompile-vsz89b"
+    cmakeVariables:
+      CMAKE_C_FLAGS: "/DWIN32 /D_WINDOWS "
+      CMAKE_MODULE_PATH: "D:/Unreal Projects/aws-sdk-cpp/cmake;//cmake;D:/Unreal Projects/aws-sdk-cpp/crt/aws-crt-cpp/crt/aws-c-common/cmake;D:/Unreal Projects/aws-sdk-cpp/crt/aws-crt-cpp/cmake;/lib/cmake;D:/Unreal Projects/aws-sdk-cpp/crt/aws-crt-cpp/crt/aws-c-common/cmake;D:/Unreal Projects/aws-sdk-cpp/crt/aws-crt-cpp/crt/aws-c-common/cmake"
+    buildResult:
+      variable: "HAS_STDBOOL"
+      cached: true
+      stdout: |
+        Change Dir: 'D:/Unreal Projects/aws-sdk-cpp/build-windows/CMakeFiles/CMakeScratch/TryCompile-vsz89b'
+        
+        Run Build Command(s): "D:/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/amd64/MSBuild.exe" cmTC_b84e9.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:n
+        MSBuild version 17.5.1+f6fdcf537 for .NET Framework
+        Build started 2/27/2024 8:21:53 PM.
+        Included response file: D:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\MSBuild\\Current\\Bin\\amd64\\MSBuild.rsp
+        
+        Project "D:\\Unreal Projects\\aws-sdk-cpp\\build-windows\\CMakeFiles\\CMakeScratch\\TryCompile-vsz89b\\cmTC_b84e9.vcxproj" on node 1 (default targets).
+        PrepareForBuild:
+          Creating directory "cmTC_b84e9.dir\\Debug\\".
+          Creating directory "D:\\Unreal Projects\\aws-sdk-cpp\\build-windows\\CMakeFiles\\CMakeScratch\\TryCompile-vsz89b\\Debug\\".
+          Creating directory "cmTC_b84e9.dir\\Debug\\cmTC_b84e9.tlog\\".
+        InitializeBuildStatus:
+          Creating "cmTC_b84e9.dir\\Debug\\cmTC_b84e9.tlog\\unsuccessfulbuild" because "AlwaysCreate" was specified.
+        ClCompile:
+          D:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.34.31933\\bin\\HostX64\\x64\\CL.exe /c /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_b84e9.dir\\Debug\\\\" /Fd"cmTC_b84e9.dir\\Debug\\vc143.pdb" /external:W1 /Gd /TC /errorReport:queue "D:\\Unreal Projects\\aws-sdk-cpp\\build-windows\\CMakeFiles\\CMakeScratch\\TryCompile-vsz89b\\CheckIncludeFile.c"
+          Microsoft (R) C/C++ Optimizing Compiler Version 19.34.31944 for x64
+          CheckIncludeFile.c
+          Copyright (C) Microsoft Corporation.  All rights reserved.
+          cl /c /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_b84e9.dir\\Debug\\\\" /Fd"cmTC_b84e9.dir\\Debug\\vc143.pdb" /external:W1 /Gd /TC /errorReport:queue "D:\\Unreal Projects\\aws-sdk-cpp\\build-windows\\CMakeFiles\\CMakeScratch\\TryCompile-vsz89b\\CheckIncludeFile.c"
+        Link:
+          D:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.34.31933\\bin\\HostX64\\x64\\link.exe /ERRORREPORT:QUEUE /OUT:"D:\\Unreal Projects\\aws-sdk-cpp\\build-windows\\CMakeFiles\\CMakeScratch\\TryCompile-vsz89b\\Debug\\cmTC_b84e9.exe" /INCREMENTAL /ILK:"cmTC_b84e9.dir\\Debug\\cmTC_b84e9.ilk" /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"D:/Unreal Projects/aws-sdk-cpp/build-windows/CMakeFiles/CMakeScratch/TryCompile-vsz89b/Debug/cmTC_b84e9.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"D:/Unreal Projects/aws-sdk-cpp/build-windows/CMakeFiles/CMakeScratch/TryCompile-vsz89b/Debug/cmTC_b84e9.lib" /MACHINE:X64  /machine:x64 cmTC_b84e9.dir\\Debug\\CheckIncludeFile.obj
+          cmTC_b84e9.vcxproj -> D:\\Unreal Projects\\aws-sdk-cpp\\build-windows\\CMakeFiles\\CMakeScratch\\TryCompile-vsz89b\\Debug\\cmTC_b84e9.exe
+        FinalizeBuildStatus:
+          Deleting file "cmTC_b84e9.dir\\Debug\\cmTC_b84e9.tlog\\unsuccessfulbuild".
+          Touching "cmTC_b84e9.dir\\Debug\\cmTC_b84e9.tlog\\cmTC_b84e9.lastbuildstate".
+        Done Building Project "D:\\Unreal Projects\\aws-sdk-cpp\\build-windows\\CMakeFiles\\CMakeScratch\\TryCompile-vsz89b\\cmTC_b84e9.vcxproj" (default targets).
+        
+        Build succeeded.
+            0 Warning(s)
+            0 Error(s)
+        
+        Time Elapsed 00:00:00.60
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-3.29/Modules/Internal/CheckSourceCompiles.cmake:101 (try_compile)"
+      - "C:/Program Files/CMake/share/cmake-3.29/Modules/Internal/CheckCompilerFlag.cmake:18 (cmake_check_source_compiles)"
+      - "C:/Program Files/CMake/share/cmake-3.29/Modules/CheckCCompilerFlag.cmake:51 (cmake_check_compiler_flag)"
+      - "crt/aws-crt-cpp/crt/aws-c-common/cmake/AwsCFlags.cmake:190 (check_c_compiler_flag)"
+      - "crt/aws-crt-cpp/crt/aws-c-common/CMakeLists.txt:190 (aws_set_common_properties)"
+    checks:
+      - "Performing Test HAS_WGNU"
+    directories:
+      source: "D:/Unreal Projects/aws-sdk-cpp/build-windows/CMakeFiles/CMakeScratch/TryCompile-9n91ch"
+      binary: "D:/Unreal Projects/aws-sdk-cpp/build-windows/CMakeFiles/CMakeScratch/TryCompile-9n91ch"
+    cmakeVariables:
+      CMAKE_C_FLAGS: "/DWIN32 /D_WINDOWS "
+      CMAKE_MODULE_PATH: "D:/Unreal Projects/aws-sdk-cpp/cmake;//cmake;D:/Unreal Projects/aws-sdk-cpp/crt/aws-crt-cpp/crt/aws-c-common/cmake;D:/Unreal Projects/aws-sdk-cpp/crt/aws-crt-cpp/cmake;/lib/cmake;D:/Unreal Projects/aws-sdk-cpp/crt/aws-crt-cpp/crt/aws-c-common/cmake;D:/Unreal Projects/aws-sdk-cpp/crt/aws-crt-cpp/crt/aws-c-common/cmake"
+    buildResult:
+      variable: "HAS_WGNU"
+      cached: true
+      stdout: |
+        Change Dir: 'D:/Unreal Projects/aws-sdk-cpp/build-windows/CMakeFiles/CMakeScratch/TryCompile-9n91ch'
+        
+        Run Build Command(s): "D:/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/amd64/MSBuild.exe" cmTC_c52b5.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:n
+        MSBuild version 17.5.1+f6fdcf537 for .NET Framework
+        Build started 2/27/2024 8:21:54 PM.
+        Included response file: D:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\MSBuild\\Current\\Bin\\amd64\\MSBuild.rsp
+        
+        Project "D:\\Unreal Projects\\aws-sdk-cpp\\build-windows\\CMakeFiles\\CMakeScratch\\TryCompile-9n91ch\\cmTC_c52b5.vcxproj" on node 1 (default targets).
+        PrepareForBuild:
+          Creating directory "cmTC_c52b5.dir\\Debug\\".
+          Creating directory "D:\\Unreal Projects\\aws-sdk-cpp\\build-windows\\CMakeFiles\\CMakeScratch\\TryCompile-9n91ch\\Debug\\".
+          Creating directory "cmTC_c52b5.dir\\Debug\\cmTC_c52b5.tlog\\".
+        InitializeBuildStatus:
+          Creating "cmTC_c52b5.dir\\Debug\\cmTC_c52b5.tlog\\unsuccessfulbuild" because "AlwaysCreate" was specified.
+        ClCompile:
+          D:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.34.31933\\bin\\HostX64\\x64\\CL.exe /c /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D HAS_WGNU /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_c52b5.dir\\Debug\\\\" /Fd"cmTC_c52b5.dir\\Debug\\vc143.pdb" /external:W1 /Gd /TC /errorReport:queue  -Wgnu -Werror "D:\\Unreal Projects\\aws-sdk-cpp\\build-windows\\CMakeFiles\\CMakeScratch\\TryCompile-9n91ch\\src.c"
+          Microsoft (R) C/C++ Optimizing Compiler Version 19.34.31944 for x64
+          Copyright (C) Microsoft Corporation.  All rights reserved.
+          cl /c /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D HAS_WGNU /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_c52b5.dir\\Debug\\\\" /Fd"cmTC_c52b5.dir\\Debug\\vc143.pdb" /external:W1 /Gd /TC /errorReport:queue  -Wgnu -Werror "D:\\Unreal Projects\\aws-sdk-cpp\\build-windows\\CMakeFiles\\CMakeScratch\\TryCompile-9n91ch\\src.c"
+        cl : command line  error D8021: invalid numeric argument '/Wgnu' [D:\\Unreal Projects\\aws-sdk-cpp\\build-windows\\CMakeFiles\\CMakeScratch\\TryCompile-9n91ch\\cmTC_c52b5.vcxproj]
+        Done Building Project "D:\\Unreal Projects\\aws-sdk-cpp\\build-windows\\CMakeFiles\\CMakeScratch\\TryCompile-9n91ch\\cmTC_c52b5.vcxproj" (default targets) -- FAILED.
+        
+        Build FAILED.
+        
+        "D:\\Unreal Projects\\aws-sdk-cpp\\build-windows\\CMakeFiles\\CMakeScratch\\TryCompile-9n91ch\\cmTC_c52b5.vcxproj" (default target) (1) ->
+        (ClCompile target) -> 
+          cl : command line  error D8021: invalid numeric argument '/Wgnu' [D:\\Unreal Projects\\aws-sdk-cpp\\build-windows\\CMakeFiles\\CMakeScratch\\TryCompile-9n91ch\\cmTC_c52b5.vcxproj]
+        
+            0 Warning(s)
+            1 Error(s)
+        
+        Time Elapsed 00:00:00.31
+        
+      exitCode: 1
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-3.29/Modules/Internal/CheckSourceCompiles.cmake:101 (try_compile)"
+      - "C:/Program Files/CMake/share/cmake-3.29/Modules/CheckCSourceCompiles.cmake:52 (cmake_check_source_compiles)"
+      - "crt/aws-crt-cpp/crt/aws-c-common/cmake/AwsCFlags.cmake:216 (check_c_source_compiles)"
+      - "crt/aws-crt-cpp/crt/aws-c-common/CMakeLists.txt:190 (aws_set_common_properties)"
+    checks:
+      - "Performing Test HAVE_SYSCONF"
+    directories:
+      source: "D:/Unreal Projects/aws-sdk-cpp/build-windows/CMakeFiles/CMakeScratch/TryCompile-pfaijq"
+      binary: "D:/Unreal Projects/aws-sdk-cpp/build-windows/CMakeFiles/CMakeScratch/TryCompile-pfaijq"
+    cmakeVariables:
+      CMAKE_C_FLAGS: "/DWIN32 /D_WINDOWS "
+      CMAKE_MODULE_PATH: "D:/Unreal Projects/aws-sdk-cpp/cmake;//cmake;D:/Unreal Projects/aws-sdk-cpp/crt/aws-crt-cpp/crt/aws-c-common/cmake;D:/Unreal Projects/aws-sdk-cpp/crt/aws-crt-cpp/cmake;/lib/cmake;D:/Unreal Projects/aws-sdk-cpp/crt/aws-crt-cpp/crt/aws-c-common/cmake;D:/Unreal Projects/aws-sdk-cpp/crt/aws-crt-cpp/crt/aws-c-common/cmake"
+    buildResult:
+      variable: "HAVE_SYSCONF"
+      cached: true
+      stdout: |
+        Change Dir: 'D:/Unreal Projects/aws-sdk-cpp/build-windows/CMakeFiles/CMakeScratch/TryCompile-pfaijq'
+        
+        Run Build Command(s): "D:/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/amd64/MSBuild.exe" cmTC_f17da.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:n
+        MSBuild version 17.5.1+f6fdcf537 for .NET Framework
+        Build started 2/27/2024 8:21:54 PM.
+        Included response file: D:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\MSBuild\\Current\\Bin\\amd64\\MSBuild.rsp
+        
+        Project "D:\\Unreal Projects\\aws-sdk-cpp\\build-windows\\CMakeFiles\\CMakeScratch\\TryCompile-pfaijq\\cmTC_f17da.vcxproj" on node 1 (default targets).
+        PrepareForBuild:
+          Creating directory "cmTC_f17da.dir\\Debug\\".
+          Creating directory "D:\\Unreal Projects\\aws-sdk-cpp\\build-windows\\CMakeFiles\\CMakeScratch\\TryCompile-pfaijq\\Debug\\".
+          Creating directory "cmTC_f17da.dir\\Debug\\cmTC_f17da.tlog\\".
+        InitializeBuildStatus:
+          Creating "cmTC_f17da.dir\\Debug\\cmTC_f17da.tlog\\unsuccessfulbuild" because "AlwaysCreate" was specified.
+        ClCompile:
+          D:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.34.31933\\bin\\HostX64\\x64\\CL.exe /c /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D HAVE_SYSCONF /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_f17da.dir\\Debug\\\\" /Fd"cmTC_f17da.dir\\Debug\\vc143.pdb" /external:W1 /Gd /TC /errorReport:queue "D:\\Unreal Projects\\aws-sdk-cpp\\build-windows\\CMakeFiles\\CMakeScratch\\TryCompile-pfaijq\\src.c"
+          Microsoft (R) C/C++ Optimizing Compiler Version 19.34.31944 for x64
+          src.c
+          Copyright (C) Microsoft Corporation.  All rights reserved.
+          cl /c /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D HAVE_SYSCONF /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_f17da.dir\\Debug\\\\" /Fd"cmTC_f17da.dir\\Debug\\vc143.pdb" /external:W1 /Gd /TC /errorReport:queue "D:\\Unreal Projects\\aws-sdk-cpp\\build-windows\\CMakeFiles\\CMakeScratch\\TryCompile-pfaijq\\src.c"
+        D:\\Unreal Projects\\aws-sdk-cpp\\build-windows\\CMakeFiles\\CMakeScratch\\TryCompile-pfaijq\\src.c(2,14): fatal  error C1083: Cannot open include file: 'unistd.h': No such file or directory [D:\\Unreal Projects\\aws-sdk-cpp\\build-windows\\CMakeFiles\\CMakeScratch\\TryCompile-pfaijq\\cmTC_f17da.vcxproj]
+        Done Building Project "D:\\Unreal Projects\\aws-sdk-cpp\\build-windows\\CMakeFiles\\CMakeScratch\\TryCompile-pfaijq\\cmTC_f17da.vcxproj" (default targets) -- FAILED.
+        
+        Build FAILED.
+        
+        "D:\\Unreal Projects\\aws-sdk-cpp\\build-windows\\CMakeFiles\\CMakeScratch\\TryCompile-pfaijq\\cmTC_f17da.vcxproj" (default target) (1) ->
+        (ClCompile target) -> 
+          D:\\Unreal Projects\\aws-sdk-cpp\\build-windows\\CMakeFiles\\CMakeScratch\\TryCompile-pfaijq\\src.c(2,14): fatal  error C1083: Cannot open include file: 'unistd.h': No such file or directory [D:\\Unreal Projects\\aws-sdk-cpp\\build-windows\\CMakeFiles\\CMakeScratch\\TryCompile-pfaijq\\cmTC_f17da.vcxproj]
+        
+            0 Warning(s)
+            1 Error(s)
+        
+        Time Elapsed 00:00:00.35
+        
+      exitCode: 1
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-3.29/Modules/CheckSymbolExists.cmake:140 (try_compile)"
+      - "C:/Program Files/CMake/share/cmake-3.29/Modules/CheckCXXSymbolExists.cmake:72 (__CHECK_SYMBOL_EXISTS_IMPL)"
+      - "CMakeLists.txt:314 (check_cxx_symbol_exists)"
+    checks:
+      - "Looking for pathconf"
+    directories:
+      source: "D:/Unreal Projects/aws-sdk-cpp/build-windows/CMakeFiles/CMakeScratch/TryCompile-u7tohq"
+      binary: "D:/Unreal Projects/aws-sdk-cpp/build-windows/CMakeFiles/CMakeScratch/TryCompile-u7tohq"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: "/DWIN32 /D_WINDOWS /W4 /GR /EHsc /MP /bigobj /utf-8 /WX"
+      CMAKE_MODULE_PATH: "D:/Unreal Projects/aws-sdk-cpp/cmake;//cmake;D:/Unreal Projects/aws-sdk-cpp/crt/aws-crt-cpp/crt/aws-c-common/cmake"
+    buildResult:
+      variable: "HAS_PATHCONF"
+      cached: true
+      stdout: |
+        Change Dir: 'D:/Unreal Projects/aws-sdk-cpp/build-windows/CMakeFiles/CMakeScratch/TryCompile-u7tohq'
+        
+        Run Build Command(s): "D:/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/amd64/MSBuild.exe" cmTC_9c6ce.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:n
+        MSBuild version 17.5.1+f6fdcf537 for .NET Framework
+        Build started 2/27/2024 8:21:56 PM.
+        Included response file: D:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\MSBuild\\Current\\Bin\\amd64\\MSBuild.rsp
+        
+        Project "D:\\Unreal Projects\\aws-sdk-cpp\\build-windows\\CMakeFiles\\CMakeScratch\\TryCompile-u7tohq\\cmTC_9c6ce.vcxproj" on node 1 (default targets).
+        PrepareForBuild:
+          Creating directory "cmTC_9c6ce.dir\\Debug\\".
+          Creating directory "D:\\Unreal Projects\\aws-sdk-cpp\\build-windows\\CMakeFiles\\CMakeScratch\\TryCompile-u7tohq\\Debug\\".
+          Creating directory "cmTC_9c6ce.dir\\Debug\\cmTC_9c6ce.tlog\\".
+        InitializeBuildStatus:
+          Creating "cmTC_9c6ce.dir\\Debug\\cmTC_9c6ce.tlog\\unsuccessfulbuild" because "AlwaysCreate" was specified.
+        ClCompile:
+          D:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.34.31933\\bin\\HostX64\\x64\\CL.exe /c /Zi /W4 /WX /diagnostics:column /MP /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /GR /Fo"cmTC_9c6ce.dir\\Debug\\\\" /Fd"cmTC_9c6ce.dir\\Debug\\vc143.pdb" /external:W4 /Gd /TP /errorReport:queue  /bigobj /utf-8 "D:\\Unreal Projects\\aws-sdk-cpp\\build-windows\\CMakeFiles\\CMakeScratch\\TryCompile-u7tohq\\CheckSymbolExists.cxx"
+          Microsoft (R) C/C++ Optimizing Compiler Version 19.34.31944 for x64
+          CheckSymbolExists.cxx
+          Copyright (C) Microsoft Corporation.  All rights reserved.
+          cl /c /Zi /W4 /WX /diagnostics:column /MP /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /GR /Fo"cmTC_9c6ce.dir\\Debug\\\\" /Fd"cmTC_9c6ce.dir\\Debug\\vc143.pdb" /external:W4 /Gd /TP /errorReport:queue  /bigobj /utf-8 "D:\\Unreal Projects\\aws-sdk-cpp\\build-windows\\CMakeFiles\\CMakeScratch\\TryCompile-u7tohq\\CheckSymbolExists.cxx"
+        D:\\Unreal Projects\\aws-sdk-cpp\\build-windows\\CMakeFiles\\CMakeScratch\\TryCompile-u7tohq\\CheckSymbolExists.cxx(2,10): fatal  error C1083: Cannot open include file: 'unistd.h': No such file or directory [D:\\Unreal Projects\\aws-sdk-cpp\\build-windows\\CMakeFiles\\CMakeScratch\\TryCompile-u7tohq\\cmTC_9c6ce.vcxproj]
+        Done Building Project "D:\\Unreal Projects\\aws-sdk-cpp\\build-windows\\CMakeFiles\\CMakeScratch\\TryCompile-u7tohq\\cmTC_9c6ce.vcxproj" (default targets) -- FAILED.
+        
+        Build FAILED.
+        
+        "D:\\Unreal Projects\\aws-sdk-cpp\\build-windows\\CMakeFiles\\CMakeScratch\\TryCompile-u7tohq\\cmTC_9c6ce.vcxproj" (default target) (1) ->
+        (ClCompile target) -> 
+          D:\\Unreal Projects\\aws-sdk-cpp\\build-windows\\CMakeFiles\\CMakeScratch\\TryCompile-u7tohq\\CheckSymbolExists.cxx(2,10): fatal  error C1083: Cannot open include file: 'unistd.h': No such file or directory [D:\\Unreal Projects\\aws-sdk-cpp\\build-windows\\CMakeFiles\\CMakeScratch\\TryCompile-u7tohq\\cmTC_9c6ce.vcxproj]
+        
+            0 Warning(s)
+            1 Error(s)
+        
+        Time Elapsed 00:00:00.36
+        
+      exitCode: 1
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-3.29/Modules/CheckSymbolExists.cmake:140 (try_compile)"
+      - "C:/Program Files/CMake/share/cmake-3.29/Modules/CheckCXXSymbolExists.cmake:72 (__CHECK_SYMBOL_EXISTS_IMPL)"
+      - "CMakeLists.txt:319 (check_cxx_symbol_exists)"
+    checks:
+      - "Looking for umask"
+    directories:
+      source: "D:/Unreal Projects/aws-sdk-cpp/build-windows/CMakeFiles/CMakeScratch/TryCompile-wx3abm"
+      binary: "D:/Unreal Projects/aws-sdk-cpp/build-windows/CMakeFiles/CMakeScratch/TryCompile-wx3abm"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: "/DWIN32 /D_WINDOWS /W4 /GR /EHsc /MP /bigobj /utf-8 /WX"
+      CMAKE_MODULE_PATH: "D:/Unreal Projects/aws-sdk-cpp/cmake;//cmake;D:/Unreal Projects/aws-sdk-cpp/crt/aws-crt-cpp/crt/aws-c-common/cmake"
+    buildResult:
+      variable: "HAS_UMASK"
+      cached: true
+      stdout: |
+        Change Dir: 'D:/Unreal Projects/aws-sdk-cpp/build-windows/CMakeFiles/CMakeScratch/TryCompile-wx3abm'
+        
+        Run Build Command(s): "D:/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/amd64/MSBuild.exe" cmTC_3151a.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:n
+        MSBuild version 17.5.1+f6fdcf537 for .NET Framework
+        Build started 2/27/2024 8:21:57 PM.
+        Included response file: D:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\MSBuild\\Current\\Bin\\amd64\\MSBuild.rsp
+        
+        Project "D:\\Unreal Projects\\aws-sdk-cpp\\build-windows\\CMakeFiles\\CMakeScratch\\TryCompile-wx3abm\\cmTC_3151a.vcxproj" on node 1 (default targets).
+        PrepareForBuild:
+          Creating directory "cmTC_3151a.dir\\Debug\\".
+          Creating directory "D:\\Unreal Projects\\aws-sdk-cpp\\build-windows\\CMakeFiles\\CMakeScratch\\TryCompile-wx3abm\\Debug\\".
+          Creating directory "cmTC_3151a.dir\\Debug\\cmTC_3151a.tlog\\".
+        InitializeBuildStatus:
+          Creating "cmTC_3151a.dir\\Debug\\cmTC_3151a.tlog\\unsuccessfulbuild" because "AlwaysCreate" was specified.
+        ClCompile:
+          D:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.34.31933\\bin\\HostX64\\x64\\CL.exe /c /Zi /W4 /WX /diagnostics:column /MP /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /GR /Fo"cmTC_3151a.dir\\Debug\\\\" /Fd"cmTC_3151a.dir\\Debug\\vc143.pdb" /external:W4 /Gd /TP /errorReport:queue  /bigobj /utf-8 "D:\\Unreal Projects\\aws-sdk-cpp\\build-windows\\CMakeFiles\\CMakeScratch\\TryCompile-wx3abm\\CheckSymbolExists.cxx"
+          Microsoft (R) C/C++ Optimizing Compiler Version 19.34.31944 for x64
+          CheckSymbolExists.cxx
+          Copyright (C) Microsoft Corporation.  All rights reserved.
+          cl /c /Zi /W4 /WX /diagnostics:column /MP /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /GR /Fo"cmTC_3151a.dir\\Debug\\\\" /Fd"cmTC_3151a.dir\\Debug\\vc143.pdb" /external:W4 /Gd /TP /errorReport:queue  /bigobj /utf-8 "D:\\Unreal Projects\\aws-sdk-cpp\\build-windows\\CMakeFiles\\CMakeScratch\\TryCompile-wx3abm\\CheckSymbolExists.cxx"
+        D:\\Unreal Projects\\aws-sdk-cpp\\build-windows\\CMakeFiles\\CMakeScratch\\TryCompile-wx3abm\\CheckSymbolExists.cxx(8,19): error C2065: 'umask': undeclared identifier [D:\\Unreal Projects\\aws-sdk-cpp\\build-windows\\CMakeFiles\\CMakeScratch\\TryCompile-wx3abm\\cmTC_3151a.vcxproj]
+        Done Building Project "D:\\Unreal Projects\\aws-sdk-cpp\\build-windows\\CMakeFiles\\CMakeScratch\\TryCompile-wx3abm\\cmTC_3151a.vcxproj" (default targets) -- FAILED.
+        
+        Build FAILED.
+        
+        "D:\\Unreal Projects\\aws-sdk-cpp\\build-windows\\CMakeFiles\\CMakeScratch\\TryCompile-wx3abm\\cmTC_3151a.vcxproj" (default target) (1) ->
+        (ClCompile target) -> 
+          D:\\Unreal Projects\\aws-sdk-cpp\\build-windows\\CMakeFiles\\CMakeScratch\\TryCompile-wx3abm\\CheckSymbolExists.cxx(8,19): error C2065: 'umask': undeclared identifier [D:\\Unreal Projects\\aws-sdk-cpp\\build-windows\\CMakeFiles\\CMakeScratch\\TryCompile-wx3abm\\cmTC_3151a.vcxproj]
+        
+            0 Warning(s)
+            1 Error(s)
+        
+        Time Elapsed 00:00:00.37
+        
+      exitCode: 1
+  -
+    kind: "try_run-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-3.29/Modules/Internal/CheckSourceRuns.cmake:93 (try_run)"
+      - "C:/Program Files/CMake/share/cmake-3.29/Modules/CheckCXXSourceRuns.cmake:52 (cmake_check_source_runs)"
+      - "src/aws-cpp-sdk-core/CMakeLists.txt:178 (check_cxx_source_runs)"
+    checks:
+      - "Performing Test WINHTTP_HAS_H2"
+    directories:
+      source: "D:/Unreal Projects/aws-sdk-cpp/build-windows/CMakeFiles/CMakeScratch/TryCompile-r9ijz9"
+      binary: "D:/Unreal Projects/aws-sdk-cpp/build-windows/CMakeFiles/CMakeScratch/TryCompile-r9ijz9"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: "/DWIN32 /D_WINDOWS /W4 /GR /EHsc /MP /bigobj /utf-8 /WX"
+      CMAKE_MODULE_PATH: "D:/Unreal Projects/aws-sdk-cpp/cmake;//cmake;D:/Unreal Projects/aws-sdk-cpp/crt/aws-crt-cpp/crt/aws-c-common/cmake"
+    buildResult:
+      variable: "WINHTTP_HAS_H2_COMPILED"
+      cached: true
+      stdout: |
+        Change Dir: 'D:/Unreal Projects/aws-sdk-cpp/build-windows/CMakeFiles/CMakeScratch/TryCompile-r9ijz9'
+        
+        Run Build Command(s): "D:/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/amd64/MSBuild.exe" cmTC_e5a6b.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:n
+        MSBuild version 17.5.1+f6fdcf537 for .NET Framework
+        Build started 2/27/2024 8:21:58 PM.
+        Included response file: D:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\MSBuild\\Current\\Bin\\amd64\\MSBuild.rsp
+        
+        Project "D:\\Unreal Projects\\aws-sdk-cpp\\build-windows\\CMakeFiles\\CMakeScratch\\TryCompile-r9ijz9\\cmTC_e5a6b.vcxproj" on node 1 (default targets).
+        PrepareForBuild:
+          Creating directory "cmTC_e5a6b.dir\\Debug\\".
+          Creating directory "D:\\Unreal Projects\\aws-sdk-cpp\\build-windows\\CMakeFiles\\CMakeScratch\\TryCompile-r9ijz9\\Debug\\".
+          Creating directory "cmTC_e5a6b.dir\\Debug\\cmTC_e5a6b.tlog\\".
+        InitializeBuildStatus:
+          Creating "cmTC_e5a6b.dir\\Debug\\cmTC_e5a6b.tlog\\unsuccessfulbuild" because "AlwaysCreate" was specified.
+        ClCompile:
+          D:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.34.31933\\bin\\HostX64\\x64\\CL.exe /c /Zi /W4 /WX /diagnostics:column /MP /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D WINHTTP_HAS_H2 /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /GR /Fo"cmTC_e5a6b.dir\\Debug\\\\" /Fd"cmTC_e5a6b.dir\\Debug\\vc143.pdb" /external:W4 /Gd /TP /errorReport:queue  /bigobj /utf-8 "D:\\Unreal Projects\\aws-sdk-cpp\\build-windows\\CMakeFiles\\CMakeScratch\\TryCompile-r9ijz9\\src.cxx"
+          Microsoft (R) C/C++ Optimizing Compiler Version 19.34.31944 for x64
+          src.cxx
+          Copyright (C) Microsoft Corporation.  All rights reserved.
+          cl /c /Zi /W4 /WX /diagnostics:column /MP /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D WINHTTP_HAS_H2 /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /GR /Fo"cmTC_e5a6b.dir\\Debug\\\\" /Fd"cmTC_e5a6b.dir\\Debug\\vc143.pdb" /external:W4 /Gd /TP /errorReport:queue  /bigobj /utf-8 "D:\\Unreal Projects\\aws-sdk-cpp\\build-windows\\CMakeFiles\\CMakeScratch\\TryCompile-r9ijz9\\src.cxx"
+        Link:
+          D:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.34.31933\\bin\\HostX64\\x64\\link.exe /ERRORREPORT:QUEUE /OUT:"D:\\Unreal Projects\\aws-sdk-cpp\\build-windows\\CMakeFiles\\CMakeScratch\\TryCompile-r9ijz9\\Debug\\cmTC_e5a6b.exe" /INCREMENTAL /ILK:"cmTC_e5a6b.dir\\Debug\\cmTC_e5a6b.ilk" /NOLOGO WinHttp.lib kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"D:/Unreal Projects/aws-sdk-cpp/build-windows/CMakeFiles/CMakeScratch/TryCompile-r9ijz9/Debug/cmTC_e5a6b.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"D:/Unreal Projects/aws-sdk-cpp/build-windows/CMakeFiles/CMakeScratch/TryCompile-r9ijz9/Debug/cmTC_e5a6b.lib" /MACHINE:X64  /machine:x64 cmTC_e5a6b.dir\\Debug\\src.obj
+          cmTC_e5a6b.vcxproj -> D:\\Unreal Projects\\aws-sdk-cpp\\build-windows\\CMakeFiles\\CMakeScratch\\TryCompile-r9ijz9\\Debug\\cmTC_e5a6b.exe
+        FinalizeBuildStatus:
+          Deleting file "cmTC_e5a6b.dir\\Debug\\cmTC_e5a6b.tlog\\unsuccessfulbuild".
+          Touching "cmTC_e5a6b.dir\\Debug\\cmTC_e5a6b.tlog\\cmTC_e5a6b.lastbuildstate".
+        Done Building Project "D:\\Unreal Projects\\aws-sdk-cpp\\build-windows\\CMakeFiles\\CMakeScratch\\TryCompile-r9ijz9\\cmTC_e5a6b.vcxproj" (default targets).
+        
+        Build succeeded.
+            0 Warning(s)
+            0 Error(s)
+        
+        Time Elapsed 00:00:01.00
+        
+      exitCode: 0
+    runResult:
+      variable: "WINHTTP_HAS_H2_EXITCODE"
+      cached: true
+      stdout: |
+      stderr: |
+      exitCode: 0
+  -
+    kind: "try_run-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-3.29/Modules/Internal/CheckSourceRuns.cmake:93 (try_run)"
+      - "C:/Program Files/CMake/share/cmake-3.29/Modules/CheckCXXSourceRuns.cmake:52 (cmake_check_source_runs)"
+      - "src/aws-cpp-sdk-core/CMakeLists.txt:198 (check_cxx_source_runs)"
+    checks:
+      - "Performing Test WININET_HAS_H2"
+    directories:
+      source: "D:/Unreal Projects/aws-sdk-cpp/build-windows/CMakeFiles/CMakeScratch/TryCompile-3haec8"
+      binary: "D:/Unreal Projects/aws-sdk-cpp/build-windows/CMakeFiles/CMakeScratch/TryCompile-3haec8"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: "/DWIN32 /D_WINDOWS /W4 /GR /EHsc /MP /bigobj /utf-8 /WX"
+      CMAKE_MODULE_PATH: "D:/Unreal Projects/aws-sdk-cpp/cmake;//cmake;D:/Unreal Projects/aws-sdk-cpp/crt/aws-crt-cpp/crt/aws-c-common/cmake"
+    buildResult:
+      variable: "WININET_HAS_H2_COMPILED"
+      cached: true
+      stdout: |
+        Change Dir: 'D:/Unreal Projects/aws-sdk-cpp/build-windows/CMakeFiles/CMakeScratch/TryCompile-3haec8'
+        
+        Run Build Command(s): "D:/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/amd64/MSBuild.exe" cmTC_c9891.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:n
+        MSBuild version 17.5.1+f6fdcf537 for .NET Framework
+        Build started 2/27/2024 8:21:59 PM.
+        Included response file: D:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\MSBuild\\Current\\Bin\\amd64\\MSBuild.rsp
+        
+        Project "D:\\Unreal Projects\\aws-sdk-cpp\\build-windows\\CMakeFiles\\CMakeScratch\\TryCompile-3haec8\\cmTC_c9891.vcxproj" on node 1 (default targets).
+        PrepareForBuild:
+          Creating directory "cmTC_c9891.dir\\Debug\\".
+          Creating directory "D:\\Unreal Projects\\aws-sdk-cpp\\build-windows\\CMakeFiles\\CMakeScratch\\TryCompile-3haec8\\Debug\\".
+          Creating directory "cmTC_c9891.dir\\Debug\\cmTC_c9891.tlog\\".
+        InitializeBuildStatus:
+          Creating "cmTC_c9891.dir\\Debug\\cmTC_c9891.tlog\\unsuccessfulbuild" because "AlwaysCreate" was specified.
+        ClCompile:
+          D:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.34.31933\\bin\\HostX64\\x64\\CL.exe /c /Zi /W4 /WX /diagnostics:column /MP /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D WININET_HAS_H2 /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /GR /Fo"cmTC_c9891.dir\\Debug\\\\" /Fd"cmTC_c9891.dir\\Debug\\vc143.pdb" /external:W4 /Gd /TP /errorReport:queue  /bigobj /utf-8 "D:\\Unreal Projects\\aws-sdk-cpp\\build-windows\\CMakeFiles\\CMakeScratch\\TryCompile-3haec8\\src.cxx"
+          Microsoft (R) C/C++ Optimizing Compiler Version 19.34.31944 for x64
+          src.cxx
+          Copyright (C) Microsoft Corporation.  All rights reserved.
+          cl /c /Zi /W4 /WX /diagnostics:column /MP /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D WININET_HAS_H2 /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /GR /Fo"cmTC_c9891.dir\\Debug\\\\" /Fd"cmTC_c9891.dir\\Debug\\vc143.pdb" /external:W4 /Gd /TP /errorReport:queue  /bigobj /utf-8 "D:\\Unreal Projects\\aws-sdk-cpp\\build-windows\\CMakeFiles\\CMakeScratch\\TryCompile-3haec8\\src.cxx"
+        Link:
+          D:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.34.31933\\bin\\HostX64\\x64\\link.exe /ERRORREPORT:QUEUE /OUT:"D:\\Unreal Projects\\aws-sdk-cpp\\build-windows\\CMakeFiles\\CMakeScratch\\TryCompile-3haec8\\Debug\\cmTC_c9891.exe" /INCREMENTAL /ILK:"cmTC_c9891.dir\\Debug\\cmTC_c9891.ilk" /NOLOGO Wininet.lib kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"D:/Unreal Projects/aws-sdk-cpp/build-windows/CMakeFiles/CMakeScratch/TryCompile-3haec8/Debug/cmTC_c9891.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"D:/Unreal Projects/aws-sdk-cpp/build-windows/CMakeFiles/CMakeScratch/TryCompile-3haec8/Debug/cmTC_c9891.lib" /MACHINE:X64  /machine:x64 cmTC_c9891.dir\\Debug\\src.obj
+          cmTC_c9891.vcxproj -> D:\\Unreal Projects\\aws-sdk-cpp\\build-windows\\CMakeFiles\\CMakeScratch\\TryCompile-3haec8\\Debug\\cmTC_c9891.exe
+        FinalizeBuildStatus:
+          Deleting file "cmTC_c9891.dir\\Debug\\cmTC_c9891.tlog\\unsuccessfulbuild".
+          Touching "cmTC_c9891.dir\\Debug\\cmTC_c9891.tlog\\cmTC_c9891.lastbuildstate".
+        Done Building Project "D:\\Unreal Projects\\aws-sdk-cpp\\build-windows\\CMakeFiles\\CMakeScratch\\TryCompile-3haec8\\cmTC_c9891.vcxproj" (default targets).
+        
+        Build succeeded.
+            0 Warning(s)
+            0 Error(s)
+        
+        Time Elapsed 00:00:00.97
+        
+      exitCode: 0
+    runResult:
+      variable: "WININET_HAS_H2_EXITCODE"
+      cached: true
+      stdout: |
+      stderr: |
+      exitCode: 0
+...

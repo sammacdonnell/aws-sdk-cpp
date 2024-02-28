@@ -1,0 +1,1275 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="D:\Unreal Projects\aws-sdk-cpp\build-windows\src\aws-cpp-sdk-core\ub_core.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Unreal Projects\aws-sdk-cpp\src\aws-cpp-sdk-core\source\AmazonSerializableWebServiceRequest.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Unreal Projects\aws-sdk-cpp\src\aws-cpp-sdk-core\source\AmazonStreamingWebServiceRequest.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Unreal Projects\aws-sdk-cpp\src\aws-cpp-sdk-core\source\AmazonWebServiceRequest.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Unreal Projects\aws-sdk-cpp\src\aws-cpp-sdk-core\source\Aws.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Unreal Projects\aws-sdk-cpp\src\aws-cpp-sdk-core\source\Globals.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Unreal Projects\aws-sdk-cpp\src\aws-cpp-sdk-core\source\Region.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Unreal Projects\aws-sdk-cpp\src\aws-cpp-sdk-core\source\Version.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Unreal Projects\aws-sdk-cpp\src\aws-cpp-sdk-core\source\external\cjson\cJSON.cpp">
+      <Filter>Source Files\external\cjson</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Unreal Projects\aws-sdk-cpp\src\aws-cpp-sdk-core\source\http\HttpClient.cpp">
+      <Filter>Source Files\http</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Unreal Projects\aws-sdk-cpp\src\aws-cpp-sdk-core\source\http\HttpClientFactory.cpp">
+      <Filter>Source Files\http</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Unreal Projects\aws-sdk-cpp\src\aws-cpp-sdk-core\source\http\HttpRequest.cpp">
+      <Filter>Source Files\http</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Unreal Projects\aws-sdk-cpp\src\aws-cpp-sdk-core\source\http\HttpResponse.cpp">
+      <Filter>Source Files\http</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Unreal Projects\aws-sdk-cpp\src\aws-cpp-sdk-core\source\http\HttpTypes.cpp">
+      <Filter>Source Files\http</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Unreal Projects\aws-sdk-cpp\src\aws-cpp-sdk-core\source\http\Scheme.cpp">
+      <Filter>Source Files\http</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Unreal Projects\aws-sdk-cpp\src\aws-cpp-sdk-core\source\http\URI.cpp">
+      <Filter>Source Files\http</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Unreal Projects\aws-sdk-cpp\src\aws-cpp-sdk-core\source\http\windows\WinConnectionPoolMgr.cpp">
+      <Filter>Source Files\http\windows</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Unreal Projects\aws-sdk-cpp\src\aws-cpp-sdk-core\source\http\windows\WinHttpConnectionPoolMgr.cpp">
+      <Filter>Source Files\http\windows</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Unreal Projects\aws-sdk-cpp\src\aws-cpp-sdk-core\source\http\windows\WinHttpSyncHttpClient.cpp">
+      <Filter>Source Files\http\windows</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Unreal Projects\aws-sdk-cpp\src\aws-cpp-sdk-core\source\http\windows\WinINetConnectionPoolMgr.cpp">
+      <Filter>Source Files\http\windows</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Unreal Projects\aws-sdk-cpp\src\aws-cpp-sdk-core\source\http\windows\WinINetSyncHttpClient.cpp">
+      <Filter>Source Files\http\windows</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Unreal Projects\aws-sdk-cpp\src\aws-cpp-sdk-core\source\http\windows\WinSyncHttpClient.cpp">
+      <Filter>Source Files\http\windows</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Unreal Projects\aws-sdk-cpp\src\aws-cpp-sdk-core\source\internal\AWSHttpResourceClient.cpp">
+      <Filter>Source Files\internal</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Unreal Projects\aws-sdk-cpp\src\aws-cpp-sdk-core\source\monitoring\DefaultMonitoring.cpp">
+      <Filter>Source Files\monitoring</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Unreal Projects\aws-sdk-cpp\src\aws-cpp-sdk-core\source\monitoring\HttpClientMetrics.cpp">
+      <Filter>Source Files\monitoring</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Unreal Projects\aws-sdk-cpp\src\aws-cpp-sdk-core\source\monitoring\MonitoringManager.cpp">
+      <Filter>Source Files\monitoring</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Unreal Projects\aws-sdk-cpp\src\aws-cpp-sdk-core\source\net\windows\Net.cpp">
+      <Filter>Source Files\net\windows</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Unreal Projects\aws-sdk-cpp\src\aws-cpp-sdk-core\source\net\windows\SimpleUDP.cpp">
+      <Filter>Source Files\net\windows</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Unreal Projects\aws-sdk-cpp\src\aws-cpp-sdk-core\source\platform\windows\Environment.cpp">
+      <Filter>Source Files\platform\windows</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Unreal Projects\aws-sdk-cpp\src\aws-cpp-sdk-core\source\platform\windows\FileSystem.cpp">
+      <Filter>Source Files\platform\windows</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Unreal Projects\aws-sdk-cpp\src\aws-cpp-sdk-core\source\platform\windows\OSVersionInfo.cpp">
+      <Filter>Source Files\platform\windows</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Unreal Projects\aws-sdk-cpp\src\aws-cpp-sdk-core\source\platform\windows\Security.cpp">
+      <Filter>Source Files\platform\windows</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Unreal Projects\aws-sdk-cpp\src\aws-cpp-sdk-core\source\platform\windows\Time.cpp">
+      <Filter>Source Files\platform\windows</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Unreal Projects\aws-sdk-cpp\src\aws-cpp-sdk-core\source\utils\ARN.cpp">
+      <Filter>Source Files\utils</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Unreal Projects\aws-sdk-cpp\src\aws-cpp-sdk-core\source\utils\Array.cpp">
+      <Filter>Source Files\utils</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Unreal Projects\aws-sdk-cpp\src\aws-cpp-sdk-core\source\utils\DNS.cpp">
+      <Filter>Source Files\utils</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Unreal Projects\aws-sdk-cpp\src\aws-cpp-sdk-core\source\utils\DateTimeCommon.cpp">
+      <Filter>Source Files\utils</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Unreal Projects\aws-sdk-cpp\src\aws-cpp-sdk-core\source\utils\Directory.cpp">
+      <Filter>Source Files\utils</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Unreal Projects\aws-sdk-cpp\src\aws-cpp-sdk-core\source\utils\Document.cpp">
+      <Filter>Source Files\utils</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Unreal Projects\aws-sdk-cpp\src\aws-cpp-sdk-core\source\utils\EnumParseOverflowContainer.cpp">
+      <Filter>Source Files\utils</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Unreal Projects\aws-sdk-cpp\src\aws-cpp-sdk-core\source\utils\FileSystemUtils.cpp">
+      <Filter>Source Files\utils</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Unreal Projects\aws-sdk-cpp\src\aws-cpp-sdk-core\source\utils\GetTheLights.cpp">
+      <Filter>Source Files\utils</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Unreal Projects\aws-sdk-cpp\src\aws-cpp-sdk-core\source\utils\HashingUtils.cpp">
+      <Filter>Source Files\utils</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Unreal Projects\aws-sdk-cpp\src\aws-cpp-sdk-core\source\utils\RAIICounter.cpp">
+      <Filter>Source Files\utils</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Unreal Projects\aws-sdk-cpp\src\aws-cpp-sdk-core\source\utils\StringUtils.cpp">
+      <Filter>Source Files\utils</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Unreal Projects\aws-sdk-cpp\src\aws-cpp-sdk-core\source\utils\TempFile.cpp">
+      <Filter>Source Files\utils</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Unreal Projects\aws-sdk-cpp\src\aws-cpp-sdk-core\source\utils\UUID.cpp">
+      <Filter>Source Files\utils</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Unreal Projects\aws-sdk-cpp\src\aws-cpp-sdk-core\source\utils\crypto\CRC32.cpp">
+      <Filter>Source Files\utils\crypto</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Unreal Projects\aws-sdk-cpp\src\aws-cpp-sdk-core\source\utils\crypto\Cipher.cpp">
+      <Filter>Source Files\utils\crypto</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Unreal Projects\aws-sdk-cpp\src\aws-cpp-sdk-core\source\utils\crypto\ContentCryptoMaterial.cpp">
+      <Filter>Source Files\utils\crypto</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Unreal Projects\aws-sdk-cpp\src\aws-cpp-sdk-core\source\utils\crypto\ContentCryptoScheme.cpp">
+      <Filter>Source Files\utils\crypto</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Unreal Projects\aws-sdk-cpp\src\aws-cpp-sdk-core\source\utils\crypto\CryptoBuf.cpp">
+      <Filter>Source Files\utils\crypto</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Unreal Projects\aws-sdk-cpp\src\aws-cpp-sdk-core\source\utils\crypto\CryptoStream.cpp">
+      <Filter>Source Files\utils\crypto</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Unreal Projects\aws-sdk-cpp\src\aws-cpp-sdk-core\source\utils\crypto\EncryptionMaterials.cpp">
+      <Filter>Source Files\utils\crypto</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Unreal Projects\aws-sdk-cpp\src\aws-cpp-sdk-core\source\utils\crypto\KeyWrapAlgorithm.cpp">
+      <Filter>Source Files\utils\crypto</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Unreal Projects\aws-sdk-cpp\src\aws-cpp-sdk-core\source\utils\crypto\MD5.cpp">
+      <Filter>Source Files\utils\crypto</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Unreal Projects\aws-sdk-cpp\src\aws-cpp-sdk-core\source\utils\crypto\PrecalculatedHash.cpp">
+      <Filter>Source Files\utils\crypto</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Unreal Projects\aws-sdk-cpp\src\aws-cpp-sdk-core\source\utils\crypto\Sha1.cpp">
+      <Filter>Source Files\utils\crypto</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Unreal Projects\aws-sdk-cpp\src\aws-cpp-sdk-core\source\utils\crypto\Sha256.cpp">
+      <Filter>Source Files\utils\crypto</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Unreal Projects\aws-sdk-cpp\src\aws-cpp-sdk-core\source\utils\crypto\Sha256HMAC.cpp">
+      <Filter>Source Files\utils\crypto</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Unreal Projects\aws-sdk-cpp\src\aws-cpp-sdk-core\source\utils\crypto\bcrypt\CryptoImpl.cpp">
+      <Filter>Source Files\utils\crypto\bcrypt</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Unreal Projects\aws-sdk-cpp\src\aws-cpp-sdk-core\source\utils\crypto\factory\Factories.cpp">
+      <Filter>Source Files\utils\crypto\factory</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Unreal Projects\aws-sdk-cpp\src\aws-cpp-sdk-core\source\utils\event\EventDecoderStream.cpp">
+      <Filter>Source Files\utils\event</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Unreal Projects\aws-sdk-cpp\src\aws-cpp-sdk-core\source\utils\event\EventEncoderStream.cpp">
+      <Filter>Source Files\utils\event</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Unreal Projects\aws-sdk-cpp\src\aws-cpp-sdk-core\source\utils\event\EventHeader.cpp">
+      <Filter>Source Files\utils\event</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Unreal Projects\aws-sdk-cpp\src\aws-cpp-sdk-core\source\utils\event\EventMessage.cpp">
+      <Filter>Source Files\utils\event</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Unreal Projects\aws-sdk-cpp\src\aws-cpp-sdk-core\source\utils\event\EventStreamBuf.cpp">
+      <Filter>Source Files\utils\event</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Unreal Projects\aws-sdk-cpp\src\aws-cpp-sdk-core\source\utils\event\EventStreamDecoder.cpp">
+      <Filter>Source Files\utils\event</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Unreal Projects\aws-sdk-cpp\src\aws-cpp-sdk-core\source\utils\event\EventStreamEncoder.cpp">
+      <Filter>Source Files\utils\event</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Unreal Projects\aws-sdk-cpp\src\aws-cpp-sdk-core\source\utils\event\EventStreamErrors.cpp">
+      <Filter>Source Files\utils\event</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Unreal Projects\aws-sdk-cpp\src\aws-cpp-sdk-core\source\utils\json\JsonSerializer.cpp">
+      <Filter>Source Files\utils\json</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="D:\Unreal Projects\aws-sdk-cpp\src\aws-cpp-sdk-core\include\aws\core\AmazonSerializableWebServiceRequest.h">
+      <Filter>Header Files\aws\core</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Unreal Projects\aws-sdk-cpp\src\aws-cpp-sdk-core\include\aws\core\AmazonStreamingWebServiceRequest.h">
+      <Filter>Header Files\aws\core</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Unreal Projects\aws-sdk-cpp\src\aws-cpp-sdk-core\include\aws\core\AmazonWebServiceRequest.h">
+      <Filter>Header Files\aws\core</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Unreal Projects\aws-sdk-cpp\src\aws-cpp-sdk-core\include\aws\core\AmazonWebServiceResult.h">
+      <Filter>Header Files\aws\core</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Unreal Projects\aws-sdk-cpp\src\aws-cpp-sdk-core\include\aws\core\Aws.h">
+      <Filter>Header Files\aws\core</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Unreal Projects\aws-sdk-cpp\src\aws-cpp-sdk-core\include\aws\core\Core_EXPORTS.h">
+      <Filter>Header Files\aws\core</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Unreal Projects\aws-sdk-cpp\src\aws-cpp-sdk-core\include\aws\core\Globals.h">
+      <Filter>Header Files\aws\core</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Unreal Projects\aws-sdk-cpp\src\aws-cpp-sdk-core\include\aws\core\NoResult.h">
+      <Filter>Header Files\aws\core</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Unreal Projects\aws-sdk-cpp\src\aws-cpp-sdk-core\include\aws\core\Region.h">
+      <Filter>Header Files\aws\core</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Unreal Projects\aws-sdk-cpp\src\aws-cpp-sdk-core\include\aws\core\SDKConfig.h">
+      <Filter>Header Files\aws\core</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Unreal Projects\aws-sdk-cpp\src\aws-cpp-sdk-core\include\aws\core\Version.h">
+      <Filter>Header Files\aws\core</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Unreal Projects\aws-sdk-cpp\src\aws-cpp-sdk-core\include\aws\core\VersionConfig.h">
+      <Filter>Header Files\aws\core</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Unreal Projects\aws-sdk-cpp\src\aws-cpp-sdk-core\include\aws\core\auth\AWSAuthSigner.h">
+      <Filter>Header Files\aws\core\auth</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Unreal Projects\aws-sdk-cpp\src\aws-cpp-sdk-core\include\aws\core\auth\AWSAuthSignerProvider.h">
+      <Filter>Header Files\aws\core\auth</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Unreal Projects\aws-sdk-cpp\src\aws-cpp-sdk-core\include\aws\core\auth\AWSBearerToken.h">
+      <Filter>Header Files\aws\core\auth</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Unreal Projects\aws-sdk-cpp\src\aws-cpp-sdk-core\include\aws\core\auth\AWSCredentials.h">
+      <Filter>Header Files\aws\core\auth</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Unreal Projects\aws-sdk-cpp\src\aws-cpp-sdk-core\include\aws\core\auth\AWSCredentialsProvider.h">
+      <Filter>Header Files\aws\core\auth</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Unreal Projects\aws-sdk-cpp\src\aws-cpp-sdk-core\include\aws\core\auth\AWSCredentialsProviderChain.h">
+      <Filter>Header Files\aws\core\auth</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Unreal Projects\aws-sdk-cpp\src\aws-cpp-sdk-core\include\aws\core\auth\GeneralHTTPCredentialsProvider.h">
+      <Filter>Header Files\aws\core\auth</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Unreal Projects\aws-sdk-cpp\src\aws-cpp-sdk-core\include\aws\core\auth\SSOCredentialsProvider.h">
+      <Filter>Header Files\aws\core\auth</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Unreal Projects\aws-sdk-cpp\src\aws-cpp-sdk-core\include\aws\core\auth\STSCredentialsProvider.h">
+      <Filter>Header Files\aws\core\auth</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Unreal Projects\aws-sdk-cpp\src\aws-cpp-sdk-core\include\aws\core\auth\bearer-token-provider\AWSBearerTokenProviderBase.h">
+      <Filter>Header Files\aws\core\auth\bearer-token-provider</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Unreal Projects\aws-sdk-cpp\src\aws-cpp-sdk-core\include\aws\core\auth\bearer-token-provider\AWSBearerTokenProviderChainBase.h">
+      <Filter>Header Files\aws\core\auth\bearer-token-provider</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Unreal Projects\aws-sdk-cpp\src\aws-cpp-sdk-core\include\aws\core\auth\bearer-token-provider\DefaultBearerTokenProviderChain.h">
+      <Filter>Header Files\aws\core\auth\bearer-token-provider</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Unreal Projects\aws-sdk-cpp\src\aws-cpp-sdk-core\include\aws\core\auth\bearer-token-provider\SSOBearerTokenProvider.h">
+      <Filter>Header Files\aws\core\auth\bearer-token-provider</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Unreal Projects\aws-sdk-cpp\src\aws-cpp-sdk-core\include\aws\core\auth\bearer-token-provider\StaticBearerTokenProvider.h">
+      <Filter>Header Files\aws\core\auth\bearer-token-provider</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Unreal Projects\aws-sdk-cpp\src\aws-cpp-sdk-core\include\aws\core\auth\signer-provider\AWSAuthSignerProviderBase.h">
+      <Filter>Header Files\aws\core\auth\signer-provider</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Unreal Projects\aws-sdk-cpp\src\aws-cpp-sdk-core\include\aws\core\auth\signer-provider\BearerTokenAuthSignerProvider.h">
+      <Filter>Header Files\aws\core\auth\signer-provider</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Unreal Projects\aws-sdk-cpp\src\aws-cpp-sdk-core\include\aws\core\auth\signer-provider\DefaultAuthSignerProvider.h">
+      <Filter>Header Files\aws\core\auth\signer-provider</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Unreal Projects\aws-sdk-cpp\src\aws-cpp-sdk-core\include\aws\core\auth\signer\AWSAuthBearerSigner.h">
+      <Filter>Header Files\aws\core\auth\signer</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Unreal Projects\aws-sdk-cpp\src\aws-cpp-sdk-core\include\aws\core\auth\signer\AWSAuthEventStreamV4Signer.h">
+      <Filter>Header Files\aws\core\auth\signer</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Unreal Projects\aws-sdk-cpp\src\aws-cpp-sdk-core\include\aws\core\auth\signer\AWSAuthSignerBase.h">
+      <Filter>Header Files\aws\core\auth\signer</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Unreal Projects\aws-sdk-cpp\src\aws-cpp-sdk-core\include\aws\core\auth\signer\AWSAuthSignerCommon.h">
+      <Filter>Header Files\aws\core\auth\signer</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Unreal Projects\aws-sdk-cpp\src\aws-cpp-sdk-core\include\aws\core\auth\signer\AWSAuthSignerHelper.h">
+      <Filter>Header Files\aws\core\auth\signer</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Unreal Projects\aws-sdk-cpp\src\aws-cpp-sdk-core\include\aws\core\auth\signer\AWSAuthV4Signer.h">
+      <Filter>Header Files\aws\core\auth\signer</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Unreal Projects\aws-sdk-cpp\src\aws-cpp-sdk-core\include\aws\core\auth\signer\AWSNullSigner.h">
+      <Filter>Header Files\aws\core\auth\signer</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Unreal Projects\aws-sdk-cpp\src\aws-cpp-sdk-core\include\aws\core\client\AWSAsyncOperationTemplate.h">
+      <Filter>Header Files\aws\core\client</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Unreal Projects\aws-sdk-cpp\src\aws-cpp-sdk-core\include\aws\core\client\AWSClient.h">
+      <Filter>Header Files\aws\core\client</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Unreal Projects\aws-sdk-cpp\src\aws-cpp-sdk-core\include\aws\core\client\AWSClientAsyncCRTP.h">
+      <Filter>Header Files\aws\core\client</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Unreal Projects\aws-sdk-cpp\src\aws-cpp-sdk-core\include\aws\core\client\AWSError.h">
+      <Filter>Header Files\aws\core\client</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Unreal Projects\aws-sdk-cpp\src\aws-cpp-sdk-core\include\aws\core\client\AWSErrorMarshaller.h">
+      <Filter>Header Files\aws\core\client</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Unreal Projects\aws-sdk-cpp\src\aws-cpp-sdk-core\include\aws\core\client\AWSJsonClient.h">
+      <Filter>Header Files\aws\core\client</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Unreal Projects\aws-sdk-cpp\src\aws-cpp-sdk-core\include\aws\core\client\AWSUrlPresigner.h">
+      <Filter>Header Files\aws\core\client</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Unreal Projects\aws-sdk-cpp\src\aws-cpp-sdk-core\include\aws\core\client\AWSXmlClient.h">
+      <Filter>Header Files\aws\core\client</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Unreal Projects\aws-sdk-cpp\src\aws-cpp-sdk-core\include\aws\core\client\AdaptiveRetryStrategy.h">
+      <Filter>Header Files\aws\core\client</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Unreal Projects\aws-sdk-cpp\src\aws-cpp-sdk-core\include\aws\core\client\AsyncCallerContext.h">
+      <Filter>Header Files\aws\core\client</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Unreal Projects\aws-sdk-cpp\src\aws-cpp-sdk-core\include\aws\core\client\ClientConfiguration.h">
+      <Filter>Header Files\aws\core\client</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Unreal Projects\aws-sdk-cpp\src\aws-cpp-sdk-core\include\aws\core\client\CoreErrors.h">
+      <Filter>Header Files\aws\core\client</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Unreal Projects\aws-sdk-cpp\src\aws-cpp-sdk-core\include\aws\core\client\DefaultRetryStrategy.h">
+      <Filter>Header Files\aws\core\client</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Unreal Projects\aws-sdk-cpp\src\aws-cpp-sdk-core\include\aws\core\client\GenericClientConfiguration.h">
+      <Filter>Header Files\aws\core\client</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Unreal Projects\aws-sdk-cpp\src\aws-cpp-sdk-core\include\aws\core\client\RequestCompression.h">
+      <Filter>Header Files\aws\core\client</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Unreal Projects\aws-sdk-cpp\src\aws-cpp-sdk-core\include\aws\core\client\RetryStrategy.h">
+      <Filter>Header Files\aws\core\client</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Unreal Projects\aws-sdk-cpp\src\aws-cpp-sdk-core\include\aws\core\client\SpecifiedRetryableErrorsRetryStrategy.h">
+      <Filter>Header Files\aws\core\client</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Unreal Projects\aws-sdk-cpp\src\aws-cpp-sdk-core\include\aws\core\config\AWSConfigFileProfileConfigLoader.h">
+      <Filter>Header Files\aws\core\config</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Unreal Projects\aws-sdk-cpp\src\aws-cpp-sdk-core\include\aws\core\config\AWSProfileConfig.h">
+      <Filter>Header Files\aws\core\config</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Unreal Projects\aws-sdk-cpp\src\aws-cpp-sdk-core\include\aws\core\config\AWSProfileConfigLoader.h">
+      <Filter>Header Files\aws\core\config</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Unreal Projects\aws-sdk-cpp\src\aws-cpp-sdk-core\include\aws\core\config\AWSProfileConfigLoaderBase.h">
+      <Filter>Header Files\aws\core\config</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Unreal Projects\aws-sdk-cpp\src\aws-cpp-sdk-core\include\aws\core\config\ConfigAndCredentialsCacheManager.h">
+      <Filter>Header Files\aws\core\config</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Unreal Projects\aws-sdk-cpp\src\aws-cpp-sdk-core\include\aws\core\config\EC2InstanceProfileConfigLoader.h">
+      <Filter>Header Files\aws\core\config</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Unreal Projects\aws-sdk-cpp\src\aws-cpp-sdk-core\include\aws\core\config\defaults\ClientConfigurationDefaults.h">
+      <Filter>Header Files\aws\core\config\defaults</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Unreal Projects\aws-sdk-cpp\src\aws-cpp-sdk-core\include\aws\core\endpoint\AWSEndpoint.h">
+      <Filter>Header Files\aws\core\endpoint</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Unreal Projects\aws-sdk-cpp\src\aws-cpp-sdk-core\include\aws\core\endpoint\AWSPartitions.h">
+      <Filter>Header Files\aws\core\endpoint</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Unreal Projects\aws-sdk-cpp\src\aws-cpp-sdk-core\include\aws\core\endpoint\BuiltInParameters.h">
+      <Filter>Header Files\aws\core\endpoint</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Unreal Projects\aws-sdk-cpp\src\aws-cpp-sdk-core\include\aws\core\endpoint\ClientContextParameters.h">
+      <Filter>Header Files\aws\core\endpoint</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Unreal Projects\aws-sdk-cpp\src\aws-cpp-sdk-core\include\aws\core\endpoint\DefaultEndpointProvider.h">
+      <Filter>Header Files\aws\core\endpoint</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Unreal Projects\aws-sdk-cpp\src\aws-cpp-sdk-core\include\aws\core\endpoint\EndpointParameter.h">
+      <Filter>Header Files\aws\core\endpoint</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Unreal Projects\aws-sdk-cpp\src\aws-cpp-sdk-core\include\aws\core\endpoint\EndpointProviderBase.h">
+      <Filter>Header Files\aws\core\endpoint</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Unreal Projects\aws-sdk-cpp\src\aws-cpp-sdk-core\include\aws\core\endpoint\internal\AWSEndpointAttribute.h">
+      <Filter>Header Files\aws\core\endpoint\internal</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Unreal Projects\aws-sdk-cpp\src\aws-cpp-sdk-core\include\aws\core\external\cjson\cJSON.h">
+      <Filter>Header Files\aws\core\external\cjson</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Unreal Projects\aws-sdk-cpp\src\aws-cpp-sdk-core\include\aws\core\external\tinyxml2\tinyxml2.h">
+      <Filter>Header Files\aws\core\external\tinyxml2</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Unreal Projects\aws-sdk-cpp\src\aws-cpp-sdk-core\include\aws\core\http\HttpClient.h">
+      <Filter>Header Files\aws\core\http</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Unreal Projects\aws-sdk-cpp\src\aws-cpp-sdk-core\include\aws\core\http\HttpClientFactory.h">
+      <Filter>Header Files\aws\core\http</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Unreal Projects\aws-sdk-cpp\src\aws-cpp-sdk-core\include\aws\core\http\HttpRequest.h">
+      <Filter>Header Files\aws\core\http</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Unreal Projects\aws-sdk-cpp\src\aws-cpp-sdk-core\include\aws\core\http\HttpResponse.h">
+      <Filter>Header Files\aws\core\http</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Unreal Projects\aws-sdk-cpp\src\aws-cpp-sdk-core\include\aws\core\http\HttpTypes.h">
+      <Filter>Header Files\aws\core\http</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Unreal Projects\aws-sdk-cpp\src\aws-cpp-sdk-core\include\aws\core\http\Scheme.h">
+      <Filter>Header Files\aws\core\http</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Unreal Projects\aws-sdk-cpp\src\aws-cpp-sdk-core\include\aws\core\http\URI.h">
+      <Filter>Header Files\aws\core\http</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Unreal Projects\aws-sdk-cpp\src\aws-cpp-sdk-core\include\aws\core\http\Version.h">
+      <Filter>Header Files\aws\core\http</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Unreal Projects\aws-sdk-cpp\src\aws-cpp-sdk-core\include\aws\core\http\standard\StandardHttpRequest.h">
+      <Filter>Header Files\aws\core\http\standard</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Unreal Projects\aws-sdk-cpp\src\aws-cpp-sdk-core\include\aws\core\http\standard\StandardHttpResponse.h">
+      <Filter>Header Files\aws\core\http\standard</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Unreal Projects\aws-sdk-cpp\src\aws-cpp-sdk-core\include\aws\core\http\windows\WinConnectionPoolMgr.h">
+      <Filter>Header Files\aws\core\http\windows</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Unreal Projects\aws-sdk-cpp\src\aws-cpp-sdk-core\include\aws\core\http\windows\WinHttpConnectionPoolMgr.h">
+      <Filter>Header Files\aws\core\http\windows</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Unreal Projects\aws-sdk-cpp\src\aws-cpp-sdk-core\include\aws\core\http\windows\WinHttpSyncHttpClient.h">
+      <Filter>Header Files\aws\core\http\windows</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Unreal Projects\aws-sdk-cpp\src\aws-cpp-sdk-core\include\aws\core\http\windows\WinINetConnectionPoolMgr.h">
+      <Filter>Header Files\aws\core\http\windows</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Unreal Projects\aws-sdk-cpp\src\aws-cpp-sdk-core\include\aws\core\http\windows\WinINetSyncHttpClient.h">
+      <Filter>Header Files\aws\core\http\windows</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Unreal Projects\aws-sdk-cpp\src\aws-cpp-sdk-core\include\aws\core\http\windows\WinSyncHttpClient.h">
+      <Filter>Header Files\aws\core\http\windows</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Unreal Projects\aws-sdk-cpp\src\aws-cpp-sdk-core\include\aws\core\internal\AWSHttpResourceClient.h">
+      <Filter>Header Files\aws\core\internal</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Unreal Projects\aws-sdk-cpp\src\aws-cpp-sdk-core\include\aws\core\monitoring\CoreMetrics.h">
+      <Filter>Header Files\aws\core\monitoring</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Unreal Projects\aws-sdk-cpp\src\aws-cpp-sdk-core\include\aws\core\monitoring\DefaultMonitoring.h">
+      <Filter>Header Files\aws\core\monitoring</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Unreal Projects\aws-sdk-cpp\src\aws-cpp-sdk-core\include\aws\core\monitoring\HttpClientMetrics.h">
+      <Filter>Header Files\aws\core\monitoring</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Unreal Projects\aws-sdk-cpp\src\aws-cpp-sdk-core\include\aws\core\monitoring\MonitoringFactory.h">
+      <Filter>Header Files\aws\core\monitoring</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Unreal Projects\aws-sdk-cpp\src\aws-cpp-sdk-core\include\aws\core\monitoring\MonitoringInterface.h">
+      <Filter>Header Files\aws\core\monitoring</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Unreal Projects\aws-sdk-cpp\src\aws-cpp-sdk-core\include\aws\core\monitoring\MonitoringManager.h">
+      <Filter>Header Files\aws\core\monitoring</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Unreal Projects\aws-sdk-cpp\src\aws-cpp-sdk-core\include\aws\core\net\Net.h">
+      <Filter>Header Files\aws\core\net</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Unreal Projects\aws-sdk-cpp\src\aws-cpp-sdk-core\include\aws\core\net\SimpleUDP.h">
+      <Filter>Header Files\aws\core\net</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Unreal Projects\aws-sdk-cpp\src\aws-cpp-sdk-core\include\aws\core\platform\Android.h">
+      <Filter>Header Files\aws\core\platform</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Unreal Projects\aws-sdk-cpp\src\aws-cpp-sdk-core\include\aws\core\platform\Environment.h">
+      <Filter>Header Files\aws\core\platform</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Unreal Projects\aws-sdk-cpp\src\aws-cpp-sdk-core\include\aws\core\platform\FileSystem.h">
+      <Filter>Header Files\aws\core\platform</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Unreal Projects\aws-sdk-cpp\src\aws-cpp-sdk-core\include\aws\core\platform\OSVersionInfo.h">
+      <Filter>Header Files\aws\core\platform</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Unreal Projects\aws-sdk-cpp\src\aws-cpp-sdk-core\include\aws\core\platform\Platform.h">
+      <Filter>Header Files\aws\core\platform</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Unreal Projects\aws-sdk-cpp\src\aws-cpp-sdk-core\include\aws\core\platform\Security.h">
+      <Filter>Header Files\aws\core\platform</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Unreal Projects\aws-sdk-cpp\src\aws-cpp-sdk-core\include\aws\core\platform\Time.h">
+      <Filter>Header Files\aws\core\platform</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Unreal Projects\aws-sdk-cpp\src\aws-cpp-sdk-core\include\aws\core\utils\ARN.h">
+      <Filter>Header Files\aws\core\utils</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Unreal Projects\aws-sdk-cpp\src\aws-cpp-sdk-core\include\aws\core\utils\Array.h">
+      <Filter>Header Files\aws\core\utils</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Unreal Projects\aws-sdk-cpp\src\aws-cpp-sdk-core\include\aws\core\utils\Cache.h">
+      <Filter>Header Files\aws\core\utils</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Unreal Projects\aws-sdk-cpp\src\aws-cpp-sdk-core\include\aws\core\utils\ConcurrentCache.h">
+      <Filter>Header Files\aws\core\utils</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Unreal Projects\aws-sdk-cpp\src\aws-cpp-sdk-core\include\aws\core\utils\DNS.h">
+      <Filter>Header Files\aws\core\utils</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Unreal Projects\aws-sdk-cpp\src\aws-cpp-sdk-core\include\aws\core\utils\DateTime.h">
+      <Filter>Header Files\aws\core\utils</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Unreal Projects\aws-sdk-cpp\src\aws-cpp-sdk-core\include\aws\core\utils\Document.h">
+      <Filter>Header Files\aws\core\utils</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Unreal Projects\aws-sdk-cpp\src\aws-cpp-sdk-core\include\aws\core\utils\EnumParseOverflowContainer.h">
+      <Filter>Header Files\aws\core\utils</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Unreal Projects\aws-sdk-cpp\src\aws-cpp-sdk-core\include\aws\core\utils\FileSystemUtils.h">
+      <Filter>Header Files\aws\core\utils</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Unreal Projects\aws-sdk-cpp\src\aws-cpp-sdk-core\include\aws\core\utils\GetTheLights.h">
+      <Filter>Header Files\aws\core\utils</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Unreal Projects\aws-sdk-cpp\src\aws-cpp-sdk-core\include\aws\core\utils\HashingUtils.h">
+      <Filter>Header Files\aws\core\utils</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Unreal Projects\aws-sdk-cpp\src\aws-cpp-sdk-core\include\aws\core\utils\Outcome.h">
+      <Filter>Header Files\aws\core\utils</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Unreal Projects\aws-sdk-cpp\src\aws-cpp-sdk-core\include\aws\core\utils\RAIICounter.h">
+      <Filter>Header Files\aws\core\utils</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Unreal Projects\aws-sdk-cpp\src\aws-cpp-sdk-core\include\aws\core\utils\ResourceManager.h">
+      <Filter>Header Files\aws\core\utils</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Unreal Projects\aws-sdk-cpp\src\aws-cpp-sdk-core\include\aws\core\utils\StringUtils.h">
+      <Filter>Header Files\aws\core\utils</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Unreal Projects\aws-sdk-cpp\src\aws-cpp-sdk-core\include\aws\core\utils\UUID.h">
+      <Filter>Header Files\aws\core\utils</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Unreal Projects\aws-sdk-cpp\src\aws-cpp-sdk-core\include\aws\core\utils\UnreferencedParam.h">
+      <Filter>Header Files\aws\core\utils</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Unreal Projects\aws-sdk-cpp\src\aws-cpp-sdk-core\include\aws\core\utils\base64\Base64.h">
+      <Filter>Header Files\aws\core\utils\base64</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Unreal Projects\aws-sdk-cpp\src\aws-cpp-sdk-core\include\aws\core\utils\component-registry\ComponentRegistry.h">
+      <Filter>Header Files\aws\core\utils\component-registry</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Unreal Projects\aws-sdk-cpp\src\aws-cpp-sdk-core\include\aws\core\utils\crypto\CRC32.h">
+      <Filter>Header Files\aws\core\utils\crypto</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Unreal Projects\aws-sdk-cpp\src\aws-cpp-sdk-core\include\aws\core\utils\crypto\Cipher.h">
+      <Filter>Header Files\aws\core\utils\crypto</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Unreal Projects\aws-sdk-cpp\src\aws-cpp-sdk-core\include\aws\core\utils\crypto\ContentCryptoMaterial.h">
+      <Filter>Header Files\aws\core\utils\crypto</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Unreal Projects\aws-sdk-cpp\src\aws-cpp-sdk-core\include\aws\core\utils\crypto\ContentCryptoScheme.h">
+      <Filter>Header Files\aws\core\utils\crypto</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Unreal Projects\aws-sdk-cpp\src\aws-cpp-sdk-core\include\aws\core\utils\crypto\CryptoBuf.h">
+      <Filter>Header Files\aws\core\utils\crypto</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Unreal Projects\aws-sdk-cpp\src\aws-cpp-sdk-core\include\aws\core\utils\crypto\CryptoStream.h">
+      <Filter>Header Files\aws\core\utils\crypto</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Unreal Projects\aws-sdk-cpp\src\aws-cpp-sdk-core\include\aws\core\utils\crypto\EncryptionMaterials.h">
+      <Filter>Header Files\aws\core\utils\crypto</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Unreal Projects\aws-sdk-cpp\src\aws-cpp-sdk-core\include\aws\core\utils\crypto\Factories.h">
+      <Filter>Header Files\aws\core\utils\crypto</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Unreal Projects\aws-sdk-cpp\src\aws-cpp-sdk-core\include\aws\core\utils\crypto\HMAC.h">
+      <Filter>Header Files\aws\core\utils\crypto</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Unreal Projects\aws-sdk-cpp\src\aws-cpp-sdk-core\include\aws\core\utils\crypto\Hash.h">
+      <Filter>Header Files\aws\core\utils\crypto</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Unreal Projects\aws-sdk-cpp\src\aws-cpp-sdk-core\include\aws\core\utils\crypto\HashResult.h">
+      <Filter>Header Files\aws\core\utils\crypto</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Unreal Projects\aws-sdk-cpp\src\aws-cpp-sdk-core\include\aws\core\utils\crypto\KeyWrapAlgorithm.h">
+      <Filter>Header Files\aws\core\utils\crypto</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Unreal Projects\aws-sdk-cpp\src\aws-cpp-sdk-core\include\aws\core\utils\crypto\MD5.h">
+      <Filter>Header Files\aws\core\utils\crypto</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Unreal Projects\aws-sdk-cpp\src\aws-cpp-sdk-core\include\aws\core\utils\crypto\PrecalculatedHash.h">
+      <Filter>Header Files\aws\core\utils\crypto</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Unreal Projects\aws-sdk-cpp\src\aws-cpp-sdk-core\include\aws\core\utils\crypto\SecureRandom.h">
+      <Filter>Header Files\aws\core\utils\crypto</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Unreal Projects\aws-sdk-cpp\src\aws-cpp-sdk-core\include\aws\core\utils\crypto\Sha1.h">
+      <Filter>Header Files\aws\core\utils\crypto</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Unreal Projects\aws-sdk-cpp\src\aws-cpp-sdk-core\include\aws\core\utils\crypto\Sha256.h">
+      <Filter>Header Files\aws\core\utils\crypto</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Unreal Projects\aws-sdk-cpp\src\aws-cpp-sdk-core\include\aws\core\utils\crypto\Sha256HMAC.h">
+      <Filter>Header Files\aws\core\utils\crypto</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Unreal Projects\aws-sdk-cpp\src\aws-cpp-sdk-core\include\aws\core\utils\crypto\bcrypt\CryptoImpl.h">
+      <Filter>Header Files\aws\core\utils\crypto\bcrypt</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Unreal Projects\aws-sdk-cpp\src\aws-cpp-sdk-core\include\aws\core\utils\event\EventDecoderStream.h">
+      <Filter>Header Files\aws\core\utils\event</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Unreal Projects\aws-sdk-cpp\src\aws-cpp-sdk-core\include\aws\core\utils\event\EventEncoderStream.h">
+      <Filter>Header Files\aws\core\utils\event</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Unreal Projects\aws-sdk-cpp\src\aws-cpp-sdk-core\include\aws\core\utils\event\EventHeader.h">
+      <Filter>Header Files\aws\core\utils\event</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Unreal Projects\aws-sdk-cpp\src\aws-cpp-sdk-core\include\aws\core\utils\event\EventMessage.h">
+      <Filter>Header Files\aws\core\utils\event</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Unreal Projects\aws-sdk-cpp\src\aws-cpp-sdk-core\include\aws\core\utils\event\EventStream.h">
+      <Filter>Header Files\aws\core\utils\event</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Unreal Projects\aws-sdk-cpp\src\aws-cpp-sdk-core\include\aws\core\utils\event\EventStreamBuf.h">
+      <Filter>Header Files\aws\core\utils\event</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Unreal Projects\aws-sdk-cpp\src\aws-cpp-sdk-core\include\aws\core\utils\event\EventStreamDecoder.h">
+      <Filter>Header Files\aws\core\utils\event</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Unreal Projects\aws-sdk-cpp\src\aws-cpp-sdk-core\include\aws\core\utils\event\EventStreamEncoder.h">
+      <Filter>Header Files\aws\core\utils\event</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Unreal Projects\aws-sdk-cpp\src\aws-cpp-sdk-core\include\aws\core\utils\event\EventStreamErrors.h">
+      <Filter>Header Files\aws\core\utils\event</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Unreal Projects\aws-sdk-cpp\src\aws-cpp-sdk-core\include\aws\core\utils\event\EventStreamHandler.h">
+      <Filter>Header Files\aws\core\utils\event</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Unreal Projects\aws-sdk-cpp\src\aws-cpp-sdk-core\include\aws\core\utils\json\JsonSerializer.h">
+      <Filter>Header Files\aws\core\utils\json</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Unreal Projects\aws-sdk-cpp\src\aws-cpp-sdk-core\include\aws\core\utils\logging\AWSLogging.h">
+      <Filter>Header Files\aws\core\utils\logging</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Unreal Projects\aws-sdk-cpp\src\aws-cpp-sdk-core\include\aws\core\utils\logging\CRTLogSystem.h">
+      <Filter>Header Files\aws\core\utils\logging</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Unreal Projects\aws-sdk-cpp\src\aws-cpp-sdk-core\include\aws\core\utils\logging\CRTLogging.h">
+      <Filter>Header Files\aws\core\utils\logging</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Unreal Projects\aws-sdk-cpp\src\aws-cpp-sdk-core\include\aws\core\utils\logging\ConsoleLogSystem.h">
+      <Filter>Header Files\aws\core\utils\logging</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Unreal Projects\aws-sdk-cpp\src\aws-cpp-sdk-core\include\aws\core\utils\logging\DefaultCRTLogSystem.h">
+      <Filter>Header Files\aws\core\utils\logging</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Unreal Projects\aws-sdk-cpp\src\aws-cpp-sdk-core\include\aws\core\utils\logging\DefaultLogSystem.h">
+      <Filter>Header Files\aws\core\utils\logging</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Unreal Projects\aws-sdk-cpp\src\aws-cpp-sdk-core\include\aws\core\utils\logging\ErrorMacros.h">
+      <Filter>Header Files\aws\core\utils\logging</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Unreal Projects\aws-sdk-cpp\src\aws-cpp-sdk-core\include\aws\core\utils\logging\FormattedLogSystem.h">
+      <Filter>Header Files\aws\core\utils\logging</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Unreal Projects\aws-sdk-cpp\src\aws-cpp-sdk-core\include\aws\core\utils\logging\LogLevel.h">
+      <Filter>Header Files\aws\core\utils\logging</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Unreal Projects\aws-sdk-cpp\src\aws-cpp-sdk-core\include\aws\core\utils\logging\LogMacros.h">
+      <Filter>Header Files\aws\core\utils\logging</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Unreal Projects\aws-sdk-cpp\src\aws-cpp-sdk-core\include\aws\core\utils\logging\LogSystemInterface.h">
+      <Filter>Header Files\aws\core\utils\logging</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Unreal Projects\aws-sdk-cpp\src\aws-cpp-sdk-core\include\aws\core\utils\logging\NullLogSystem.h">
+      <Filter>Header Files\aws\core\utils\logging</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Unreal Projects\aws-sdk-cpp\src\aws-cpp-sdk-core\include\aws\core\utils\memory\AWSMemory.h">
+      <Filter>Header Files\aws\core\utils\memory</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Unreal Projects\aws-sdk-cpp\src\aws-cpp-sdk-core\include\aws\core\utils\memory\MemorySystemInterface.h">
+      <Filter>Header Files\aws\core\utils\memory</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Unreal Projects\aws-sdk-cpp\src\aws-cpp-sdk-core\include\aws\core\utils\memory\stl\AWSAllocator.h">
+      <Filter>Header Files\aws\core\utils\memory\stl</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Unreal Projects\aws-sdk-cpp\src\aws-cpp-sdk-core\include\aws\core\utils\memory\stl\AWSArray.h">
+      <Filter>Header Files\aws\core\utils\memory\stl</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Unreal Projects\aws-sdk-cpp\src\aws-cpp-sdk-core\include\aws\core\utils\memory\stl\AWSDeque.h">
+      <Filter>Header Files\aws\core\utils\memory\stl</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Unreal Projects\aws-sdk-cpp\src\aws-cpp-sdk-core\include\aws\core\utils\memory\stl\AWSList.h">
+      <Filter>Header Files\aws\core\utils\memory\stl</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Unreal Projects\aws-sdk-cpp\src\aws-cpp-sdk-core\include\aws\core\utils\memory\stl\AWSMap.h">
+      <Filter>Header Files\aws\core\utils\memory\stl</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Unreal Projects\aws-sdk-cpp\src\aws-cpp-sdk-core\include\aws\core\utils\memory\stl\AWSMultiMap.h">
+      <Filter>Header Files\aws\core\utils\memory\stl</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Unreal Projects\aws-sdk-cpp\src\aws-cpp-sdk-core\include\aws\core\utils\memory\stl\AWSQueue.h">
+      <Filter>Header Files\aws\core\utils\memory\stl</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Unreal Projects\aws-sdk-cpp\src\aws-cpp-sdk-core\include\aws\core\utils\memory\stl\AWSSet.h">
+      <Filter>Header Files\aws\core\utils\memory\stl</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Unreal Projects\aws-sdk-cpp\src\aws-cpp-sdk-core\include\aws\core\utils\memory\stl\AWSStack.h">
+      <Filter>Header Files\aws\core\utils\memory\stl</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Unreal Projects\aws-sdk-cpp\src\aws-cpp-sdk-core\include\aws\core\utils\memory\stl\AWSStreamFwd.h">
+      <Filter>Header Files\aws\core\utils\memory\stl</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Unreal Projects\aws-sdk-cpp\src\aws-cpp-sdk-core\include\aws\core\utils\memory\stl\AWSString.h">
+      <Filter>Header Files\aws\core\utils\memory\stl</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Unreal Projects\aws-sdk-cpp\src\aws-cpp-sdk-core\include\aws\core\utils\memory\stl\AWSStringStream.h">
+      <Filter>Header Files\aws\core\utils\memory\stl</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Unreal Projects\aws-sdk-cpp\src\aws-cpp-sdk-core\include\aws\core\utils\memory\stl\AWSVector.h">
+      <Filter>Header Files\aws\core\utils\memory\stl</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Unreal Projects\aws-sdk-cpp\src\aws-cpp-sdk-core\include\aws\core\utils\memory\stl\SimpleStringStream.h">
+      <Filter>Header Files\aws\core\utils\memory\stl</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Unreal Projects\aws-sdk-cpp\src\aws-cpp-sdk-core\include\aws\core\utils\ratelimiter\DefaultRateLimiter.h">
+      <Filter>Header Files\aws\core\utils\ratelimiter</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Unreal Projects\aws-sdk-cpp\src\aws-cpp-sdk-core\include\aws\core\utils\ratelimiter\RateLimiterInterface.h">
+      <Filter>Header Files\aws\core\utils\ratelimiter</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Unreal Projects\aws-sdk-cpp\src\aws-cpp-sdk-core\include\aws\core\utils\stream\ConcurrentStreamBuf.h">
+      <Filter>Header Files\aws\core\utils\stream</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Unreal Projects\aws-sdk-cpp\src\aws-cpp-sdk-core\include\aws\core\utils\stream\PreallocatedStreamBuf.h">
+      <Filter>Header Files\aws\core\utils\stream</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Unreal Projects\aws-sdk-cpp\src\aws-cpp-sdk-core\include\aws\core\utils\stream\ResponseStream.h">
+      <Filter>Header Files\aws\core\utils\stream</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Unreal Projects\aws-sdk-cpp\src\aws-cpp-sdk-core\include\aws\core\utils\stream\SimpleStreamBuf.h">
+      <Filter>Header Files\aws\core\utils\stream</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Unreal Projects\aws-sdk-cpp\src\aws-cpp-sdk-core\include\aws\core\utils\threading\DefaultExecutor.h">
+      <Filter>Header Files\aws\core\utils\threading</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Unreal Projects\aws-sdk-cpp\src\aws-cpp-sdk-core\include\aws\core\utils\threading\Executor.h">
+      <Filter>Header Files\aws\core\utils\threading</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Unreal Projects\aws-sdk-cpp\src\aws-cpp-sdk-core\include\aws\core\utils\threading\PooledThreadExecutor.h">
+      <Filter>Header Files\aws\core\utils\threading</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Unreal Projects\aws-sdk-cpp\src\aws-cpp-sdk-core\include\aws\core\utils\threading\ReaderWriterLock.h">
+      <Filter>Header Files\aws\core\utils\threading</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Unreal Projects\aws-sdk-cpp\src\aws-cpp-sdk-core\include\aws\core\utils\threading\Semaphore.h">
+      <Filter>Header Files\aws\core\utils\threading</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Unreal Projects\aws-sdk-cpp\src\aws-cpp-sdk-core\include\aws\core\utils\threading\ThreadTask.h">
+      <Filter>Header Files\aws\core\utils\threading</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Unreal Projects\aws-sdk-cpp\src\aws-cpp-sdk-core\include\aws\core\utils\xml\XmlSerializer.h">
+      <Filter>Header Files\aws\core\utils\xml</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Unreal Projects\aws-sdk-cpp\src\aws-cpp-sdk-core\include\smithy\Smithy_EXPORTS.h">
+      <Filter>Header Files\smithy</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Unreal Projects\aws-sdk-cpp\src\aws-cpp-sdk-core\include\smithy\tracing\Gauge.h">
+      <Filter>Header Files\smithy\tracing</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Unreal Projects\aws-sdk-cpp\src\aws-cpp-sdk-core\include\smithy\tracing\Histogram.h">
+      <Filter>Header Files\smithy\tracing</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Unreal Projects\aws-sdk-cpp\src\aws-cpp-sdk-core\include\smithy\tracing\Meter.h">
+      <Filter>Header Files\smithy\tracing</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Unreal Projects\aws-sdk-cpp\src\aws-cpp-sdk-core\include\smithy\tracing\MeterProvider.h">
+      <Filter>Header Files\smithy\tracing</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Unreal Projects\aws-sdk-cpp\src\aws-cpp-sdk-core\include\smithy\tracing\MonotonicCounter.h">
+      <Filter>Header Files\smithy\tracing</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Unreal Projects\aws-sdk-cpp\src\aws-cpp-sdk-core\include\smithy\tracing\NoopMeterProvider.h">
+      <Filter>Header Files\smithy\tracing</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Unreal Projects\aws-sdk-cpp\src\aws-cpp-sdk-core\include\smithy\tracing\NoopTelemetryProvider.h">
+      <Filter>Header Files\smithy\tracing</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Unreal Projects\aws-sdk-cpp\src\aws-cpp-sdk-core\include\smithy\tracing\NoopTracerProvider.h">
+      <Filter>Header Files\smithy\tracing</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Unreal Projects\aws-sdk-cpp\src\aws-cpp-sdk-core\include\smithy\tracing\TelemetryProvider.h">
+      <Filter>Header Files\smithy\tracing</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Unreal Projects\aws-sdk-cpp\src\aws-cpp-sdk-core\include\smithy\tracing\TraceSpan.h">
+      <Filter>Header Files\smithy\tracing</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Unreal Projects\aws-sdk-cpp\src\aws-cpp-sdk-core\include\smithy\tracing\Tracer.h">
+      <Filter>Header Files\smithy\tracing</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Unreal Projects\aws-sdk-cpp\src\aws-cpp-sdk-core\include\smithy\tracing\TracerProvider.h">
+      <Filter>Header Files\smithy\tracing</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Unreal Projects\aws-sdk-cpp\src\aws-cpp-sdk-core\include\smithy\tracing\TracingUtils.h">
+      <Filter>Header Files\smithy\tracing</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Unreal Projects\aws-sdk-cpp\src\aws-cpp-sdk-core\include\smithy\tracing\UpDownCounter.h">
+      <Filter>Header Files\smithy\tracing</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Unreal Projects\aws-sdk-cpp\src\aws-cpp-sdk-core\source\auth\AWSCredentialsProvider.cpp">
+      <Filter>Source Files\auth</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Unreal Projects\aws-sdk-cpp\src\aws-cpp-sdk-core\source\auth\AWSCredentialsProviderChain.cpp">
+      <Filter>Source Files\auth</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Unreal Projects\aws-sdk-cpp\src\aws-cpp-sdk-core\source\auth\GeneralHTTPCredentialsProvider.cpp">
+      <Filter>Source Files\auth</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Unreal Projects\aws-sdk-cpp\src\aws-cpp-sdk-core\source\auth\SSOCredentialsProvider.cpp">
+      <Filter>Source Files\auth</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Unreal Projects\aws-sdk-cpp\src\aws-cpp-sdk-core\source\auth\STSCredentialsProvider.cpp">
+      <Filter>Source Files\auth</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Unreal Projects\aws-sdk-cpp\src\aws-cpp-sdk-core\source\auth\bearer-token-provider\DefaultBearerTokenProviderChain.cpp">
+      <Filter>Source Files\auth\bearer-token-provider</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Unreal Projects\aws-sdk-cpp\src\aws-cpp-sdk-core\source\auth\bearer-token-provider\SSOBearerTokenProvider.cpp">
+      <Filter>Source Files\auth\bearer-token-provider</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Unreal Projects\aws-sdk-cpp\src\aws-cpp-sdk-core\source\auth\signer-provider\AWSAuthSignerProviderBase.cpp">
+      <Filter>Source Files\auth\signer-provider</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Unreal Projects\aws-sdk-cpp\src\aws-cpp-sdk-core\source\auth\signer-provider\BearerTokenAuthSignerProvider.cpp">
+      <Filter>Source Files\auth\signer-provider</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Unreal Projects\aws-sdk-cpp\src\aws-cpp-sdk-core\source\auth\signer-provider\DefaultAuthSignerProvider.cpp">
+      <Filter>Source Files\auth\signer-provider</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Unreal Projects\aws-sdk-cpp\src\aws-cpp-sdk-core\source\auth\signer\AWSAuthBearerSigner.cpp">
+      <Filter>Source Files\auth\signer</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Unreal Projects\aws-sdk-cpp\src\aws-cpp-sdk-core\source\auth\signer\AWSAuthEventStreamV4Signer.cpp">
+      <Filter>Source Files\auth\signer</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Unreal Projects\aws-sdk-cpp\src\aws-cpp-sdk-core\source\auth\signer\AWSAuthSignerCommon.cpp">
+      <Filter>Source Files\auth\signer</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Unreal Projects\aws-sdk-cpp\src\aws-cpp-sdk-core\source\auth\signer\AWSAuthSignerHelper.cpp">
+      <Filter>Source Files\auth\signer</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Unreal Projects\aws-sdk-cpp\src\aws-cpp-sdk-core\source\auth\signer\AWSAuthV4Signer.cpp">
+      <Filter>Source Files\auth\signer</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Unreal Projects\aws-sdk-cpp\src\aws-cpp-sdk-core\source\auth\signer\AWSNullSigner.cpp">
+      <Filter>Source Files\auth\signer</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Unreal Projects\aws-sdk-cpp\src\aws-cpp-sdk-core\source\client\AWSClient.cpp">
+      <Filter>Source Files\client</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Unreal Projects\aws-sdk-cpp\src\aws-cpp-sdk-core\source\client\AWSErrorMarshaller.cpp">
+      <Filter>Source Files\client</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Unreal Projects\aws-sdk-cpp\src\aws-cpp-sdk-core\source\client\AWSJsonClient.cpp">
+      <Filter>Source Files\client</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Unreal Projects\aws-sdk-cpp\src\aws-cpp-sdk-core\source\client\AWSUrlPresigner.cpp">
+      <Filter>Source Files\client</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Unreal Projects\aws-sdk-cpp\src\aws-cpp-sdk-core\source\client\AWSXmlClient.cpp">
+      <Filter>Source Files\client</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Unreal Projects\aws-sdk-cpp\src\aws-cpp-sdk-core\source\client\AdaptiveRetryStrategy.cpp">
+      <Filter>Source Files\client</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Unreal Projects\aws-sdk-cpp\src\aws-cpp-sdk-core\source\client\AsyncCallerContext.cpp">
+      <Filter>Source Files\client</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Unreal Projects\aws-sdk-cpp\src\aws-cpp-sdk-core\source\client\ClientConfiguration.cpp">
+      <Filter>Source Files\client</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Unreal Projects\aws-sdk-cpp\src\aws-cpp-sdk-core\source\client\CoreErrors.cpp">
+      <Filter>Source Files\client</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Unreal Projects\aws-sdk-cpp\src\aws-cpp-sdk-core\source\client\DefaultRetryStrategy.cpp">
+      <Filter>Source Files\client</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Unreal Projects\aws-sdk-cpp\src\aws-cpp-sdk-core\source\client\GenericClientConfiguration.cpp">
+      <Filter>Source Files\client</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Unreal Projects\aws-sdk-cpp\src\aws-cpp-sdk-core\source\client\RequestCompression.cpp">
+      <Filter>Source Files\client</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Unreal Projects\aws-sdk-cpp\src\aws-cpp-sdk-core\source\client\RetryStrategy.cpp">
+      <Filter>Source Files\client</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Unreal Projects\aws-sdk-cpp\src\aws-cpp-sdk-core\source\client\SpecifiedRetryableErrorsRetryStrategy.cpp">
+      <Filter>Source Files\client</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Unreal Projects\aws-sdk-cpp\src\aws-cpp-sdk-core\source\config\AWSConfigFileProfileConfigLoader.cpp">
+      <Filter>Source Files\config</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Unreal Projects\aws-sdk-cpp\src\aws-cpp-sdk-core\source\config\AWSProfileConfigLoaderBase.cpp">
+      <Filter>Source Files\config</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Unreal Projects\aws-sdk-cpp\src\aws-cpp-sdk-core\source\config\ConfigAndCredentialsCacheManager.cpp">
+      <Filter>Source Files\config</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Unreal Projects\aws-sdk-cpp\src\aws-cpp-sdk-core\source\config\EC2InstanceProfileConfigLoader.cpp">
+      <Filter>Source Files\config</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Unreal Projects\aws-sdk-cpp\src\aws-cpp-sdk-core\source\config\defaults\ClientConfigurationDefaults.cpp">
+      <Filter>Source Files\config\defaults</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Unreal Projects\aws-sdk-cpp\src\aws-cpp-sdk-core\source\endpoint\AWSEndpoint.cpp">
+      <Filter>Source Files\endpoint</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Unreal Projects\aws-sdk-cpp\src\aws-cpp-sdk-core\source\endpoint\AWSPartitions.cpp">
+      <Filter>Source Files\endpoint</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Unreal Projects\aws-sdk-cpp\src\aws-cpp-sdk-core\source\endpoint\BuiltInParameters.cpp">
+      <Filter>Source Files\endpoint</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Unreal Projects\aws-sdk-cpp\src\aws-cpp-sdk-core\source\endpoint\ClientContextParameters.cpp">
+      <Filter>Source Files\endpoint</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Unreal Projects\aws-sdk-cpp\src\aws-cpp-sdk-core\source\endpoint\DefaultEndpointProvider.cpp">
+      <Filter>Source Files\endpoint</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Unreal Projects\aws-sdk-cpp\src\aws-cpp-sdk-core\source\endpoint\EndpointProviderBase.cpp">
+      <Filter>Source Files\endpoint</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Unreal Projects\aws-sdk-cpp\src\aws-cpp-sdk-core\source\endpoint\internal\AWSEndpointAttribute.cpp">
+      <Filter>Source Files\endpoint\internal</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Unreal Projects\aws-sdk-cpp\src\aws-cpp-sdk-core\source\external\tinyxml2\tinyxml2.cpp">
+      <Filter>Source Files\external\tinyxml2</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Unreal Projects\aws-sdk-cpp\src\aws-cpp-sdk-core\source\http\standard\StandardHttpRequest.cpp">
+      <Filter>Source Files\http\standard</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Unreal Projects\aws-sdk-cpp\src\aws-cpp-sdk-core\source\http\standard\StandardHttpResponse.cpp">
+      <Filter>Source Files\http\standard</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Unreal Projects\aws-sdk-cpp\src\aws-cpp-sdk-core\source\smithy\tracing\TracingUtils.cpp">
+      <Filter>Source Files\smithy\tracing</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Unreal Projects\aws-sdk-cpp\src\aws-cpp-sdk-core\source\utils\base64\Base64.cpp">
+      <Filter>Source Files\utils\base64</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Unreal Projects\aws-sdk-cpp\src\aws-cpp-sdk-core\source\utils\component-registry\ComponentRegistry.cpp">
+      <Filter>Source Files\utils\component-registry</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Unreal Projects\aws-sdk-cpp\src\aws-cpp-sdk-core\source\utils\logging\AWSLogging.cpp">
+      <Filter>Source Files\utils\logging</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Unreal Projects\aws-sdk-cpp\src\aws-cpp-sdk-core\source\utils\logging\CRTLogging.cpp">
+      <Filter>Source Files\utils\logging</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Unreal Projects\aws-sdk-cpp\src\aws-cpp-sdk-core\source\utils\logging\ConsoleLogSystem.cpp">
+      <Filter>Source Files\utils\logging</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Unreal Projects\aws-sdk-cpp\src\aws-cpp-sdk-core\source\utils\logging\DefaultCRTLogSystem.cpp">
+      <Filter>Source Files\utils\logging</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Unreal Projects\aws-sdk-cpp\src\aws-cpp-sdk-core\source\utils\logging\DefaultLogSystem.cpp">
+      <Filter>Source Files\utils\logging</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Unreal Projects\aws-sdk-cpp\src\aws-cpp-sdk-core\source\utils\logging\FormattedLogSystem.cpp">
+      <Filter>Source Files\utils\logging</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Unreal Projects\aws-sdk-cpp\src\aws-cpp-sdk-core\source\utils\logging\LogLevel.cpp">
+      <Filter>Source Files\utils\logging</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Unreal Projects\aws-sdk-cpp\src\aws-cpp-sdk-core\source\utils\memory\AWSMemory.cpp">
+      <Filter>Source Files\utils\memory</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Unreal Projects\aws-sdk-cpp\src\aws-cpp-sdk-core\source\utils\memory\stl\SimpleStringStream.cpp">
+      <Filter>Source Files\utils\memory\stl</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Unreal Projects\aws-sdk-cpp\src\aws-cpp-sdk-core\source\utils\stream\ConcurrentStreamBuf.cpp">
+      <Filter>Source Files\utils\stream</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Unreal Projects\aws-sdk-cpp\src\aws-cpp-sdk-core\source\utils\stream\PreallocatedStreamBuf.cpp">
+      <Filter>Source Files\utils\stream</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Unreal Projects\aws-sdk-cpp\src\aws-cpp-sdk-core\source\utils\stream\ResponseStream.cpp">
+      <Filter>Source Files\utils\stream</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Unreal Projects\aws-sdk-cpp\src\aws-cpp-sdk-core\source\utils\stream\SimpleStreamBuf.cpp">
+      <Filter>Source Files\utils\stream</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Unreal Projects\aws-sdk-cpp\src\aws-cpp-sdk-core\source\utils\threading\DefaultExecutor.cpp">
+      <Filter>Source Files\utils\threading</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Unreal Projects\aws-sdk-cpp\src\aws-cpp-sdk-core\source\utils\threading\PooledThreadExecutor.cpp">
+      <Filter>Source Files\utils\threading</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Unreal Projects\aws-sdk-cpp\src\aws-cpp-sdk-core\source\utils\threading\ReaderWriterLock.cpp">
+      <Filter>Source Files\utils\threading</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Unreal Projects\aws-sdk-cpp\src\aws-cpp-sdk-core\source\utils\threading\Semaphore.cpp">
+      <Filter>Source Files\utils\threading</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Unreal Projects\aws-sdk-cpp\src\aws-cpp-sdk-core\source\utils\threading\ThreadTask.cpp">
+      <Filter>Source Files\utils\threading</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Unreal Projects\aws-sdk-cpp\src\aws-cpp-sdk-core\source\utils\xml\XmlSerializer.cpp">
+      <Filter>Source Files\utils\xml</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="D:\Unreal Projects\aws-sdk-cpp\src\aws-cpp-sdk-core\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{6F0199CA-9D47-3E25-AB78-CCA8553426CC}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\aws">
+      <UniqueIdentifier>{E6B0D143-0CAF-36E3-AA53-2CC8DC177171}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\aws\core">
+      <UniqueIdentifier>{8BC577B5-4C67-306E-B802-21F7247CCF87}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\aws\core\auth">
+      <UniqueIdentifier>{7ED1EA29-D484-3295-A911-0B6FCBFACEA2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\aws\core\auth\bearer-token-provider">
+      <UniqueIdentifier>{26BA77B4-E97F-3AF9-A5ED-7DCF2B05DD3C}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\aws\core\auth\signer">
+      <UniqueIdentifier>{10EBCBFE-FB48-3AFD-8B10-65E475B2086F}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\aws\core\auth\signer-provider">
+      <UniqueIdentifier>{B1AD4ECD-A7E0-371C-A5D5-D05ECF518649}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\aws\core\client">
+      <UniqueIdentifier>{E7590636-C7E9-3486-8CB6-6A8A79108D71}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\aws\core\config">
+      <UniqueIdentifier>{998E554B-4E69-3185-BBBC-BB402CE2941C}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\aws\core\config\defaults">
+      <UniqueIdentifier>{9421F7A3-DB48-3351-BEAA-D11D38663281}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\aws\core\endpoint">
+      <UniqueIdentifier>{8176BC7F-2874-3B37-8D55-A2D4E26AE779}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\aws\core\endpoint\internal">
+      <UniqueIdentifier>{ACBF057B-9AC0-3C17-819C-10063A290EE2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\aws\core\external">
+      <UniqueIdentifier>{9224C9AD-F061-34B1-A9FB-C3A09795123E}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\aws\core\external\cjson">
+      <UniqueIdentifier>{3030D60E-849E-3F34-A8FC-BB79FD354F42}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\aws\core\external\tinyxml2">
+      <UniqueIdentifier>{5EB3074F-BAEA-3CF7-B4B3-48EEC4013318}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\aws\core\http">
+      <UniqueIdentifier>{A52FE47B-A278-312E-A1AC-D5494B0313BC}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\aws\core\http\standard">
+      <UniqueIdentifier>{63CEC57B-477F-31EB-8386-B263CAB78355}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\aws\core\http\windows">
+      <UniqueIdentifier>{EEBEC68E-12C6-32A0-BD19-6EE086097159}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\aws\core\internal">
+      <UniqueIdentifier>{F94E74CD-6947-38C7-8D55-275F2B6970E6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\aws\core\monitoring">
+      <UniqueIdentifier>{AF6C27D6-F833-3ED2-85B2-381C91906A9F}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\aws\core\net">
+      <UniqueIdentifier>{3E8ECCBD-F628-3DCA-9C4D-2FE0A9D95720}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\aws\core\platform">
+      <UniqueIdentifier>{A60C5BDF-CD39-35B5-9DA9-6E720EFF2D68}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\aws\core\utils">
+      <UniqueIdentifier>{3D19EFF5-7F4C-3612-A08B-D7785A6A1332}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\aws\core\utils\base64">
+      <UniqueIdentifier>{1C0CA28A-8F9D-3846-A5CE-DEE8F735AAA1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\aws\core\utils\component-registry">
+      <UniqueIdentifier>{12E93A21-4A6F-3576-AB75-09A21E9492CC}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\aws\core\utils\crypto">
+      <UniqueIdentifier>{3FEACC68-7B33-3477-B27E-910DE4A28DF7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\aws\core\utils\crypto\bcrypt">
+      <UniqueIdentifier>{02C40E63-E54C-3583-BD10-450BCE23B889}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\aws\core\utils\event">
+      <UniqueIdentifier>{AA9FC0BB-93CE-3758-90F4-486A2AA45D4F}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\aws\core\utils\json">
+      <UniqueIdentifier>{648A16E2-5CE5-3584-AEA6-AFA912515C1B}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\aws\core\utils\logging">
+      <UniqueIdentifier>{0A3C30A2-189C-3BB0-84E8-7E094514A8F9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\aws\core\utils\memory">
+      <UniqueIdentifier>{70C6B76D-07B8-3650-9E58-BEFD3396DF93}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\aws\core\utils\memory\stl">
+      <UniqueIdentifier>{18422B0D-4142-3E6C-811B-946B9018E258}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\aws\core\utils\ratelimiter">
+      <UniqueIdentifier>{C74D27D9-1259-3037-823A-853CAE3A708A}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\aws\core\utils\stream">
+      <UniqueIdentifier>{7AAE6352-45C4-3C97-9C7B-66F4175F9DD1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\aws\core\utils\threading">
+      <UniqueIdentifier>{BEE20576-0450-39BA-917D-3947C939A82C}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\aws\core\utils\xml">
+      <UniqueIdentifier>{CD0C0062-430C-321C-87B9-AB878AACFFEC}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\smithy">
+      <UniqueIdentifier>{85CD98DE-7796-34B5-B610-A2FBBFA98B71}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\smithy\tracing">
+      <UniqueIdentifier>{E0C35AB1-3C62-3BC7-AE27-C6D9AFAD2883}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{CCEC3583-A3C9-3A51-9022-2FBC475718F4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\auth">
+      <UniqueIdentifier>{5D6BEA73-754B-3639-84BB-FE14DA38F19F}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\auth\bearer-token-provider">
+      <UniqueIdentifier>{57C7ECA8-AE0A-3C06-9E49-9A1784D12C3C}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\auth\signer">
+      <UniqueIdentifier>{C80AC0A3-ACF2-30F3-BB8B-7A3266872771}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\auth\signer-provider">
+      <UniqueIdentifier>{037919FC-34FC-3ECB-991F-0DB530AC412F}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\client">
+      <UniqueIdentifier>{E7FFF665-ECBE-3C09-B91E-302EC97BE3DB}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\config">
+      <UniqueIdentifier>{E23DFAB5-21B5-3263-B2BF-98D08610B16C}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\config\defaults">
+      <UniqueIdentifier>{823C6E80-10F8-3549-863C-B32E08ECF259}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\endpoint">
+      <UniqueIdentifier>{68BA8E21-CB71-3607-93CC-6B2966BDFA33}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\endpoint\internal">
+      <UniqueIdentifier>{A8232BD5-213F-30A0-90E2-838E26481FA6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\external">
+      <UniqueIdentifier>{65AEF3C9-50B2-37E4-BED4-4003EE2E997C}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\external\cjson">
+      <UniqueIdentifier>{9BBCB4AF-DC60-30E7-824D-0284A924A401}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\external\tinyxml2">
+      <UniqueIdentifier>{075FF3BF-62B0-3DD9-9A56-2FE568141584}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\http">
+      <UniqueIdentifier>{C6BA6D24-7E8F-37F6-AD55-0A3C06D41AFA}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\http\standard">
+      <UniqueIdentifier>{2A960910-577F-3E75-8541-F9E589EEDA3B}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\http\windows">
+      <UniqueIdentifier>{50DB96AD-F1BE-3C56-8789-B39CC6CAC076}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\internal">
+      <UniqueIdentifier>{B6AE7CC3-AAC7-3C6F-B40A-C467D0E09C48}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\monitoring">
+      <UniqueIdentifier>{2FCA2C9D-6B66-3041-B23C-14ADFC92C455}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\net">
+      <UniqueIdentifier>{B2301FC9-6484-3080-9417-D2DA0F21E51F}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\net\windows">
+      <UniqueIdentifier>{8AB569C1-E3AD-318F-9328-90E54426F673}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\platform">
+      <UniqueIdentifier>{A034A869-2C04-31CA-AB7A-14DCC226A715}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\platform\windows">
+      <UniqueIdentifier>{3457B032-CA50-3B28-8388-0E023AD3FBA1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\smithy">
+      <UniqueIdentifier>{25EBA62B-4604-3553-B340-9ACC7B05C9C4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\smithy\tracing">
+      <UniqueIdentifier>{0D6CF780-05D0-3A99-8A5C-54FEA543B1B4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\utils">
+      <UniqueIdentifier>{34626867-D3FE-3C49-8D7B-452901F9D8A4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\utils\base64">
+      <UniqueIdentifier>{227B7DAA-C259-337E-ADC4-73476030FFA7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\utils\component-registry">
+      <UniqueIdentifier>{CAF93BA9-4A0F-31BB-B15F-E59088EBAC04}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\utils\crypto">
+      <UniqueIdentifier>{958E6850-CCD5-3761-AFF3-6EA4BDE1DFCA}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\utils\crypto\bcrypt">
+      <UniqueIdentifier>{8F2ACDF5-B52F-3FA0-ABC7-0E52443EEFAF}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\utils\crypto\factory">
+      <UniqueIdentifier>{36ADED35-4A23-3D19-ACDB-DCD8F0DBC0E0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\utils\event">
+      <UniqueIdentifier>{0AB0E5D8-7847-3509-A6BC-AD985F76FBE9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\utils\json">
+      <UniqueIdentifier>{F1562CF0-E072-34E5-ADFD-7FA28DDB988B}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\utils\logging">
+      <UniqueIdentifier>{940962F1-05AE-3390-B9C9-A75A2188EB67}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\utils\memory">
+      <UniqueIdentifier>{56A5D08A-D042-3C4C-ADB5-C9EB9EE38DF4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\utils\memory\stl">
+      <UniqueIdentifier>{DDB18556-2B67-3584-9D86-AD078A852255}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\utils\stream">
+      <UniqueIdentifier>{CA357B72-8986-3A91-AE94-4ACFFD7233C8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\utils\threading">
+      <UniqueIdentifier>{64E59E02-CB05-3F6B-87FB-1E78E2E96D6B}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\utils\xml">
+      <UniqueIdentifier>{D164692F-0702-3092-A383-FB837331DD64}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

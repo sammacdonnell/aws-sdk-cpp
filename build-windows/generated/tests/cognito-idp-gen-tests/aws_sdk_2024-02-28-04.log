@@ -1,0 +1,726 @@
+[INFO] 2024-02-28 04:30:34.242 Aws_Init_Cleanup [4072] Initiate AWS SDK for C++ with Version:1.11.274
+[TRACE] 2024-02-28 04:30:34.242 FileSystem [4072] Checking USERPROFILE for the home directory.
+[DEBUG] 2024-02-28 04:30:34.242 FileSystem [4072] Environment value for variable USERPROFILE is C:\Users\samma
+[INFO] 2024-02-28 04:30:34.242 Aws::Config::AWSConfigFileProfileConfigLoader [4072] Initializing config loader against fileName C:\Users\samma\.aws\credentials and using profilePrefix = 0
+[TRACE] 2024-02-28 04:30:34.242 FileSystem [4072] Checking USERPROFILE for the home directory.
+[DEBUG] 2024-02-28 04:30:34.242 FileSystem [4072] Environment value for variable USERPROFILE is C:\Users\samma
+[INFO] 2024-02-28 04:30:34.242 Aws::Config::AWSConfigFileProfileConfigLoader [4072] Initializing config loader against fileName C:\Users\samma\.aws\config and using profilePrefix = 1
+[TRACE] 2024-02-28 04:30:34.242 FileSystem [4072] Checking USERPROFILE for the home directory.
+[DEBUG] 2024-02-28 04:30:34.242 FileSystem [4072] Environment value for variable USERPROFILE is C:\Users\samma
+[INFO] 2024-02-28 04:30:34.242 Aws::Config::AWSConfigFileProfileConfigLoader [4072] Unable to open config file C:\Users\samma\.aws\credentials for reading.
+[INFO] 2024-02-28 04:30:34.242 Aws::Config::AWSProfileConfigLoaderBase [4072] Failed to reload configuration.
+[TRACE] 2024-02-28 04:30:34.242 FileSystem [4072] Checking USERPROFILE for the home directory.
+[DEBUG] 2024-02-28 04:30:34.242 FileSystem [4072] Environment value for variable USERPROFILE is C:\Users\samma
+[INFO] 2024-02-28 04:30:34.242 Aws::Config::AWSConfigFileProfileConfigLoader [4072] Unable to open config file C:\Users\samma\.aws\config for reading.
+[INFO] 2024-02-28 04:30:34.242 Aws::Config::AWSProfileConfigLoaderBase [4072] Failed to reload configuration.
+[INFO] 2024-02-28 04:30:34.242 event-loop [4072] id=000002339A6E05E0: Initializing IO Completion Port
+[INFO] 2024-02-28 04:30:34.242 event-loop [4072] id=000002339A6E05E0: Starting event-loop thread.
+[INFO] 2024-02-28 04:30:34.243 thread [4072] id=000002339A6E8A38: cpu affinity of cpu_id 0 was specified, attempting to honor the value.
+[DEBUG] 2024-02-28 04:30:34.243 thread [4072] id=000002339A6E8A38: computed mask 1 on group 0.
+[DEBUG] 2024-02-28 04:30:34.243 thread [4072] id=000002339A6E8A38: SetThreadGroupAffinity() result 1.
+[DEBUG] 2024-02-28 04:30:34.243 thread [4072] id=000002339A6E8A38: SetThreadIdealProcessorEx() result 1.
+[INFO] 2024-02-28 04:30:34.243 event-loop [4072] id=000002339A6E0040: Initializing IO Completion Port
+[INFO] 2024-02-28 04:30:34.243 event-loop [4072] id=000002339A6E0040: Starting event-loop thread.
+[INFO] 2024-02-28 04:30:34.243 thread [4072] id=000002339A71C298: cpu affinity of cpu_id 0 was specified, attempting to honor the value.
+[DEBUG] 2024-02-28 04:30:34.243 thread [4072] id=000002339A71C298: computed mask 1 on group 0.
+[DEBUG] 2024-02-28 04:30:34.243 thread [4072] id=000002339A71C298: SetThreadGroupAffinity() result 1.
+[DEBUG] 2024-02-28 04:30:34.243 thread [4072] id=000002339A71C298: SetThreadIdealProcessorEx() result 1.
+[INFO] 2024-02-28 04:30:34.243 event-loop [4072] id=000002339A6DFFF0: Initializing IO Completion Port
+[INFO] 2024-02-28 04:30:34.243 event-loop [4072] id=000002339A6DFFF0: Starting event-loop thread.
+[INFO] 2024-02-28 04:30:34.243 thread [4072] id=000002339A71E468: cpu affinity of cpu_id 0 was specified, attempting to honor the value.
+[DEBUG] 2024-02-28 04:30:34.243 thread [4072] id=000002339A71E468: computed mask 1 on group 0.
+[DEBUG] 2024-02-28 04:30:34.243 thread [4072] id=000002339A71E468: SetThreadGroupAffinity() result 1.
+[DEBUG] 2024-02-28 04:30:34.243 thread [4072] id=000002339A71E468: SetThreadIdealProcessorEx() result 1.
+[INFO] 2024-02-28 04:30:34.243 event-loop [4072] id=000002339A6E0C70: Initializing IO Completion Port
+[INFO] 2024-02-28 04:30:34.243 event-loop [4072] id=000002339A6E0C70: Starting event-loop thread.
+[INFO] 2024-02-28 04:30:34.243 thread [4072] id=000002339A72F938: cpu affinity of cpu_id 0 was specified, attempting to honor the value.
+[DEBUG] 2024-02-28 04:30:34.243 thread [4072] id=000002339A72F938: computed mask 1 on group 0.
+[DEBUG] 2024-02-28 04:30:34.243 thread [4072] id=000002339A72F938: SetThreadGroupAffinity() result 1.
+[DEBUG] 2024-02-28 04:30:34.243 thread [4072] id=000002339A72F938: SetThreadIdealProcessorEx() result 1.
+[INFO] 2024-02-28 04:30:34.243 event-loop [4072] id=000002339A6E0E00: Initializing IO Completion Port
+[INFO] 2024-02-28 04:30:34.243 event-loop [4072] id=000002339A6E0E00: Starting event-loop thread.
+[INFO] 2024-02-28 04:30:34.243 thread [4072] id=000002339A7330C8: cpu affinity of cpu_id 0 was specified, attempting to honor the value.
+[DEBUG] 2024-02-28 04:30:34.243 thread [4072] id=000002339A7330C8: computed mask 1 on group 0.
+[DEBUG] 2024-02-28 04:30:34.243 thread [4072] id=000002339A7330C8: SetThreadGroupAffinity() result 1.
+[DEBUG] 2024-02-28 04:30:34.243 thread [4072] id=000002339A7330C8: SetThreadIdealProcessorEx() result 1.
+[INFO] 2024-02-28 04:30:34.243 event-loop [35188] id=000002339A6E0040: main loop started
+[INFO] 2024-02-28 04:30:34.243 event-loop [4072] id=000002339A6E01D0: Initializing IO Completion Port
+[INFO] 2024-02-28 04:30:34.243 event-loop [35188] id=000002339A6E0040: default timeout 100000
+[INFO] 2024-02-28 04:30:34.243 event-loop [4072] id=000002339A6E01D0: Starting event-loop thread.
+[TRACE] 2024-02-28 04:30:34.243 event-loop [35188] id=000002339A6E0040: waiting for a maximum of 100000 ms
+[INFO] 2024-02-28 04:30:34.243 event-loop [54140] id=000002339A6E05E0: main loop started
+[INFO] 2024-02-28 04:30:34.243 thread [4072] id=000002339A732CD8: cpu affinity of cpu_id 0 was specified, attempting to honor the value.
+[INFO] 2024-02-28 04:30:34.243 event-loop [54140] id=000002339A6E05E0: default timeout 100000
+[DEBUG] 2024-02-28 04:30:34.243 thread [4072] id=000002339A732CD8: computed mask 1 on group 0.
+[DEBUG] 2024-02-28 04:30:34.243 thread [4072] id=000002339A732CD8: SetThreadGroupAffinity() result 1.
+[DEBUG] 2024-02-28 04:30:34.243 thread [4072] id=000002339A732CD8: SetThreadIdealProcessorEx() result 1.
+[INFO] 2024-02-28 04:30:34.243 event-loop [4072] id=000002339A6F4B50: Initializing IO Completion Port
+[INFO] 2024-02-28 04:30:34.243 event-loop [39260] id=000002339A6DFFF0: main loop started
+[INFO] 2024-02-28 04:30:34.243 event-loop [4072] id=000002339A6F4B50: Starting event-loop thread.
+[INFO] 2024-02-28 04:30:34.243 event-loop [39260] id=000002339A6DFFF0: default timeout 100000
+[TRACE] 2024-02-28 04:30:34.243 event-loop [39260] id=000002339A6DFFF0: waiting for a maximum of 100000 ms
+[TRACE] 2024-02-28 04:30:34.243 event-loop [54140] id=000002339A6E05E0: waiting for a maximum of 100000 ms
+[INFO] 2024-02-28 04:30:34.243 thread [4072] id=000002339A733608: cpu affinity of cpu_id 0 was specified, attempting to honor the value.
+[DEBUG] 2024-02-28 04:30:34.243 thread [4072] id=000002339A733608: computed mask 1 on group 0.
+[DEBUG] 2024-02-28 04:30:34.243 thread [4072] id=000002339A733608: SetThreadGroupAffinity() result 1.
+[DEBUG] 2024-02-28 04:30:34.243 thread [4072] id=000002339A733608: SetThreadIdealProcessorEx() result 1.
+[INFO] 2024-02-28 04:30:34.243 event-loop [4072] id=000002339A6F5280: Initializing IO Completion Port
+[INFO] 2024-02-28 04:30:34.243 event-loop [4072] id=000002339A6F5280: Starting event-loop thread.
+[INFO] 2024-02-28 04:30:34.243 thread [4072] id=000002339A7338A8: cpu affinity of cpu_id 0 was specified, attempting to honor the value.
+[DEBUG] 2024-02-28 04:30:34.243 thread [4072] id=000002339A7338A8: computed mask 1 on group 0.
+[DEBUG] 2024-02-28 04:30:34.243 thread [4072] id=000002339A7338A8: SetThreadGroupAffinity() result 1.
+[DEBUG] 2024-02-28 04:30:34.243 thread [4072] id=000002339A7338A8: SetThreadIdealProcessorEx() result 1.
+[INFO] 2024-02-28 04:30:34.243 event-loop [4072] id=000002339A6F5050: Initializing IO Completion Port
+[INFO] 2024-02-28 04:30:34.243 event-loop [4072] id=000002339A6F5050: Starting event-loop thread.
+[INFO] 2024-02-28 04:30:34.243 event-loop [8276] id=000002339A6E0C70: main loop started
+[INFO] 2024-02-28 04:30:34.243 event-loop [8276] id=000002339A6E0C70: default timeout 100000
+[TRACE] 2024-02-28 04:30:34.243 event-loop [8276] id=000002339A6E0C70: waiting for a maximum of 100000 ms
+[INFO] 2024-02-28 04:30:34.243 thread [4072] id=000002339A732B88: cpu affinity of cpu_id 0 was specified, attempting to honor the value.
+[DEBUG] 2024-02-28 04:30:34.243 thread [4072] id=000002339A732B88: computed mask 1 on group 0.
+[DEBUG] 2024-02-28 04:30:34.243 thread [4072] id=000002339A732B88: SetThreadGroupAffinity() result 1.
+[INFO] 2024-02-28 04:30:34.243 event-loop [43096] id=000002339A6E01D0: main loop started
+[DEBUG] 2024-02-28 04:30:34.243 thread [4072] id=000002339A732B88: SetThreadIdealProcessorEx() result 1.
+[INFO] 2024-02-28 04:30:34.243 event-loop [43096] id=000002339A6E01D0: default timeout 100000
+[INFO] 2024-02-28 04:30:34.243 event-loop [4072] id=000002339A6FC810: Initializing IO Completion Port
+[TRACE] 2024-02-28 04:30:34.243 event-loop [43096] id=000002339A6E01D0: waiting for a maximum of 100000 ms
+[INFO] 2024-02-28 04:30:34.243 event-loop [4072] id=000002339A6FC810: Starting event-loop thread.
+[INFO] 2024-02-28 04:30:34.243 thread [4072] id=000002339A7334B8: cpu affinity of cpu_id 0 was specified, attempting to honor the value.
+[DEBUG] 2024-02-28 04:30:34.243 thread [4072] id=000002339A7334B8: computed mask 1 on group 0.
+[DEBUG] 2024-02-28 04:30:34.243 thread [4072] id=000002339A7334B8: SetThreadGroupAffinity() result 1.
+[DEBUG] 2024-02-28 04:30:34.243 thread [4072] id=000002339A7334B8: SetThreadIdealProcessorEx() result 1.
+[INFO] 2024-02-28 04:30:34.243 event-loop [31052] id=000002339A6F4B50: main loop started
+[INFO] 2024-02-28 04:30:34.243 event-loop [31052] id=000002339A6F4B50: default timeout 100000
+[INFO] 2024-02-28 04:30:34.243 event-loop [37824] id=000002339A6E0E00: main loop started
+[INFO] 2024-02-28 04:30:34.243 event-loop [37824] id=000002339A6E0E00: default timeout 100000
+[TRACE] 2024-02-28 04:30:34.243 event-loop [37824] id=000002339A6E0E00: waiting for a maximum of 100000 ms
+[TRACE] 2024-02-28 04:30:34.243 event-loop [31052] id=000002339A6F4B50: waiting for a maximum of 100000 ms
+[INFO] 2024-02-28 04:30:34.243 event-loop [23536] id=000002339A6F5050: main loop started
+[INFO] 2024-02-28 04:30:34.243 event-loop [23536] id=000002339A6F5050: default timeout 100000
+[TRACE] 2024-02-28 04:30:34.243 event-loop [23536] id=000002339A6F5050: waiting for a maximum of 100000 ms
+[INFO] 2024-02-28 04:30:34.243 event-loop [4072] id=000002339A6FBDC0: Initializing IO Completion Port
+[INFO] 2024-02-28 04:30:34.243 event-loop [42644] id=000002339A6F5280: main loop started
+[INFO] 2024-02-28 04:30:34.243 event-loop [42644] id=000002339A6F5280: default timeout 100000
+[TRACE] 2024-02-28 04:30:34.243 event-loop [42644] id=000002339A6F5280: waiting for a maximum of 100000 ms
+[INFO] 2024-02-28 04:30:34.243 event-loop [4072] id=000002339A6FBDC0: Starting event-loop thread.
+[INFO] 2024-02-28 04:30:34.243 event-loop [59068] id=000002339A6FC810: main loop started
+[INFO] 2024-02-28 04:30:34.243 thread [4072] id=000002339A733758: cpu affinity of cpu_id 0 was specified, attempting to honor the value.
+[INFO] 2024-02-28 04:30:34.243 event-loop [59068] id=000002339A6FC810: default timeout 100000
+[DEBUG] 2024-02-28 04:30:34.243 thread [4072] id=000002339A733758: computed mask 1 on group 0.
+[TRACE] 2024-02-28 04:30:34.243 event-loop [59068] id=000002339A6FC810: waiting for a maximum of 100000 ms
+[DEBUG] 2024-02-28 04:30:34.243 thread [4072] id=000002339A733758: SetThreadGroupAffinity() result 1.
+[DEBUG] 2024-02-28 04:30:34.243 thread [4072] id=000002339A733758: SetThreadIdealProcessorEx() result 1.
+[INFO] 2024-02-28 04:30:34.243 event-loop [4072] id=000002339A6FC9F0: Initializing IO Completion Port
+[INFO] 2024-02-28 04:30:34.243 event-loop [4072] id=000002339A6FC9F0: Starting event-loop thread.
+[INFO] 2024-02-28 04:30:34.243 event-loop [69904] id=000002339A6FBDC0: main loop started
+[INFO] 2024-02-28 04:30:34.243 event-loop [69904] id=000002339A6FBDC0: default timeout 100000
+[TRACE] 2024-02-28 04:30:34.243 event-loop [69904] id=000002339A6FBDC0: waiting for a maximum of 100000 ms
+[INFO] 2024-02-28 04:30:34.243 thread [4072] id=000002339A733368: cpu affinity of cpu_id 0 was specified, attempting to honor the value.
+[DEBUG] 2024-02-28 04:30:34.243 thread [4072] id=000002339A733368: computed mask 1 on group 0.
+[DEBUG] 2024-02-28 04:30:34.243 thread [4072] id=000002339A733368: SetThreadGroupAffinity() result 1.
+[DEBUG] 2024-02-28 04:30:34.243 thread [4072] id=000002339A733368: SetThreadIdealProcessorEx() result 1.
+[INFO] 2024-02-28 04:30:34.243 dns [4072] id=000002339A6D6100: Initializing default host resolver with 8 max host entries.
+[INFO] 2024-02-28 04:30:34.243 event-loop [36020] id=000002339A6FC9F0: main loop started
+[INFO] 2024-02-28 04:30:34.243 channel-bootstrap [4072] id=000002339A745610: Initializing client bootstrap with event-loop group 000002339A6F3F20
+[INFO] 2024-02-28 04:30:34.243 event-loop [36020] id=000002339A6FC9F0: default timeout 100000
+[TRACE] 2024-02-28 04:30:34.243 event-loop [36020] id=000002339A6FC9F0: waiting for a maximum of 100000 ms
+[DEBUG] 2024-02-28 04:30:34.244 HttpClientFactory [4072] Initializing Http Static State
+[INFO] 2024-02-28 04:30:34.244 EC2MetadataClient [4072] Using IMDS endpoint: http://169.254.169.254
+[DEBUG] 2024-02-28 04:30:34.244 ClientConfiguration [4072] Request Compression enabled
+[DEBUG] 2024-02-28 04:30:34.244 ClientConfiguration [4072] ClientConfiguration will use MinReqCompression: 10240
+[DEBUG] 2024-02-28 04:30:34.244 ClientConfiguration [4072] ClientConfiguration will use SDK Auto Resolved profile: [default] if not specified by users.
+[INFO] 2024-02-28 04:30:34.244 ClientConfiguration [4072] Retry Strategy will use the default max attempts.
+[INFO] 2024-02-28 04:30:34.245 EC2MetadataClient [4072] Creating AWSHttpResourceClient with max connections 2 and scheme http
+[INFO] 2024-02-28 04:30:34.245 WinHttpSyncHttpClient [4072] Creating http client with user agent  with max connections 2 request timeout 1000,and connect timeout 1000
+[DEBUG] 2024-02-28 04:30:34.247 WinHttpHttp2 [4072] HTTP/2 enabled on WinHttp handle: 000002339A74F660.
+[DEBUG] 2024-02-28 04:30:34.247 WinHttpSyncHttpClient [4072] API handle 000002339A74F660
+[INFO] 2024-02-28 04:30:34.247 ConnectionPoolMgr [4072] Creating connection pool mgr with handle 000002339A74F660, and max connections per host 2, request timeout 1000 ms, and connect timeout in 1000 ms, enabling TCP keep-alive.
+[TRACE] 2024-02-28 04:30:34.248 Aws::Endpoint::DefaultEndpointProvider [4072] Endpoint bool eval parameter: UseFIPS = 0
+[TRACE] 2024-02-28 04:30:34.248 Aws::Endpoint::DefaultEndpointProvider [4072] Endpoint str eval parameter: Region = ap-northeast-1
+[TRACE] 2024-02-28 04:30:34.248 Aws::Endpoint::DefaultEndpointProvider [4072] Endpoint bool eval parameter: UseDualStack = 0
+[DEBUG] 2024-02-28 04:30:34.248 Unknown [4072] Resolved endpoint with status 0
+[DEBUG] 2024-02-28 04:30:34.248 Aws::Endpoint::DefaultEndpointProvider [4072] Endpoint rules engine evaluated the endpoint: https://cognito-idp.ap-northeast-1.amazonaws.com
+[TRACE] 2024-02-28 04:30:34.248 Aws::Endpoint::DefaultEndpointProvider [4072] Endpoint bool eval parameter: UseFIPS = 0
+[TRACE] 2024-02-28 04:30:34.248 Aws::Endpoint::DefaultEndpointProvider [4072] Endpoint str eval parameter: Region = ap-northeast-2
+[TRACE] 2024-02-28 04:30:34.248 Aws::Endpoint::DefaultEndpointProvider [4072] Endpoint bool eval parameter: UseDualStack = 0
+[DEBUG] 2024-02-28 04:30:34.248 Unknown [4072] Resolved endpoint with status 0
+[DEBUG] 2024-02-28 04:30:34.248 Aws::Endpoint::DefaultEndpointProvider [4072] Endpoint rules engine evaluated the endpoint: https://cognito-idp.ap-northeast-2.amazonaws.com
+[TRACE] 2024-02-28 04:30:34.248 Aws::Endpoint::DefaultEndpointProvider [4072] Endpoint bool eval parameter: UseFIPS = 0
+[TRACE] 2024-02-28 04:30:34.248 Aws::Endpoint::DefaultEndpointProvider [4072] Endpoint str eval parameter: Region = ap-south-1
+[TRACE] 2024-02-28 04:30:34.248 Aws::Endpoint::DefaultEndpointProvider [4072] Endpoint bool eval parameter: UseDualStack = 0
+[DEBUG] 2024-02-28 04:30:34.248 Unknown [4072] Resolved endpoint with status 0
+[DEBUG] 2024-02-28 04:30:34.248 Aws::Endpoint::DefaultEndpointProvider [4072] Endpoint rules engine evaluated the endpoint: https://cognito-idp.ap-south-1.amazonaws.com
+[TRACE] 2024-02-28 04:30:34.248 Aws::Endpoint::DefaultEndpointProvider [4072] Endpoint bool eval parameter: UseFIPS = 0
+[TRACE] 2024-02-28 04:30:34.248 Aws::Endpoint::DefaultEndpointProvider [4072] Endpoint str eval parameter: Region = ap-southeast-1
+[TRACE] 2024-02-28 04:30:34.248 Aws::Endpoint::DefaultEndpointProvider [4072] Endpoint bool eval parameter: UseDualStack = 0
+[DEBUG] 2024-02-28 04:30:34.248 Unknown [4072] Resolved endpoint with status 0
+[DEBUG] 2024-02-28 04:30:34.248 Aws::Endpoint::DefaultEndpointProvider [4072] Endpoint rules engine evaluated the endpoint: https://cognito-idp.ap-southeast-1.amazonaws.com
+[TRACE] 2024-02-28 04:30:34.248 Aws::Endpoint::DefaultEndpointProvider [4072] Endpoint bool eval parameter: UseFIPS = 0
+[TRACE] 2024-02-28 04:30:34.248 Aws::Endpoint::DefaultEndpointProvider [4072] Endpoint str eval parameter: Region = ap-southeast-2
+[TRACE] 2024-02-28 04:30:34.248 Aws::Endpoint::DefaultEndpointProvider [4072] Endpoint bool eval parameter: UseDualStack = 0
+[DEBUG] 2024-02-28 04:30:34.248 Unknown [4072] Resolved endpoint with status 0
+[DEBUG] 2024-02-28 04:30:34.248 Aws::Endpoint::DefaultEndpointProvider [4072] Endpoint rules engine evaluated the endpoint: https://cognito-idp.ap-southeast-2.amazonaws.com
+[TRACE] 2024-02-28 04:30:34.249 Aws::Endpoint::DefaultEndpointProvider [4072] Endpoint bool eval parameter: UseFIPS = 0
+[TRACE] 2024-02-28 04:30:34.249 Aws::Endpoint::DefaultEndpointProvider [4072] Endpoint str eval parameter: Region = ca-central-1
+[TRACE] 2024-02-28 04:30:34.249 Aws::Endpoint::DefaultEndpointProvider [4072] Endpoint bool eval parameter: UseDualStack = 0
+[DEBUG] 2024-02-28 04:30:34.249 Unknown [4072] Resolved endpoint with status 0
+[DEBUG] 2024-02-28 04:30:34.249 Aws::Endpoint::DefaultEndpointProvider [4072] Endpoint rules engine evaluated the endpoint: https://cognito-idp.ca-central-1.amazonaws.com
+[TRACE] 2024-02-28 04:30:34.249 Aws::Endpoint::DefaultEndpointProvider [4072] Endpoint bool eval parameter: UseFIPS = 0
+[TRACE] 2024-02-28 04:30:34.249 Aws::Endpoint::DefaultEndpointProvider [4072] Endpoint str eval parameter: Region = eu-central-1
+[TRACE] 2024-02-28 04:30:34.249 Aws::Endpoint::DefaultEndpointProvider [4072] Endpoint bool eval parameter: UseDualStack = 0
+[DEBUG] 2024-02-28 04:30:34.249 Unknown [4072] Resolved endpoint with status 0
+[DEBUG] 2024-02-28 04:30:34.249 Aws::Endpoint::DefaultEndpointProvider [4072] Endpoint rules engine evaluated the endpoint: https://cognito-idp.eu-central-1.amazonaws.com
+[TRACE] 2024-02-28 04:30:34.249 Aws::Endpoint::DefaultEndpointProvider [4072] Endpoint bool eval parameter: UseFIPS = 0
+[TRACE] 2024-02-28 04:30:34.249 Aws::Endpoint::DefaultEndpointProvider [4072] Endpoint str eval parameter: Region = eu-north-1
+[TRACE] 2024-02-28 04:30:34.249 Aws::Endpoint::DefaultEndpointProvider [4072] Endpoint bool eval parameter: UseDualStack = 0
+[DEBUG] 2024-02-28 04:30:34.249 Unknown [4072] Resolved endpoint with status 0
+[DEBUG] 2024-02-28 04:30:34.249 Aws::Endpoint::DefaultEndpointProvider [4072] Endpoint rules engine evaluated the endpoint: https://cognito-idp.eu-north-1.amazonaws.com
+[TRACE] 2024-02-28 04:30:34.249 Aws::Endpoint::DefaultEndpointProvider [4072] Endpoint bool eval parameter: UseFIPS = 0
+[TRACE] 2024-02-28 04:30:34.249 Aws::Endpoint::DefaultEndpointProvider [4072] Endpoint str eval parameter: Region = eu-west-1
+[TRACE] 2024-02-28 04:30:34.249 Aws::Endpoint::DefaultEndpointProvider [4072] Endpoint bool eval parameter: UseDualStack = 0
+[DEBUG] 2024-02-28 04:30:34.249 Unknown [4072] Resolved endpoint with status 0
+[DEBUG] 2024-02-28 04:30:34.249 Aws::Endpoint::DefaultEndpointProvider [4072] Endpoint rules engine evaluated the endpoint: https://cognito-idp.eu-west-1.amazonaws.com
+[TRACE] 2024-02-28 04:30:34.249 Aws::Endpoint::DefaultEndpointProvider [4072] Endpoint bool eval parameter: UseFIPS = 0
+[TRACE] 2024-02-28 04:30:34.249 Aws::Endpoint::DefaultEndpointProvider [4072] Endpoint str eval parameter: Region = eu-west-2
+[TRACE] 2024-02-28 04:30:34.249 Aws::Endpoint::DefaultEndpointProvider [4072] Endpoint bool eval parameter: UseDualStack = 0
+[DEBUG] 2024-02-28 04:30:34.249 Unknown [4072] Resolved endpoint with status 0
+[DEBUG] 2024-02-28 04:30:34.249 Aws::Endpoint::DefaultEndpointProvider [4072] Endpoint rules engine evaluated the endpoint: https://cognito-idp.eu-west-2.amazonaws.com
+[TRACE] 2024-02-28 04:30:34.249 Aws::Endpoint::DefaultEndpointProvider [4072] Endpoint bool eval parameter: UseFIPS = 0
+[TRACE] 2024-02-28 04:30:34.249 Aws::Endpoint::DefaultEndpointProvider [4072] Endpoint str eval parameter: Region = eu-west-3
+[TRACE] 2024-02-28 04:30:34.249 Aws::Endpoint::DefaultEndpointProvider [4072] Endpoint bool eval parameter: UseDualStack = 0
+[DEBUG] 2024-02-28 04:30:34.249 Unknown [4072] Resolved endpoint with status 0
+[DEBUG] 2024-02-28 04:30:34.249 Aws::Endpoint::DefaultEndpointProvider [4072] Endpoint rules engine evaluated the endpoint: https://cognito-idp.eu-west-3.amazonaws.com
+[TRACE] 2024-02-28 04:30:34.250 Aws::Endpoint::DefaultEndpointProvider [4072] Endpoint bool eval parameter: UseFIPS = 0
+[TRACE] 2024-02-28 04:30:34.250 Aws::Endpoint::DefaultEndpointProvider [4072] Endpoint str eval parameter: Region = me-south-1
+[TRACE] 2024-02-28 04:30:34.250 Aws::Endpoint::DefaultEndpointProvider [4072] Endpoint bool eval parameter: UseDualStack = 0
+[DEBUG] 2024-02-28 04:30:34.250 Unknown [4072] Resolved endpoint with status 0
+[DEBUG] 2024-02-28 04:30:34.250 Aws::Endpoint::DefaultEndpointProvider [4072] Endpoint rules engine evaluated the endpoint: https://cognito-idp.me-south-1.amazonaws.com
+[TRACE] 2024-02-28 04:30:34.250 Aws::Endpoint::DefaultEndpointProvider [4072] Endpoint bool eval parameter: UseFIPS = 0
+[TRACE] 2024-02-28 04:30:34.250 Aws::Endpoint::DefaultEndpointProvider [4072] Endpoint str eval parameter: Region = sa-east-1
+[TRACE] 2024-02-28 04:30:34.250 Aws::Endpoint::DefaultEndpointProvider [4072] Endpoint bool eval parameter: UseDualStack = 0
+[DEBUG] 2024-02-28 04:30:34.250 Unknown [4072] Resolved endpoint with status 0
+[DEBUG] 2024-02-28 04:30:34.250 Aws::Endpoint::DefaultEndpointProvider [4072] Endpoint rules engine evaluated the endpoint: https://cognito-idp.sa-east-1.amazonaws.com
+[TRACE] 2024-02-28 04:30:34.250 Aws::Endpoint::DefaultEndpointProvider [4072] Endpoint bool eval parameter: UseFIPS = 0
+[TRACE] 2024-02-28 04:30:34.250 Aws::Endpoint::DefaultEndpointProvider [4072] Endpoint str eval parameter: Region = us-east-1
+[TRACE] 2024-02-28 04:30:34.250 Aws::Endpoint::DefaultEndpointProvider [4072] Endpoint bool eval parameter: UseDualStack = 0
+[DEBUG] 2024-02-28 04:30:34.250 Unknown [4072] Resolved endpoint with status 0
+[DEBUG] 2024-02-28 04:30:34.250 Aws::Endpoint::DefaultEndpointProvider [4072] Endpoint rules engine evaluated the endpoint: https://cognito-idp.us-east-1.amazonaws.com
+[TRACE] 2024-02-28 04:30:34.250 Aws::Endpoint::DefaultEndpointProvider [4072] Endpoint bool eval parameter: UseFIPS = 1
+[TRACE] 2024-02-28 04:30:34.250 Aws::Endpoint::DefaultEndpointProvider [4072] Endpoint str eval parameter: Region = us-east-1
+[TRACE] 2024-02-28 04:30:34.250 Aws::Endpoint::DefaultEndpointProvider [4072] Endpoint bool eval parameter: UseDualStack = 0
+[DEBUG] 2024-02-28 04:30:34.250 Unknown [4072] Resolved endpoint with status 0
+[DEBUG] 2024-02-28 04:30:34.250 Aws::Endpoint::DefaultEndpointProvider [4072] Endpoint rules engine evaluated the endpoint: https://cognito-idp-fips.us-east-1.amazonaws.com
+[TRACE] 2024-02-28 04:30:34.250 Aws::Endpoint::DefaultEndpointProvider [4072] Endpoint bool eval parameter: UseFIPS = 0
+[TRACE] 2024-02-28 04:30:34.250 Aws::Endpoint::DefaultEndpointProvider [4072] Endpoint str eval parameter: Region = us-east-2
+[TRACE] 2024-02-28 04:30:34.250 Aws::Endpoint::DefaultEndpointProvider [4072] Endpoint bool eval parameter: UseDualStack = 0
+[DEBUG] 2024-02-28 04:30:34.250 Unknown [4072] Resolved endpoint with status 0
+[DEBUG] 2024-02-28 04:30:34.250 Aws::Endpoint::DefaultEndpointProvider [4072] Endpoint rules engine evaluated the endpoint: https://cognito-idp.us-east-2.amazonaws.com
+[TRACE] 2024-02-28 04:30:34.250 Aws::Endpoint::DefaultEndpointProvider [4072] Endpoint bool eval parameter: UseFIPS = 1
+[TRACE] 2024-02-28 04:30:34.250 Aws::Endpoint::DefaultEndpointProvider [4072] Endpoint str eval parameter: Region = us-east-2
+[TRACE] 2024-02-28 04:30:34.250 Aws::Endpoint::DefaultEndpointProvider [4072] Endpoint bool eval parameter: UseDualStack = 0
+[DEBUG] 2024-02-28 04:30:34.250 Unknown [4072] Resolved endpoint with status 0
+[DEBUG] 2024-02-28 04:30:34.250 Aws::Endpoint::DefaultEndpointProvider [4072] Endpoint rules engine evaluated the endpoint: https://cognito-idp-fips.us-east-2.amazonaws.com
+[TRACE] 2024-02-28 04:30:34.251 Aws::Endpoint::DefaultEndpointProvider [4072] Endpoint bool eval parameter: UseFIPS = 0
+[TRACE] 2024-02-28 04:30:34.251 Aws::Endpoint::DefaultEndpointProvider [4072] Endpoint str eval parameter: Region = us-west-1
+[TRACE] 2024-02-28 04:30:34.251 Aws::Endpoint::DefaultEndpointProvider [4072] Endpoint bool eval parameter: UseDualStack = 0
+[DEBUG] 2024-02-28 04:30:34.251 Unknown [4072] Resolved endpoint with status 0
+[DEBUG] 2024-02-28 04:30:34.251 Aws::Endpoint::DefaultEndpointProvider [4072] Endpoint rules engine evaluated the endpoint: https://cognito-idp.us-west-1.amazonaws.com
+[TRACE] 2024-02-28 04:30:34.251 Aws::Endpoint::DefaultEndpointProvider [4072] Endpoint bool eval parameter: UseFIPS = 1
+[TRACE] 2024-02-28 04:30:34.251 Aws::Endpoint::DefaultEndpointProvider [4072] Endpoint str eval parameter: Region = us-west-1
+[TRACE] 2024-02-28 04:30:34.251 Aws::Endpoint::DefaultEndpointProvider [4072] Endpoint bool eval parameter: UseDualStack = 0
+[DEBUG] 2024-02-28 04:30:34.251 Unknown [4072] Resolved endpoint with status 0
+[DEBUG] 2024-02-28 04:30:34.251 Aws::Endpoint::DefaultEndpointProvider [4072] Endpoint rules engine evaluated the endpoint: https://cognito-idp-fips.us-west-1.amazonaws.com
+[TRACE] 2024-02-28 04:30:34.251 Aws::Endpoint::DefaultEndpointProvider [4072] Endpoint bool eval parameter: UseFIPS = 0
+[TRACE] 2024-02-28 04:30:34.251 Aws::Endpoint::DefaultEndpointProvider [4072] Endpoint str eval parameter: Region = us-west-2
+[TRACE] 2024-02-28 04:30:34.251 Aws::Endpoint::DefaultEndpointProvider [4072] Endpoint bool eval parameter: UseDualStack = 0
+[DEBUG] 2024-02-28 04:30:34.251 Unknown [4072] Resolved endpoint with status 0
+[DEBUG] 2024-02-28 04:30:34.251 Aws::Endpoint::DefaultEndpointProvider [4072] Endpoint rules engine evaluated the endpoint: https://cognito-idp.us-west-2.amazonaws.com
+[TRACE] 2024-02-28 04:30:34.251 Aws::Endpoint::DefaultEndpointProvider [4072] Endpoint bool eval parameter: UseFIPS = 1
+[TRACE] 2024-02-28 04:30:34.251 Aws::Endpoint::DefaultEndpointProvider [4072] Endpoint str eval parameter: Region = us-west-2
+[TRACE] 2024-02-28 04:30:34.251 Aws::Endpoint::DefaultEndpointProvider [4072] Endpoint bool eval parameter: UseDualStack = 0
+[DEBUG] 2024-02-28 04:30:34.251 Unknown [4072] Resolved endpoint with status 0
+[DEBUG] 2024-02-28 04:30:34.251 Aws::Endpoint::DefaultEndpointProvider [4072] Endpoint rules engine evaluated the endpoint: https://cognito-idp-fips.us-west-2.amazonaws.com
+[TRACE] 2024-02-28 04:30:34.251 Aws::Endpoint::DefaultEndpointProvider [4072] Endpoint bool eval parameter: UseFIPS = 1
+[TRACE] 2024-02-28 04:30:34.251 Aws::Endpoint::DefaultEndpointProvider [4072] Endpoint str eval parameter: Region = us-east-1
+[TRACE] 2024-02-28 04:30:34.251 Aws::Endpoint::DefaultEndpointProvider [4072] Endpoint bool eval parameter: UseDualStack = 1
+[DEBUG] 2024-02-28 04:30:34.251 Unknown [4072] Resolved endpoint with status 0
+[DEBUG] 2024-02-28 04:30:34.251 Aws::Endpoint::DefaultEndpointProvider [4072] Endpoint rules engine evaluated the endpoint: https://cognito-idp-fips.us-east-1.api.aws
+[TRACE] 2024-02-28 04:30:34.251 Aws::Endpoint::DefaultEndpointProvider [4072] Endpoint bool eval parameter: UseFIPS = 0
+[TRACE] 2024-02-28 04:30:34.251 Aws::Endpoint::DefaultEndpointProvider [4072] Endpoint str eval parameter: Region = us-east-1
+[TRACE] 2024-02-28 04:30:34.251 Aws::Endpoint::DefaultEndpointProvider [4072] Endpoint bool eval parameter: UseDualStack = 1
+[DEBUG] 2024-02-28 04:30:34.251 Unknown [4072] Resolved endpoint with status 0
+[DEBUG] 2024-02-28 04:30:34.251 Aws::Endpoint::DefaultEndpointProvider [4072] Endpoint rules engine evaluated the endpoint: https://cognito-idp.us-east-1.api.aws
+[TRACE] 2024-02-28 04:30:34.252 Aws::Endpoint::DefaultEndpointProvider [4072] Endpoint bool eval parameter: UseFIPS = 1
+[TRACE] 2024-02-28 04:30:34.252 Aws::Endpoint::DefaultEndpointProvider [4072] Endpoint str eval parameter: Region = cn-north-1
+[TRACE] 2024-02-28 04:30:34.252 Aws::Endpoint::DefaultEndpointProvider [4072] Endpoint bool eval parameter: UseDualStack = 1
+[DEBUG] 2024-02-28 04:30:34.252 Unknown [4072] Resolved endpoint with status 0
+[DEBUG] 2024-02-28 04:30:34.252 Aws::Endpoint::DefaultEndpointProvider [4072] Endpoint rules engine evaluated the endpoint: https://cognito-idp-fips.cn-north-1.api.amazonwebservices.com.cn
+[TRACE] 2024-02-28 04:30:34.252 Aws::Endpoint::DefaultEndpointProvider [4072] Endpoint bool eval parameter: UseFIPS = 1
+[TRACE] 2024-02-28 04:30:34.252 Aws::Endpoint::DefaultEndpointProvider [4072] Endpoint str eval parameter: Region = cn-north-1
+[TRACE] 2024-02-28 04:30:34.252 Aws::Endpoint::DefaultEndpointProvider [4072] Endpoint bool eval parameter: UseDualStack = 0
+[DEBUG] 2024-02-28 04:30:34.252 Unknown [4072] Resolved endpoint with status 0
+[DEBUG] 2024-02-28 04:30:34.252 Aws::Endpoint::DefaultEndpointProvider [4072] Endpoint rules engine evaluated the endpoint: https://cognito-idp-fips.cn-north-1.amazonaws.com.cn
+[TRACE] 2024-02-28 04:30:34.252 Aws::Endpoint::DefaultEndpointProvider [4072] Endpoint bool eval parameter: UseFIPS = 0
+[TRACE] 2024-02-28 04:30:34.252 Aws::Endpoint::DefaultEndpointProvider [4072] Endpoint str eval parameter: Region = cn-north-1
+[TRACE] 2024-02-28 04:30:34.252 Aws::Endpoint::DefaultEndpointProvider [4072] Endpoint bool eval parameter: UseDualStack = 1
+[DEBUG] 2024-02-28 04:30:34.252 Unknown [4072] Resolved endpoint with status 0
+[DEBUG] 2024-02-28 04:30:34.252 Aws::Endpoint::DefaultEndpointProvider [4072] Endpoint rules engine evaluated the endpoint: https://cognito-idp.cn-north-1.api.amazonwebservices.com.cn
+[TRACE] 2024-02-28 04:30:34.252 Aws::Endpoint::DefaultEndpointProvider [4072] Endpoint bool eval parameter: UseFIPS = 0
+[TRACE] 2024-02-28 04:30:34.252 Aws::Endpoint::DefaultEndpointProvider [4072] Endpoint str eval parameter: Region = cn-north-1
+[TRACE] 2024-02-28 04:30:34.252 Aws::Endpoint::DefaultEndpointProvider [4072] Endpoint bool eval parameter: UseDualStack = 0
+[DEBUG] 2024-02-28 04:30:34.252 Unknown [4072] Resolved endpoint with status 0
+[DEBUG] 2024-02-28 04:30:34.252 Aws::Endpoint::DefaultEndpointProvider [4072] Endpoint rules engine evaluated the endpoint: https://cognito-idp.cn-north-1.amazonaws.com.cn
+[TRACE] 2024-02-28 04:30:34.252 Aws::Endpoint::DefaultEndpointProvider [4072] Endpoint bool eval parameter: UseFIPS = 0
+[TRACE] 2024-02-28 04:30:34.252 Aws::Endpoint::DefaultEndpointProvider [4072] Endpoint str eval parameter: Region = us-gov-west-1
+[TRACE] 2024-02-28 04:30:34.252 Aws::Endpoint::DefaultEndpointProvider [4072] Endpoint bool eval parameter: UseDualStack = 0
+[DEBUG] 2024-02-28 04:30:34.252 Unknown [4072] Resolved endpoint with status 0
+[DEBUG] 2024-02-28 04:30:34.252 Aws::Endpoint::DefaultEndpointProvider [4072] Endpoint rules engine evaluated the endpoint: https://cognito-idp.us-gov-west-1.amazonaws.com
+[TRACE] 2024-02-28 04:30:34.253 Aws::Endpoint::DefaultEndpointProvider [4072] Endpoint bool eval parameter: UseFIPS = 1
+[TRACE] 2024-02-28 04:30:34.253 Aws::Endpoint::DefaultEndpointProvider [4072] Endpoint str eval parameter: Region = us-gov-west-1
+[TRACE] 2024-02-28 04:30:34.253 Aws::Endpoint::DefaultEndpointProvider [4072] Endpoint bool eval parameter: UseDualStack = 0
+[DEBUG] 2024-02-28 04:30:34.253 Unknown [4072] Resolved endpoint with status 0
+[DEBUG] 2024-02-28 04:30:34.253 Aws::Endpoint::DefaultEndpointProvider [4072] Endpoint rules engine evaluated the endpoint: https://cognito-idp-fips.us-gov-west-1.amazonaws.com
+[TRACE] 2024-02-28 04:30:34.253 Aws::Endpoint::DefaultEndpointProvider [4072] Endpoint bool eval parameter: UseFIPS = 1
+[TRACE] 2024-02-28 04:30:34.253 Aws::Endpoint::DefaultEndpointProvider [4072] Endpoint str eval parameter: Region = us-gov-east-1
+[TRACE] 2024-02-28 04:30:34.253 Aws::Endpoint::DefaultEndpointProvider [4072] Endpoint bool eval parameter: UseDualStack = 1
+[DEBUG] 2024-02-28 04:30:34.253 Unknown [4072] Resolved endpoint with status 0
+[DEBUG] 2024-02-28 04:30:34.253 Aws::Endpoint::DefaultEndpointProvider [4072] Endpoint rules engine evaluated the endpoint: https://cognito-idp-fips.us-gov-east-1.api.aws
+[TRACE] 2024-02-28 04:30:34.253 Aws::Endpoint::DefaultEndpointProvider [4072] Endpoint bool eval parameter: UseFIPS = 1
+[TRACE] 2024-02-28 04:30:34.253 Aws::Endpoint::DefaultEndpointProvider [4072] Endpoint str eval parameter: Region = us-gov-east-1
+[TRACE] 2024-02-28 04:30:34.253 Aws::Endpoint::DefaultEndpointProvider [4072] Endpoint bool eval parameter: UseDualStack = 0
+[DEBUG] 2024-02-28 04:30:34.253 Unknown [4072] Resolved endpoint with status 0
+[DEBUG] 2024-02-28 04:30:34.253 Aws::Endpoint::DefaultEndpointProvider [4072] Endpoint rules engine evaluated the endpoint: https://cognito-idp-fips.us-gov-east-1.amazonaws.com
+[TRACE] 2024-02-28 04:30:34.253 Aws::Endpoint::DefaultEndpointProvider [4072] Endpoint bool eval parameter: UseFIPS = 0
+[TRACE] 2024-02-28 04:30:34.253 Aws::Endpoint::DefaultEndpointProvider [4072] Endpoint str eval parameter: Region = us-gov-east-1
+[TRACE] 2024-02-28 04:30:34.253 Aws::Endpoint::DefaultEndpointProvider [4072] Endpoint bool eval parameter: UseDualStack = 1
+[DEBUG] 2024-02-28 04:30:34.253 Unknown [4072] Resolved endpoint with status 0
+[DEBUG] 2024-02-28 04:30:34.253 Aws::Endpoint::DefaultEndpointProvider [4072] Endpoint rules engine evaluated the endpoint: https://cognito-idp.us-gov-east-1.api.aws
+[TRACE] 2024-02-28 04:30:34.253 Aws::Endpoint::DefaultEndpointProvider [4072] Endpoint bool eval parameter: UseFIPS = 0
+[TRACE] 2024-02-28 04:30:34.253 Aws::Endpoint::DefaultEndpointProvider [4072] Endpoint str eval parameter: Region = us-gov-east-1
+[TRACE] 2024-02-28 04:30:34.253 Aws::Endpoint::DefaultEndpointProvider [4072] Endpoint bool eval parameter: UseDualStack = 0
+[DEBUG] 2024-02-28 04:30:34.253 Unknown [4072] Resolved endpoint with status 0
+[DEBUG] 2024-02-28 04:30:34.253 Aws::Endpoint::DefaultEndpointProvider [4072] Endpoint rules engine evaluated the endpoint: https://cognito-idp.us-gov-east-1.amazonaws.com
+[TRACE] 2024-02-28 04:30:34.254 Aws::Endpoint::DefaultEndpointProvider [4072] Endpoint bool eval parameter: UseFIPS = 1
+[TRACE] 2024-02-28 04:30:34.254 Aws::Endpoint::DefaultEndpointProvider [4072] Endpoint str eval parameter: Region = us-iso-east-1
+[TRACE] 2024-02-28 04:30:34.254 Aws::Endpoint::DefaultEndpointProvider [4072] Endpoint bool eval parameter: UseDualStack = 1
+[DEBUG] 2024-02-28 04:30:34.254 Unknown [4072] Resolved endpoint with status 0
+[TRACE] 2024-02-28 04:30:34.254 Aws::Endpoint::DefaultEndpointProvider [4072] Endpoint bool eval parameter: UseFIPS = 1
+[TRACE] 2024-02-28 04:30:34.254 Aws::Endpoint::DefaultEndpointProvider [4072] Endpoint str eval parameter: Region = us-iso-east-1
+[TRACE] 2024-02-28 04:30:34.254 Aws::Endpoint::DefaultEndpointProvider [4072] Endpoint bool eval parameter: UseDualStack = 0
+[DEBUG] 2024-02-28 04:30:34.254 Unknown [4072] Resolved endpoint with status 0
+[DEBUG] 2024-02-28 04:30:34.254 Aws::Endpoint::DefaultEndpointProvider [4072] Endpoint rules engine evaluated the endpoint: https://cognito-idp-fips.us-iso-east-1.c2s.ic.gov
+[TRACE] 2024-02-28 04:30:34.254 Aws::Endpoint::DefaultEndpointProvider [4072] Endpoint bool eval parameter: UseFIPS = 0
+[TRACE] 2024-02-28 04:30:34.254 Aws::Endpoint::DefaultEndpointProvider [4072] Endpoint str eval parameter: Region = us-iso-east-1
+[TRACE] 2024-02-28 04:30:34.254 Aws::Endpoint::DefaultEndpointProvider [4072] Endpoint bool eval parameter: UseDualStack = 1
+[DEBUG] 2024-02-28 04:30:34.254 Unknown [4072] Resolved endpoint with status 0
+[TRACE] 2024-02-28 04:30:34.254 Aws::Endpoint::DefaultEndpointProvider [4072] Endpoint bool eval parameter: UseFIPS = 0
+[TRACE] 2024-02-28 04:30:34.254 Aws::Endpoint::DefaultEndpointProvider [4072] Endpoint str eval parameter: Region = us-iso-east-1
+[TRACE] 2024-02-28 04:30:34.254 Aws::Endpoint::DefaultEndpointProvider [4072] Endpoint bool eval parameter: UseDualStack = 0
+[DEBUG] 2024-02-28 04:30:34.254 Unknown [4072] Resolved endpoint with status 0
+[DEBUG] 2024-02-28 04:30:34.254 Aws::Endpoint::DefaultEndpointProvider [4072] Endpoint rules engine evaluated the endpoint: https://cognito-idp.us-iso-east-1.c2s.ic.gov
+[TRACE] 2024-02-28 04:30:34.254 Aws::Endpoint::DefaultEndpointProvider [4072] Endpoint bool eval parameter: UseFIPS = 1
+[TRACE] 2024-02-28 04:30:34.254 Aws::Endpoint::DefaultEndpointProvider [4072] Endpoint str eval parameter: Region = us-isob-east-1
+[TRACE] 2024-02-28 04:30:34.254 Aws::Endpoint::DefaultEndpointProvider [4072] Endpoint bool eval parameter: UseDualStack = 1
+[DEBUG] 2024-02-28 04:30:34.254 Unknown [4072] Resolved endpoint with status 0
+[TRACE] 2024-02-28 04:30:34.254 Aws::Endpoint::DefaultEndpointProvider [4072] Endpoint bool eval parameter: UseFIPS = 1
+[TRACE] 2024-02-28 04:30:34.254 Aws::Endpoint::DefaultEndpointProvider [4072] Endpoint str eval parameter: Region = us-isob-east-1
+[TRACE] 2024-02-28 04:30:34.254 Aws::Endpoint::DefaultEndpointProvider [4072] Endpoint bool eval parameter: UseDualStack = 0
+[DEBUG] 2024-02-28 04:30:34.254 Unknown [4072] Resolved endpoint with status 0
+[DEBUG] 2024-02-28 04:30:34.254 Aws::Endpoint::DefaultEndpointProvider [4072] Endpoint rules engine evaluated the endpoint: https://cognito-idp-fips.us-isob-east-1.sc2s.sgov.gov
+[TRACE] 2024-02-28 04:30:34.255 Aws::Endpoint::DefaultEndpointProvider [4072] Endpoint bool eval parameter: UseFIPS = 0
+[TRACE] 2024-02-28 04:30:34.255 Aws::Endpoint::DefaultEndpointProvider [4072] Endpoint str eval parameter: Region = us-isob-east-1
+[TRACE] 2024-02-28 04:30:34.255 Aws::Endpoint::DefaultEndpointProvider [4072] Endpoint bool eval parameter: UseDualStack = 1
+[DEBUG] 2024-02-28 04:30:34.255 Unknown [4072] Resolved endpoint with status 0
+[TRACE] 2024-02-28 04:30:34.255 Aws::Endpoint::DefaultEndpointProvider [4072] Endpoint bool eval parameter: UseFIPS = 0
+[TRACE] 2024-02-28 04:30:34.255 Aws::Endpoint::DefaultEndpointProvider [4072] Endpoint str eval parameter: Region = us-isob-east-1
+[TRACE] 2024-02-28 04:30:34.255 Aws::Endpoint::DefaultEndpointProvider [4072] Endpoint bool eval parameter: UseDualStack = 0
+[DEBUG] 2024-02-28 04:30:34.255 Unknown [4072] Resolved endpoint with status 0
+[DEBUG] 2024-02-28 04:30:34.255 Aws::Endpoint::DefaultEndpointProvider [4072] Endpoint rules engine evaluated the endpoint: https://cognito-idp.us-isob-east-1.sc2s.sgov.gov
+[TRACE] 2024-02-28 04:30:34.255 Aws::Endpoint::DefaultEndpointProvider [4072] Endpoint bool eval parameter: UseFIPS = 0
+[TRACE] 2024-02-28 04:30:34.255 Aws::Endpoint::DefaultEndpointProvider [4072] Endpoint str eval parameter: Endpoint = https://example.com
+[TRACE] 2024-02-28 04:30:34.255 Aws::Endpoint::DefaultEndpointProvider [4072] Endpoint str eval parameter: Region = us-east-1
+[TRACE] 2024-02-28 04:30:34.255 Aws::Endpoint::DefaultEndpointProvider [4072] Endpoint bool eval parameter: UseDualStack = 0
+[DEBUG] 2024-02-28 04:30:34.255 Unknown [4072] Resolved endpoint with status 0
+[DEBUG] 2024-02-28 04:30:34.255 Aws::Endpoint::DefaultEndpointProvider [4072] Endpoint rules engine evaluated the endpoint: https://example.com
+[TRACE] 2024-02-28 04:30:34.255 Aws::Endpoint::DefaultEndpointProvider [4072] Endpoint bool eval parameter: UseFIPS = 0
+[TRACE] 2024-02-28 04:30:34.255 Aws::Endpoint::DefaultEndpointProvider [4072] Endpoint str eval parameter: Endpoint = https://example.com
+[TRACE] 2024-02-28 04:30:34.255 Aws::Endpoint::DefaultEndpointProvider [4072] Endpoint bool eval parameter: UseDualStack = 0
+[DEBUG] 2024-02-28 04:30:34.255 Unknown [4072] Resolved endpoint with status 0
+[DEBUG] 2024-02-28 04:30:34.255 Aws::Endpoint::DefaultEndpointProvider [4072] Endpoint rules engine evaluated the endpoint: https://example.com
+[TRACE] 2024-02-28 04:30:34.255 Aws::Endpoint::DefaultEndpointProvider [4072] Endpoint bool eval parameter: UseFIPS = 1
+[TRACE] 2024-02-28 04:30:34.255 Aws::Endpoint::DefaultEndpointProvider [4072] Endpoint str eval parameter: Endpoint = https://example.com
+[TRACE] 2024-02-28 04:30:34.255 Aws::Endpoint::DefaultEndpointProvider [4072] Endpoint str eval parameter: Region = us-east-1
+[TRACE] 2024-02-28 04:30:34.255 Aws::Endpoint::DefaultEndpointProvider [4072] Endpoint bool eval parameter: UseDualStack = 0
+[DEBUG] 2024-02-28 04:30:34.255 Unknown [4072] Resolved endpoint with status 0
+[TRACE] 2024-02-28 04:30:34.255 Aws::Endpoint::DefaultEndpointProvider [4072] Endpoint bool eval parameter: UseFIPS = 0
+[TRACE] 2024-02-28 04:30:34.255 Aws::Endpoint::DefaultEndpointProvider [4072] Endpoint str eval parameter: Endpoint = https://example.com
+[TRACE] 2024-02-28 04:30:34.255 Aws::Endpoint::DefaultEndpointProvider [4072] Endpoint str eval parameter: Region = us-east-1
+[TRACE] 2024-02-28 04:30:34.255 Aws::Endpoint::DefaultEndpointProvider [4072] Endpoint bool eval parameter: UseDualStack = 1
+[DEBUG] 2024-02-28 04:30:34.255 Unknown [4072] Resolved endpoint with status 0
+[DEBUG] 2024-02-28 04:30:34.256 Unknown [4072] Resolved endpoint with status 0
+[INFO] 2024-02-28 04:30:34.256 Aws_Init_Cleanup [4072] Shutdown AWS SDK for C++.
+[DEBUG] 2024-02-28 04:30:34.256 WinSyncHttpClient [4072] Cleaning up client with handle 0000000000000000
+[INFO] 2024-02-28 04:30:34.256 WinHttpConnectionPoolMgr [4072] Cleaning up connection pool mgr.
+[DEBUG] 2024-02-28 04:30:34.256 HttpClientFactory [4072] Cleanup Http Static State
+[INFO] 2024-02-28 04:50:24.167 Aws_Init_Cleanup [58564] Initiate AWS SDK for C++ with Version:1.11.274
+[TRACE] 2024-02-28 04:50:24.167 FileSystem [58564] Checking USERPROFILE for the home directory.
+[DEBUG] 2024-02-28 04:50:24.167 FileSystem [58564] Environment value for variable USERPROFILE is C:\Users\samma
+[INFO] 2024-02-28 04:50:24.167 Aws::Config::AWSConfigFileProfileConfigLoader [58564] Initializing config loader against fileName C:\Users\samma\.aws\credentials and using profilePrefix = 0
+[TRACE] 2024-02-28 04:50:24.167 FileSystem [58564] Checking USERPROFILE for the home directory.
+[DEBUG] 2024-02-28 04:50:24.167 FileSystem [58564] Environment value for variable USERPROFILE is C:\Users\samma
+[INFO] 2024-02-28 04:50:24.167 Aws::Config::AWSConfigFileProfileConfigLoader [58564] Initializing config loader against fileName C:\Users\samma\.aws\config and using profilePrefix = 1
+[TRACE] 2024-02-28 04:50:24.167 FileSystem [58564] Checking USERPROFILE for the home directory.
+[DEBUG] 2024-02-28 04:50:24.167 FileSystem [58564] Environment value for variable USERPROFILE is C:\Users\samma
+[INFO] 2024-02-28 04:50:24.167 Aws::Config::AWSConfigFileProfileConfigLoader [58564] Unable to open config file C:\Users\samma\.aws\credentials for reading.
+[INFO] 2024-02-28 04:50:24.167 Aws::Config::AWSProfileConfigLoaderBase [58564] Failed to reload configuration.
+[TRACE] 2024-02-28 04:50:24.167 FileSystem [58564] Checking USERPROFILE for the home directory.
+[DEBUG] 2024-02-28 04:50:24.167 FileSystem [58564] Environment value for variable USERPROFILE is C:\Users\samma
+[INFO] 2024-02-28 04:50:24.167 Aws::Config::AWSConfigFileProfileConfigLoader [58564] Unable to open config file C:\Users\samma\.aws\config for reading.
+[INFO] 2024-02-28 04:50:24.167 Aws::Config::AWSProfileConfigLoaderBase [58564] Failed to reload configuration.
+[INFO] 2024-02-28 04:50:24.167 event-loop [58564] id=00000203BB068080: Initializing IO Completion Port
+[INFO] 2024-02-28 04:50:24.167 event-loop [58564] id=00000203BB068080: Starting event-loop thread.
+[INFO] 2024-02-28 04:50:24.167 thread [58564] id=00000203BB073D08: cpu affinity of cpu_id 0 was specified, attempting to honor the value.
+[DEBUG] 2024-02-28 04:50:24.167 thread [58564] id=00000203BB073D08: computed mask 1 on group 0.
+[DEBUG] 2024-02-28 04:50:24.167 thread [58564] id=00000203BB073D08: SetThreadGroupAffinity() result 1.
+[DEBUG] 2024-02-28 04:50:24.167 thread [58564] id=00000203BB073D08: SetThreadIdealProcessorEx() result 1.
+[INFO] 2024-02-28 04:50:24.167 event-loop [58564] id=00000203BB068580: Initializing IO Completion Port
+[INFO] 2024-02-28 04:50:24.167 event-loop [58564] id=00000203BB068580: Starting event-loop thread.
+[INFO] 2024-02-28 04:50:24.167 thread [58564] id=00000203BB050C98: cpu affinity of cpu_id 0 was specified, attempting to honor the value.
+[DEBUG] 2024-02-28 04:50:24.167 thread [58564] id=00000203BB050C98: computed mask 1 on group 0.
+[DEBUG] 2024-02-28 04:50:24.167 thread [58564] id=00000203BB050C98: SetThreadGroupAffinity() result 1.
+[DEBUG] 2024-02-28 04:50:24.167 thread [58564] id=00000203BB050C98: SetThreadIdealProcessorEx() result 1.
+[INFO] 2024-02-28 04:50:24.167 event-loop [35272] id=00000203BB068080: main loop started
+[INFO] 2024-02-28 04:50:24.167 event-loop [58564] id=00000203BB068350: Initializing IO Completion Port
+[INFO] 2024-02-28 04:50:24.167 event-loop [35272] id=00000203BB068080: default timeout 100000
+[TRACE] 2024-02-28 04:50:24.167 event-loop [35272] id=00000203BB068080: waiting for a maximum of 100000 ms
+[INFO] 2024-02-28 04:50:24.167 event-loop [58564] id=00000203BB068350: Starting event-loop thread.
+[INFO] 2024-02-28 04:50:24.167 thread [58564] id=00000203BB073E58: cpu affinity of cpu_id 0 was specified, attempting to honor the value.
+[DEBUG] 2024-02-28 04:50:24.167 thread [58564] id=00000203BB073E58: computed mask 1 on group 0.
+[DEBUG] 2024-02-28 04:50:24.167 thread [58564] id=00000203BB073E58: SetThreadGroupAffinity() result 1.
+[DEBUG] 2024-02-28 04:50:24.167 thread [58564] id=00000203BB073E58: SetThreadIdealProcessorEx() result 1.
+[INFO] 2024-02-28 04:50:24.167 event-loop [58564] id=00000203BB0688A0: Initializing IO Completion Port
+[INFO] 2024-02-28 04:50:24.167 event-loop [58564] id=00000203BB0688A0: Starting event-loop thread.
+[INFO] 2024-02-28 04:50:24.167 thread [58564] id=00000203BB073FA8: cpu affinity of cpu_id 0 was specified, attempting to honor the value.
+[INFO] 2024-02-28 04:50:24.167 event-loop [61312] id=00000203BB068350: main loop started
+[DEBUG] 2024-02-28 04:50:24.167 thread [58564] id=00000203BB073FA8: computed mask 1 on group 0.
+[INFO] 2024-02-28 04:50:24.167 event-loop [61312] id=00000203BB068350: default timeout 100000
+[TRACE] 2024-02-28 04:50:24.167 event-loop [61312] id=00000203BB068350: waiting for a maximum of 100000 ms
+[DEBUG] 2024-02-28 04:50:24.167 thread [58564] id=00000203BB073FA8: SetThreadGroupAffinity() result 1.
+[INFO] 2024-02-28 04:50:24.167 event-loop [59804] id=00000203BB068580: main loop started
+[DEBUG] 2024-02-28 04:50:24.167 thread [58564] id=00000203BB073FA8: SetThreadIdealProcessorEx() result 1.
+[INFO] 2024-02-28 04:50:24.167 event-loop [59804] id=00000203BB068580: default timeout 100000
+[TRACE] 2024-02-28 04:50:24.167 event-loop [59804] id=00000203BB068580: waiting for a maximum of 100000 ms
+[INFO] 2024-02-28 04:50:24.167 event-loop [58564] id=00000203BB082350: Initializing IO Completion Port
+[INFO] 2024-02-28 04:50:24.167 event-loop [58564] id=00000203BB082350: Starting event-loop thread.
+[INFO] 2024-02-28 04:50:24.168 event-loop [32948] id=00000203BB0688A0: main loop started
+[INFO] 2024-02-28 04:50:24.168 event-loop [32948] id=00000203BB0688A0: default timeout 100000
+[TRACE] 2024-02-28 04:50:24.168 event-loop [32948] id=00000203BB0688A0: waiting for a maximum of 100000 ms
+[INFO] 2024-02-28 04:50:24.168 thread [58564] id=00000203BB074EA8: cpu affinity of cpu_id 0 was specified, attempting to honor the value.
+[DEBUG] 2024-02-28 04:50:24.168 thread [58564] id=00000203BB074EA8: computed mask 1 on group 0.
+[DEBUG] 2024-02-28 04:50:24.168 thread [58564] id=00000203BB074EA8: SetThreadGroupAffinity() result 1.
+[DEBUG] 2024-02-28 04:50:24.168 thread [58564] id=00000203BB074EA8: SetThreadIdealProcessorEx() result 1.
+[INFO] 2024-02-28 04:50:24.168 event-loop [58564] id=00000203BB0823A0: Initializing IO Completion Port
+[INFO] 2024-02-28 04:50:24.168 event-loop [58564] id=00000203BB0823A0: Starting event-loop thread.
+[INFO] 2024-02-28 04:50:24.168 thread [58564] id=00000203BB077ED8: cpu affinity of cpu_id 0 was specified, attempting to honor the value.
+[INFO] 2024-02-28 04:50:24.168 event-loop [44532] id=00000203BB082350: main loop started
+[DEBUG] 2024-02-28 04:50:24.168 thread [58564] id=00000203BB077ED8: computed mask 1 on group 0.
+[INFO] 2024-02-28 04:50:24.168 event-loop [44532] id=00000203BB082350: default timeout 100000
+[DEBUG] 2024-02-28 04:50:24.168 thread [58564] id=00000203BB077ED8: SetThreadGroupAffinity() result 1.
+[TRACE] 2024-02-28 04:50:24.168 event-loop [44532] id=00000203BB082350: waiting for a maximum of 100000 ms
+[DEBUG] 2024-02-28 04:50:24.168 thread [58564] id=00000203BB077ED8: SetThreadIdealProcessorEx() result 1.
+[INFO] 2024-02-28 04:50:24.168 event-loop [58564] id=00000203BB082260: Initializing IO Completion Port
+[INFO] 2024-02-28 04:50:24.168 event-loop [58564] id=00000203BB082260: Starting event-loop thread.
+[INFO] 2024-02-28 04:50:24.168 thread [58564] id=00000203BB078238: cpu affinity of cpu_id 0 was specified, attempting to honor the value.
+[INFO] 2024-02-28 04:50:24.168 event-loop [65676] id=00000203BB0823A0: main loop started
+[DEBUG] 2024-02-28 04:50:24.168 thread [58564] id=00000203BB078238: computed mask 1 on group 0.
+[INFO] 2024-02-28 04:50:24.168 event-loop [65676] id=00000203BB0823A0: default timeout 100000
+[TRACE] 2024-02-28 04:50:24.168 event-loop [65676] id=00000203BB0823A0: waiting for a maximum of 100000 ms
+[DEBUG] 2024-02-28 04:50:24.168 thread [58564] id=00000203BB078238: SetThreadGroupAffinity() result 1.
+[DEBUG] 2024-02-28 04:50:24.168 thread [58564] id=00000203BB078238: SetThreadIdealProcessorEx() result 1.
+[INFO] 2024-02-28 04:50:24.168 event-loop [58564] id=00000203BB0822B0: Initializing IO Completion Port
+[INFO] 2024-02-28 04:50:24.168 event-loop [58564] id=00000203BB0822B0: Starting event-loop thread.
+[INFO] 2024-02-28 04:50:24.168 thread [58564] id=00000203BB08B098: cpu affinity of cpu_id 0 was specified, attempting to honor the value.
+[INFO] 2024-02-28 04:50:24.168 event-loop [57376] id=00000203BB082260: main loop started
+[DEBUG] 2024-02-28 04:50:24.168 thread [58564] id=00000203BB08B098: computed mask 1 on group 0.
+[INFO] 2024-02-28 04:50:24.168 event-loop [57376] id=00000203BB082260: default timeout 100000
+[TRACE] 2024-02-28 04:50:24.168 event-loop [57376] id=00000203BB082260: waiting for a maximum of 100000 ms
+[DEBUG] 2024-02-28 04:50:24.168 thread [58564] id=00000203BB08B098: SetThreadGroupAffinity() result 1.
+[DEBUG] 2024-02-28 04:50:24.168 thread [58564] id=00000203BB08B098: SetThreadIdealProcessorEx() result 1.
+[INFO] 2024-02-28 04:50:24.168 event-loop [58564] id=00000203BB082300: Initializing IO Completion Port
+[INFO] 2024-02-28 04:50:24.168 event-loop [58564] id=00000203BB082300: Starting event-loop thread.
+[INFO] 2024-02-28 04:50:24.168 thread [58564] id=00000203BB08DB58: cpu affinity of cpu_id 0 was specified, attempting to honor the value.
+[INFO] 2024-02-28 04:50:24.168 event-loop [61144] id=00000203BB0822B0: main loop started
+[DEBUG] 2024-02-28 04:50:24.168 thread [58564] id=00000203BB08DB58: computed mask 1 on group 0.
+[INFO] 2024-02-28 04:50:24.168 event-loop [61144] id=00000203BB0822B0: default timeout 100000
+[DEBUG] 2024-02-28 04:50:24.168 thread [58564] id=00000203BB08DB58: SetThreadGroupAffinity() result 1.
+[TRACE] 2024-02-28 04:50:24.168 event-loop [61144] id=00000203BB0822B0: waiting for a maximum of 100000 ms
+[DEBUG] 2024-02-28 04:50:24.168 thread [58564] id=00000203BB08DB58: SetThreadIdealProcessorEx() result 1.
+[INFO] 2024-02-28 04:50:24.168 event-loop [58564] id=00000203BB082080: Initializing IO Completion Port
+[INFO] 2024-02-28 04:50:24.168 event-loop [58564] id=00000203BB082080: Starting event-loop thread.
+[INFO] 2024-02-28 04:50:24.168 thread [58564] id=00000203BB08F9F8: cpu affinity of cpu_id 0 was specified, attempting to honor the value.
+[INFO] 2024-02-28 04:50:24.168 event-loop [60132] id=00000203BB082300: main loop started
+[DEBUG] 2024-02-28 04:50:24.168 thread [58564] id=00000203BB08F9F8: computed mask 1 on group 0.
+[INFO] 2024-02-28 04:50:24.168 event-loop [60132] id=00000203BB082300: default timeout 100000
+[TRACE] 2024-02-28 04:50:24.168 event-loop [60132] id=00000203BB082300: waiting for a maximum of 100000 ms
+[DEBUG] 2024-02-28 04:50:24.168 thread [58564] id=00000203BB08F9F8: SetThreadGroupAffinity() result 1.
+[DEBUG] 2024-02-28 04:50:24.168 thread [58564] id=00000203BB08F9F8: SetThreadIdealProcessorEx() result 1.
+[INFO] 2024-02-28 04:50:24.168 event-loop [58564] id=00000203BB0820D0: Initializing IO Completion Port
+[INFO] 2024-02-28 04:50:24.168 event-loop [58564] id=00000203BB0820D0: Starting event-loop thread.
+[INFO] 2024-02-28 04:50:24.168 thread [58564] id=00000203BB091688: cpu affinity of cpu_id 0 was specified, attempting to honor the value.
+[DEBUG] 2024-02-28 04:50:24.168 thread [58564] id=00000203BB091688: computed mask 1 on group 0.
+[INFO] 2024-02-28 04:50:24.168 event-loop [61096] id=00000203BB082080: main loop started
+[INFO] 2024-02-28 04:50:24.168 event-loop [61096] id=00000203BB082080: default timeout 100000
+[DEBUG] 2024-02-28 04:50:24.168 thread [58564] id=00000203BB091688: SetThreadGroupAffinity() result 1.
+[TRACE] 2024-02-28 04:50:24.168 event-loop [61096] id=00000203BB082080: waiting for a maximum of 100000 ms
+[DEBUG] 2024-02-28 04:50:24.168 thread [58564] id=00000203BB091688: SetThreadIdealProcessorEx() result 1.
+[INFO] 2024-02-28 04:50:24.168 event-loop [58564] id=00000203BB082120: Initializing IO Completion Port
+[INFO] 2024-02-28 04:50:24.168 event-loop [58564] id=00000203BB082120: Starting event-loop thread.
+[INFO] 2024-02-28 04:50:24.168 event-loop [35572] id=00000203BB0820D0: main loop started
+[INFO] 2024-02-28 04:50:24.168 thread [58564] id=00000203BB09F748: cpu affinity of cpu_id 0 was specified, attempting to honor the value.
+[INFO] 2024-02-28 04:50:24.168 event-loop [35572] id=00000203BB0820D0: default timeout 100000
+[TRACE] 2024-02-28 04:50:24.168 event-loop [35572] id=00000203BB0820D0: waiting for a maximum of 100000 ms
+[DEBUG] 2024-02-28 04:50:24.168 thread [58564] id=00000203BB09F748: computed mask 1 on group 0.
+[DEBUG] 2024-02-28 04:50:24.168 thread [58564] id=00000203BB09F748: SetThreadGroupAffinity() result 1.
+[DEBUG] 2024-02-28 04:50:24.168 thread [58564] id=00000203BB09F748: SetThreadIdealProcessorEx() result 1.
+[INFO] 2024-02-28 04:50:24.168 dns [58564] id=00000203BB0854B0: Initializing default host resolver with 8 max host entries.
+[INFO] 2024-02-28 04:50:24.168 channel-bootstrap [58564] id=00000203BB07A910: Initializing client bootstrap with event-loop group 00000203BB059310
+[INFO] 2024-02-28 04:50:24.168 event-loop [66800] id=00000203BB082120: main loop started
+[INFO] 2024-02-28 04:50:24.168 event-loop [66800] id=00000203BB082120: default timeout 100000
+[TRACE] 2024-02-28 04:50:24.168 event-loop [66800] id=00000203BB082120: waiting for a maximum of 100000 ms
+[DEBUG] 2024-02-28 04:50:24.168 HttpClientFactory [58564] Initializing Http Static State
+[INFO] 2024-02-28 04:50:24.169 EC2MetadataClient [58564] Using IMDS endpoint: http://169.254.169.254
+[DEBUG] 2024-02-28 04:50:24.169 ClientConfiguration [58564] Request Compression enabled
+[DEBUG] 2024-02-28 04:50:24.169 ClientConfiguration [58564] ClientConfiguration will use MinReqCompression: 10240
+[DEBUG] 2024-02-28 04:50:24.169 ClientConfiguration [58564] ClientConfiguration will use SDK Auto Resolved profile: [default] if not specified by users.
+[INFO] 2024-02-28 04:50:24.169 ClientConfiguration [58564] Retry Strategy will use the default max attempts.
+[INFO] 2024-02-28 04:50:24.169 EC2MetadataClient [58564] Creating AWSHttpResourceClient with max connections 2 and scheme http
+[INFO] 2024-02-28 04:50:24.169 WinHttpSyncHttpClient [58564] Creating http client with user agent  with max connections 2 request timeout 1000,and connect timeout 1000
+[DEBUG] 2024-02-28 04:50:24.171 WinHttpHttp2 [58564] HTTP/2 enabled on WinHttp handle: 00000203BB0A8EE0.
+[DEBUG] 2024-02-28 04:50:24.171 WinHttpSyncHttpClient [58564] API handle 00000203BB0A8EE0
+[INFO] 2024-02-28 04:50:24.171 ConnectionPoolMgr [58564] Creating connection pool mgr with handle 00000203BB0A8EE0, and max connections per host 2, request timeout 1000 ms, and connect timeout in 1000 ms, enabling TCP keep-alive.
+[TRACE] 2024-02-28 04:50:24.172 Aws::Endpoint::DefaultEndpointProvider [58564] Endpoint bool eval parameter: UseFIPS = 0
+[TRACE] 2024-02-28 04:50:24.172 Aws::Endpoint::DefaultEndpointProvider [58564] Endpoint str eval parameter: Region = ap-northeast-1
+[TRACE] 2024-02-28 04:50:24.172 Aws::Endpoint::DefaultEndpointProvider [58564] Endpoint bool eval parameter: UseDualStack = 0
+[DEBUG] 2024-02-28 04:50:24.172 Unknown [58564] Resolved endpoint with status 0
+[DEBUG] 2024-02-28 04:50:24.172 Aws::Endpoint::DefaultEndpointProvider [58564] Endpoint rules engine evaluated the endpoint: https://cognito-idp.ap-northeast-1.amazonaws.com
+[TRACE] 2024-02-28 04:50:24.172 Aws::Endpoint::DefaultEndpointProvider [58564] Endpoint bool eval parameter: UseFIPS = 0
+[TRACE] 2024-02-28 04:50:24.172 Aws::Endpoint::DefaultEndpointProvider [58564] Endpoint str eval parameter: Region = ap-northeast-2
+[TRACE] 2024-02-28 04:50:24.172 Aws::Endpoint::DefaultEndpointProvider [58564] Endpoint bool eval parameter: UseDualStack = 0
+[DEBUG] 2024-02-28 04:50:24.172 Unknown [58564] Resolved endpoint with status 0
+[DEBUG] 2024-02-28 04:50:24.172 Aws::Endpoint::DefaultEndpointProvider [58564] Endpoint rules engine evaluated the endpoint: https://cognito-idp.ap-northeast-2.amazonaws.com
+[TRACE] 2024-02-28 04:50:24.172 Aws::Endpoint::DefaultEndpointProvider [58564] Endpoint bool eval parameter: UseFIPS = 0
+[TRACE] 2024-02-28 04:50:24.172 Aws::Endpoint::DefaultEndpointProvider [58564] Endpoint str eval parameter: Region = ap-south-1
+[TRACE] 2024-02-28 04:50:24.172 Aws::Endpoint::DefaultEndpointProvider [58564] Endpoint bool eval parameter: UseDualStack = 0
+[DEBUG] 2024-02-28 04:50:24.172 Unknown [58564] Resolved endpoint with status 0
+[DEBUG] 2024-02-28 04:50:24.172 Aws::Endpoint::DefaultEndpointProvider [58564] Endpoint rules engine evaluated the endpoint: https://cognito-idp.ap-south-1.amazonaws.com
+[TRACE] 2024-02-28 04:50:24.173 Aws::Endpoint::DefaultEndpointProvider [58564] Endpoint bool eval parameter: UseFIPS = 0
+[TRACE] 2024-02-28 04:50:24.173 Aws::Endpoint::DefaultEndpointProvider [58564] Endpoint str eval parameter: Region = ap-southeast-1
+[TRACE] 2024-02-28 04:50:24.173 Aws::Endpoint::DefaultEndpointProvider [58564] Endpoint bool eval parameter: UseDualStack = 0
+[DEBUG] 2024-02-28 04:50:24.173 Unknown [58564] Resolved endpoint with status 0
+[DEBUG] 2024-02-28 04:50:24.173 Aws::Endpoint::DefaultEndpointProvider [58564] Endpoint rules engine evaluated the endpoint: https://cognito-idp.ap-southeast-1.amazonaws.com
+[TRACE] 2024-02-28 04:50:24.173 Aws::Endpoint::DefaultEndpointProvider [58564] Endpoint bool eval parameter: UseFIPS = 0
+[TRACE] 2024-02-28 04:50:24.173 Aws::Endpoint::DefaultEndpointProvider [58564] Endpoint str eval parameter: Region = ap-southeast-2
+[TRACE] 2024-02-28 04:50:24.173 Aws::Endpoint::DefaultEndpointProvider [58564] Endpoint bool eval parameter: UseDualStack = 0
+[DEBUG] 2024-02-28 04:50:24.173 Unknown [58564] Resolved endpoint with status 0
+[DEBUG] 2024-02-28 04:50:24.173 Aws::Endpoint::DefaultEndpointProvider [58564] Endpoint rules engine evaluated the endpoint: https://cognito-idp.ap-southeast-2.amazonaws.com
+[TRACE] 2024-02-28 04:50:24.173 Aws::Endpoint::DefaultEndpointProvider [58564] Endpoint bool eval parameter: UseFIPS = 0
+[TRACE] 2024-02-28 04:50:24.173 Aws::Endpoint::DefaultEndpointProvider [58564] Endpoint str eval parameter: Region = ca-central-1
+[TRACE] 2024-02-28 04:50:24.173 Aws::Endpoint::DefaultEndpointProvider [58564] Endpoint bool eval parameter: UseDualStack = 0
+[DEBUG] 2024-02-28 04:50:24.173 Unknown [58564] Resolved endpoint with status 0
+[DEBUG] 2024-02-28 04:50:24.173 Aws::Endpoint::DefaultEndpointProvider [58564] Endpoint rules engine evaluated the endpoint: https://cognito-idp.ca-central-1.amazonaws.com
+[TRACE] 2024-02-28 04:50:24.173 Aws::Endpoint::DefaultEndpointProvider [58564] Endpoint bool eval parameter: UseFIPS = 0
+[TRACE] 2024-02-28 04:50:24.173 Aws::Endpoint::DefaultEndpointProvider [58564] Endpoint str eval parameter: Region = eu-central-1
+[TRACE] 2024-02-28 04:50:24.173 Aws::Endpoint::DefaultEndpointProvider [58564] Endpoint bool eval parameter: UseDualStack = 0
+[DEBUG] 2024-02-28 04:50:24.173 Unknown [58564] Resolved endpoint with status 0
+[DEBUG] 2024-02-28 04:50:24.173 Aws::Endpoint::DefaultEndpointProvider [58564] Endpoint rules engine evaluated the endpoint: https://cognito-idp.eu-central-1.amazonaws.com
+[TRACE] 2024-02-28 04:50:24.173 Aws::Endpoint::DefaultEndpointProvider [58564] Endpoint bool eval parameter: UseFIPS = 0
+[TRACE] 2024-02-28 04:50:24.173 Aws::Endpoint::DefaultEndpointProvider [58564] Endpoint str eval parameter: Region = eu-north-1
+[TRACE] 2024-02-28 04:50:24.173 Aws::Endpoint::DefaultEndpointProvider [58564] Endpoint bool eval parameter: UseDualStack = 0
+[DEBUG] 2024-02-28 04:50:24.173 Unknown [58564] Resolved endpoint with status 0
+[DEBUG] 2024-02-28 04:50:24.173 Aws::Endpoint::DefaultEndpointProvider [58564] Endpoint rules engine evaluated the endpoint: https://cognito-idp.eu-north-1.amazonaws.com
+[TRACE] 2024-02-28 04:50:24.173 Aws::Endpoint::DefaultEndpointProvider [58564] Endpoint bool eval parameter: UseFIPS = 0
+[TRACE] 2024-02-28 04:50:24.173 Aws::Endpoint::DefaultEndpointProvider [58564] Endpoint str eval parameter: Region = eu-west-1
+[TRACE] 2024-02-28 04:50:24.173 Aws::Endpoint::DefaultEndpointProvider [58564] Endpoint bool eval parameter: UseDualStack = 0
+[DEBUG] 2024-02-28 04:50:24.173 Unknown [58564] Resolved endpoint with status 0
+[DEBUG] 2024-02-28 04:50:24.173 Aws::Endpoint::DefaultEndpointProvider [58564] Endpoint rules engine evaluated the endpoint: https://cognito-idp.eu-west-1.amazonaws.com
+[TRACE] 2024-02-28 04:50:24.174 Aws::Endpoint::DefaultEndpointProvider [58564] Endpoint bool eval parameter: UseFIPS = 0
+[TRACE] 2024-02-28 04:50:24.174 Aws::Endpoint::DefaultEndpointProvider [58564] Endpoint str eval parameter: Region = eu-west-2
+[TRACE] 2024-02-28 04:50:24.174 Aws::Endpoint::DefaultEndpointProvider [58564] Endpoint bool eval parameter: UseDualStack = 0
+[DEBUG] 2024-02-28 04:50:24.174 Unknown [58564] Resolved endpoint with status 0
+[DEBUG] 2024-02-28 04:50:24.174 Aws::Endpoint::DefaultEndpointProvider [58564] Endpoint rules engine evaluated the endpoint: https://cognito-idp.eu-west-2.amazonaws.com
+[TRACE] 2024-02-28 04:50:24.174 Aws::Endpoint::DefaultEndpointProvider [58564] Endpoint bool eval parameter: UseFIPS = 0
+[TRACE] 2024-02-28 04:50:24.174 Aws::Endpoint::DefaultEndpointProvider [58564] Endpoint str eval parameter: Region = eu-west-3
+[TRACE] 2024-02-28 04:50:24.174 Aws::Endpoint::DefaultEndpointProvider [58564] Endpoint bool eval parameter: UseDualStack = 0
+[DEBUG] 2024-02-28 04:50:24.174 Unknown [58564] Resolved endpoint with status 0
+[DEBUG] 2024-02-28 04:50:24.174 Aws::Endpoint::DefaultEndpointProvider [58564] Endpoint rules engine evaluated the endpoint: https://cognito-idp.eu-west-3.amazonaws.com
+[TRACE] 2024-02-28 04:50:24.174 Aws::Endpoint::DefaultEndpointProvider [58564] Endpoint bool eval parameter: UseFIPS = 0
+[TRACE] 2024-02-28 04:50:24.174 Aws::Endpoint::DefaultEndpointProvider [58564] Endpoint str eval parameter: Region = me-south-1
+[TRACE] 2024-02-28 04:50:24.174 Aws::Endpoint::DefaultEndpointProvider [58564] Endpoint bool eval parameter: UseDualStack = 0
+[DEBUG] 2024-02-28 04:50:24.174 Unknown [58564] Resolved endpoint with status 0
+[DEBUG] 2024-02-28 04:50:24.174 Aws::Endpoint::DefaultEndpointProvider [58564] Endpoint rules engine evaluated the endpoint: https://cognito-idp.me-south-1.amazonaws.com
+[TRACE] 2024-02-28 04:50:24.174 Aws::Endpoint::DefaultEndpointProvider [58564] Endpoint bool eval parameter: UseFIPS = 0
+[TRACE] 2024-02-28 04:50:24.174 Aws::Endpoint::DefaultEndpointProvider [58564] Endpoint str eval parameter: Region = sa-east-1
+[TRACE] 2024-02-28 04:50:24.174 Aws::Endpoint::DefaultEndpointProvider [58564] Endpoint bool eval parameter: UseDualStack = 0
+[DEBUG] 2024-02-28 04:50:24.174 Unknown [58564] Resolved endpoint with status 0
+[DEBUG] 2024-02-28 04:50:24.174 Aws::Endpoint::DefaultEndpointProvider [58564] Endpoint rules engine evaluated the endpoint: https://cognito-idp.sa-east-1.amazonaws.com
+[TRACE] 2024-02-28 04:50:24.174 Aws::Endpoint::DefaultEndpointProvider [58564] Endpoint bool eval parameter: UseFIPS = 0
+[TRACE] 2024-02-28 04:50:24.174 Aws::Endpoint::DefaultEndpointProvider [58564] Endpoint str eval parameter: Region = us-east-1
+[TRACE] 2024-02-28 04:50:24.174 Aws::Endpoint::DefaultEndpointProvider [58564] Endpoint bool eval parameter: UseDualStack = 0
+[DEBUG] 2024-02-28 04:50:24.174 Unknown [58564] Resolved endpoint with status 0
+[DEBUG] 2024-02-28 04:50:24.174 Aws::Endpoint::DefaultEndpointProvider [58564] Endpoint rules engine evaluated the endpoint: https://cognito-idp.us-east-1.amazonaws.com
+[TRACE] 2024-02-28 04:50:24.174 Aws::Endpoint::DefaultEndpointProvider [58564] Endpoint bool eval parameter: UseFIPS = 1
+[TRACE] 2024-02-28 04:50:24.174 Aws::Endpoint::DefaultEndpointProvider [58564] Endpoint str eval parameter: Region = us-east-1
+[TRACE] 2024-02-28 04:50:24.174 Aws::Endpoint::DefaultEndpointProvider [58564] Endpoint bool eval parameter: UseDualStack = 0
+[DEBUG] 2024-02-28 04:50:24.174 Unknown [58564] Resolved endpoint with status 0
+[DEBUG] 2024-02-28 04:50:24.174 Aws::Endpoint::DefaultEndpointProvider [58564] Endpoint rules engine evaluated the endpoint: https://cognito-idp-fips.us-east-1.amazonaws.com
+[TRACE] 2024-02-28 04:50:24.174 Aws::Endpoint::DefaultEndpointProvider [58564] Endpoint bool eval parameter: UseFIPS = 0
+[TRACE] 2024-02-28 04:50:24.174 Aws::Endpoint::DefaultEndpointProvider [58564] Endpoint str eval parameter: Region = us-east-2
+[TRACE] 2024-02-28 04:50:24.174 Aws::Endpoint::DefaultEndpointProvider [58564] Endpoint bool eval parameter: UseDualStack = 0
+[DEBUG] 2024-02-28 04:50:24.175 Unknown [58564] Resolved endpoint with status 0
+[DEBUG] 2024-02-28 04:50:24.175 Aws::Endpoint::DefaultEndpointProvider [58564] Endpoint rules engine evaluated the endpoint: https://cognito-idp.us-east-2.amazonaws.com
+[TRACE] 2024-02-28 04:50:24.175 Aws::Endpoint::DefaultEndpointProvider [58564] Endpoint bool eval parameter: UseFIPS = 1
+[TRACE] 2024-02-28 04:50:24.175 Aws::Endpoint::DefaultEndpointProvider [58564] Endpoint str eval parameter: Region = us-east-2
+[TRACE] 2024-02-28 04:50:24.175 Aws::Endpoint::DefaultEndpointProvider [58564] Endpoint bool eval parameter: UseDualStack = 0
+[DEBUG] 2024-02-28 04:50:24.175 Unknown [58564] Resolved endpoint with status 0
+[DEBUG] 2024-02-28 04:50:24.175 Aws::Endpoint::DefaultEndpointProvider [58564] Endpoint rules engine evaluated the endpoint: https://cognito-idp-fips.us-east-2.amazonaws.com
+[TRACE] 2024-02-28 04:50:24.175 Aws::Endpoint::DefaultEndpointProvider [58564] Endpoint bool eval parameter: UseFIPS = 0
+[TRACE] 2024-02-28 04:50:24.175 Aws::Endpoint::DefaultEndpointProvider [58564] Endpoint str eval parameter: Region = us-west-1
+[TRACE] 2024-02-28 04:50:24.175 Aws::Endpoint::DefaultEndpointProvider [58564] Endpoint bool eval parameter: UseDualStack = 0
+[DEBUG] 2024-02-28 04:50:24.175 Unknown [58564] Resolved endpoint with status 0
+[DEBUG] 2024-02-28 04:50:24.175 Aws::Endpoint::DefaultEndpointProvider [58564] Endpoint rules engine evaluated the endpoint: https://cognito-idp.us-west-1.amazonaws.com
+[TRACE] 2024-02-28 04:50:24.175 Aws::Endpoint::DefaultEndpointProvider [58564] Endpoint bool eval parameter: UseFIPS = 1
+[TRACE] 2024-02-28 04:50:24.175 Aws::Endpoint::DefaultEndpointProvider [58564] Endpoint str eval parameter: Region = us-west-1
+[TRACE] 2024-02-28 04:50:24.175 Aws::Endpoint::DefaultEndpointProvider [58564] Endpoint bool eval parameter: UseDualStack = 0
+[DEBUG] 2024-02-28 04:50:24.175 Unknown [58564] Resolved endpoint with status 0
+[DEBUG] 2024-02-28 04:50:24.175 Aws::Endpoint::DefaultEndpointProvider [58564] Endpoint rules engine evaluated the endpoint: https://cognito-idp-fips.us-west-1.amazonaws.com
+[TRACE] 2024-02-28 04:50:24.175 Aws::Endpoint::DefaultEndpointProvider [58564] Endpoint bool eval parameter: UseFIPS = 0
+[TRACE] 2024-02-28 04:50:24.175 Aws::Endpoint::DefaultEndpointProvider [58564] Endpoint str eval parameter: Region = us-west-2
+[TRACE] 2024-02-28 04:50:24.175 Aws::Endpoint::DefaultEndpointProvider [58564] Endpoint bool eval parameter: UseDualStack = 0
+[DEBUG] 2024-02-28 04:50:24.175 Unknown [58564] Resolved endpoint with status 0
+[DEBUG] 2024-02-28 04:50:24.175 Aws::Endpoint::DefaultEndpointProvider [58564] Endpoint rules engine evaluated the endpoint: https://cognito-idp.us-west-2.amazonaws.com
+[TRACE] 2024-02-28 04:50:24.175 Aws::Endpoint::DefaultEndpointProvider [58564] Endpoint bool eval parameter: UseFIPS = 1
+[TRACE] 2024-02-28 04:50:24.175 Aws::Endpoint::DefaultEndpointProvider [58564] Endpoint str eval parameter: Region = us-west-2
+[TRACE] 2024-02-28 04:50:24.175 Aws::Endpoint::DefaultEndpointProvider [58564] Endpoint bool eval parameter: UseDualStack = 0
+[DEBUG] 2024-02-28 04:50:24.175 Unknown [58564] Resolved endpoint with status 0
+[DEBUG] 2024-02-28 04:50:24.175 Aws::Endpoint::DefaultEndpointProvider [58564] Endpoint rules engine evaluated the endpoint: https://cognito-idp-fips.us-west-2.amazonaws.com
+[TRACE] 2024-02-28 04:50:24.175 Aws::Endpoint::DefaultEndpointProvider [58564] Endpoint bool eval parameter: UseFIPS = 1
+[TRACE] 2024-02-28 04:50:24.175 Aws::Endpoint::DefaultEndpointProvider [58564] Endpoint str eval parameter: Region = us-east-1
+[TRACE] 2024-02-28 04:50:24.175 Aws::Endpoint::DefaultEndpointProvider [58564] Endpoint bool eval parameter: UseDualStack = 1
+[DEBUG] 2024-02-28 04:50:24.176 Unknown [58564] Resolved endpoint with status 0
+[DEBUG] 2024-02-28 04:50:24.176 Aws::Endpoint::DefaultEndpointProvider [58564] Endpoint rules engine evaluated the endpoint: https://cognito-idp-fips.us-east-1.api.aws
+[TRACE] 2024-02-28 04:50:24.176 Aws::Endpoint::DefaultEndpointProvider [58564] Endpoint bool eval parameter: UseFIPS = 0
+[TRACE] 2024-02-28 04:50:24.176 Aws::Endpoint::DefaultEndpointProvider [58564] Endpoint str eval parameter: Region = us-east-1
+[TRACE] 2024-02-28 04:50:24.176 Aws::Endpoint::DefaultEndpointProvider [58564] Endpoint bool eval parameter: UseDualStack = 1
+[DEBUG] 2024-02-28 04:50:24.176 Unknown [58564] Resolved endpoint with status 0
+[DEBUG] 2024-02-28 04:50:24.176 Aws::Endpoint::DefaultEndpointProvider [58564] Endpoint rules engine evaluated the endpoint: https://cognito-idp.us-east-1.api.aws
+[TRACE] 2024-02-28 04:50:24.176 Aws::Endpoint::DefaultEndpointProvider [58564] Endpoint bool eval parameter: UseFIPS = 1
+[TRACE] 2024-02-28 04:50:24.176 Aws::Endpoint::DefaultEndpointProvider [58564] Endpoint str eval parameter: Region = cn-north-1
+[TRACE] 2024-02-28 04:50:24.176 Aws::Endpoint::DefaultEndpointProvider [58564] Endpoint bool eval parameter: UseDualStack = 1
+[DEBUG] 2024-02-28 04:50:24.176 Unknown [58564] Resolved endpoint with status 0
+[DEBUG] 2024-02-28 04:50:24.176 Aws::Endpoint::DefaultEndpointProvider [58564] Endpoint rules engine evaluated the endpoint: https://cognito-idp-fips.cn-north-1.api.amazonwebservices.com.cn
+[TRACE] 2024-02-28 04:50:24.176 Aws::Endpoint::DefaultEndpointProvider [58564] Endpoint bool eval parameter: UseFIPS = 1
+[TRACE] 2024-02-28 04:50:24.176 Aws::Endpoint::DefaultEndpointProvider [58564] Endpoint str eval parameter: Region = cn-north-1
+[TRACE] 2024-02-28 04:50:24.176 Aws::Endpoint::DefaultEndpointProvider [58564] Endpoint bool eval parameter: UseDualStack = 0
+[DEBUG] 2024-02-28 04:50:24.176 Unknown [58564] Resolved endpoint with status 0
+[DEBUG] 2024-02-28 04:50:24.176 Aws::Endpoint::DefaultEndpointProvider [58564] Endpoint rules engine evaluated the endpoint: https://cognito-idp-fips.cn-north-1.amazonaws.com.cn
+[TRACE] 2024-02-28 04:50:24.176 Aws::Endpoint::DefaultEndpointProvider [58564] Endpoint bool eval parameter: UseFIPS = 0
+[TRACE] 2024-02-28 04:50:24.176 Aws::Endpoint::DefaultEndpointProvider [58564] Endpoint str eval parameter: Region = cn-north-1
+[TRACE] 2024-02-28 04:50:24.176 Aws::Endpoint::DefaultEndpointProvider [58564] Endpoint bool eval parameter: UseDualStack = 1
+[DEBUG] 2024-02-28 04:50:24.176 Unknown [58564] Resolved endpoint with status 0
+[DEBUG] 2024-02-28 04:50:24.176 Aws::Endpoint::DefaultEndpointProvider [58564] Endpoint rules engine evaluated the endpoint: https://cognito-idp.cn-north-1.api.amazonwebservices.com.cn
+[TRACE] 2024-02-28 04:50:24.176 Aws::Endpoint::DefaultEndpointProvider [58564] Endpoint bool eval parameter: UseFIPS = 0
+[TRACE] 2024-02-28 04:50:24.176 Aws::Endpoint::DefaultEndpointProvider [58564] Endpoint str eval parameter: Region = cn-north-1
+[TRACE] 2024-02-28 04:50:24.176 Aws::Endpoint::DefaultEndpointProvider [58564] Endpoint bool eval parameter: UseDualStack = 0
+[DEBUG] 2024-02-28 04:50:24.176 Unknown [58564] Resolved endpoint with status 0
+[DEBUG] 2024-02-28 04:50:24.176 Aws::Endpoint::DefaultEndpointProvider [58564] Endpoint rules engine evaluated the endpoint: https://cognito-idp.cn-north-1.amazonaws.com.cn
+[TRACE] 2024-02-28 04:50:24.177 Aws::Endpoint::DefaultEndpointProvider [58564] Endpoint bool eval parameter: UseFIPS = 0
+[TRACE] 2024-02-28 04:50:24.177 Aws::Endpoint::DefaultEndpointProvider [58564] Endpoint str eval parameter: Region = us-gov-west-1
+[TRACE] 2024-02-28 04:50:24.177 Aws::Endpoint::DefaultEndpointProvider [58564] Endpoint bool eval parameter: UseDualStack = 0
+[DEBUG] 2024-02-28 04:50:24.177 Unknown [58564] Resolved endpoint with status 0
+[DEBUG] 2024-02-28 04:50:24.177 Aws::Endpoint::DefaultEndpointProvider [58564] Endpoint rules engine evaluated the endpoint: https://cognito-idp.us-gov-west-1.amazonaws.com
+[TRACE] 2024-02-28 04:50:24.177 Aws::Endpoint::DefaultEndpointProvider [58564] Endpoint bool eval parameter: UseFIPS = 1
+[TRACE] 2024-02-28 04:50:24.177 Aws::Endpoint::DefaultEndpointProvider [58564] Endpoint str eval parameter: Region = us-gov-west-1
+[TRACE] 2024-02-28 04:50:24.177 Aws::Endpoint::DefaultEndpointProvider [58564] Endpoint bool eval parameter: UseDualStack = 0
+[DEBUG] 2024-02-28 04:50:24.177 Unknown [58564] Resolved endpoint with status 0
+[DEBUG] 2024-02-28 04:50:24.177 Aws::Endpoint::DefaultEndpointProvider [58564] Endpoint rules engine evaluated the endpoint: https://cognito-idp-fips.us-gov-west-1.amazonaws.com
+[TRACE] 2024-02-28 04:50:24.177 Aws::Endpoint::DefaultEndpointProvider [58564] Endpoint bool eval parameter: UseFIPS = 1
+[TRACE] 2024-02-28 04:50:24.177 Aws::Endpoint::DefaultEndpointProvider [58564] Endpoint str eval parameter: Region = us-gov-east-1
+[TRACE] 2024-02-28 04:50:24.177 Aws::Endpoint::DefaultEndpointProvider [58564] Endpoint bool eval parameter: UseDualStack = 1
+[DEBUG] 2024-02-28 04:50:24.177 Unknown [58564] Resolved endpoint with status 0
+[DEBUG] 2024-02-28 04:50:24.177 Aws::Endpoint::DefaultEndpointProvider [58564] Endpoint rules engine evaluated the endpoint: https://cognito-idp-fips.us-gov-east-1.api.aws
+[TRACE] 2024-02-28 04:50:24.177 Aws::Endpoint::DefaultEndpointProvider [58564] Endpoint bool eval parameter: UseFIPS = 1
+[TRACE] 2024-02-28 04:50:24.177 Aws::Endpoint::DefaultEndpointProvider [58564] Endpoint str eval parameter: Region = us-gov-east-1
+[TRACE] 2024-02-28 04:50:24.177 Aws::Endpoint::DefaultEndpointProvider [58564] Endpoint bool eval parameter: UseDualStack = 0
+[DEBUG] 2024-02-28 04:50:24.177 Unknown [58564] Resolved endpoint with status 0
+[DEBUG] 2024-02-28 04:50:24.177 Aws::Endpoint::DefaultEndpointProvider [58564] Endpoint rules engine evaluated the endpoint: https://cognito-idp-fips.us-gov-east-1.amazonaws.com
+[TRACE] 2024-02-28 04:50:24.177 Aws::Endpoint::DefaultEndpointProvider [58564] Endpoint bool eval parameter: UseFIPS = 0
+[TRACE] 2024-02-28 04:50:24.177 Aws::Endpoint::DefaultEndpointProvider [58564] Endpoint str eval parameter: Region = us-gov-east-1
+[TRACE] 2024-02-28 04:50:24.177 Aws::Endpoint::DefaultEndpointProvider [58564] Endpoint bool eval parameter: UseDualStack = 1
+[DEBUG] 2024-02-28 04:50:24.177 Unknown [58564] Resolved endpoint with status 0
+[DEBUG] 2024-02-28 04:50:24.177 Aws::Endpoint::DefaultEndpointProvider [58564] Endpoint rules engine evaluated the endpoint: https://cognito-idp.us-gov-east-1.api.aws
+[TRACE] 2024-02-28 04:50:24.177 Aws::Endpoint::DefaultEndpointProvider [58564] Endpoint bool eval parameter: UseFIPS = 0
+[TRACE] 2024-02-28 04:50:24.177 Aws::Endpoint::DefaultEndpointProvider [58564] Endpoint str eval parameter: Region = us-gov-east-1
+[TRACE] 2024-02-28 04:50:24.177 Aws::Endpoint::DefaultEndpointProvider [58564] Endpoint bool eval parameter: UseDualStack = 0
+[DEBUG] 2024-02-28 04:50:24.177 Unknown [58564] Resolved endpoint with status 0
+[DEBUG] 2024-02-28 04:50:24.177 Aws::Endpoint::DefaultEndpointProvider [58564] Endpoint rules engine evaluated the endpoint: https://cognito-idp.us-gov-east-1.amazonaws.com
+[TRACE] 2024-02-28 04:50:24.178 Aws::Endpoint::DefaultEndpointProvider [58564] Endpoint bool eval parameter: UseFIPS = 1
+[TRACE] 2024-02-28 04:50:24.178 Aws::Endpoint::DefaultEndpointProvider [58564] Endpoint str eval parameter: Region = us-iso-east-1
+[TRACE] 2024-02-28 04:50:24.178 Aws::Endpoint::DefaultEndpointProvider [58564] Endpoint bool eval parameter: UseDualStack = 1
+[DEBUG] 2024-02-28 04:50:24.178 Unknown [58564] Resolved endpoint with status 0
+[TRACE] 2024-02-28 04:50:24.178 Aws::Endpoint::DefaultEndpointProvider [58564] Endpoint bool eval parameter: UseFIPS = 1
+[TRACE] 2024-02-28 04:50:24.178 Aws::Endpoint::DefaultEndpointProvider [58564] Endpoint str eval parameter: Region = us-iso-east-1
+[TRACE] 2024-02-28 04:50:24.178 Aws::Endpoint::DefaultEndpointProvider [58564] Endpoint bool eval parameter: UseDualStack = 0
+[DEBUG] 2024-02-28 04:50:24.178 Unknown [58564] Resolved endpoint with status 0
+[DEBUG] 2024-02-28 04:50:24.178 Aws::Endpoint::DefaultEndpointProvider [58564] Endpoint rules engine evaluated the endpoint: https://cognito-idp-fips.us-iso-east-1.c2s.ic.gov
+[TRACE] 2024-02-28 04:50:24.178 Aws::Endpoint::DefaultEndpointProvider [58564] Endpoint bool eval parameter: UseFIPS = 0
+[TRACE] 2024-02-28 04:50:24.178 Aws::Endpoint::DefaultEndpointProvider [58564] Endpoint str eval parameter: Region = us-iso-east-1
+[TRACE] 2024-02-28 04:50:24.178 Aws::Endpoint::DefaultEndpointProvider [58564] Endpoint bool eval parameter: UseDualStack = 1
+[DEBUG] 2024-02-28 04:50:24.178 Unknown [58564] Resolved endpoint with status 0
+[TRACE] 2024-02-28 04:50:24.178 Aws::Endpoint::DefaultEndpointProvider [58564] Endpoint bool eval parameter: UseFIPS = 0
+[TRACE] 2024-02-28 04:50:24.178 Aws::Endpoint::DefaultEndpointProvider [58564] Endpoint str eval parameter: Region = us-iso-east-1
+[TRACE] 2024-02-28 04:50:24.178 Aws::Endpoint::DefaultEndpointProvider [58564] Endpoint bool eval parameter: UseDualStack = 0
+[DEBUG] 2024-02-28 04:50:24.178 Unknown [58564] Resolved endpoint with status 0
+[DEBUG] 2024-02-28 04:50:24.178 Aws::Endpoint::DefaultEndpointProvider [58564] Endpoint rules engine evaluated the endpoint: https://cognito-idp.us-iso-east-1.c2s.ic.gov
+[TRACE] 2024-02-28 04:50:24.178 Aws::Endpoint::DefaultEndpointProvider [58564] Endpoint bool eval parameter: UseFIPS = 1
+[TRACE] 2024-02-28 04:50:24.178 Aws::Endpoint::DefaultEndpointProvider [58564] Endpoint str eval parameter: Region = us-isob-east-1
+[TRACE] 2024-02-28 04:50:24.178 Aws::Endpoint::DefaultEndpointProvider [58564] Endpoint bool eval parameter: UseDualStack = 1
+[DEBUG] 2024-02-28 04:50:24.178 Unknown [58564] Resolved endpoint with status 0
+[TRACE] 2024-02-28 04:50:24.178 Aws::Endpoint::DefaultEndpointProvider [58564] Endpoint bool eval parameter: UseFIPS = 1
+[TRACE] 2024-02-28 04:50:24.178 Aws::Endpoint::DefaultEndpointProvider [58564] Endpoint str eval parameter: Region = us-isob-east-1
+[TRACE] 2024-02-28 04:50:24.178 Aws::Endpoint::DefaultEndpointProvider [58564] Endpoint bool eval parameter: UseDualStack = 0
+[DEBUG] 2024-02-28 04:50:24.178 Unknown [58564] Resolved endpoint with status 0
+[DEBUG] 2024-02-28 04:50:24.178 Aws::Endpoint::DefaultEndpointProvider [58564] Endpoint rules engine evaluated the endpoint: https://cognito-idp-fips.us-isob-east-1.sc2s.sgov.gov
+[TRACE] 2024-02-28 04:50:24.179 Aws::Endpoint::DefaultEndpointProvider [58564] Endpoint bool eval parameter: UseFIPS = 0
+[TRACE] 2024-02-28 04:50:24.179 Aws::Endpoint::DefaultEndpointProvider [58564] Endpoint str eval parameter: Region = us-isob-east-1
+[TRACE] 2024-02-28 04:50:24.179 Aws::Endpoint::DefaultEndpointProvider [58564] Endpoint bool eval parameter: UseDualStack = 1
+[DEBUG] 2024-02-28 04:50:24.179 Unknown [58564] Resolved endpoint with status 0
+[TRACE] 2024-02-28 04:50:24.179 Aws::Endpoint::DefaultEndpointProvider [58564] Endpoint bool eval parameter: UseFIPS = 0
+[TRACE] 2024-02-28 04:50:24.179 Aws::Endpoint::DefaultEndpointProvider [58564] Endpoint str eval parameter: Region = us-isob-east-1
+[TRACE] 2024-02-28 04:50:24.179 Aws::Endpoint::DefaultEndpointProvider [58564] Endpoint bool eval parameter: UseDualStack = 0
+[DEBUG] 2024-02-28 04:50:24.179 Unknown [58564] Resolved endpoint with status 0
+[DEBUG] 2024-02-28 04:50:24.179 Aws::Endpoint::DefaultEndpointProvider [58564] Endpoint rules engine evaluated the endpoint: https://cognito-idp.us-isob-east-1.sc2s.sgov.gov
+[TRACE] 2024-02-28 04:50:24.179 Aws::Endpoint::DefaultEndpointProvider [58564] Endpoint bool eval parameter: UseFIPS = 0
+[TRACE] 2024-02-28 04:50:24.179 Aws::Endpoint::DefaultEndpointProvider [58564] Endpoint str eval parameter: Endpoint = https://example.com
+[TRACE] 2024-02-28 04:50:24.179 Aws::Endpoint::DefaultEndpointProvider [58564] Endpoint str eval parameter: Region = us-east-1
+[TRACE] 2024-02-28 04:50:24.179 Aws::Endpoint::DefaultEndpointProvider [58564] Endpoint bool eval parameter: UseDualStack = 0
+[DEBUG] 2024-02-28 04:50:24.179 Unknown [58564] Resolved endpoint with status 0
+[DEBUG] 2024-02-28 04:50:24.179 Aws::Endpoint::DefaultEndpointProvider [58564] Endpoint rules engine evaluated the endpoint: https://example.com
+[TRACE] 2024-02-28 04:50:24.179 Aws::Endpoint::DefaultEndpointProvider [58564] Endpoint bool eval parameter: UseFIPS = 0
+[TRACE] 2024-02-28 04:50:24.179 Aws::Endpoint::DefaultEndpointProvider [58564] Endpoint str eval parameter: Endpoint = https://example.com
+[TRACE] 2024-02-28 04:50:24.179 Aws::Endpoint::DefaultEndpointProvider [58564] Endpoint bool eval parameter: UseDualStack = 0
+[DEBUG] 2024-02-28 04:50:24.179 Unknown [58564] Resolved endpoint with status 0
+[DEBUG] 2024-02-28 04:50:24.179 Aws::Endpoint::DefaultEndpointProvider [58564] Endpoint rules engine evaluated the endpoint: https://example.com
+[TRACE] 2024-02-28 04:50:24.179 Aws::Endpoint::DefaultEndpointProvider [58564] Endpoint bool eval parameter: UseFIPS = 1
+[TRACE] 2024-02-28 04:50:24.179 Aws::Endpoint::DefaultEndpointProvider [58564] Endpoint str eval parameter: Endpoint = https://example.com
+[TRACE] 2024-02-28 04:50:24.179 Aws::Endpoint::DefaultEndpointProvider [58564] Endpoint str eval parameter: Region = us-east-1
+[TRACE] 2024-02-28 04:50:24.179 Aws::Endpoint::DefaultEndpointProvider [58564] Endpoint bool eval parameter: UseDualStack = 0
+[DEBUG] 2024-02-28 04:50:24.179 Unknown [58564] Resolved endpoint with status 0
+[TRACE] 2024-02-28 04:50:24.179 Aws::Endpoint::DefaultEndpointProvider [58564] Endpoint bool eval parameter: UseFIPS = 0
+[TRACE] 2024-02-28 04:50:24.179 Aws::Endpoint::DefaultEndpointProvider [58564] Endpoint str eval parameter: Endpoint = https://example.com
+[TRACE] 2024-02-28 04:50:24.179 Aws::Endpoint::DefaultEndpointProvider [58564] Endpoint str eval parameter: Region = us-east-1
+[TRACE] 2024-02-28 04:50:24.179 Aws::Endpoint::DefaultEndpointProvider [58564] Endpoint bool eval parameter: UseDualStack = 1
+[DEBUG] 2024-02-28 04:50:24.179 Unknown [58564] Resolved endpoint with status 0
+[DEBUG] 2024-02-28 04:50:24.180 Unknown [58564] Resolved endpoint with status 0
+[INFO] 2024-02-28 04:50:24.180 Aws_Init_Cleanup [58564] Shutdown AWS SDK for C++.
+[DEBUG] 2024-02-28 04:50:24.180 WinSyncHttpClient [58564] Cleaning up client with handle 0000000000000000
+[INFO] 2024-02-28 04:50:24.180 WinHttpConnectionPoolMgr [58564] Cleaning up connection pool mgr.
+[DEBUG] 2024-02-28 04:50:24.180 HttpClientFactory [58564] Cleanup Http Static State

@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="D:\Unreal Projects\aws-sdk-cpp\crt\aws-crt-cpp\crt\aws-checksums\source\crc.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Unreal Projects\aws-sdk-cpp\crt\aws-crt-cpp\crt\aws-checksums\source\crc_sw.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Unreal Projects\aws-sdk-cpp\crt\aws-crt-cpp\crt\aws-checksums\source\intel\visualc\visualc_crc32c_sse42.c">
+      <Filter>Source Files\intel\visualc</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="D:\Unreal Projects\aws-sdk-cpp\crt\aws-crt-cpp\crt\aws-checksums\include\aws\checksums\crc.h">
+      <Filter>Header Files\aws\checksums</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Unreal Projects\aws-sdk-cpp\crt\aws-crt-cpp\crt\aws-checksums\include\aws\checksums\exports.h">
+      <Filter>Header Files\aws\checksums</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Unreal Projects\aws-sdk-cpp\crt\aws-crt-cpp\crt\aws-checksums\include\aws\checksums\private\crc_priv.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="D:\Unreal Projects\aws-sdk-cpp\crt\aws-crt-cpp\crt\aws-checksums\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{6F0199CA-9D47-3E25-AB78-CCA8553426CC}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\aws">
+      <UniqueIdentifier>{E6B0D143-0CAF-36E3-AA53-2CC8DC177171}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\aws\checksums">
+      <UniqueIdentifier>{1AB364B3-7E27-39CE-99E2-3F9B43241B57}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{CCEC3583-A3C9-3A51-9022-2FBC475718F4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\intel">
+      <UniqueIdentifier>{ECE4812C-5D07-38C3-8B95-C049F0EA245C}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\intel\visualc">
+      <UniqueIdentifier>{8A91326D-0034-3680-8E77-3D03F3DFCB30}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

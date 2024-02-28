@@ -1,0 +1,241 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="D:\Unreal Projects\aws-sdk-cpp\tests\aws-cpp-sdk-core-tests\RunTests.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Unreal Projects\aws-sdk-cpp\tests\aws-cpp-sdk-core-tests\VersionTests.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Unreal Projects\aws-sdk-cpp\tests\aws-cpp-sdk-core-tests\aws\RegionTest.cpp">
+      <Filter>Source Files\aws</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Unreal Projects\aws-sdk-cpp\tests\aws-cpp-sdk-core-tests\aws\auth\AWSAuthSignerTest.cpp">
+      <Filter>Source Files\aws\auth</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Unreal Projects\aws-sdk-cpp\tests\aws-cpp-sdk-core-tests\aws\auth\AWSCredentialsProviderTest.cpp">
+      <Filter>Source Files\aws\auth</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Unreal Projects\aws-sdk-cpp\tests\aws-cpp-sdk-core-tests\aws\auth\AWSHttpResourceClientTest.cpp">
+      <Filter>Source Files\aws\auth</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Unreal Projects\aws-sdk-cpp\tests\aws-cpp-sdk-core-tests\aws\auth\GeneralHTTPCredentialsProviderTest.cpp">
+      <Filter>Source Files\aws\auth</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Unreal Projects\aws-sdk-cpp\tests\aws-cpp-sdk-core-tests\aws\client\AWSClientTest.cpp">
+      <Filter>Source Files\aws\client</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Unreal Projects\aws-sdk-cpp\tests\aws-cpp-sdk-core-tests\aws\client\AWSErrorMashallerTest.cpp">
+      <Filter>Source Files\aws\client</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Unreal Projects\aws-sdk-cpp\tests\aws-cpp-sdk-core-tests\aws\client\AWSMetadataEndpointTest.cpp">
+      <Filter>Source Files\aws\client</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Unreal Projects\aws-sdk-cpp\tests\aws-cpp-sdk-core-tests\aws\client\AdaptiveRetryStrategyTest.cpp">
+      <Filter>Source Files\aws\client</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Unreal Projects\aws-sdk-cpp\tests\aws-cpp-sdk-core-tests\aws\client\AwsConfigTest.cpp">
+      <Filter>Source Files\aws\client</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Unreal Projects\aws-sdk-cpp\tests\aws-cpp-sdk-core-tests\aws\client\HttpSchemeMapperTest.cpp">
+      <Filter>Source Files\aws\client</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Unreal Projects\aws-sdk-cpp\tests\aws-cpp-sdk-core-tests\aws\client\RequestCompressionTest.cpp">
+      <Filter>Source Files\aws\client</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Unreal Projects\aws-sdk-cpp\tests\aws-cpp-sdk-core-tests\aws\client\RetryStrategyTest.cpp">
+      <Filter>Source Files\aws\client</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Unreal Projects\aws-sdk-cpp\tests\aws-cpp-sdk-core-tests\aws\config\AWSConfigFileProfileConfigLoaderTest.cpp">
+      <Filter>Source Files\aws\config</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Unreal Projects\aws-sdk-cpp\tests\aws-cpp-sdk-core-tests\aws\config\ClientConfigurationDefaultsTest.cpp">
+      <Filter>Source Files\aws\config</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Unreal Projects\aws-sdk-cpp\tests\aws-cpp-sdk-core-tests\aws\config\EC2InstanceProfileConfigLoaderTest.cpp">
+      <Filter>Source Files\aws\config</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Unreal Projects\aws-sdk-cpp\tests\aws-cpp-sdk-core-tests\aws\net\UDPTest.cpp">
+      <Filter>Source Files\aws\net</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Unreal Projects\aws-sdk-cpp\tests\aws-cpp-sdk-core-tests\http\HttpClientTest.cpp">
+      <Filter>Source Files\http</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Unreal Projects\aws-sdk-cpp\tests\aws-cpp-sdk-core-tests\http\HttpTypesMapperTest.cpp">
+      <Filter>Source Files\http</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Unreal Projects\aws-sdk-cpp\tests\aws-cpp-sdk-core-tests\http\SignalHandlerTest.cpp">
+      <Filter>Source Files\http</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Unreal Projects\aws-sdk-cpp\tests\aws-cpp-sdk-core-tests\http\URITest.cpp">
+      <Filter>Source Files\http</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Unreal Projects\aws-sdk-cpp\tests\aws-cpp-sdk-core-tests\monitoring\MonitoringEndToEndTest.cpp">
+      <Filter>Source Files\monitoring</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Unreal Projects\aws-sdk-cpp\tests\aws-cpp-sdk-core-tests\monitoring\MonitoringTest.cpp">
+      <Filter>Source Files\monitoring</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Unreal Projects\aws-sdk-cpp\tests\aws-cpp-sdk-core-tests\smithy\tracing\SmithyTracingTest.cpp">
+      <Filter>Source Files\smithy\tracing</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Unreal Projects\aws-sdk-cpp\tests\aws-cpp-sdk-core-tests\utils\ARNTest.cpp">
+      <Filter>Source Files\utils</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Unreal Projects\aws-sdk-cpp\tests\aws-cpp-sdk-core-tests\utils\CacheTest.cpp">
+      <Filter>Source Files\utils</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Unreal Projects\aws-sdk-cpp\tests\aws-cpp-sdk-core-tests\utils\CompilerMacrosTest.cpp">
+      <Filter>Source Files\utils</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Unreal Projects\aws-sdk-cpp\tests\aws-cpp-sdk-core-tests\utils\DNSTest.cpp">
+      <Filter>Source Files\utils</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Unreal Projects\aws-sdk-cpp\tests\aws-cpp-sdk-core-tests\utils\DateTimeTest.cpp">
+      <Filter>Source Files\utils</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Unreal Projects\aws-sdk-cpp\tests\aws-cpp-sdk-core-tests\utils\DocumentTest.cpp">
+      <Filter>Source Files\utils</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Unreal Projects\aws-sdk-cpp\tests\aws-cpp-sdk-core-tests\utils\EnumOverflowTest.cpp">
+      <Filter>Source Files\utils</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Unreal Projects\aws-sdk-cpp\tests\aws-cpp-sdk-core-tests\utils\FileSystemUtilsTest.cpp">
+      <Filter>Source Files\utils</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Unreal Projects\aws-sdk-cpp\tests\aws-cpp-sdk-core-tests\utils\GetTheLightsTest.cpp">
+      <Filter>Source Files\utils</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Unreal Projects\aws-sdk-cpp\tests\aws-cpp-sdk-core-tests\utils\HashingUtilsTest.cpp">
+      <Filter>Source Files\utils</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Unreal Projects\aws-sdk-cpp\tests\aws-cpp-sdk-core-tests\utils\OSVersionInfoTest.cpp">
+      <Filter>Source Files\utils</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Unreal Projects\aws-sdk-cpp\tests\aws-cpp-sdk-core-tests\utils\OutcomeTest.cpp">
+      <Filter>Source Files\utils</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Unreal Projects\aws-sdk-cpp\tests\aws-cpp-sdk-core-tests\utils\StringUtilsTest.cpp">
+      <Filter>Source Files\utils</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Unreal Projects\aws-sdk-cpp\tests\aws-cpp-sdk-core-tests\utils\UUIDTest.cpp">
+      <Filter>Source Files\utils</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Unreal Projects\aws-sdk-cpp\tests\aws-cpp-sdk-core-tests\utils\crypto\CryptoStreamsTest.cpp">
+      <Filter>Source Files\utils\crypto</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Unreal Projects\aws-sdk-cpp\tests\aws-cpp-sdk-core-tests\utils\crypto\HashTest.cpp">
+      <Filter>Source Files\utils\crypto</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Unreal Projects\aws-sdk-cpp\tests\aws-cpp-sdk-core-tests\utils\crypto\SymmetricCiphersTest.cpp">
+      <Filter>Source Files\utils\crypto</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Unreal Projects\aws-sdk-cpp\tests\aws-cpp-sdk-core-tests\utils\event\EventStreamDecoderTest.cpp">
+      <Filter>Source Files\utils\event</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Unreal Projects\aws-sdk-cpp\tests\aws-cpp-sdk-core-tests\utils\event\EventStreamTest.cpp">
+      <Filter>Source Files\utils\event</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Unreal Projects\aws-sdk-cpp\tests\aws-cpp-sdk-core-tests\utils\json\JsonSerializerTest.cpp">
+      <Filter>Source Files\utils\json</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Unreal Projects\aws-sdk-cpp\tests\aws-cpp-sdk-core-tests\utils\logging\LoggingTest.cpp">
+      <Filter>Source Files\utils\logging</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Unreal Projects\aws-sdk-cpp\tests\aws-cpp-sdk-core-tests\utils\memory\AWSMemoryTest.cpp">
+      <Filter>Source Files\utils\memory</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Unreal Projects\aws-sdk-cpp\tests\aws-cpp-sdk-core-tests\utils\memory\AwsMemoryManagementTest.cpp">
+      <Filter>Source Files\utils\memory</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Unreal Projects\aws-sdk-cpp\tests\aws-cpp-sdk-core-tests\utils\memory\SimpleStringStreamTests.cpp">
+      <Filter>Source Files\utils\memory</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Unreal Projects\aws-sdk-cpp\tests\aws-cpp-sdk-core-tests\utils\ratelimiter\RateLimiterTests.cpp">
+      <Filter>Source Files\utils\ratelimiter</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Unreal Projects\aws-sdk-cpp\tests\aws-cpp-sdk-core-tests\utils\stream\PreallocatedStreamBufTest.cpp">
+      <Filter>Source Files\utils\stream</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Unreal Projects\aws-sdk-cpp\tests\aws-cpp-sdk-core-tests\utils\stream\ResponseStreamTest.cpp">
+      <Filter>Source Files\utils\stream</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Unreal Projects\aws-sdk-cpp\tests\aws-cpp-sdk-core-tests\utils\stream\SimpleStreamBufTest.cpp">
+      <Filter>Source Files\utils\stream</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Unreal Projects\aws-sdk-cpp\tests\aws-cpp-sdk-core-tests\utils\threading\DefaultExecutorTest.cpp">
+      <Filter>Source Files\utils\threading</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Unreal Projects\aws-sdk-cpp\tests\aws-cpp-sdk-core-tests\utils\threading\ReaderWriterLockTest.cpp">
+      <Filter>Source Files\utils\threading</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Unreal Projects\aws-sdk-cpp\tests\aws-cpp-sdk-core-tests\utils\xml\XmlSerializerTest.cpp">
+      <Filter>Source Files\utils\xml</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="D:\Unreal Projects\aws-sdk-cpp\tests\aws-cpp-sdk-core-tests\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{CCEC3583-A3C9-3A51-9022-2FBC475718F4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\aws">
+      <UniqueIdentifier>{8B6F8EC1-E1D9-3439-BBEB-1C6F69EF3312}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\aws\auth">
+      <UniqueIdentifier>{9F664229-A558-3E82-9C47-42058A6D55F6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\aws\client">
+      <UniqueIdentifier>{416E9BE6-6126-3AB1-A873-74770238B7CA}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\aws\config">
+      <UniqueIdentifier>{11883952-B098-3E03-8332-D132DB23C01D}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\aws\net">
+      <UniqueIdentifier>{F2FA82B4-FE41-36C3-A003-95553774EE8F}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\http">
+      <UniqueIdentifier>{C6BA6D24-7E8F-37F6-AD55-0A3C06D41AFA}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\monitoring">
+      <UniqueIdentifier>{2FCA2C9D-6B66-3041-B23C-14ADFC92C455}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\smithy">
+      <UniqueIdentifier>{25EBA62B-4604-3553-B340-9ACC7B05C9C4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\smithy\tracing">
+      <UniqueIdentifier>{0D6CF780-05D0-3A99-8A5C-54FEA543B1B4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\utils">
+      <UniqueIdentifier>{34626867-D3FE-3C49-8D7B-452901F9D8A4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\utils\crypto">
+      <UniqueIdentifier>{958E6850-CCD5-3761-AFF3-6EA4BDE1DFCA}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\utils\event">
+      <UniqueIdentifier>{0AB0E5D8-7847-3509-A6BC-AD985F76FBE9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\utils\json">
+      <UniqueIdentifier>{F1562CF0-E072-34E5-ADFD-7FA28DDB988B}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\utils\logging">
+      <UniqueIdentifier>{940962F1-05AE-3390-B9C9-A75A2188EB67}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\utils\memory">
+      <UniqueIdentifier>{56A5D08A-D042-3C4C-ADB5-C9EB9EE38DF4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\utils\ratelimiter">
+      <UniqueIdentifier>{A66753F3-C0E4-3E3F-80A6-44D6196681CC}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\utils\stream">
+      <UniqueIdentifier>{CA357B72-8986-3A91-AE94-4ACFFD7233C8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\utils\threading">
+      <UniqueIdentifier>{64E59E02-CB05-3F6B-87FB-1E78E2E96D6B}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\utils\xml">
+      <UniqueIdentifier>{D164692F-0702-3092-A383-FB837331DD64}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

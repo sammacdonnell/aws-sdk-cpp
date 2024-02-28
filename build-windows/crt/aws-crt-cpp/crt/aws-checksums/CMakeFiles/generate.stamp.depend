@@ -1,0 +1,16 @@
+# CMake generation dependency list for this directory.
+C:/Program Files/CMake/share/cmake-3.29/Modules/CMakeParseArguments.cmake
+C:/Program Files/CMake/share/cmake-3.29/Modules/CTest.cmake
+C:/Program Files/CMake/share/cmake-3.29/Modules/CTestUseLaunchers.cmake
+C:/Program Files/CMake/share/cmake-3.29/Modules/CheckCCompilerFlag.cmake
+C:/Program Files/CMake/share/cmake-3.29/Modules/CheckCSourceRuns.cmake
+C:/Program Files/CMake/share/cmake-3.29/Modules/CheckIncludeFile.cmake
+C:/Program Files/CMake/share/cmake-3.29/Modules/CheckSymbolExists.cmake
+D:/Unreal Projects/aws-sdk-cpp/crt/aws-crt-cpp/crt/aws-c-common/cmake/AwsCFlags.cmake
+D:/Unreal Projects/aws-sdk-cpp/crt/aws-crt-cpp/crt/aws-c-common/cmake/AwsCheckHeaders.cmake
+D:/Unreal Projects/aws-sdk-cpp/crt/aws-crt-cpp/crt/aws-c-common/cmake/AwsFeatureTests.cmake
+D:/Unreal Projects/aws-sdk-cpp/crt/aws-crt-cpp/crt/aws-c-common/cmake/AwsFindPackage.cmake
+D:/Unreal Projects/aws-sdk-cpp/crt/aws-crt-cpp/crt/aws-c-common/cmake/AwsSanitizers.cmake
+D:/Unreal Projects/aws-sdk-cpp/crt/aws-crt-cpp/crt/aws-c-common/cmake/AwsSharedLibSetup.cmake
+D:/Unreal Projects/aws-sdk-cpp/crt/aws-crt-cpp/crt/aws-checksums/CMakeLists.txt
+D:/Unreal Projects/aws-sdk-cpp/crt/aws-crt-cpp/crt/aws-checksums/cmake/aws-checksums-config.cmake

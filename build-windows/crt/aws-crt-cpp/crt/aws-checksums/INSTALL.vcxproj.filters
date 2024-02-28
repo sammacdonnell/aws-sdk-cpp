@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <CustomBuild Include="D:\Unreal Projects\aws-sdk-cpp\build-windows\CMakeFiles\2b251710c22e5097c0040b458d3574bc\INSTALL_force.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="CMake Rules">
+      <UniqueIdentifier>{376D248B-5FE6-30BB-B378-FA9240831ED9}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

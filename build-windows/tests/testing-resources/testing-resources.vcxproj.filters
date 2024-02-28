@@ -1,0 +1,198 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="D:\Unreal Projects\aws-sdk-cpp\tests\testing-resources\source\AwsCppSdkGTestSuite.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Unreal Projects\aws-sdk-cpp\tests\testing-resources\source\MemoryTesting.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Unreal Projects\aws-sdk-cpp\tests\testing-resources\source\TestingEnvironment.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Unreal Projects\aws-sdk-cpp\tests\testing-resources\source\external\gtest\gtest-all.cc">
+      <Filter>Source Files\external\gtest</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Unreal Projects\aws-sdk-cpp\tests\testing-resources\source\platform\windows\PlatformTesting.cpp">
+      <Filter>Source Files\platform\windows</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="D:\Unreal Projects\aws-sdk-cpp\tests\testing-resources\include\aws\external\gtest\gtest-assertion-result.h">
+      <Filter>Header Files\aws\external\gtest</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Unreal Projects\aws-sdk-cpp\tests\testing-resources\include\aws\external\gtest\gtest-aws-helper.h">
+      <Filter>Header Files\aws\external\gtest</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Unreal Projects\aws-sdk-cpp\tests\testing-resources\include\aws\external\gtest\gtest-death-test.h">
+      <Filter>Header Files\aws\external\gtest</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Unreal Projects\aws-sdk-cpp\tests\testing-resources\include\aws\external\gtest\gtest-matchers.h">
+      <Filter>Header Files\aws\external\gtest</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Unreal Projects\aws-sdk-cpp\tests\testing-resources\include\aws\external\gtest\gtest-message.h">
+      <Filter>Header Files\aws\external\gtest</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Unreal Projects\aws-sdk-cpp\tests\testing-resources\include\aws\external\gtest\gtest-param-test.h">
+      <Filter>Header Files\aws\external\gtest</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Unreal Projects\aws-sdk-cpp\tests\testing-resources\include\aws\external\gtest\gtest-printers.h">
+      <Filter>Header Files\aws\external\gtest</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Unreal Projects\aws-sdk-cpp\tests\testing-resources\include\aws\external\gtest\gtest-spi.h">
+      <Filter>Header Files\aws\external\gtest</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Unreal Projects\aws-sdk-cpp\tests\testing-resources\include\aws\external\gtest\gtest-test-part.h">
+      <Filter>Header Files\aws\external\gtest</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Unreal Projects\aws-sdk-cpp\tests\testing-resources\include\aws\external\gtest\gtest-typed-test.h">
+      <Filter>Header Files\aws\external\gtest</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Unreal Projects\aws-sdk-cpp\tests\testing-resources\include\aws\external\gtest\gtest.h">
+      <Filter>Header Files\aws\external\gtest</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Unreal Projects\aws-sdk-cpp\tests\testing-resources\include\aws\external\gtest\gtest_pred_impl.h">
+      <Filter>Header Files\aws\external\gtest</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Unreal Projects\aws-sdk-cpp\tests\testing-resources\include\aws\external\gtest\gtest_prod.h">
+      <Filter>Header Files\aws\external\gtest</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Unreal Projects\aws-sdk-cpp\tests\testing-resources\include\aws\external\gtest\internal\custom\gtest-port.h">
+      <Filter>Header Files\aws\external\gtest\internal\custom</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Unreal Projects\aws-sdk-cpp\tests\testing-resources\include\aws\external\gtest\internal\custom\gtest-printers.h">
+      <Filter>Header Files\aws\external\gtest\internal\custom</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Unreal Projects\aws-sdk-cpp\tests\testing-resources\include\aws\external\gtest\internal\custom\gtest.h">
+      <Filter>Header Files\aws\external\gtest\internal\custom</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Unreal Projects\aws-sdk-cpp\tests\testing-resources\include\aws\external\gtest\internal\gtest-death-test-internal.h">
+      <Filter>Header Files\aws\external\gtest\internal</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Unreal Projects\aws-sdk-cpp\tests\testing-resources\include\aws\external\gtest\internal\gtest-filepath.h">
+      <Filter>Header Files\aws\external\gtest\internal</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Unreal Projects\aws-sdk-cpp\tests\testing-resources\include\aws\external\gtest\internal\gtest-internal.h">
+      <Filter>Header Files\aws\external\gtest\internal</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Unreal Projects\aws-sdk-cpp\tests\testing-resources\include\aws\external\gtest\internal\gtest-param-util.h">
+      <Filter>Header Files\aws\external\gtest\internal</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Unreal Projects\aws-sdk-cpp\tests\testing-resources\include\aws\external\gtest\internal\gtest-port-arch.h">
+      <Filter>Header Files\aws\external\gtest\internal</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Unreal Projects\aws-sdk-cpp\tests\testing-resources\include\aws\external\gtest\internal\gtest-port.h">
+      <Filter>Header Files\aws\external\gtest\internal</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Unreal Projects\aws-sdk-cpp\tests\testing-resources\include\aws\external\gtest\internal\gtest-string.h">
+      <Filter>Header Files\aws\external\gtest\internal</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Unreal Projects\aws-sdk-cpp\tests\testing-resources\include\aws\external\gtest\internal\gtest-type-util.h">
+      <Filter>Header Files\aws\external\gtest\internal</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Unreal Projects\aws-sdk-cpp\tests\testing-resources\include\aws\testing\AwsCppSdkGTestSuite.h">
+      <Filter>Header Files\aws\testing</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Unreal Projects\aws-sdk-cpp\tests\testing-resources\include\aws\testing\AwsTestHelpers.h">
+      <Filter>Header Files\aws\testing</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Unreal Projects\aws-sdk-cpp\tests\testing-resources\include\aws\testing\MemoryTesting.h">
+      <Filter>Header Files\aws\testing</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Unreal Projects\aws-sdk-cpp\tests\testing-resources\include\aws\testing\ProxyConfig.h">
+      <Filter>Header Files\aws\testing</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Unreal Projects\aws-sdk-cpp\tests\testing-resources\include\aws\testing\TestingEnvironment.h">
+      <Filter>Header Files\aws\testing</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Unreal Projects\aws-sdk-cpp\tests\testing-resources\include\aws\testing\Testing_EXPORTS.h">
+      <Filter>Header Files\aws\testing</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Unreal Projects\aws-sdk-cpp\tests\testing-resources\include\aws\testing\mocks\aws\auth\MockAWSHttpResourceClient.h">
+      <Filter>Header Files\aws\testing\mocks\aws\auth</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Unreal Projects\aws-sdk-cpp\tests\testing-resources\include\aws\testing\mocks\aws\client\MockAWSClient.h">
+      <Filter>Header Files\aws\testing\mocks\aws\client</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Unreal Projects\aws-sdk-cpp\tests\testing-resources\include\aws\testing\mocks\event\MockEventStreamDecoder.h">
+      <Filter>Header Files\aws\testing\mocks\event</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Unreal Projects\aws-sdk-cpp\tests\testing-resources\include\aws\testing\mocks\event\MockEventStreamHandler.h">
+      <Filter>Header Files\aws\testing\mocks\event</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Unreal Projects\aws-sdk-cpp\tests\testing-resources\include\aws\testing\mocks\http\MockHttpClient.h">
+      <Filter>Header Files\aws\testing\mocks\http</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Unreal Projects\aws-sdk-cpp\tests\testing-resources\include\aws\testing\mocks\monitoring\TestingMonitoring.h">
+      <Filter>Header Files\aws\testing\mocks\monitoring</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Unreal Projects\aws-sdk-cpp\tests\testing-resources\include\aws\testing\platform\PlatformTesting.h">
+      <Filter>Header Files\aws\testing\platform</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="D:\Unreal Projects\aws-sdk-cpp\tests\testing-resources\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{6F0199CA-9D47-3E25-AB78-CCA8553426CC}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\aws">
+      <UniqueIdentifier>{E6B0D143-0CAF-36E3-AA53-2CC8DC177171}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\aws\external">
+      <UniqueIdentifier>{19D627D9-3732-3298-A352-0B49F57900A3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\aws\external\gtest">
+      <UniqueIdentifier>{1EF15F6F-4B58-3CE1-A378-30C6D2780849}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\aws\external\gtest\internal">
+      <UniqueIdentifier>{A3370972-BEB9-3C66-B80E-46646AC9D671}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\aws\external\gtest\internal\custom">
+      <UniqueIdentifier>{BA20BB46-4682-3173-930D-F251540989A1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\aws\testing">
+      <UniqueIdentifier>{3636F568-A90A-38CD-BD48-65F2C5FEF9C2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\aws\testing\mocks">
+      <UniqueIdentifier>{86378F57-F0F0-3074-91DD-65BF70827FB7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\aws\testing\mocks\aws">
+      <UniqueIdentifier>{B2BA0A31-71EC-3177-90D6-8AFD6CA068F6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\aws\testing\mocks\aws\auth">
+      <UniqueIdentifier>{E1C6F792-2774-373D-A87F-2CD05B626DA3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\aws\testing\mocks\aws\client">
+      <UniqueIdentifier>{03EB8961-D4C8-32FD-B568-F0CAA95EB952}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\aws\testing\mocks\event">
+      <UniqueIdentifier>{C59496AA-B7FE-3F5F-9D08-44D98D269A37}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\aws\testing\mocks\http">
+      <UniqueIdentifier>{B7993732-89CA-3C71-9BBF-33561A23219A}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\aws\testing\mocks\monitoring">
+      <UniqueIdentifier>{448EEB95-7B37-3F09-9719-10C1CC2048C8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\aws\testing\platform">
+      <UniqueIdentifier>{86E349FB-D59E-3CC7-B28C-8A32D99C80AF}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{CCEC3583-A3C9-3A51-9022-2FBC475718F4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\external">
+      <UniqueIdentifier>{65AEF3C9-50B2-37E4-BED4-4003EE2E997C}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\external\gtest">
+      <UniqueIdentifier>{0A966F60-5D3A-30A1-91B1-0ACEFC2D5819}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\platform">
+      <UniqueIdentifier>{A034A869-2C04-31CA-AB7A-14DCC226A715}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\platform\windows">
+      <UniqueIdentifier>{3457B032-CA50-3B28-8388-0E023AD3FBA1}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>
